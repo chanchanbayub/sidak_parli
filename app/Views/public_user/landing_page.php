@@ -185,14 +185,14 @@ use CodeIgniter\Filters\CSRF;
                             $("#download").css('display', 'none')
                         } else if (response.data_penindakan.status_bap_id == 3) {
                             $("#download").css('display', 'block')
-                            $("#download").html('<i class="fa fa-download"> Download BAP');
+                            $("#download").html('<i class="fa fa-download"></i> Download BAP');
                             $("#download").attr('href', `/pdf/bap_digital/${response.data_penindakan.nomor_bap}`);
                             $(".status").addClass("badge badge-danger status")
                         } else if (response.data_penindakan.status_bap_id == 4 || response.data_penindakan.status_bap_id == 5) {
                             $(".status").addClass("badge badge-success status")
                             $("#download").css('display', 'block');
                             $("#download").attr('href', `/spk/${response.data_penindakan.nomor_surat}`);
-                            $("#download").html('<i class="fa fa-download"> Download SPK');
+                            $("#download").html('<i class="fa fa-download"> </id> Download SPK');
                         }
                         $(".status").html(response.data_penindakan.status_penderekan);
                         $(".status").css("text-transform", 'capitalize');
