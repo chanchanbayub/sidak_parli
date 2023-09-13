@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <label for="merk_kendaraan">Merk Kendaraan :</label>
+                                <label for="merk_kendaraan">Merk / Type Kendaraan:</label>
                                 <input type="text" class="form-control" id="merk_kendaraan" name="merk_kendaraan">
                                 <div class="invalid-feedback error-merk-kendaraan">
 

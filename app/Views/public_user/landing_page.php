@@ -128,7 +128,7 @@ use CodeIgniter\Filters\CSRF;
                 <div class="modal-footer text-center">
                     <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fa fa-times"></i> Close</button>
                     <a class="btn btn-success" href="" target="_blank" id="whatsapp"> <i class="fab fa-whatsapp"></i> Ajukan Pengeluaran</a>
-                    <a href="" class="btn btn-primary" target=" _blank" id="download"> <i class="fa fa-download"></i> Download BAP</a>
+                    <a href="" class="btn btn-primary" target="_blank" id="download"> <i class="fa fa-download"></i> Download BAP</a>
                 </div>
             </div>
         </div>
@@ -163,7 +163,7 @@ use CodeIgniter\Filters\CSRF;
                     $(".btn-user").prop('disabled', true);
                 },
                 success: function(response) {
-                    console.log(response);
+                    // console.log(response);
                     $('.btn-user').html("<i class='fa fa-search'></i> Cari Kendaraan");
                     $(".btn-user").prop('disabled', false);
                     if (response.error) {
@@ -182,12 +182,15 @@ use CodeIgniter\Filters\CSRF;
 
                         if (response.data_penindakan.status_bap_id == 2) {
                             $(".status").addClass("badge badge-warning status")
+                            $("#download").css('display', 'none')
                         } else if (response.data_penindakan.status_bap_id == 3) {
+                            $("#download").css('display', 'block')
                             $("#download").html('Download BAP');
                             $("#download").attr('href', `/pdf/bap_digital/${response.data_penindakan.nomor_bap}`);
                             $(".status").addClass("badge badge-danger status")
                         } else if (response.data_penindakan.status_bap_id == 4 || response.data_penindakan.status_bap_id == 5) {
                             $(".status").addClass("badge badge-success status")
+                            $("#download").css('display', 'block');
                             $("#download").attr('href', `/spk/${response.data_penindakan.nomor_surat}`);
                             $("#download").html('Download SPK');
                         }
