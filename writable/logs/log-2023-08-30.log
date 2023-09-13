@@ -1,0 +1,119 @@
+CRITICAL - 2023-08-30 00:42:35 --> Undefined variable: exportExcel
+in APPPATH/Controllers/Excel/ExportExcel.php on line 21.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: exportExcel', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 21, [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 00:43:05 --> Undefined variable: exportExcel
+in APPPATH/Controllers/Excel/ExportExcel.php on line 21.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: exportExcel', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 21, [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 00:43:37 --> Undefined variable: spreadsheet
+in APPPATH/Controllers/Excel/ExportExcel.php on line 21.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: spreadsheet', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 21, [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 00:43:54 --> Undefined variable: spreadsheet
+in APPPATH/Controllers/Excel/ExportExcel.php on line 22.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: spreadsheet', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 22, [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 00:45:41 --> Undefined variable: spreadsheet
+in APPPATH/Controllers/Excel/ExportExcel.php on line 22.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: spreadsheet', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 22, [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 00:56:01 --> Class 'App\Controllers\Excel\Spreadsheet' not found
+in APPPATH/Controllers/Excel/ExportExcel.php on line 17.
+ 1 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Excel\ExportExcel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 00:57:05 --> Class 'App\Controllers\Excel\Spreadsheet' not found
+in APPPATH/Controllers/Excel/ExportExcel.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Excel\ExportExcel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 00:57:38 --> Class 'App\Controllers\Excel\spreadsheet' not found
+in APPPATH/Controllers/Excel/ExportExcel.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(904): App\Controllers\Excel\ExportExcel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 01:01:33 --> require(/Users/chanchanbayubahari/Desktop/e-parli/app/vendor/autoload.php): failed to open stream: No such file or directory
+in APPPATH/Controllers/Excel/ExportExcel.php on line 20.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(/Users/chanchanbayubahari/Desktop/e-parli/app/vendor/autoload.php): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 20, [])
+ 2 APPPATH/Controllers/Excel/ExportExcel.php(20): require()
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 01:01:40 --> require(/Users/chanchanbayubahari/Desktop/e-parli/app/..vendor/autoload.php): failed to open stream: No such file or directory
+in APPPATH/Controllers/Excel/ExportExcel.php on line 20.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(/Users/chanchanbayubahari/Desktop/e-parli/app/..vendor/autoload.php): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 20, [])
+ 2 APPPATH/Controllers/Excel/ExportExcel.php(20): require()
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 01:04:56 --> Undefined variable: spreadsheet
+in APPPATH/Controllers/Excel/ExportExcel.php on line 25.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: spreadsheet', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 25, [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 01:05:10 --> Undefined variable: spreadsheet
+in APPPATH/Controllers/Excel/ExportExcel.php on line 28.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: spreadsheet', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 28, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 01:14:06 --> Undefined property: App\Controllers\Excel\ExportExcel::$spreadsheet
+in APPPATH/Controllers/Excel/ExportExcel.php on line 19.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Excel\\ExportExcel::$spreadsheet', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 19, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 01:43:10 --> Undefined property: stdClass::$jenis_penidakan
+in APPPATH/Controllers/Excel/ExportExcel.php on line 57.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$jenis_penidakan', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-30 01:43:21 --> Undefined property: stdClass::$jenis_nomor_bap
+in APPPATH/Controllers/Excel/ExportExcel.php on line 58.
+ 1 APPPATH/Controllers/Excel/ExportExcel.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$jenis_nomor_bap', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Excel/ExportExcel.php', 58, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Excel\ExportExcel->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Excel\ExportExcel))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')

@@ -1,0 +1,44 @@
+CRITICAL - 2023-08-21 22:37:35 --> Invalid file: "admin/data_penindakan.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/data_penindakan.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/data_penindakan', [], true)
+ 3 APPPATH/Controllers/Admin/DataPenindakan.php(15): view('admin/data_penindakan')
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\DataPenindakan->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DataPenindakan))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-21 22:39:37 --> Undefined variable: title
+in APPPATH/Views/admin/data_penindakan.php on line 11.
+ 1 APPPATH/Views/admin/data_penindakan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/data_penindakan.php', 11, [])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/data_penindakan.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/data_penindakan', [], true)
+ 5 APPPATH/Controllers/Admin/DataPenindakan.php(15): view('admin/data_penindakan')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\DataPenindakan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DataPenindakan))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-21 22:39:56 --> Undefined variable: ukpd
+in APPPATH/Views/admin/data_penindakan.php on line 67.
+ 1 APPPATH/Views/admin/data_penindakan.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: ukpd', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/data_penindakan.php', 67, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/data_penindakan.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/data_penindakan', [], true)
+ 5 APPPATH/Controllers/Admin/DataPenindakan.php(15): view('admin/data_penindakan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\DataPenindakan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DataPenindakan))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-21 22:58:13 --> Invalid file: "admin/tambah_penindakan.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/tambah_penindakan.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/tambah_penindakan', [], true)
+ 3 APPPATH/Controllers/Admin/DataPenindakan.php(24): view('admin/tambah_penindakan', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\DataPenindakan->tambah_penindakan()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DataPenindakan))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')

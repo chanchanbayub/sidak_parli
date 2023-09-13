@@ -1,0 +1,634 @@
+CRITICAL - 2023-08-15 23:25:24 --> file_put_contents(ttd_petugas/64dba6f424c7b.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dba6f424c7b.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 72, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(72): file_put_contents('ttd_petugas/64dba6f424c7b.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . 'úIDATx^íÔ}EYÆ“å%D´¼$’f’ F(„Z€Rh¦â• 7³å"…Z¶DDA‘â¢`ˆ\\Q3ƒ -Q1DS5‹ĞÔÈ´i=ûÌüÙçp¾ïœó}û\\fÎó®uüÏÙ{ö;ÏÌ÷ì™wŞKÀbŒ€(PˆVÓ#€	Ë“Àb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(ÖL†*>xXú¼ø_`Gÿ3“Çû!F LXd¼p<°Ej6“”¾”«!üF§wcF rLXp¼?pğğ1›¼Â6c^ëËŒ€' . "\0" . 'LXLƒø+ÀÇ€‡®ĞÜ7' . "\0" . '"µ¤k>áw:y¼1K‚€	kİw.îÓjê³À¯÷ˆ*ÜÚû-~È$u	„=Öıx7`–Öº;œ
+Ü­ÕÌÑŞl<8*ıvıÛbŒÀ˜˜°Æªÿ²(ÜN' . "\0" . 'k}ÿ#`ç®Üd|)ğ¶ôûANYÓã}“XRLX|üYà½ÀÓZ·ş{ïßáêÑÍ5¤%ó¡Éj4X¾Âô!`ÂšhBÄ‡' . "\0" . '—' . "\0" . 'iİöe`77MÔ”/6F`bLXcCERÔºåÀ3!|wìf|¡0kFÀ„5tQÛ?mµÌr:ğ‡~2V¾¨râyÀ¯_îÜá¹½NÇ“§·AØ¶r ¦Ú=ÖHxãáÀqÀO¥Kÿ8Â‰#oõK€@<1‰¤å‡€|ğ~¾õÃg!üú' . "\0" . '3•.š°V„5ÊUáÀŞ­K4ŸáƒS7ZQó`R_ºoBøÅÂ:º0êš°†EÜ¸øÍÖÏßê9}†Ï/ÌèY‘9"	øp÷¤Ä÷¼(¢A«ñLY×+ <qŠıhÖ]†/*¼Fa6
+·É"’z
+„[Šm+?&Q\'Á’²Q	áúŞWÍÊûqÀ9€HKò5CbH»Öc½ìòËÏ„5æ(»Ì„Õ‡JÜĞ2_1Yôomµ´T@|°çnŠtşĞvn£Öïw' . "\0" . '[B¸qehw˜o¦ß' . "\0" . 'a˜½«zd»è 	kŠñùÀÙ­%¾~yS2°Ç.Àv% õb–h%åßaŸÑ=‹Ú2f¢ÛÂÍ£ïñƒ˜°Dúbüô…¶rYë‚¥*šíŞ÷ït9hw.<;}£äŠò³Ó–îÁü Ùª./c¼xBjGÆ[¬3êÌ’VcĞ¤ËI°Ë	ô÷ |rFcàÇÌ¾íŞô>ñv@.’ ¤­a|$ğÊ´òz3ğéÉıï¢^~¤¶pÒÌº]Ñƒ–°í:áÙıNkE#í®h%İŞî}Bë`%¾xK‚é»îÛ-dñ@d\'9ÂtÛşr´¶Ä„7dGÈv…v€ @fKuô’zw>„çÜÙÍ(£yNÀ8…PÜ-…vé‘>)\\ãüZfÂjç¦ÒéÏf¾·F}ÛB#Ğ¤Ò‹èçZjîáï{ÿî#³› lŞ}w|RØ¦KJXQ¡z£æÕ•sSu1›¦ÚFcGzCrÊÜ¸ÂJ)©4‰ïöør£«JT¡eˆÍ[À)¬®ò“}R¸Ş)²¬„¥ØÀ#xòÙ‚JoY
+Æ/îUÉQsÓ!ªİaØ÷ƒ„ÕŞîé·k?OFpmÕ²|‚J²MI|R¸^`—°¢ÒÃÈ¸~ÏŞ¾ÎZ/¾¿‚’Gø“€4‡=à£WYñ€(¸"·•vZëÜö{!ÈoJâ“Âõ»Œ„¥Å)ë§B*xe`°Ì!.OôQ|İ(py•çÍO üôh•ãAÀ[G\\\'§Îv…0E\'aŸ¯Õ¯X2ÂŠ›õâ¾ø™‹Bnïe™	Q…cµzÒ*JÕq¦AvĞT©#¿L÷ëÚK!üöhµ£üì´Z“èT¸íª„ŒJ#Ÿ«ä5óIáèñ2aµˆï^”¾ø<y1[¦‚ÀšVPZéèäNN»ú|¦ŸH&­:Ô·ÔÊIö.îåÒr8™f(>)\\/ØK´ÂŠ*¯7uNÄ÷tçµZïôiß?‚ÔobÂjo/‡ ÕİœÅ\'…ë€e",¥8N)k›ĞŠíÖœïA­›°ÚÛÁƒ!äks¾xeÏA¹EU|dÊ÷è%!¬¦€ÄçZ£³3„O7ZsUxµÂ¶ß+„ÍÃãe)¹Ÿşq„}ç¯S9,a} UGğãv-gˆæ¥é"Ôºk·ƒaÉ…&§£ù$„vVÛyv1Ï]ÂŠOGÖyP¶ƒğébFh¦ŠÆmÒiÜV€<ÀÇ9Å“‘\\iX.ƒpÕtÕÄ†Õw:¸ ÛÁ†°DP—púUÚ)@¢æ‚\\Jî1â³Ò5ù¤öš”¾iM}^ÂjÛ1>' . "\0" . 'áw×„T•75¹ëŸš>*e6ÊË[n™ ´:£Òu—ÀKXÍiÜ7’³h:\\„í`CX*\'%òÿ»çú¢,¢l³ò_|	+”é~É«Éè÷•ˆf’d†]öĞ¶*\'¬¸ĞN”öX‘hVQò_ÒGyÀò©é°	2g‚ºË–P+“¼…’Ï*_ß·íºÂ£¦ş—4Ñ¢ŠWˆP$ÛBøç‰nßpqCVù imMvWí„%ïem	%S»XÔ‘Ÿh%çI[¸8~ö+¨Qö%à»‚Q‡Hü"IêöÕòl*`‘C€„pÆÚ?SÂR}Eeaü(ú`Ø÷íïtÍ£Åëª Ëšãv+&¬¨J»·–Ş
+Á‘—ûH”]$¯¢t„¾Z‹¼¿/”:øc”quA%Ê;>Ÿî~‚N¤Ùrİ–ì,úM"RÅ›EéVTà½ğ%o‡CÅÖ àª[B9ÈÊ$²¢	yûºİº¿¥fÂ’CĞø–ír0›UÔSIí>$yûa*]õÀ‡{Ÿ #h!Ògÿ‘Î)EL[ı¾Õ‚-:¥V)9ÉU²_V!ã0?5+%¬ø<àÜ«–ŸJ“Ë,ÍíNŸÜòTUŸ­{ıš} ?ñÖT¾L+©.ö*jHQ[
+m/$­$|ù¾øö^‘.V/£tYëïQ¹·ş³5?exw' . "\0" . 'şpVHXQFd…àèXr
+ùäT"ñÀş€VÙ¢Ú«(%¨«Dúê/‡prÇ¢Nä.Yàğ«¾”Ì[Aø—Jhªİ¨‘°ä9ü„šŒ}+¿bsÜ809*[ê0‘­áË€rÓ5Ù-¯Ë:W¥âÛ ¨øBA_äŠ3gCÈÁìrN:0Èn³Éx%¸æÑıxQ¯:S#/„ğîyhQÚ3+#¬¨´12¬ç7ìqş¤´A¹SßøÇ€N¸òø4ºr‘a!²šá=
+œ˜:¢ÙõTâk€c’r\'B8|A](µj#,¶ä' . "\0" . 'W­8R½&ÊqO+ gÏHæ«ùHu5‘J#¬¶ã¥0hŞ£Ù9ìê0¹¬VWXuØN”£®BÆ$ÑÙŠ«1dŞ”r©ûGCÈo°1á˜åeÑ\\§Cò%Òq½rsCPßI‰èd«‘Ãá$ÆÚ?Ğêå\' üÖ,{İÍ³†ŞKpgh÷¾/7Öíä•n@M„¥l”/NıU"¸M!¨|×‚H³‚:>y—+tD¹åÇ&É—FE_¯„ğõqnºë5±mÛÓÏ‡)E(d§ÑwAØJpg•¨±ÍÕz¾<~‚k›Áº«&ÂRºÛ\\åı²AsíètrgT,–ÈBuÛ«›ÕZW=Ôë |kıjD%®ûxËõA†é­Ë=Jg{\'\\’¯U	îw!,ùÂÉoN²\'„Ö?Öu·P+a=‚Naæ(Q¹ÃT’¼]Às%tª%’:‚VTIüÕs"÷IŠ¬‹åÁ<Yg›Ìòf¿{ºOÂòÔ/À¡İÓx,ğÊôÍ±^=ËwuM„¥ã|ÕKáóÎ(§F…^È_jŒª.HÏÓmm:‹‰÷OEBó²VnÛÔáDÿ"½4ÌrÎ±yîÎĞGX{¦—”¾\\%˜{>3yŸZ	a5Éæ4Qs­¹{AÖŒ¤qVÕ1õ³Z^Ø«=[66EÚk55¥-Q)C”
+æqIáóDŸ™(S~Lób×»D)dò\\ş­*¨¬^´’[ ¨†¢ej!,yµËYRòmíRNS' . "\0" . 'M	õµVw«=O›ZMA¤5E‰çÏn= BI”}o°òó!(ğ½‰r¿‘«†Dn8*újYZKÆvİ%W@›À$*6OÏ^Íávà=½šz³Ú¦ö9%
+‡×@PiöÊ¤Ïø®?|ù5í5İb¨]CUÎ,Wóy½ü,•ÖK€SSÓ1÷´Ç<* xµS?mÇ”%"‡	M[¡Ô~ÔªJ««,**[I¥ßŸÌ*Š;ÅªÍÓ‚/Ê3_ú¿XºÃ®––ü›^‘`9
+Âk»ƒhXK}‹íäW£b­§Í\'S”½JD)û•Dö*Ù­d¿²,$ñ…½—F.‚ ;¨ej!¬SH‹º9ƒ@Ò([T6fë™Jİ«e’œ“D*+ƒN%ªj,÷Z¨‚×&õn„ â–Ê	«¬ï	ä	=e‰"­döX»÷yW*6~I"Ñ|:ö½¡¥Ù±,4Í	³N´¸/¹Ù=-C¨e…¥|Ó
+}‘<‚ìKK"Í„×ÖOÅ%$Ê…µì´@”cïöIÕ]!(*ÁR\'aEÅäåŠ¾w@X¨²DÓŸu±’¤ÇíAv4K1ô…á„bTŸ±¢¬°¢JU]‘p+¨0e#İWÌ@^
+AÅ\',E!•ì´¤²|ôö*Jı*[aı>ğW	³!´%gå¬Õä­—‘?¡¼¾v3Iº™Y+íçE n›¶õúµ OıÙg„uTÊ„ ôTKOY:+—¸s*›µ
+–ŞÂ*ïx¥İk2åÊğ‡Tª´ëv«Â’‹|Y$/ ¼XKC\'_«œ}AU„·‡ “AK±ÄöI÷ÎrıÅb{4Åk ,Ù¯dÇ’h•Ñ.M?ÌæØf“¥òŸZÉÿnI¥Î;È™5ÇnùÑŠßÖKhÇ…‚âs2J£ÓB ÂÒ	aÎŞ©úƒkÌÈ¹èó"*…î•½JÆhE%/ö9¥ÑYt¼JÓ/*(ş€¤õ§ hÛo@ pÂjÒËK"ÿ£{@Ğ+“¨Duò«ÊiUVş:&ú«²âº•Ó?Wá¾‚rş[*#,ešÔŞ_òU¿\\ßG½T´²Êd¥' . "\0" . 'ß@P>-KUD­š7N]rª™!c[ú
+K%±G(Q	ö§V5‰²i(5Íæ­~Ù±°®Anõ&^Ü«Vİˆ²OœWmW×Ø±Ò	«}B8Ã<XkD{ìÛâS…\\h!ß¹àÅAÇî /Š@S8÷é§·APM' . "\0" . 'KÒ	«]ÚK%½G˜mZ…tT¥j¥[ÎY(ÕõM‰İ
+KNWèÌMí¨:•ÚşK®ãCç¦Ñ¢=¸tÂÚ$ÅæÀçƒ!äÊÏ‹†õ}â.)	á#Zê' . "\0" . 'A¤üªîTÏR¨U´D/\'ÍgE,Üw±jkÎ
+\',_×ûƒnDù°7‡ğãùC;®Qö©“RyúöM*N±?„/Û’¯«¨ÓàìÒ°;„ÔĞ«®úPa)Mñ@ÎÒ°/„³ºhzí4."Z•Ë+ÄLº2¬ÿõôí–¾°
+éşéâê:{Í* ¬f•¥ÊË|JZ÷ÈÅÎï•cıMÀC[C®8À7¯…ğÃÙO?q1ˆª­ŠĞ’Ë <y1ôZ-j!,•zÒ*+.]Ğ’VQ^ê*' . "\0" . 'š«¤äY „m/†ğµÅ˜Öb~Dùa)ãhÎDºqY&é"W	a5«,U§Ù7Áu-	/ˆ4“P…1¨­ZŠ‡BPy*‹HDy¼Ëó]²e$µ´r)U' . "\0" . 'FÔéš2ä`°l¼Ô_¼oUmùNpE›
+¦^ç]ˆ:é~ijÖÂ-|+Za5«,y?\'õïrƒ[¯Î§ÖÊ6±agö²)ô‰t<ÂÍ3TÆ*
+&9ã¹Iå‹!<£(õ§¨lm„µ5ĞÎ^°#„ìˆ7EÛMG•ÙÒŠj¿¬V@Èéœg¤SQ6Ùœ2è? äÒmåu¥c+#¬f•u	óš_a1[¡¹x·´Œ?¦çğ·Ad@UVÔSêÌ$1t—ï)Qi’rÂGA¸nù0¸kk$¬vQ
+õøÑr¡Ê)y¤|F+WUÃœ€t1Ó)Á^u³Q;…êHÎ„seUİëQ«°®P¨RçÏƒ ›À$>xğÜÆ•T^ê9õÍí&ëF ÚKùİÈõrâÆº»=¢wµVÛùN1Y[v[9ªâó+’§z;HY)‹Î^lÇÕ¥ó…t>nÜ”ì Z­o
+!×ß,¤İ«Y)a5«,ße„ïxI•¯H«ª-ZÃ¡ØÅ·ölUAÁ«#Ğ}q……„œuĞíUš¨™°şò¾ÔwŠ‚¢½F‰"(»TV…¶(XUÕzt
+h1"uÒ,×ÉŞrıÍŸQVS5–úv=ÓµœáÉ‡\'nüYÏ#åVÏ¢åúa.˜¼MßaÆA q<Ş¿w€2qscµ×TLX³¨PÔI”ØOv' . "\0" . '¹Œ)Q%Ãïİ·ATğò8àõôÿ#`f„@í„¥`hEgÂ3]GÜ*-Å·‡¿I^êjÓbŒÀŒ¨œ°šU–òbŸœpU
+—SÌ¡J)İÚwTÓ×÷2\' GĞ,JYs Ù«,FÀÌ	e ,%ö“»A.ŸÔ†ZÛÄÒG®
+Û÷n]  å£!h[h1F`Î,a5«¬s€çOˆõ»{Ù@íû2!n¾ÜLe!,­²Îtâ§>+FKŸœV¹°ìSª	§œê#`%!¬•oêÿeòR
+•€WæOÙº,FÀ,ÿm©Í¯…p%' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:25:24 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dba6f424c7b.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 72, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(72): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:25:38 --> file_put_contents(ttd_petugas/64dba702dc3a0.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dba702dc3a0.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 72, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(72): file_put_contents('ttd_petugas/64dba702dc3a0.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . 'úIDATx^íÔ}EYÆ“å%D´¼$’f’ F(„Z€Rh¦â• 7³å"…Z¶DDA‘â¢`ˆ\\Q3ƒ -Q1DS5‹ĞÔÈ´i=ûÌüÙçp¾ïœó}û\\fÎó®uüÏÙ{ö;ÏÌ÷ì™wŞKÀbŒ€(PˆVÓ#€	Ë“Àb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(ÖL†*>xXú¼ø_`Gÿ3“Çû!F LXd¼p<°Ej6“”¾”«!üF§wcF rLXp¼?pğğ1›¼Â6c^ëËŒ€' . "\0" . 'LXLƒø+ÀÇ€‡®ĞÜ7' . "\0" . '"µ¤k>áw:y¼1K‚€	kİw.îÓjê³À¯÷ˆ*ÜÚû-~È$u	„=Öıx7`–Öº;œ
+Ü­ÕÌÑŞl<8*ıvıÛbŒÀ˜˜°Æªÿ²(ÜN' . "\0" . 'k}ÿ#`ç®Üd|)ğ¶ôûANYÓã}“XRLX|üYà½ÀÓZ·ş{ïßáêÑÍ5¤%ó¡Éj4X¾Âô!`ÂšhBÄ‡' . "\0" . '—' . "\0" . 'iİöe`77MÔ”/6F`bLXcCERÔºåÀ3!|wìf|¡0kFÀ„5tQÛ?mµÌr:ğ‡~2V¾¨râyÀ¯_îÜá¹½NÇ“§·AØ¶r ¦Ú=ÖHxãáÀqÀO¥Kÿ8Â‰#oõK€@<1‰¤å‡€|ğ~¾õÃg!üú' . "\0" . '3•.š°V„5ÊUáÀŞ­K4ŸáƒS7ZQó`R_ºoBøÅÂ:º0êš°†EÜ¸øÍÖÏßê9}†Ï/ÌèY‘9"	øp÷¤Ä÷¼(¢A«ñLY×+ <qŠıhÖ]†/*¼Fa6
+·É"’z
+„[Šm+?&Q\'Á’²Q	áúŞWÍÊûqÀ9€HKò5CbH»Öc½ìòËÏ„5æ(»Ì„Õ‡JÜĞ2_1Yôomµ´T@|°çnŠtşĞvn£Öïw' . "\0" . '[B¸qehw˜o¦ß' . "\0" . 'a˜½«zd»è 	kŠñùÀÙ­%¾~yS2°Ç.Àv% õb–h%åßaŸÑ=‹Ú2f¢ÛÂÍ£ïñƒ˜°Dúbüô…¶rYë‚¥*šíŞ÷ït9hw.<;}£äŠò³Ó–îÁü Ùª./c¼xBjGÆ[¬3êÌ’VcĞ¤ËI°Ë	ô÷ |rFcàÇÌ¾íŞô>ñv@.’ ¤­a|$ğÊ´òz3ğéÉıï¢^~¤¶pÒÌº]Ñƒ–°í:áÙıNkE#í®h%İŞî}Bë`%¾xK‚é»îÛ-dñ@d\'9ÂtÛşr´¶Ä„7dGÈv…v€ @fKuô’zw>„çÜÙÍ(£yNÀ8…PÜ-…vé‘>)\\ãüZfÂjç¦ÒéÏf¾·F}ÛB#Ğ¤Ò‹èçZjîáï{ÿî#³› lŞ}w|RØ¦KJXQ¡z£æÕ•sSu1›¦ÚFcGzCrÊÜ¸ÂJ)©4‰ïöør£«JT¡eˆÍ[À)¬®ò“}R¸Ş)²¬„¥ØÀ#xòÙ‚JoY
+Æ/îUÉQsÓ!ªİaØ÷ƒ„ÕŞîé·k?OFpmÕ²|‚J²MI|R¸^`—°¢ÒÃÈ¸~ÏŞ¾ÎZ/¾¿‚’Gø“€4‡=à£WYñ€(¸"·•vZëÜö{!ÈoJâ“Âõ»Œ„¥Å)ë§B*xe`°Ì!.OôQ|İ(py•çÍO üôh•ãAÀ[G\\\'§Îv…0E\'aŸ¯Õ¯X2ÂŠ›õâ¾ø™‹Bnïe™	Q…cµzÒ*JÕq¦AvĞT©#¿L÷ëÚK!üöhµ£üì´Z“èT¸íª„ŒJ#Ÿ«ä5óIáèñ2aµˆï^”¾ø<y1[¦‚ÀšVPZéèäNN»ú|¦ŸH&­:Ô·ÔÊIö.îåÒr8™f(>)\\/ØK´ÂŠ*¯7uNÄ÷tçµZïôiß?‚ÔobÂjo/‡ ÕİœÅ\'…ë€e",¥8N)k›ĞŠíÖœïA­›°ÚÛÁƒ!äks¾xeÏA¹EU|dÊ÷è%!¬¦€ÄçZ£³3„O7ZsUxµÂ¶ß+„ÍÃãe)¹Ÿşq„}ç¯S9,a} UGğãv-gˆæ¥é"Ôºk·ƒaÉ…&§£ù$„vVÛyv1Ï]ÂŠOGÖyP¶ƒğébFh¦ŠÆmÒiÜV€<ÀÇ9Å“‘\\iX.ƒpÕtÕÄ†Õw:¸ ÛÁ†°DP—púUÚ)@¢æ‚\\Jî1â³Ò5ù¤öš”¾iM}^ÂjÛ1>' . "\0" . 'áw×„T•75¹ëŸš>*e6ÊË[n™ ´:£Òu—ÀKXÍiÜ7’³h:\\„í`CX*\'%òÿ»çú¢,¢l³ò_|	+”é~É«Éè÷•ˆf’d†]öĞ¶*\'¬¸ĞN”öX‘hVQò_ÒGyÀò©é°	2g‚ºË–P+“¼…’Ï*_ß·íºÂ£¦ş—4Ñ¢ŠWˆP$ÛBøç‰nßpqCVù imMvWí„%ïem	%S»XÔ‘Ÿh%çI[¸8~ö+¨Qö%à»‚Q‡Hü"IêöÕòl*`‘C€„pÆÚ?SÂR}Eeaü(ú`Ø÷íïtÍ£Åëª Ëšãv+&¬¨J»·–Ş
+Á‘—ûH”]$¯¢t„¾Z‹¼¿/”:øc”quA%Ê;>Ÿî~‚N¤Ùrİ–ì,úM"RÅ›EéVTà½ğ%o‡CÅÖ àª[B9ÈÊ$²¢	yûºİº¿¥fÂ’CĞø–ír0›UÔSIí>$yûa*]õÀ‡{Ÿ #h!Ògÿ‘Î)EL[ı¾Õ‚-:¥V)9ÉU²_V!ã0?5+%¬ø<àÜ«–ŸJ“Ë,ÍíNŸÜòTUŸ­{ıš} ?ñÖT¾L+©.ö*jHQ[
+m/$­$|ù¾øö^‘.V/£tYëïQ¹·ş³5?exw' . "\0" . 'şpVHXQFd…àèXr
+ùäT"ñÀş€VÙ¢Ú«(%¨«Dúê/‡prÇ¢Nä.Yàğ«¾”Ì[Aø—Jhªİ¨‘°ä9ü„šŒ}+¿bsÜ809*[ê0‘­áË€rÓ5Ù-¯Ë:W¥âÛ ¨øBA_äŠ3gCÈÁìrN:0Èn³Éx%¸æÑıxQ¯:S#/„ğîyhQÚ3+#¬¨´12¬ç7ìqş¤´A¹SßøÇ€N¸òø4ºr‘a!²šá=
+œ˜:¢ÙõTâk€c’r\'B8|A](µj#,¶ä' . "\0" . 'W­8R½&ÊqO+ gÏHæ«ùHu5‘J#¬¶ã¥0hŞ£Ù9ìê0¹¬VWXuØN”£®BÆ$ÑÙŠ«1dŞ”r©ûGCÈo°1á˜åeÑ\\§Cò%Òq½rsCPßI‰èd«‘Ãá$ÆÚ?Ğêå\' üÖ,{İÍ³†ŞKpgh÷¾/7Öíä•n@M„¥l”/NıU"¸M!¨|×‚H³‚:>y—+tD¹åÇ&É—FE_¯„ğõqnºë5±mÛÓÏ‡)E(d§ÑwAØJpg•¨±ÍÕz¾<~‚k›Áº«&ÂRºÛ\\åı²AsíètrgT,–ÈBuÛ«›ÕZW=Ôë |kıjD%®ûxËõA†é­Ë=Jg{\'\\’¯U	îw!,ùÂÉoN²\'„Ö?Öu·P+a=‚Naæ(Q¹ÃT’¼]Às%tª%’:‚VTIüÕs"÷IŠ¬‹åÁ<Yg›Ìòf¿{ºOÂòÔ/À¡İÓx,ğÊôÍ±^=ËwuM„¥ã|ÕKáóÎ(§F…^È_jŒª.HÏÓmm:‹‰÷OEBó²VnÛÔáDÿ"½4ÌrÎ±yîÎĞGX{¦—”¾\\%˜{>3yŸZ	a5Éæ4Qs­¹{AÖŒ¤qVÕ1õ³Z^Ø«=[66EÚk55¥-Q)C”
+æqIáóDŸ™(S~Lób×»D)dò\\ş­*¨¬^´’[ ¨†¢ej!,yµËYRòmíRNS' . "\0" . 'M	õµVw«=O›ZMA¤5E‰çÏn= BI”}o°òó!(ğ½‰r¿‘«†Dn8*újYZKÆvİ%W@›À$*6OÏ^Íávà=½šz³Ú¦ö9%
+‡×@PiöÊ¤Ïø®?|ù5í5İb¨]CUÎ,Wóy½ü,•ÖK€SSÓ1÷´Ç<* xµS?mÇ”%"‡	M[¡Ô~ÔªJ««,**[I¥ßŸÌ*Š;ÅªÍÓ‚/Ê3_ú¿XºÃ®––ü›^‘`9
+Âk»ƒhXK}‹íäW£b­§Í\'S”½JD)û•Dö*Ù­d¿²,$ñ…½—F.‚ ;¨ej!¬SH‹º9ƒ@Ò([T6fë™Jİ«e’œ“D*+ƒN%ªj,÷Z¨‚×&õn„ â–Ê	«¬ï	ä	=e‰"­döX»÷yW*6~I"Ñ|:ö½¡¥Ù±,4Í	³N´¸/¹Ù=-C¨e…¥|Ó
+}‘<‚ìKK"Í„×ÖOÅ%$Ê…µì´@”cïöIÕ]!(*ÁR\'aEÅäåŠ¾w@X¨²DÓŸu±’¤ÇíAv4K1ô…á„bTŸ±¢¬°¢JU]‘p+¨0e#İWÌ@^
+AÅ\',E!•ì´¤²|ôö*Jı*[aı>ğW	³!´%gå¬Õä­—‘?¡¼¾v3Iº™Y+íçE n›¶õúµ OıÙg„uTÊ„ ôTKOY:+—¸s*›µ
+–ŞÂ*ïx¥İk2åÊğ‡Tª´ëv«Â’‹|Y$/ ¼XKC\'_«œ}AU„·‡ “AK±ÄöI÷ÎrıÅb{4Åk ,Ù¯dÇ’h•Ñ.M?ÌæØf“¥òŸZÉÿnI¥Î;È™5ÇnùÑŠßÖKhÇ…‚âs2J£ÓB ÂÒ	aÎŞ©úƒkÌÈ¹èó"*…î•½JÆhE%/ö9¥ÑYt¼JÓ/*(ş€¤õ§ hÛo@ pÂjÒËK"ÿ£{@Ğ+“¨Duò«ÊiUVş:&ú«²âº•Ó?Wá¾‚rş[*#,ešÔŞ_òU¿\\ßG½T´²Êd¥' . "\0" . 'ß@P>-KUD­š7N]rª™!c[ú
+K%±G(Q	ö§V5‰²i(5Íæ­~Ù±°®Anõ&^Ü«Vİˆ²OœWmW×Ø±Ò	«}B8Ã<XkD{ìÛâS…\\h!ß¹àÅAÇî /Š@S8÷é§·APM' . "\0" . 'KÒ	«]ÚK%½G˜mZ…tT¥j¥[ÎY(ÕõM‰İ
+KNWèÌMí¨:•ÚşK®ãCç¦Ñ¢=¸tÂÚ$ÅæÀçƒ!äÊÏ‹†õ}â.)	á#Zê' . "\0" . 'A¤üªîTÏR¨U´D/\'ÍgE,Üw±jkÎ
+\',_×ûƒnDù°7‡ğãùC;®Qö©“RyúöM*N±?„/Û’¯«¨ÓàìÒ°;„ÔĞ«®úPa)Mñ@ÎÒ°/„³ºhzí4."Z•Ë+ÄLº2¬ÿõôí–¾°
+éşéâê:{Í* ¬f•¥ÊË|JZ÷ÈÅÎï•cıMÀC[C®8À7¯…ğÃÙO?q1ˆª­ŠĞ’Ë <y1ôZ-j!,•zÒ*+.]Ğ’VQ^ê*' . "\0" . 'š«¤äY „m/†ğµÅ˜Öb~Dùa)ãhÎDºqY&é"W	a5«,U§Ù7Áu-	/ˆ4“P…1¨­ZŠ‡BPy*‹HDy¼Ëó]²e$µ´r)U' . "\0" . 'FÔéš2ä`°l¼Ô_¼oUmùNpE›
+¦^ç]ˆ:é~ijÖÂ-|+Za5«,y?\'õïrƒ[¯Î§ÖÊ6±agö²)ô‰t<ÂÍ3TÆ*
+&9ã¹Iå‹!<£(õ§¨lm„µ5ĞÎ^°#„ìˆ7EÛMG•ÙÒŠj¿¬V@Èéœg¤SQ6Ùœ2è? äÒmåu¥c+#¬f•u	óš_a1[¡¹x·´Œ?¦çğ·Ad@UVÔSêÌ$1t—ï)Qi’rÂGA¸nù0¸kk$¬vQ
+õøÑr¡Ê)y¤|F+WUÃœ€t1Ó)Á^u³Q;…êHÎ„seUİëQ«°®P¨RçÏƒ ›À$>xğÜÆ•T^ê9õÍí&ëF ÚKùİÈõrâÆº»=¢wµVÛùN1Y[v[9ªâó+’§z;HY)‹Î^lÇÕ¥ó…t>nÜ”ì Z­o
+!×ß,¤İ«Y)a5«,ße„ïxI•¯H«ª-ZÃ¡ØÅ·ölUAÁ«#Ğ}q……„œuĞíUš¨™°şò¾ÔwŠ‚¢½F‰"(»TV…¶(XUÕzt
+h1"uÒ,×ÉŞrıÍŸQVS5–úv=ÓµœáÉ‡\'nüYÏ#åVÏ¢åúa.˜¼MßaÆA q<Ş¿w€2qscµ×TLX³¨PÔI”ØOv' . "\0" . '¹Œ)Q%Ãïİ·ATğò8àõôÿ#`f„@í„¥`hEgÂ3]GÜ*-Å·‡¿I^êjÓbŒÀŒ¨œ°šU–òbŸœpU
+—SÌ¡J)İÚwTÓ×÷2\' GĞ,JYs Ù«,FÀÌ	e ,%ö“»A.ŸÔ†ZÛÄÒG®
+Û÷n]  å£!h[h1F`Î,a5«¬s€çOˆõ»{Ù@íû2!n¾ÜLe!,­²Îtâ§>+FKŸœV¹°ìSª	§œê#`%!¬•oêÿeòR
+•€WæOÙº,FÀ,ÿm©Í¯…p%' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:25:38 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dba702dc3a0.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 72, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(72): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:28:39 --> file_put_contents(ttd_petugas/64dba7b7c0b77.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dba7b7c0b77.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 72, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(72): file_put_contents('ttd_petugas/64dba7b7c0b77.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . 'úIDATx^íÔ}EYÆ“å%D´¼$’f’ F(„Z€Rh¦â• 7³å"…Z¶DDA‘â¢`ˆ\\Q3ƒ -Q1DS5‹ĞÔÈ´i=ûÌüÙçp¾ïœó}û\\fÎó®uüÏÙ{ö;ÏÌ÷ì™wŞKÀbŒ€(PˆVÓ#€	Ë“Àb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(V1CeE€0ay#P&¬b†ÊŠ#`Âò0F LXÅ•5FÀ„å9`Œ@1˜°Š*+jŒ€	ËsÀb0a3TVÔ–ç€0Å `Â*f¨¬¨0&,Ï#`ŠAÀ„UÌPYQ#`LXFÀƒ€	«˜¡²¢FÀ˜°<Œ€(ÖL†*>xXú¼ø_`Gÿ3“Çû!F LXd¼p<°Ej6“”¾”«!üF§wcF rLXp¼?pğğ1›¼Â6c^ëËŒ€' . "\0" . 'LXLƒø+ÀÇ€‡®ĞÜ7' . "\0" . '"µ¤k>áw:y¼1K‚€	kİw.îÓjê³À¯÷ˆ*ÜÚû-~È$u	„=Öıx7`–Öº;œ
+Ü­ÕÌÑŞl<8*ıvıÛbŒÀ˜˜°Æªÿ²(ÜN' . "\0" . 'k}ÿ#`ç®Üd|)ğ¶ôûANYÓã}“XRLX|üYà½ÀÓZ·ş{ïßáêÑÍ5¤%ó¡Éj4X¾Âô!`ÂšhBÄ‡' . "\0" . '—' . "\0" . 'iİöe`77MÔ”/6F`bLXcCERÔºåÀ3!|wìf|¡0kFÀ„5tQÛ?mµÌr:ğ‡~2V¾¨râyÀ¯_îÜá¹½NÇ“§·AØ¶r ¦Ú=ÖHxãáÀqÀO¥Kÿ8Â‰#oõK€@<1‰¤å‡€|ğ~¾õÃg!üú' . "\0" . '3•.š°V„5ÊUáÀŞ­K4ŸáƒS7ZQó`R_ºoBøÅÂ:º0êš°†EÜ¸øÍÖÏßê9}†Ï/ÌèY‘9"	øp÷¤Ä÷¼(¢A«ñLY×+ <qŠıhÖ]†/*¼Fa6
+·É"’z
+„[Šm+?&Q\'Á’²Q	áúŞWÍÊûqÀ9€HKò5CbH»Öc½ìòËÏ„5æ(»Ì„Õ‡JÜĞ2_1Yôomµ´T@|°çnŠtşĞvn£Öïw' . "\0" . '[B¸qehw˜o¦ß' . "\0" . 'a˜½«zd»è 	kŠñùÀÙ­%¾~yS2°Ç.Àv% õb–h%åßaŸÑ=‹Ú2f¢ÛÂÍ£ïñƒ˜°Dúbüô…¶rYë‚¥*šíŞ÷ït9hw.<;}£äŠò³Ó–îÁü Ùª./c¼xBjGÆ[¬3êÌ’VcĞ¤ËI°Ë	ô÷ |rFcàÇÌ¾íŞô>ñv@.’ ¤­a|$ğÊ´òz3ğéÉıï¢^~¤¶pÒÌº]Ñƒ–°í:áÙıNkE#í®h%İŞî}Bë`%¾xK‚é»îÛ-dñ@d\'9ÂtÛşr´¶Ä„7dGÈv…v€ @fKuô’zw>„çÜÙÍ(£yNÀ8…PÜ-…vé‘>)\\ãüZfÂjç¦ÒéÏf¾·F}ÛB#Ğ¤Ò‹èçZjîáï{ÿî#³› lŞ}w|RØ¦KJXQ¡z£æÕ•sSu1›¦ÚFcGzCrÊÜ¸ÂJ)©4‰ïöør£«JT¡eˆÍ[À)¬®ò“}R¸Ş)²¬„¥ØÀ#xòÙ‚JoY
+Æ/îUÉQsÓ!ªİaØ÷ƒ„ÕŞîé·k?OFpmÕ²|‚J²MI|R¸^`—°¢ÒÃÈ¸~ÏŞ¾ÎZ/¾¿‚’Gø“€4‡=à£WYñ€(¸"·•vZëÜö{!ÈoJâ“Âõ»Œ„¥Å)ë§B*xe`°Ì!.OôQ|İ(py•çÍO üôh•ãAÀ[G\\\'§Îv…0E\'aŸ¯Õ¯X2ÂŠ›õâ¾ø™‹Bnïe™	Q…cµzÒ*JÕq¦AvĞT©#¿L÷ëÚK!üöhµ£üì´Z“èT¸íª„ŒJ#Ÿ«ä5óIáèñ2aµˆï^”¾ø<y1[¦‚ÀšVPZéèäNN»ú|¦ŸH&­:Ô·ÔÊIö.îåÒr8™f(>)\\/ØK´ÂŠ*¯7uNÄ÷tçµZïôiß?‚ÔobÂjo/‡ ÕİœÅ\'…ë€e",¥8N)k›ĞŠíÖœïA­›°ÚÛÁƒ!äks¾xeÏA¹EU|dÊ÷è%!¬¦€ÄçZ£³3„O7ZsUxµÂ¶ß+„ÍÃãe)¹Ÿşq„}ç¯S9,a} UGğãv-gˆæ¥é"Ôºk·ƒaÉ…&§£ù$„vVÛyv1Ï]ÂŠOGÖyP¶ƒğébFh¦ŠÆmÒiÜV€<ÀÇ9Å“‘\\iX.ƒpÕtÕÄ†Õw:¸ ÛÁ†°DP—púUÚ)@¢æ‚\\Jî1â³Ò5ù¤öš”¾iM}^ÂjÛ1>' . "\0" . 'áw×„T•75¹ëŸš>*e6ÊË[n™ ´:£Òu—ÀKXÍiÜ7’³h:\\„í`CX*\'%òÿ»çú¢,¢l³ò_|	+”é~É«Éè÷•ˆf’d†]öĞ¶*\'¬¸ĞN”öX‘hVQò_ÒGyÀò©é°	2g‚ºË–P+“¼…’Ï*_ß·íºÂ£¦ş—4Ñ¢ŠWˆP$ÛBøç‰nßpqCVù imMvWí„%ïem	%S»XÔ‘Ÿh%çI[¸8~ö+¨Qö%à»‚Q‡Hü"IêöÕòl*`‘C€„pÆÚ?SÂR}Eeaü(ú`Ø÷íïtÍ£Åëª Ëšãv+&¬¨J»·–Ş
+Á‘—ûH”]$¯¢t„¾Z‹¼¿/”:øc”quA%Ê;>Ÿî~‚N¤Ùrİ–ì,úM"RÅ›EéVTà½ğ%o‡CÅÖ àª[B9ÈÊ$²¢	yûºİº¿¥fÂ’CĞø–ír0›UÔSIí>$yûa*]õÀ‡{Ÿ #h!Ògÿ‘Î)EL[ı¾Õ‚-:¥V)9ÉU²_V!ã0?5+%¬ø<àÜ«–ŸJ“Ë,ÍíNŸÜòTUŸ­{ıš} ?ñÖT¾L+©.ö*jHQ[
+m/$­$|ù¾øö^‘.V/£tYëïQ¹·ş³5?exw' . "\0" . 'şpVHXQFd…àèXr
+ùäT"ñÀş€VÙ¢Ú«(%¨«Dúê/‡prÇ¢Nä.Yàğ«¾”Ì[Aø—Jhªİ¨‘°ä9ü„šŒ}+¿bsÜ809*[ê0‘­áË€rÓ5Ù-¯Ë:W¥âÛ ¨øBA_äŠ3gCÈÁìrN:0Èn³Éx%¸æÑıxQ¯:S#/„ğîyhQÚ3+#¬¨´12¬ç7ìqş¤´A¹SßøÇ€N¸òø4ºr‘a!²šá=
+œ˜:¢ÙõTâk€c’r\'B8|A](µj#,¶ä' . "\0" . 'W­8R½&ÊqO+ gÏHæ«ùHu5‘J#¬¶ã¥0hŞ£Ù9ìê0¹¬VWXuØN”£®BÆ$ÑÙŠ«1dŞ”r©ûGCÈo°1á˜åeÑ\\§Cò%Òq½rsCPßI‰èd«‘Ãá$ÆÚ?Ğêå\' üÖ,{İÍ³†ŞKpgh÷¾/7Öíä•n@M„¥l”/NıU"¸M!¨|×‚H³‚:>y—+tD¹åÇ&É—FE_¯„ğõqnºë5±mÛÓÏ‡)E(d§ÑwAØJpg•¨±ÍÕz¾<~‚k›Áº«&ÂRºÛ\\åı²AsíètrgT,–ÈBuÛ«›ÕZW=Ôë |kıjD%®ûxËõA†é­Ë=Jg{\'\\’¯U	îw!,ùÂÉoN²\'„Ö?Öu·P+a=‚Naæ(Q¹ÃT’¼]Às%tª%’:‚VTIüÕs"÷IŠ¬‹åÁ<Yg›Ìòf¿{ºOÂòÔ/À¡İÓx,ğÊôÍ±^=ËwuM„¥ã|ÕKáóÎ(§F…^È_jŒª.HÏÓmm:‹‰÷OEBó²VnÛÔáDÿ"½4ÌrÎ±yîÎĞGX{¦—”¾\\%˜{>3yŸZ	a5Éæ4Qs­¹{AÖŒ¤qVÕ1õ³Z^Ø«=[66EÚk55¥-Q)C”
+æqIáóDŸ™(S~Lób×»D)dò\\ş­*¨¬^´’[ ¨†¢ej!,yµËYRòmíRNS' . "\0" . 'M	õµVw«=O›ZMA¤5E‰çÏn= BI”}o°òó!(ğ½‰r¿‘«†Dn8*újYZKÆvİ%W@›À$*6OÏ^Íávà=½šz³Ú¦ö9%
+‡×@PiöÊ¤Ïø®?|ù5í5İb¨]CUÎ,Wóy½ü,•ÖK€SSÓ1÷´Ç<* xµS?mÇ”%"‡	M[¡Ô~ÔªJ««,**[I¥ßŸÌ*Š;ÅªÍÓ‚/Ê3_ú¿XºÃ®––ü›^‘`9
+Âk»ƒhXK}‹íäW£b­§Í\'S”½JD)û•Dö*Ù­d¿²,$ñ…½—F.‚ ;¨ej!¬SH‹º9ƒ@Ò([T6fë™Jİ«e’œ“D*+ƒN%ªj,÷Z¨‚×&õn„ â–Ê	«¬ï	ä	=e‰"­döX»÷yW*6~I"Ñ|:ö½¡¥Ù±,4Í	³N´¸/¹Ù=-C¨e…¥|Ó
+}‘<‚ìKK"Í„×ÖOÅ%$Ê…µì´@”cïöIÕ]!(*ÁR\'aEÅäåŠ¾w@X¨²DÓŸu±’¤ÇíAv4K1ô…á„bTŸ±¢¬°¢JU]‘p+¨0e#İWÌ@^
+AÅ\',E!•ì´¤²|ôö*Jı*[aı>ğW	³!´%gå¬Õä­—‘?¡¼¾v3Iº™Y+íçE n›¶õúµ OıÙg„uTÊ„ ôTKOY:+—¸s*›µ
+–ŞÂ*ïx¥İk2åÊğ‡Tª´ëv«Â’‹|Y$/ ¼XKC\'_«œ}AU„·‡ “AK±ÄöI÷ÎrıÅb{4Åk ,Ù¯dÇ’h•Ñ.M?ÌæØf“¥òŸZÉÿnI¥Î;È™5ÇnùÑŠßÖKhÇ…‚âs2J£ÓB ÂÒ	aÎŞ©úƒkÌÈ¹èó"*…î•½JÆhE%/ö9¥ÑYt¼JÓ/*(ş€¤õ§ hÛo@ pÂjÒËK"ÿ£{@Ğ+“¨Duò«ÊiUVş:&ú«²âº•Ó?Wá¾‚rş[*#,ešÔŞ_òU¿\\ßG½T´²Êd¥' . "\0" . 'ß@P>-KUD­š7N]rª™!c[ú
+K%±G(Q	ö§V5‰²i(5Íæ­~Ù±°®Anõ&^Ü«Vİˆ²OœWmW×Ø±Ò	«}B8Ã<XkD{ìÛâS…\\h!ß¹àÅAÇî /Š@S8÷é§·APM' . "\0" . 'KÒ	«]ÚK%½G˜mZ…tT¥j¥[ÎY(ÕõM‰İ
+KNWèÌMí¨:•ÚşK®ãCç¦Ñ¢=¸tÂÚ$ÅæÀçƒ!äÊÏ‹†õ}â.)	á#Zê' . "\0" . 'A¤üªîTÏR¨U´D/\'ÍgE,Üw±jkÎ
+\',_×ûƒnDù°7‡ğãùC;®Qö©“RyúöM*N±?„/Û’¯«¨ÓàìÒ°;„ÔĞ«®úPa)Mñ@ÎÒ°/„³ºhzí4."Z•Ë+ÄLº2¬ÿõôí–¾°
+éşéâê:{Í* ¬f•¥ÊË|JZ÷ÈÅÎï•cıMÀC[C®8À7¯…ğÃÙO?q1ˆª­ŠĞ’Ë <y1ôZ-j!,•zÒ*+.]Ğ’VQ^ê*' . "\0" . 'š«¤äY „m/†ğµÅ˜Öb~Dùa)ãhÎDºqY&é"W	a5«,U§Ù7Áu-	/ˆ4“P…1¨­ZŠ‡BPy*‹HDy¼Ëó]²e$µ´r)U' . "\0" . 'FÔéš2ä`°l¼Ô_¼oUmùNpE›
+¦^ç]ˆ:é~ijÖÂ-|+Za5«,y?\'õïrƒ[¯Î§ÖÊ6±agö²)ô‰t<ÂÍ3TÆ*
+&9ã¹Iå‹!<£(õ§¨lm„µ5ĞÎ^°#„ìˆ7EÛMG•ÙÒŠj¿¬V@Èéœg¤SQ6Ùœ2è? äÒmåu¥c+#¬f•u	óš_a1[¡¹x·´Œ?¦çğ·Ad@UVÔSêÌ$1t—ï)Qi’rÂGA¸nù0¸kk$¬vQ
+õøÑr¡Ê)y¤|F+WUÃœ€t1Ó)Á^u³Q;…êHÎ„seUİëQ«°®P¨RçÏƒ ›À$>xğÜÆ•T^ê9õÍí&ëF ÚKùİÈõrâÆº»=¢wµVÛùN1Y[v[9ªâó+’§z;HY)‹Î^lÇÕ¥ó…t>nÜ”ì Z­o
+!×ß,¤İ«Y)a5«,ße„ïxI•¯H«ª-ZÃ¡ØÅ·ölUAÁ«#Ğ}q……„œuĞíUš¨™°şò¾ÔwŠ‚¢½F‰"(»TV…¶(XUÕzt
+h1"uÒ,×ÉŞrıÍŸQVS5–úv=ÓµœáÉ‡\'nüYÏ#åVÏ¢åúa.˜¼MßaÆA q<Ş¿w€2qscµ×TLX³¨PÔI”ØOv' . "\0" . '¹Œ)Q%Ãïİ·ATğò8àõôÿ#`f„@í„¥`hEgÂ3]GÜ*-Å·‡¿I^êjÓbŒÀŒ¨œ°šU–òbŸœpU
+—SÌ¡J)İÚwTÓ×÷2\' GĞ,JYs Ù«,FÀÌ	e ,%ö“»A.ŸÔ†ZÛÄÒG®
+Û÷n]  å£!h[h1F`Î,a5«¬s€çOˆõ»{Ù@íû2!n¾ÜLe!,­²Îtâ§>+FKŸœV¹°ìSª	§œê#`%!¬•oêÿeòR
+•€WæOÙº,FÀ,ÿm©Í¯…p%' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:28:39 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dba7b7c0b77.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 72, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(72): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:31:45 --> file_put_contents(ttd_petugas/64dba8716bcf9.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dba8716bcf9.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 72, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(72): file_put_contents('ttd_petugas/64dba8716bcf9.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . '¤IDATx^í	´-Eu†¿%ÑÄ‘ A‚àD"DAç)
+ˆ€(2*(ƒJ$Š¨KAPÃ Š¢œ' . "\0" . 'IDŸ
+BPPQˆ1N8‘íúûT=úö;çŞsÏé>§º{ïµŞºïŞÛ]µë¯:ÿ­Úµ‡€‹#à8-A ´DOWÓpœ°|8@kpÂjÍTuUQ[xp' . "\0" . 'pGà›€ÅÑŞx,ğ\'àDàû®ï*>®¥pÂZ#¢VVÔfÀ¦À“»-£‹ßˆ‹?7‡BøŞ2Ş÷G[Œ€V‹\'¯]ªÛ[-€‡.“ Ææw33 \\3ÎşL;pÂjç¼µLkûğ´E”Ö®éGÀuñHx[|Vës}`@GÇG' . "\0" . 'w]bğÚu¼B:Z¶/WwNX¾6DÀîœ¼¨Ò‰êËÀ…À—€I-¢i½>xø€Ø(’Ù°wD€/‡pQƒô¦gŒ€ÖŒïOw¦Ğ¹ÑN•†}päø5Z¶.ğRàÅÀ#‡¼¡£âş~8NkşLŞ8aå=?-ÕÎî|Ø @·|ÛBøX³2ÙÇÜ£Ô—ôïü.hwçÒRœ°Z:qùªmk:†é«äwÀV³=š™nöV/aõKà`?ÎC×lNX¾6jDÀ´£ÒÎJ;,ÉÍƒ›Ápy,£)“½ëhà•—®¶ôcâ2 ÌäQ\'¬L&¢ıj˜|ªd³J·x²mš)Ø?Ö,á¬£á^Nn?öıVæºÁ‘šnu¨[A‰vTÚYi‡•‰˜¼æÏBÒd”ßÂ¯2QÔÕX\',_S"`Ÿ¡i-É~%›•lWŠ=1:™–w[?Ü2†¯d¨°«TBÀ	Ë—ÃØG£;AjC·€ºÔ­`Æb÷t|~II9™j·õRw8Íwêœ°ò›Ì5³í€SKJ^A»—‰mÜ½¤´lo;ÌöV³EÍYU\'¬9O@;»7eW¸$fWĞ.‚ğÔ–emà‚èA_‚;œf8¡NXNJŞ*™v#"«GE=¿lá7yë½˜v¦´6:"Ê ÏÒ“îpšÙ¤:ae6!ù«c/ù5ÉùRdµ"½ÇÑpQ‡Sİ‚îí§ãàØÜ3NXÍaÛÁ–ípà ÒÀ¶‡pZ÷:ÒáôJà)y¹ktıÅFä„Õ¯ùb´«Ù€ ğ—Kápª‹yÌ\'ù)ğ,_ïğÀ³šV¶S““b«ÙÏ‚ğÂœ4lN—"¥ŒòåK¹mìá¤æúõ–‡!à„åëb	ºhdŸdÒíUÀ±%o~5"§Y9Éz¢ÀI à\'¬	@ë×+]6²/w&màÀJo~ÂËmÉŸŸ\'¬ÉpëÉ[}1²/g:Méš•%u½øÖÿÊpêÒ0NXÜŞæûhdw¶L9¶T©gøÆµ2îÛşÜä8aM]‡ßì³‘}Üi-ªBOÊPq<„İÆ}ÛŸ›\'¬Épëğ[ndríSÀ6ñùOCxÖøïú““ à„5	j~Ç¾
+<>±cìuOœ}fpKXÈ¹¶®»oo!NX¾"J˜nÀWúAG=ÙëštSeªÔó])¾²®¼
+NX¾$"Åí×õ¥¢=rtØÏKùë¿aÃI[ò÷ÆCÀ	k<œzğÔ‚İÕO€ºCäbÓnª¾£|ZIN‚°KÊ\\‡è„5WøséÜ¶Œ^ÛRH˜7€ ãËPŠ‹	í®îı=ÃŠ¸:~5#à„U3 íkÎô¡»z°£*äûµo³Ô¸Èc/’—ü¸w¾9ìg‰Kó}9a5qæ=Ø1À>QÉ£×ö­™+=GõL¤÷.)p
+„æ¨P¯ºvÂêÕtWkºÕRI®Õâoás½†dÑÁ¯BV²8xéY­\'¬Y!]?EÚ”¯éfëª’³Óz~
+™âU,6É» ¤éüÔêYÏNX=›ğÛ‡k{ïß+ûºnê-#nÏŒieşÁÉjş«Ã	kşs0LéQ—Ê[í	á=sP$ã.íAÀaƒ’_äROÈXñN«æ„Õéé5¸>WJõ»‘û\\•±²×Ê_ÿW¥Ÿ*LéìşdZÍóƒá„•ç¼4¨•û\\·8şiWUõXÿwà7481Şô8aRwqŸ«ás9òø§İ§ˆê¼î¬vÄ	«İó·LíİçjUÀì@;+SM¢,¢C8z™' . "\0" . 'ûã#à„Õ0Àù4ï>WçÂtì;P"¾²øñ/ŸE»Š&NXON}ª>W?' . "\0" . 'ÒÕ|Ï}®ìÀ‘|Uopg?şÕ·êšhÉ	«	T³kÓN' . "\0" . 'T¦J¢Ø·u (#CÏ¤ØU½£â' . "\0" . '*<[hKV‚VK&jr5Ÿ+å¹JWô\'@ØuòöÚúæĞ]ÕEÀ~^Å¹=sê„Õ¹šPS;xQ|ù‡ÀÚıò¹¹«:Â[\'Õ_›NXs~6İÚf±ÌººSuâ!¬˜Mß9ôâ»ªf¡Nœ°êD3«¶LG@ÕÎK†öã ì•Š)ã»ªÆ sÃNXs€æº7ylÛ¿e@\\á×Íõ—KË¾«Êe&šĞÃ	«	TçŞ¦iWue©Èç¶><wµUÀwUÂ›IãNX™LD½jØ€ìW’!l^oû9µfw' . "\0" . 'TbÛŠV~˜Ó4Õ¤‹VM@æÓŒéƒ{ZÔçOÀÃ \\—~ujb
+­‘ëFYü°N˜3jË	+£É˜^» rºOlë0oš¾İÜZ°¿ä’°[E³«;­  e—"à„Õ©Iµã€×Ä!‰¸A¼S-À·÷/J;És<WU‡¦yÄPœ°:3Çö8à2 Íéæ.ìÌğ°u€' . "\0" . 'O©Œé£ƒ*6Ş¹;s=z$NX˜eSÕ›kK™Î„ğ’NÂŸì@à€JP…)XY.=AÀ	«mÇÉ)TÁÍ
+¿é@A	ÓíæÉÀƒKÓ¤#îQV×»XŒÂ	«QxgÑxásõ}`õØ[<Ú‹€íwÕ]â;AĞnÒ¥‡8aµzÒ$Õ|lÆ6hïŠñh§¨º	L¢İâ¾ÎhïØ\\ó:pÂªÅ¹µa‡Émáfà‘ôµ…b"İë—”ÿàø+üª…ƒr•kFÀ	«f@g×\\ñ×îJ»É–>?»şëê©ğ©RöO¹c¤±¨ño;BøF]=y;íGÀ	«•shw‹è”‰áıRFÑÈ^
+SñT×Nê @¶8í°\\•8aµr1Ø‰À.Qu9ˆ®á·íŠûTµg®òÒÔ	+¯ùCÛø\\|P;UmnÉ±É}ªÆ˜`dœ°Zµ<ì¾Àw}•
+á-í‚ûTµcòÖÒ	+ïù©hgßÜ¢]•vW™ÛyÜ§ªUK,se°2Ÿ ÛÕ³·¯ßÿx8ÕÌX
+ü€»””ü°ûTe<m«æ„•ñä,TÍ;—ªg^ªË¶Şü}^]ìáÿZ»+šNXYMÇ(eì£ƒP¬à}ò¼4yÙüse$*/öÏSÕŠÅ–µ’NXYOORÎŞ¼:~÷>)çU&ÚÛƒbB½jšâÿ>6·ÉİÖ–	”®Æ¢8ae¿@
+\'QÙ}ôU"Ÿ«oç¡¶ıM¬Ì£ø¿TYZªıo$°wCøcº¶]SŞ/¥;ëHÚ ÉæÃ	k2Üfø–½xìğk6aç#º²;¯yªîUzH©_dh?‚HËe%v¿˜&G©räáGàrà¶ÁmïJ‘RGè$
+¿zaévøFÚÑöRœ°²ŸvÓ‚U6QÉ.NšŸÊ¦õ¢ÅªyX6¨«ªôé1Hù†ùé7Ï§Øõ' . "\0" . 'eFÕ.hMàw\'‘Tù¦tZEÕ®Rí\\Ò¼lh7ûoÀ
+"ÂÎ‰VÖSºÀØ®Ğ›ûÏÏØn[ÆÃ£+©œÖä#ÖqYIJkª±n$(•*ÑZùQ¬M© òòî7m>V:aå²Ä†ê‘ƒ±½¸ùS2½M+*^]Z˜!b©I·¶
+ü&’Ó4¤t+ ×ı»{´K~Ğît©#á~ñ¥÷÷­M¡í„5îÏü¹ÂØ.;Ğb×36¶¯¼ù{Y©°…TÑ_îC€S!èÃÖb)ˆéCşé2aùqÌ­/û”p:;–]»ÂÏ\'ipğ}Øªò¾ò©J’Dı=f»8ª§šQ]şÂßM®ÏüŞtÂšöKôlª³c|è\'¦ùë¾ŒQvñæ¯Vb)](Ê@ÿ”ú¿«›Ë1?”°Fì’Š‚$Ú±ímhÒQßË7.İäŞA—' . "\0" . '­\'¬l§ÌôADòA
+qiPºpóW1ig{% 8Mù’©FÃ¤´ØÔšÜß\\yb7ÆEêiEè(*ù„7¸˜kÚ	«1h§iØ´]×_ò$kBøÉ4-~·7ö·ñVl@ÿ×òáÀrr"&Ù‘*ÿÂÍ`=i«C	ë&k,İ¢É\';cºÕı5„r¾ü¥›Èè	\'¬Œ&ãvUL%Ø‹\'ù"„§7£fî7ÅÎ@Æoe¨ñ_ùŞe«)W}š–Ó¨¡, ,]' . "\0" . '¤Òº‹ÀÛ€Í' . "\0" . '“´Öà®8a³ÜgşL±Ğ»UXK2®Ö¤I7Å%ƒÈHn"\'}Y-Ç©åÄ4aÉxŸìOg@Ğ¥È±S¢Ï\\úü²¾!­«šÖÒl›qÂš-ŞcôÖäq0—›?“#eyÇ$rÒ×¸¢Ÿjê–RªçG[ÓŸ€{' . "\0" . 'Ú‘jwöÍèI>n»åçô¾
+}ÈS•{.Ÿ_E¢;¬%Gâ_@¸÷Â±¥DÂHEJdmµ8ae7}ö‘RÑë ÈszJyó÷ËX±¦¡˜?SqWí’Ò)‘T9œg©±‰œD"\'mÊ1‹K½[÷ïIP>h"C}½¦y÷„¥Òn2$2ÚÂ»ÔöŠ¾sú±.î×•às\'¬º—ôÔí™v©Î”ö†YŞü™nOvy»dg‘xÙ~25:6 ›’¼É˜ş}‚Ò' . "\0" . 'Õ$«–¾ræ•üb@^ål¦`ùtlBh5©5‡fœ°æ' . "\0" . 'úè.ë<šòR½¨>¼‚\'”Â®]òïy|<¢èX7«õ¤Ğ“_*	6ìëCâ®L; \'Q;BİÄÉ¾¦Û¶rİÄÅÚ”;ÄUñ8*2Û‚²ÄN(UÂR“ãè}bƒ€°óàÿv!ğÔøó[ ¤Ø„}çõÚ¬X^£ÎV›ÇÁ+!èª~™brTåjDÿcjâ	bşŠLOŠä$‚Q-åM=®Ş:–Ê¶¢€^ıÿ¿¢ÏP•Œ1ıªù#Ø0Õ‹İªHZ$–şéÖ2İØ-6^Ë[õè6.DGÏ…°5˜şğ(ëƒD;ºõÁ¾ç(5<ÿ½qÇPÏsNXõàXS+ş:Æ…9nÓ¦ã—"õŸ[yC;)ey3æ¯8Ú‰””ÆF$µIÉ^2®2ÕçdJÁ¸rÈAÅ¯Ó„¬LªN]ï>l
+€N7›ºåL»²aƒc–O\\C	Kı^;¹	8¯¡_
+á	u4—vœ°r™‰Ba[ÿ¥4ùş5bËË¶¢x?hGHq´S,HI7k"*íÌ&]2+l¥BJú>hÕ)Ê±‰¸”ØğÉÑ¹µ<öe×¨uaºx@lX;PİJä¾ ÿ«ÎÉ¤³s@ä1 aIG’nàöØ£({.Ë¾óvàmnÓ‘EŞàú\'×Æ“¦~6‰Q\\v!í’dXÖ‡O¹°T/ñÚ®ÜFÕ»Š[;ÍUµ(Ç˜Ä5’°”K„XùCqÕ;ŒZsÂÊ`nWaai§";EJ=¢D~Iä* À{–~–|’ôWW!*Úyé÷ŠäŸTÔ¦ª¨0•Y¾L7)Pã½7’¸çw„çog$aÿ`•_ëœİª<8\'¬ñVÚŒZP(uF}®ìF»¥ë€‹¯GrúÖüÎzø³ìo$qi—ºÁª7Š‹™
+Lé”ÓÎíç–¶4ËOİ—ÖÔÖÙ€‰(ä]İ¤èöM»0]½k÷ôà2å`ë&û÷¶W"P—AË;e¥=Ş‚vØQ–²mÚeƒsÈ÷ßìô:a5ŠoQéD7Ge)ƒğ—Ë€ş*êˆ¥ïu”›v^äó#b’›€lT2ÈŠ•…`\\ ½\'Ã±ˆíSÀ-€|â× ‡E—Z0İà–ÜV³Å”NxS‹bÙ52í#»å£PAV­Ì94&†">ùUˆlè÷zæg&uâS¥6?f¯N¨ŒàÕNœìö¸ÍXŒÖİ	«±yí<aM‚œn0K»´"´v—:šj§$yS¦D­\\Ş1í²N+…ÕH1Å–Êk>%ğ;äéŞOqÂjtŞ—<ÊJ¡rKĞ‡WÇÁj(…ú0+>l”»Iœvd
+2–ûƒ<¼¥ƒÂ@¤[úZ—§û0=ËRá†Ò×6;›.5-&‡ĞS+ë:Ê+ÿ¼Ä	k)ı÷M"PÄÊoJaå? ÊÅ½?„O6Ùûäm›ŠchwT%2}?ìg"ãi\\,ÊªÊ	u‘¥ŸíâZ,&œ¾#ªãpÂjñÌ¶Xu“sßÀŞq“Æ"c¶
+•¾·{6Ÿ"µqy—&bÓ1HÎ­"kåÉª£èhGvh6Ì1Ô	«ÅŸúª^T5‘Uvˆrå…µ(-ò[ è†¯Ç² ¬{"±ò×åd!]ìÈ©ÄvéÈ«RZò<×ñ÷†|şXØ;ãµ4ïCP8U/ÅmX3vSm9¥}©fa8xs\\–D ˆÕFdégw]²‰¥kæC>k"6Ù‘ôo¤f—' . "\0" . 'å@æOCxÖÒCèŞNX3™SS(Í±Cª\'+ÜeWrt©ÆwhÒTaK"µDfeR+ı¿W¡UsÎ‚ğÂÚ kICNXN”É(­x/%Ò+\'S8…‚–?2ŸÜNº¯$4evUünjåd«›8e«¨³Èh"5•i“­Nß_Pò_K¾lJ¶\'\'İ!2”°ôÜw (GWoÄ	«‘©.rJ©òîë+‰îd›½‚lV.Y"PÜ€Š¼•¿–I­îÏHSN¶%+T)d’İJ—2º¼Hr„]²„±¥ê¼ÛÔd‘ĞímÀ+j¡…ƒ hAº´‚ÔD&kÆàãQ¤ÖôH¿aÃ¦;É¥}\'¬ÚfÂ”GûCÊU)ä>ä­ìÒ+ÚÃ€­ã[ıJ$·ù§éër*	•Qœ²PI»&Ä	kêù*<“•šøy•¦t›¤âr' . "\0" . 'tq–@ ÈşªÛÏD`‰Ì¶‰<’§»ª*éßZƒ¤‰á%}‚Ö	kâÙ6¥‘/Õk+Y;/wÊâ©‰\'îÔ_ì%¦4×òÑ“È¡x^ÂPC“âV„M¼&’UÙø)ïêw' . "\0" . 'GyÒ».‹F‡lÛÅøBõ¢<ı/o´»Œ÷Ö²&Ç´=—ã§jÔ%‘?R¿‚]š°ggÇFÏ†P­ŒTsù6ç„5ÖÜØ#•WÍ¿²ÈáswJçâ4„@q¡£©’!lŞPGÙ7ë„µè†‡;UìT
+Ù8' . "\0" . 'Â™ÙÏ°+ØLYkUDÒ+7†êä9a]Î¦\\PûÄl
+å’IJ5œ?ÿĞO‚¡Ø:€ÒI~' . "\0" . 'A7Ó½\'¬U¦İtM|T®M¿U¾õ“İñ³—Ÿ‘]{+¤GÒùÊ8‹î„µ“·°®Uı¸,ç{AP	&G`;~•a“üÂ´éuæ0†zºtÂÂä\'ÇÏjÆO•[WÊåIrqæŒ€i—ŸèWëk…í–)\'ù€ı€ò_,ªVÜñ«´œóšõî{Œ€éH˜òıß·¯1©=$¬"@Y9Ôw®Äo©lÕñÀ› (jŞÅÈ“Ñ]ÆwÉ:T¥»wÒ3Â²Mc€²ò •å`_ŠÓrq2DÀäÖŠò>‚’?öNzBX¦@Q¥}©6U"½Wx€rïÖ}l
+¢×\\É¦T ¢wÒqÂ*ìT‡DŸªÕK³«' . "\0" . 'eÕ~ÛÍ3~önÍ·tÀ¦Ğ…èHAµ*{\'%¬ÂN%•¼Ô•¦8‰œ=ß5(£DZ.@K0ıU´d;§·DñZÕì aÙ“¢?Õ£+H©2Í~ttqZ†€³„Hï=!¼§e¨EİVa§:x~™+b€òÅµ æ8sAÀt1”J{}Â¿ÌE9wÚÂZi§Rey\'ùÙ ”Fi‹ƒRÀ¸8-FÀNŠfá|Okñ`&V½Å„UØ©”›J¶*eÿL¢j4Úiîvª‰×…¿˜¦“ƒÌ’/Bxzv*Î@¡–V‘HO…Iu,‹WPÁ¢ñ.æ€m' . "\0" . '|3ö|5„rÉy(4—>[FXö¸¸«Jş(	4Òusòå¹ è:#`w”†[r¥êî´„°l½˜‡ê•RQÉ3… ÜNÕ»ÕÛ»ÛÍ±$˜F¾Ufê•dNXE©w"ËNUş‹¢b¤G' . "\0" . 'Çyå^­×Ö”’{ãÂf}ŒĞÈ”°LY>ˆêw-­ÒßÊ¼+LPöOG G˜NÉag*ÜÛ+ÉŒ°Lá3»Gw”L¢L
+ÊøùfrWpqzˆ€éTq`øî™–éÆC1ÏÊµş4ŸŒ®éÛäøx…˜L#òÇ’œáe}ChÎ„e¬1xE§¿ÂŠ¾MŠ×€m\\w)„\'ô©9–l;ğ€]!œÛ·Éğñ:‹#P„Ÿ©Äœäf*C×+™\'aÉ`¸c	mÙ¦>;ø™»(ôjú`—€É»Z|á.RqŠe´ÑŞGçIXê[»,İªÌûUí…Ñ5wf…€]¤º„@Ppod„ÕŒ} @Øç€-bƒ/é[õq\'¬—’7å4ÀÂ:BJê×|×ôà„•Á$¸
+Àø,p=ÂVã¿Ûş\'°Ú?‡>‚^!`;' . "\0" . 'ŠCşÏëÓğ°ú4Û>Ö `O.ŠYa£jì!8a•?èä€€­¤"ª7Aætƒ¢èà„Õ¬Ş¨#Ğ¦¬%Êª«Ï®R¯A¾Y½\'¬^L³²[ØM¥òukCHŞïİæÑ8au~Š}€İCÀ_»a×“û”i×	«{«ÙGÔyLL‡ù2Ê“ÕqÂêÅ4û »…€}Ø$é“ªµ8»5ÜÒhşÄ~ìâÎÌ$' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:31:45 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dba8716bcf9.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 72, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(72): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:35:46 --> file_put_contents(ttd_petugas/64dba962db9a0.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 73.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dba962db9a0.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 73, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(73): file_put_contents('ttd_petugas/64dba962db9a0.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . '¤IDATx^í	´-Eu†¿%ÑÄ‘ A‚àD"DAç)
+ˆ€(2*(ƒJ$Š¨KAPÃ Š¢œ' . "\0" . 'IDŸ
+BPPQˆ1N8‘íúûT=úö;çŞsÏé>§º{ïµŞºïŞÛ]µë¯:ÿ­Úµ‡€‹#à8-A ´DOWÓpœ°|8@kpÂjÍTuUQ[xp' . "\0" . 'pGà›€ÅÑŞx,ğ\'àDàû®ï*>®¥pÂZ#¢VVÔfÀ¦À“»-£‹ßˆ‹?7‡BøŞ2Ş÷G[Œ€V‹\'¯]ªÛ[-€‡.“ Ææw33 \\3ÎşL;pÂjç¼µLkûğ´E”Ö®éGÀuñHx[|Vës}`@GÇG' . "\0" . 'w]bğÚu¼B:Z¶/WwNX¾6DÀîœ¼¨Ò‰êËÀ…À—€I-¢i½>xø€Ø(’Ù°wD€/‡pQƒô¦gŒ€ÖŒïOw¦Ğ¹ÑN•†}päø5Z¶.ğRàÅÀ#‡¼¡£âş~8NkşLŞ8aå=?-ÕÎî|Ø @·|ÛBøX³2ÙÇÜ£Ô—ôïü.hwçÒRœ°Z:qùªmk:†é«äwÀV³=š™nöV/aõKà`?ÎC×lNX¾6jDÀ´£ÒÎJ;,ÉÍƒ›Ápy,£)“½ëhà•—®¶ôcâ2 ÌäQ\'¬L&¢ıj˜|ªd³J·x²mš)Ø?Ö,á¬£á^Nn?öıVæºÁ‘šnu¨[A‰vTÚYi‡•‰˜¼æÏBÒd”ßÂ¯2QÔÕX\',_S"`Ÿ¡i-É~%›•lWŠ=1:™–w[?Ü2†¯d¨°«TBÀ	Ë—ÃØG£;AjC·€ºÔ­`Æb÷t|~II9™j·õRw8Íwêœ°ò›Ì5³í€SKJ^A»—‰mÜ½¤´lo;ÌöV³EÍYU\'¬9O@;»7eW¸$fWĞ.‚ğÔ–emà‚èA_‚;œf8¡NXNJŞ*™v#"«GE=¿lá7yë½˜v¦´6:"Ê ÏÒ“îpšÙ¤:ae6!ù«c/ù5ÉùRdµ"½ÇÑpQ‡Sİ‚îí§ãàØÜ3NXÍaÛÁ–ípà ÒÀ¶‡pZ÷:ÒáôJà)y¹ktıÅFä„Õ¯ùb´«Ù€ ğ—Kápª‹yÌ\'ù)ğ,_ïğÀ³šV¶S““b«ÙÏ‚ğÂœ4lN—"¥ŒòåK¹mìá¤æúõ–‡!à„åëb	ºhdŸdÒíUÀ±%o~5"§Y9Éz¢ÀI à\'¬	@ë×+]6²/w&màÀJo~ÂËmÉŸŸ\'¬ÉpëÉ[}1²/g:Méš•%u½øÖÿÊpêÒ0NXÜŞæûhdw¶L9¶T©gøÆµ2îÛşÜä8aM]‡ßì³‘}Üi-ªBOÊPq<„İÆ}ÛŸ›\'¬Épëğ[ndríSÀ6ñùOCxÖøïú““ à„5	j~Ç¾
+<>±cìuOœ}fpKXÈ¹¶®»oo!NX¾"J˜nÀWúAG=ÙëštSeªÔó])¾²®¼
+NX¾$"Åí×õ¥¢=rtØÏKùë¿aÃI[ò÷ÆCÀ	k<œzğÔ‚İÕO€ºCäbÓnª¾£|ZIN‚°KÊ\\‡è„5WøséÜ¶Œ^ÛRH˜7€ ãËPŠ‹	í®îı=ÃŠ¸:~5#à„U3 íkÎô¡»z°£*äûµo³Ô¸Èc/’—ü¸w¾9ìg‰Kó}9a5qæ=Ø1À>QÉ£×ö­™+=GõL¤÷.)p
+„æ¨P¯ºvÂêÕtWkºÕRI®Õâoás½†dÑÁ¯BV²8xéY­\'¬Y!]?EÚ”¯éfëª’³Óz~
+™âU,6É» ¤éüÔêYÏNX=›ğÛ‡k{ïß+ûºnê-#nÏŒieşÁÉjş«Ã	kşs0LéQ—Ê[í	á=sP$ã.íAÀaƒ’_äROÈXñN«æ„Õéé5¸>WJõ»‘û\\•±²×Ê_ÿW¥Ÿ*LéìşdZÍóƒá„•ç¼4¨•û\\·8şiWUõXÿwà7481Şô8aRwqŸ«ás9òø§İ§ˆê¼î¬vÄ	«İó·LíİçjUÀì@;+SM¢,¢C8z™' . "\0" . 'ûã#à„Õ0Àù4ï>WçÂtì;P"¾²øñ/ŸE»Š&NXON}ª>W?' . "\0" . 'ÒÕ|Ï}®ìÀ‘|Uopg?şÕ·êšhÉ	«	T³kÓN' . "\0" . 'T¦J¢Ø·u (#CÏ¤ØU½£â' . "\0" . '*<[hKV‚VK&jr5Ÿ+å¹JWô\'@ØuòöÚúæĞ]ÕEÀ~^Å¹=sê„Õ¹šPS;xQ|ù‡ÀÚıò¹¹«:Â[\'Õ_›NXs~6İÚf±ÌººSuâ!¬˜Mß9ôâ»ªf¡Nœ°êD3«¶LG@ÕÎK†öã ì•Š)ã»ªÆ sÃNXs€æº7ylÛ¿e@\\á×Íõ—KË¾«Êe&šĞÃ	«	TçŞ¦iWue©Èç¶><wµUÀwUÂ›IãNX™LD½jØ€ìW’!l^oû9µfw' . "\0" . 'TbÛŠV~˜Ó4Õ¤‹VM@æÓŒéƒ{ZÔçOÀÃ \\—~ujb
+­‘ëFYü°N˜3jË	+£É˜^» rºOlë0oš¾İÜZ°¿ä’°[E³«;­  e—"à„Õ©Iµã€×Ä!‰¸A¼S-À·÷/J;És<WU‡¦yÄPœ°:3Çö8à2 Íéæ.ìÌğ°u€' . "\0" . 'O©Œé£ƒ*6Ş¹;s=z$NX˜eSÕ›kK™Î„ğ’NÂŸì@à€JP…)XY.=AÀ	«mÇÉ)TÁÍ
+¿é@A	ÓíæÉÀƒKÓ¤#îQV×»XŒÂ	«QxgÑxásõ}`õØ[<Ú‹€íwÕ]â;AĞnÒ¥‡8aµzÒ$Õ|lÆ6hïŠñh§¨º	L¢İâ¾ÎhïØ\\ó:pÂªÅ¹µa‡Émáfà‘ôµ…b"İë—”ÿàø+üª…ƒr•kFÀ	«f@g×\\ñ×îJ»É–>?»şëê©ğ©RöO¹c¤±¨ño;BøF]=y;íGÀ	«•shw‹è”‰áıRFÑÈ^
+SñT×Nê @¶8í°\\•8aµr1Ø‰À.Qu9ˆ®á·íŠûTµg®òÒÔ	+¯ùCÛø\\|P;UmnÉ±É}ªÆ˜`dœ°Zµ<ì¾Àw}•
+á-í‚ûTµcòÖÒ	+ïù©hgßÜ¢]•vW™ÛyÜ§ªUK,se°2Ÿ ÛÕ³·¯ßÿx8ÕÌX
+ü€»””ü°ûTe<m«æ„•ñä,TÍ;—ªg^ªË¶Şü}^]ìáÿZ»+šNXYMÇ(eì£ƒP¬à}ò¼4yÙüse$*/öÏSÕŠÅ–µ’NXYOORÎŞ¼:~÷>)çU&ÚÛƒbB½jšâÿ>6·ÉİÖ–	”®Æ¢8ae¿@
+\'QÙ}ôU"Ÿ«oç¡¶ıM¬Ì£ø¿TYZªıo$°wCøcº¶]SŞ/¥;ëHÚ ÉæÃ	k2Üfø–½xìğk6aç#º²;¯yªîUzH©_dh?‚HËe%v¿˜&G©räáGàrà¶ÁmïJ‘RGè$
+¿zaévøFÚÑöRœ°²ŸvÓ‚U6QÉ.NšŸÊ¦õ¢ÅªyX6¨«ªôé1Hù†ùé7Ï§Øõ' . "\0" . 'eFÕ.hMàw\'‘Tù¦tZEÕ®Rí\\Ò¼lh7ûoÀ
+"ÂÎ‰VÖSºÀØ®Ğ›ûÏÏØn[ÆÃ£+©œÖä#ÖqYIJkª±n$(•*ÑZùQ¬M© òòî7m>V:aå²Ä†ê‘ƒ±½¸ùS2½M+*^]Z˜!b©I·¶
+ü&’Ó4¤t+ ×ı»{´K~Ğît©#á~ñ¥÷÷­M¡í„5îÏü¹ÂØ.;Ğb×36¶¯¼ù{Y©°…TÑ_îC€S!èÃÖb)ˆéCşé2aùqÌ­/û”p:;–]»ÂÏ\'ipğ}Øªò¾ò©J’Dı=f»8ª§šQ]şÂßM®ÏüŞtÂšöKôlª³c|è\'¦ùë¾ŒQvñæ¯Vb)](Ê@ÿ”ú¿«›Ë1?”°Fì’Š‚$Ú±ímhÒQßË7.İäŞA—' . "\0" . '­\'¬l§ÌôADòA
+qiPºpóW1ig{% 8Mù’©FÃ¤´ØÔšÜß\\yb7ÆEêiEè(*ù„7¸˜kÚ	«1h§iØ´]×_ò$kBøÉ4-~·7ö·ñVl@ÿ×òáÀrr"&Ù‘*ÿÂÍ`=i«C	ë&k,İ¢É\';cºÕı5„r¾ü¥›Èè	\'¬Œ&ãvUL%Ø‹\'ù"„§7£fî7ÅÎ@Æoe¨ñ_ùŞe«)W}š–Ó¨¡, ,]' . "\0" . '¤Òº‹ÀÛ€Í' . "\0" . '“´Öà®8a³ÜgşL±Ğ»UXK2®Ö¤I7Å%ƒÈHn"\'}Y-Ç©åÄ4aÉxŸìOg@Ğ¥È±S¢Ï\\úü²¾!­«šÖÒl›qÂš-ŞcôÖäq0—›?“#eyÇ$rÒ×¸¢Ÿjê–RªçG[ÓŸ€{' . "\0" . 'Ú‘jwöÍèI>n»åçô¾
+}ÈS•{.Ÿ_E¢;¬%Gâ_@¸÷Â±¥DÂHEJdmµ8ae7}ö‘RÑë ÈszJyó÷ËX±¦¡˜?SqWí’Ò)‘T9œg©±‰œD"\'mÊ1‹K½[÷ïIP>h"C}½¦y÷„¥Òn2$2ÚÂ»ÔöŠ¾sú±.î×•às\'¬º—ôÔí™v©Î”ö†YŞü™nOvy»dg‘xÙ~25:6 ›’¼É˜ş}‚Ò' . "\0" . 'Õ$«–¾ræ•üb@^ål¦`ùtlBh5©5‡fœ°æ' . "\0" . 'úè.ë<šòR½¨>¼‚\'”Â®]òïy|<¢èX7«õ¤Ğ“_*	6ìëCâ®L; \'Q;BİÄÉ¾¦Û¶rİÄÅÚ”;ÄUñ8*2Û‚²ÄN(UÂR“ãè}bƒ€°óàÿv!ğÔøó[ ¤Ø„}çõÚ¬X^£ÎV›ÇÁ+!èª~™brTåjDÿcjâ	bşŠLOŠä$‚Q-åM=®Ş:–Ê¶¢€^ıÿ¿¢ÏP•Œ1ıªù#Ø0Õ‹İªHZ$–şéÖ2İØ-6^Ë[õè6.DGÏ…°5˜şğ(ëƒD;ºõÁ¾ç(5<ÿ½qÇPÏsNXõàXS+ş:Æ…9nÓ¦ã—"õŸ[yC;)ey3æ¯8Ú‰””ÆF$µIÉ^2®2ÕçdJÁ¸rÈAÅ¯Ó„¬LªN]ï>l
+€N7›ºåL»²aƒc–O\\C	Kı^;¹	8¯¡_
+á	u4—vœ°r™‰Ba[ÿ¥4ùş5bËË¶¢x?hGHq´S,HI7k"*íÌ&]2+l¥BJú>hÕ)Ê±‰¸”ØğÉÑ¹µ<öe×¨uaºx@lX;PİJä¾ ÿ«ÎÉ¤³s@ä1 aIG’nàöØ£({.Ë¾óvàmnÓ‘EŞàú\'×Æ“¦~6‰Q\\v!í’dXÖ‡O¹°T/ñÚ®ÜFÕ»Š[;ÍUµ(Ç˜Ä5’°”K„XùCqÕ;ŒZsÂÊ`nWaai§";EJ=¢D~Iä* À{–~–|’ôWW!*Úyé÷ŠäŸTÔ¦ª¨0•Y¾L7)Pã½7’¸çw„çog$aÿ`•_ëœİª<8\'¬ñVÚŒZP(uF}®ìF»¥ë€‹¯GrúÖüÎzø³ìo$qi—ºÁª7Š‹™
+Lé”ÓÎíç–¶4ËOİ—ÖÔÖÙ€‰(ä]İ¤èöM»0]½k÷ôà2å`ë&û÷¶W"P—AË;e¥=Ş‚vØQ–²mÚeƒsÈ÷ßìô:a5ŠoQéD7Ge)ƒğ—Ë€ş*êˆ¥ïu”›v^äó#b’›€lT2ÈŠ•…`\\ ½\'Ã±ˆíSÀ-€|â× ‡E—Z0İà–ÜV³Å”NxS‹bÙ52í#»å£PAV­Ì94&†">ùUˆlè÷zæg&uâS¥6?f¯N¨ŒàÕNœìö¸ÍXŒÖİ	«±yí<aM‚œn0K»´"´v—:šj§$yS¦D­\\Ş1í²N+…ÕH1Å–Êk>%ğ;äéŞOqÂjtŞ—<ÊJ¡rKĞ‡WÇÁj(…ú0+>l”»Iœvd
+2–ûƒ<¼¥ƒÂ@¤[úZ—§û0=ËRá†Ò×6;›.5-&‡ĞS+ë:Ê+ÿ¼Ä	k)ı÷M"PÄÊoJaå? ÊÅ½?„O6Ùûäm›ŠchwT%2}?ìg"ãi\\,ÊªÊ	u‘¥ŸíâZ,&œ¾#ªãpÂjñÌ¶Xu“sßÀŞq“Æ"c¶
+•¾·{6Ÿ"µqy—&bÓ1HÎ­"kåÉª£èhGvh6Ì1Ô	«ÅŸúª^T5‘Uvˆrå…µ(-ò[ è†¯Ç² ¬{"±ò×åd!]ìÈ©ÄvéÈ«RZò<×ñ÷†|şXØ;ãµ4ïCP8U/ÅmX3vSm9¥}©fa8xs\\–D ˆÕFdégw]²‰¥kæC>k"6Ù‘ôo¤f—' . "\0" . 'å@æOCxÖÒCèŞNX3™SS(Í±Cª\'+ÜeWrt©ÆwhÒTaK"µDfeR+ı¿W¡UsÎ‚ğÂÚ kICNXN”É(­x/%Ò+\'S8…‚–?2ŸÜNº¯$4evUünjåd«›8e«¨³Èh"5•i“­Nß_Pò_K¾lJ¶\'\'İ!2”°ôÜw (GWoÄ	«‘©.rJ©òîë+‰îd›½‚lV.Y"PÜ€Š¼•¿–I­îÏHSN¶%+T)d’İJ—2º¼Hr„]²„±¥ê¼ÛÔd‘ĞímÀ+j¡…ƒ hAº´‚ÔD&kÆàãQ¤ÖôH¿aÃ¦;É¥}\'¬ÚfÂ”GûCÊU)ä>ä­ìÒ+ÚÃ€­ã[ıJ$·ù§éër*	•Qœ²PI»&Ä	kêù*<“•šøy•¦t›¤âr' . "\0" . 'tq–@ ÈşªÛÏD`‰Ì¶‰<’§»ª*éßZƒ¤‰á%}‚Ö	kâÙ6¥‘/Õk+Y;/wÊâ©‰\'îÔ_ì%¦4×òÑ“È¡x^ÂPC“âV„M¼&’UÙø)ïêw' . "\0" . 'GyÒ».‹F‡lÛÅøBõ¢<ı/o´»Œ÷Ö²&Ç´=—ã§jÔ%‘?R¿‚]š°ggÇFÏ†P­ŒTsù6ç„5ÖÜØ#•WÍ¿²ÈáswJçâ4„@q¡£©’!lŞPGÙ7ë„µè†‡;UìT
+Ù8' . "\0" . 'Â™ÙÏ°+ØLYkUDÒ+7†êä9a]Î¦\\PûÄl
+å’IJ5œ?ÿĞO‚¡Ø:€ÒI~' . "\0" . 'A7Ó½\'¬U¦İtM|T®M¿U¾õ“İñ³—Ÿ‘]{+¤GÒùÊ8‹î„µ“·°®Uı¸,ç{AP	&G`;~•a“üÂ´éuæ0†zºtÂÂä\'ÇÏjÆO•[WÊåIrqæŒ€i—ŸèWëk…í–)\'ù€ı€ò_,ªVÜñ«´œóšõî{Œ€éH˜òıß·¯1©=$¬"@Y9Ôw®Äo©lÕñÀ› (jŞÅÈ“Ñ]ÆwÉ:T¥»wÒ3Â²Mc€²ò •å`_ŠÓrq2DÀäÖŠò>‚’?öNzBX¦@Q¥}©6U"½Wx€rïÖ}l
+¢×\\É¦T ¢wÒqÂ*ìT‡DŸªÕK³«' . "\0" . 'eÕ~ÛÍ3~önÍ·tÀ¦Ğ…èHAµ*{\'%¬ÂN%•¼Ô•¦8‰œ=ß5(£DZ.@K0ıU´d;§·DñZÕì aÙ“¢?Õ£+H©2Í~ttqZ†€³„Hï=!¼§e¨EİVa§:x~™+b€òÅµ æ8sAÀt1”J{}Â¿ÌE9wÚÂZi§Rey\'ùÙ ”Fi‹ƒRÀ¸8-FÀNŠfá|Okñ`&V½Å„UØ©”›J¶*eÿL¢j4Úiîvª‰×…¿˜¦“ƒÌ’/Bxzv*Î@¡–V‘HO…Iu,‹WPÁ¢ñ.æ€m' . "\0" . '|3ö|5„rÉy(4—>[FXö¸¸«Jş(	4Òusòå¹ è:#`w”†[r¥êî´„°l½˜‡ê•RQÉ3… ÜNÕ»ÕÛ»ÛÍ±$˜F¾Ufê•dNXE©w"ËNUş‹¢b¤G' . "\0" . 'Çyå^­×Ö”’{ãÂf}ŒĞÈ”°LY>ˆêw-­ÒßÊ¼+LPöOG G˜NÉag*ÜÛ+ÉŒ°Lá3»Gw”L¢L
+ÊøùfrWpqzˆ€éTq`øî™–éÆC1ÏÊµş4ŸŒ®éÛäøx…˜L#òÇ’œáe}ChÎ„e¬1xE§¿ÂŠ¾MŠ×€m\\w)„\'ô©9–l;ğ€]!œÛ·Éğñ:‹#P„Ÿ©Äœäf*C×+™\'aÉ`¸c	mÙ¦>;ø™»(ôjú`—€É»Z|á.RqŠe´ÑŞGçIXê[»,İªÌûUí…Ñ5wf…€]¤º„@Ppod„ÕŒ} @Øç€-bƒ/é[õq\'¬—’7å4ÀÂ:BJê×|×ôà„•Á$¸
+Àø,p=ÂVã¿Ûş\'°Ú?‡>‚^!`;' . "\0" . 'ŠCşÏëÓğ°ú4Û>Ö `O.ŠYa£jì!8a•?èä€€­¤"ª7Aætƒ¢èà„Õ¬Ş¨#Ğ¦¬%Êª«Ï®R¯A¾Y½\'¬^L³²[ØM¥òukCHŞïİæÑ8au~Š}€İCÀ_»a×“û”i×	«{«ÙGÔyLL‡ù2Ê“ÕqÂêÅ4û »…€}Ø$é“ªµ8»5ÜÒhşÄ~ìâÎÌ$' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:35:46 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dba962db9a0.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 73, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(73): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:37:16 --> file_put_contents(ttd_petugas/64dba9bcb30e4.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 73.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dba9bcb30e4.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 73, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(73): file_put_contents('ttd_petugas/64dba9bcb30e4.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . 'âIDATx^í´uUUÇÿ+KÍÂÂ$J1ã•Š•OñAÆS QHÉ”Ä¡ –AbfŠ¢¢˜¥˜<’‡
+ˆ¢"ÂÔ¾ä4I‘M,³l6~û¬…û{Ïë}öÙkí9Ç8ãŞï½×šë¿öşkÍ5A.@1Ø¶’–ô=)ğÓ¥0BaãñáôÛZÒs$=KÒÃjÃ¿P
+{öÂì„Uø—9¼j%õlIûIÚaÌO”Â‘ebĞÏQ9aõsŞ3µñ¬"iwI[ŒÀ¿Kú¥Ú÷NZÎö(•°
+šÌr‡b»H:]ÒƒFŒq£¤³%%…¯Hö6I/¯]{¤½¥`åbÔ‘9aõc3¥m)é/£}jx‰¤ÎÂM«¸Š´Ş&…£2ÂÕ8aù£ĞAìç$#	ûÓ=k
+~_ÒE’¬¤&‰]#éÑñª÷KáIwø÷İFÀ	«ÛóÓ3í*;Õ$/ióÚàÿ[Ò‰’^/…LŠÛã–çKáo§¿×¯ì"NX]œ•^êd;Iz—¤GÿI¯Â×g‡ÅÎ—´O¼o/)`ËrÉ\'¬Œ\'¯Õ+;Õ[£‹B}H$½D
+W®œv…¤ãıOÂUëoËïìNX]˜…^êp·ŠÓ¼{Õ ¸MÒk%6ÿ©]/i»Øö6kç{	~¶ƒvÂÊvêrUÜ~ZÒ;¢wú/ÖFñ£¸Ò:~6;Õ8ìvI÷WÜO
+wæŠšë=@À	ËŸ„°_•t¹$<Õë‚êh)ÜÒœ2•ÿÇñ7)üTsm{KËBÀ	kYÈ÷®_{¼¤HÚ¬6ô›%=O
+Ÿm»Ÿ$¼Ş‘Û¥ğËÍ÷á-¶€VÛˆ÷²?ÃŸêÍ’îQş¥’>¿j ¶¤ä«u½~£—Ğ6h\'¬Â&´[Ã±Ÿ•ô7’¬é…OÕ¡R ÔfbO”N¯Â“Ø™7İNX-İ¿n*w…‡R¾|SÒRÀeaÁb{Å-(ıœ/…g.¸Co¾œ°Z' . "\0" . '¹]Î”T?üä &0$»Ò‚a1<æñtGN•Â¡îĞ›o\'¬@îW†Õq’ê§ro’ô)ü_{XØ$ûóV{À/´\'\'¬…ÂÛ§Æí¾’şn°å»[ˆûãğÜö‘°ÏIÚ1öûv)ÔÓÍ´¯÷ØNXÀØ÷Fª Ø«ZCâk’ö˜.«Â"ğ³oÔògm/…Ñ‹·Ù.NXíâ]`oFšâ÷K"%L‚Œ–Â,gÀ•ƒê¿Æ¾ïB=érTò^AÀ	«ûØˆa£z£¤?®ÕŸJáËEÄŠÛSÔ8O
+ªK8a0‰íÁX±’x·Zßß•´¿8\\²ØÉ’^•8J
+¤Lv)' . "\0" . '\'¬&±İ!ùªØòÕAàWµÏúrV-B{»¶æÿõX)yÔ¥' . "\0" . 'œ°
+˜Äö†`Ï•kêé`Î’tˆğ`ï€Ø&’’íì‡ÛZ›î€ `œ°
+Üæ†Ve>8¯–½“¦É„Àv‹T1Û[Ò‡£B—JáiRÎU™\'¬9ìÇíFJ˜]kc%ÉŞ~RÀ×©cbY§2õ«À‰Õ¥œ°
+™ÈÅ£ZYŞò‡µöÉ€ğd)|k1}ÎÛª]-éq±•İ¤' . "\0" . 'Ùº‚€V!Ùü0*·ü«Rx]\\,‰bÿÛ|M´h÷–D)0²š¢ã&RÀåRNX…Ld³Ã¨ÒhÈfu¤(µÕa1Ü,.‹
+^-…šÓa]µYpÂš­^\\k?ÖÏ¨÷p)àÛÔq±c%½.*ùf)ÔZ;®»«7NXÓ Ô›kª„{•ô”8d“ôB)œ–FÓ¤ûŞR`,.!à„UĞdÎ7”ªì/<¹×ÂlÈ´@†¤²¹‘;r_)`Ïr)\'¬‚&sıC©RÃRó¨Øë¤ü™ÖßtkwÚc$}>vw­ÑZ×ŞQk8aµuW;2²‚~ZÒQÃÿ‰a6ëªÆkëeGI:!~w²ÏK×vœ°¦A©ØkŒÒWø)¥Š2„×Ã*´e4rÃß¨ğAR8##å]Õ)pÂš¨ò.³H¢àCâØ°ÿ<C
+Wä9V#W<µ‘t×±5Ot»¢µVWf¢U=ì×$ALüDÆ+ü­ªÑXg¶½¤ëbs·H!‘pc=xCİ@À	«óĞ¢¶µ¤OV!•Çj)üS‹J4Ü•2p¿¨ä*)P“Ğ¥@œ°
+œÔÑC2lUŸ‘”R\'Æ¦ÕI¦h%ï•÷‚™Îâ4j;aMƒR×§€œ¦Zä<ßY
+¼ìËŠ’ôlæşWOçÕ°ÊÛÚÈÿ*ü¬ğ·B¨(óD)ğ3s1â_qš( êR(NX…NìO†eO”„OUªjÃŠŠ•Uª*“1UÜãí’~!b§næèÊâ©î„Õ±	iV#®z)¥1¶*rYa»*@ì@IgÆÜ(ê#ºŒ€V±“kd[ ´†UÂ) §œ
+"v‰¤§ÆÁ-…äé^Èø|Ã8aùLØ>1Ÿy­ü«ğ³ZRaÓE€lœ
+ş³$aÂ‰pı·Eôämv\'¬îÌECšBÉJöQ<Øñd/HŒ\\íÇÄ#…
+œeNXE=Fîur°§y%&ØÀ”àj
+ì*×ü­’(I@È¤ov)\'¬b&Ø“ôîÚp8¤¸)Û¥Â¤²Ï]E1ŒJdƒ.…#à„UÄÛk%_
+ÆvòYu´XÄ¼ Û9ƒ2c•\'R#»ô' . "\0" . '\'¬ì\'yEZFC†P2…’1´@±ûKÂ‡ŒÓOVU¬®:Zr¬@ø—<$\'¬%OÀ|İÛÇ%=½Ö¹×ÉÁ^ğöÈ(’J±Tä)ÔÇ?œ~÷ØÏÇ´=¤îÙTÿağûïÆƒŒUÀÓ½d~E®¬ò«k¯>ss‹ÖÜ.«bPâRØ}YÚ´×¯QÈu›ØßR8»½¾sï©:¬Ø,Vl3v@øüU+ÆC2ésÏ†F}v¤å„ÕĞl´ÛŒ½XR½ì¹Ì_öÊ
+„m§˜t|/:x¨0ëÓTU;"]$ÄÉ)Ÿ_‰Ÿô;?É0{Y[oèúRxø¼m9aÍ‹`ë÷Ûs¢*ÍİƒÔÀáÇ­«Òz‡Æ–÷ù±Û¥pdë*,¥CÛBÒÃbî‡Júæ!m²@µ~$éø!«kúä¸ËlÄ5Iê[ÂWHbK‰\\$…=æÕÓ	k^[½ßö”t~íIñí.…úÓªFíuV•!»³j´­nl¯ÿ6zªˆ‰œeÃlGM	¥Ï8¤øvü°:ûÏ˜ÔBª“ÒR¸kıÛK$ï?B
+ïZ[ƒ;°æE°µûmWIÙ“M£æ®Ràaë>/' . "\0" . 'r³¶ÊwĞ«ëÛj$!ñáoéwê[Rø¯vq«Hª™›¬œ°Ú¹9z«jî±šºOldcLSP ó$xŒÜ]ŠWe’U´1bbeyC<cKvî!İ^¾ıÒWX“Ş|oØ.¨n“2…ğ»c9)b¦Ù¨F}U¼’Â¦İ
+7j”˜H4ô	Ø¬\\|KØõgÀXQüC<İAY9ü—®kŞ¬~F0÷sc›\'H_¬%‰QàâO¢OæØ›fµ1±brbZÇºk µsKUä”UE²Õ°ı{\\y†æIh~AØ_H•ƒCì–í¶í2È#¦\'I"!â,âÄ4ZS\\ë„5Hí_R•gÈvÁ°C{ÏÄ^%éqĞKÀç‰a#Ü9’$…í0ek×§Ó‚fd¸Y\'¬–€¾›ê¥ÁÀüYpYÀu¿õLŒ-×-5cû^RÀï¬!1Šrpú
+Iñ3a>®}’ ²â#ƒ+õ¯“ÜÆÔĞ„LlÆ	k"Dm^`¸,àºÀËƒp\\Shƒ/i›ã™·/ÛKÒGb+ØíØÎ\'Ym/ŸWPlñQKt8JY²˜’‘iÔtÜPn`ù¼óµøû°ñ”=!8…âŠğb,…3¦l ÀËŒ¤|)>òURxÓlƒ4ÂS°;AN|¶›â~6 ¦HP!ó"³SŒ8£Kœ°:1YUP*uÓÊ
+­“Â{:¡ŞR”0BPnŠ\'Ù„€F/ì1Rİ“äÔC¦P²gT$©ğµ)îñK–„€Ö’€_Ùíª41ÇJœå=£ÎQ€Ó¥ğ¼Õ`.S")€\'	˜‰ .“ö(—LpÂZúD¹ê~E=I3v¥ÄÉ\'oÄ¹!8rBúÈAQ –ÜLã„$†_®Ôå“WiK \\18a-õñX•ÓêÊXB~ÃòRÔPçFÜÙá±1\\:ğî\';' . "\0" . '§z“bãD·O•UÚlÒĞËÿŞ	kis¼"s&Zœ.éùNÁ–6˜†:6ÈadÿëZZ’ImCòÛ¼Ïö\'|,e~ï„µ”yµ#$½³ÖõY’êçq¹ıÖ LWõÁjœGˆ÷?\'xŸ–?£T>[‰•Ø]Md¸\\ÊãáDÀ	«õ‡Ã•ôŞZ·¸2Pá¦	øõİ«(VR¸p‚4N8µ#I1„Ÿ[ûBÛ6ú¯m9ô}#iy[D¼C\'¬n<F' . "\0" . 'ïûjAçÔÖ£v`¡å¸î^ıüfmµcŒ5%wJã»¿H¥2FŒ’f_ªt]¿¶‘,—İxv\\ğVkÏQ5äƒµëÒX•¹Àl¡Õ*Šâló~§V¡y-´!k¶y~%O{Jô†ç£mzU1U®­ûZAv_¯Œÿ™^×Ú{GGÀ	káWÛ }%}¨¶rÀ@L|à[é¾•Nl–UY0ñbg…I©.ˆ
+œÎ””ÊAı…^½Zõ*åÎë+„6ñjk$I¾üŒğÑr)\'¬…O¤=5®H‚|aàK”{jãu¯¢>&jÙIçéP ÙJ
+x¡×¤ÚşQ/aÉwTÍÁøìÁ¡…áO‰*äï¥ğ¬…O±wĞNX…ÚğÂ&˜ùŞ±"ü!«¸¢Xhçh¼‰UÔ(µVäl¿Q
+Ò£TÛ?\\(UUìÇü$?–½LÒ‰ñ
+(@‚.!à„µ°É¬Òú^VËÃ~}ÌÃNNîL¤éUÔ¸aÛÕƒ…•¼W
+/’Ænÿ^ ì^512+$’z¹Ş	Ğ®æ”8aM	Ôl—Ù£¢3cªÉFïNR¸}¶v–qõ"WQc	‹í Ù­%½ep(±bû‡QıB)ì³º¥i”}uµŒG§…>°Ùvˆ^×œ”!Øa +^ÈJµŠzZ´Ír¢7Âµ!•j’ Ğ¤„_jphû7Üİ«óÅû¤ğëÑÄïé6NXÎmcØ’Ñ—¤sUÇŠFT•xÈA;Èbœ|G	9Õ#0{ö7#,é÷G(Ñ¯±ı«_mŒû ‚ª:?htj½±N à„ÕØ4T«âÚ6‹Mò¢AVC\']u8cCöÛ’98MÓ¯O¸™ÀaìC¬¢¾4cGë¸ÜX]\'ÄøI)ì7¹A#oØ‹âuï‘Âa“ïñ+rDÀ	«‘Y3œ!«tŠ…­
+²ÂvµD©JRí/‰—şÁcI«(N4?¾˜UÔ8ìœ¨#q(qÜôóª„=Æöt»ƒH)3$U®|H›Îû¬<…\\ây×3!à„5\\k]\\dAV©*1/ÜÎRàTp	bä,g%…ÿÑæc 8\'5!‡VQ“ 0œH	XÑoªº/UÒùªâJ­:<ÀËï&qû[WâKR€À\\2BÀ	k®É2VTU
+aƒŸU²§ÌÕút7N”8§²’âô,mIW-1$}^«*©F“¹i¥!è$8b/‹IÙG‡|½2‡¢\'ê;a­{¢b€¬’íå®X;Oö‹‘‘“=^L*Ë¤2öÃı’q“Š/Ô9R >¯±SÆø»…±®' . "\0" . '=<^\\#¾,ÒÚ¸d†€Öº&Ì8Ä0Í© BVÌ§HçÇIe«!+$Ex
+ÿ^K8%»<’Ô¹RÀ¾SˆTÅ:ØÆ½&W\'?·iÆGÜ&>\\Ls±_ÓMœ°f—Êo‰àeü­^™ù[ÃRõÅ6’"ûA2,÷ƒŸˆ$õáöæ{EsUŒ!ì1µå]K	Œï¬¼n’Âï-RKo»œ°fÂÙøt¼x²#¤†ÙC
+¤ŠiHŒÂ
+œêARØgR0ğpûøapf»wA9~G•M$øÃ6—°_N;ÙOøÅüÌ§r¿®qÂšz¾«cqb‰DÈãDò=HcN1Ä^ÖQ¶˜ïJúh$©‹¥@½¾Äğƒ ø°’µİM¸S”‚ƒR!sğAVR
+­~¥' . "\0" . '0|cpÂšêñ¨JÈ_KLqÛ²ar*µN1ü¢Ø¦@R“LŸ.Òª°’º´Œì¤•=ÜU‰¤(€:N ¤è#ÆîÅ¾Î‡.ûÛœ°&NaµEIy˜¸š87ªÛN2£T+	ê²ÍI~[kµq›¤³%\'è™Kå«FÑÓÆÚ‚¸ÔsZí..lµÏ—Â72ÀÕo\'¬±@¹ÅÉJÆĞ$$…S¦Çß(²@œÜAì1øQ=’Qlaú^—seuH@±Sbû.‰˜E8qÜœ$$õ#^‘Ï•e¬$\'Ù¿Ÿ\'¬‘ˆUe£ÈÁRöråK¥pÒdÃ9E\'°ÉŒÂù«’HI}qr»]¹¢òƒŒ %È)ÔgĞˆ' . "\0" . 'V®¬ )A¦PG`,NXkÂSùûÎÂIòJ)£i„T/1~R„–°"Ãîµ–`“Â_ëÕRØØíç³"ím"1ÕÉ	›Ó4NšixÜ ‰º‚lïN”=¯pİíÙï¢vNX«f¥"+|š8ROr¬HÇ2$ÕëÁÁqE5œÃ)]OæVR”ñ{“Ê»^ûPŞ.şœV_#0ãÿÄçÚø!†ï\\¹pÂZMB¤U!ì%É[¤ğÊ•—Ù££MŠT-ÃyÆÓ¥Är²Ç¶òòå¾°ÕêBâ³Uüğ;\'•¬–p˜UH˜—H)ıÜX«Å¬pøõm à„µeÃ£ºîª@ª•H^U
+™wD„QÕŠq$å~NøpælÉOªZb?‚ŒêÄ”
+R]ï\\C¼‰È@q|CYŞôm¼jŞG¬÷!n¢ïµQùEáŒ˜N´H¿ÂiïxOáµ;Gğ¬¤È‚ğıfVm77­}p&L…Ï®1ÿ9!9”gG÷QñÓ¨Cü!Ù(BÊjŒ±ã¶qm÷²¥N3¿¦Tœ°ª™5^ökâ‘<àşvÜîòÂ.ÅÊ’Ãoè1ñ!¡i¿$lGE˜ÒïëÙ¦êRE_<ÄÉ€š~¦ßouø4Sæ×,\'¬a‘…òˆeOÆœıS¼!†oˆ°FLmmOç…ßîŒAÀ	K«ìV¤5T˜¡­‡
+ºsèÃß¶dçÄK¸FÜ,…Œê¶Ÿ÷S=\'¬Uv«qk÷˜>†íÙu1Ì¤-ß¤ï‡Ÿ*SÇ©$¤á‘“»”öÂùxæC Ç„µÊn…±œ¤ï¡ğ»®"ĞgÂ¶[í+BE\\G £ô”°VÙ­N’ÂK;:G®–#àDzHX£ìVWGÀè0=#¬Ên…sd
+§q»U‡NWÍF o„EÖĞzP³Û­üp2B G„eï–tXmn®’¥Ü]G zBXF»7Ôæ„Œ»xVËLRWÓè—Ñ}a,…Ãı	püèÉ
+‹‰©H‹,+ß4¹Æ€#P½½ƒ#à8¹ à„•ËL¹€#à+,G |…•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïpÂêı#à' . "\0" . '8ù à„•Ï\\¹¦@ïø2¶Óêz­+' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:37:16 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dba9bcb30e4.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 73, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(73): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:38:07 --> file_put_contents(ttd_petugas/64dba9efb70e5.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 73.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dba9efb70e5.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 73, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(73): file_put_contents('ttd_petugas/64dba9efb70e5.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . 'ÎIDATx^íÔ|UYÆŸ]Vv“ÂòBš…ğ
+ˆ€K oˆ@)´T»BÆ¥X^Xˆ‹ò‚DËZHğ/–˜\\-@,ÍKá,ÓBP»bÚÅİúo8ßÌ|3gÎœ9sö™ç]kÖÌÿ›sÎ~÷óîyş{¿ûİïd1FÀd‚@ÈDO«iŒ€	ËƒÀl0aec*+jŒ€	ËcÀl0aec*+jŒ€	ËcÀl0aec*+jŒ€	ËcÀl0aec*+jŒ€	ËcÀl0aec*+jŒ€	ËcÀl0aec*+jŒ€	ËcÀl0aec*+jŒ€	ËcÀl0aec*+jŒ€	ËcÀl0aec*+jŒ€	ËcÀl0aecª\\—lhËµÖ»?˜°úc‹jRÕ¡©cÛLZ4qÇ]2auøz5o‘ôäÔç[¤°Ëzõß½mVÛˆúyâ…’H¸]
+3<F`LX‹ ç{g &éNX’¢¤¤p—a3M0a5EÎ÷ÕD Ş(ißtñqR8§æ¾ÌŒ!`Âò X2ñxIg¥Fn”Â3—Ü ?`LX6n?ºæea?ì0-LXÃ°cÏ{o—ô˜¤ä¹R8¦ç
+[½"`Âê©a†¥V<WÒ+RŸ>/…G«îMW˜°ºBz­Û‰”ôIß›`ØG
+7¯5$î|#LX`óMó#ÏtrºÏQïóè;R|Œ0 šb²¾MÒÿJz„îî a71 <Ã1ûß•¸MÒK’gHá”şëlû„€	«OÖ¼.qI7¥n~UÒKá›ƒï¶;Ø&¬Ö ôƒê!?\'©Ü%tˆC=Ğ|UBÀ„å¡Ğ1ñ-’NJş·¤¥ğ+áæ2EÀ„•©áòV;ŞºAT…|pã¬aøVŞ}²ö] `Âêe·1‚@|¸¤ÏHzPúâµRx£a2³0aÍBÈß/	x¸¤‹*KÃ=¤@Â?‹Ø–Ç
+ˆ—I:8)' . "\0" . 'YAZøµ,F`"&,Œ"PÒßo„7ò&)¼f…
+¹é#`Âê¹†¯^|¾¤«R?q¼ã€Ço1c˜°<(z€@<OÒÑI‘ÏJÚE
+÷ö@1«Ğ3LX=3ÈzªÉâğiI?šúÊt4ë	‰{m–Ç@ŸˆÏôÊü¤puŸ5¶nİ#àV÷˜»Å-ˆo’ôªôõ%=Q
+ÿnÀŒ@‰€	Ëc¡GÄï”ôw•(øK¤ğÒ)hUVŒ€	kÅpó£Ä§Hú¨¤¤o—ÂÅÆÉ€€	Ëã ‡Ä×JúÍ¤KB–†,-k€	kÍ@?»ÉJúaI»\'ı>&…òs?U¶V `Âêf72?qÇ_.Ï”Â‰ó?Çw	Ö¬9¸¾Ä·K:.u‹3†—Â?®›îPmLXµ¡ò…«A ~LÒn©mœñ{:wÖj,Ñ‡VMX}°‚u˜‚@ä`4¤9(œ*…Ó›Cw’Dî-üd—ôe)œÓüy¾³KLX]¢í¶"IAC*„aO—³­š™¡–œø;L¸é8“VM(W|™	kÅpóuˆçKúÙt5¤Ÿ$…oL¾;n\'‰,¼~JÒCf´bÂªk†_gÂZ±Ü|]ÆHŸ#…äÜğméxI»JúqIß>åÉÄtım
+ğ’°®	zp	«F°
+u; ıILNùiõ’¨ÌI"|b–0aeh´õR¹"%“Ã	iæôXI¤£™%_’teJxî™uƒ¿ï?&¬şÛh5Œ–´Ÿ¤çIzNe‡pwKb©ÇLê·¤ğ7kÜà»lÂ¼‰sè`Ü^Òs%íŸŞñAM–xÌ¼Êñ{‚Ş–CO­ãb˜°ÃÏw7B p’ÿDš=ARe`èVOû¦$JÜ“z†˜)Î+é­é†ÿL¤}@º‘=ò¹É„•­2×4>&l>Aç¿kJ‡br_#ézI7‡0DÆ.Jño!¹A€{-EÀ„5PÃö£[E¯#$½LÒ^3tú‚¤?Ou½şmv"9à?Q© }¢Îœ}Ÿ¯ÈV®–ë­ŞEÖĞŸ”ôó’¬$âÕ˜<Wï—t­¤ë¤@0h‰GJú£t#¤©¸ó™ò- `ÂÊÀHy¨÷‘ô3iFõ -tfÖDÍAÎ~¤½CÌc¤w—Gx,CÀ„50ƒvÛÈnŞÏ¥%~©IÂLj›¤¤pórôséåàÚ¿§š°úg“kTÃá’XŠ=}eYšáº`#x3ğï%Ë¦
+Ò8Ş÷qé%C¾‚Ç›°V' . "\0" . 'z~M~)¿<ù¥ø÷$ù«DR¯¦<W$äá˜¤Øç%=Á¤ómÓ4^sÂŠ¶Nxá°ÌÚVoâŞi&uè”hs2€^(é|)e¾B)â»>)‰Hypş[‚ÀVAV/¸ÿãğ¨ØtÁnÄÇI"jœåè“„@ÍwKºH
+ÄBõH"Å*şº²;yˆ.ï‘‚VeÖ™°®KÇ@JøŞ\'…ƒÀ2ã[#IíØáÃ7õÔ-:ò?¿Ôİø¥šBOM	ûx' . "\0" . 'Nÿ¤ğå¦Oó}ıA`	ë’^_1Ûà;J' . "\0" . 'Æ5Âyş¢DTÏÒaf+Ì¦Ş½¿TSŒ•	#­ÌSßË~İ³Î„Å2aÔwõ.)°M?P‰ßHê0IL	êd6ò!I¯lĞ¹j‹£@·Vúx¹YµVn1Ö™°Ş•v½F<H
+ï[Ö>İ¿#¥
+fÉAo•KêŸ%]’üRTª€ÄwJúÅJGìÏÊÜªëLXüÙÕú‘Ş!’Äe,ÅÁ`²!@R/â<\'òüO$ı±¤‡·d*Èšì¢eºš¯JzŠÈü`É5&,¬LÒ-’¾Ävì~qh73‰8Ì!©—N â²/÷Jb9I]-œé–1“¢fá÷{˜&]sÂ*H«ZBª´2x‚oï·Ù#yÌ÷tr
+C †ß$¡?W¥%ß¥Rø¯~÷«míÆl|¶(XaÉVa°x£¤}GlG¤ô£ûuˆ¶ ¨§IbWï™Iç­|RO¡_ìğıi>;|ËúÅ³SÒ¿²û³–õŸkÂÚ ,|ïMyÄ«˜àÿ 4:’+ûêY’x‘áûf(‚ÃœåŞ…R¸kJ÷´ÉÂÆäyß%)hVO-5M-Ö&tŠ2Røw~¨òç¯H:¸›ƒ´÷-ñ˜=1‹‚ fUˆÁ\'…ù6I¯“Â§2‡©lVG@/­Ö´ñRÎğêN!Ë«¿HgæşE$F•–»¤@A„šR4âgzpz•ŸÉkşxIlÔ!(Ã Ï³†yt¨©ê`/³?+gÓš°&Z/> …<<¢†qÿ5‘Æ‹äuß’Äß™©ñ‚ x‡çfP%A‘·œÄwsä¼Í­ÃõögåjeÖ––+zFÉóeØİµT7/ıíÏZ:ÆËiÀ„5×x–¤êö7çÉ=şIM3§y-óiIÉŒ¥%¯íğüKb\'ë†<fP‘ª7:A™¿ÀàğgvYÊúx¨Üş¬yn®7aÍ´BüÃ”¸Ä
+¿Çw¾.Nò‡%òbÉGÔ<Îr–…W§%bIJé=TĞ3[_í›HigIøõÈ5Q˜¦*a/Ym_&µnVÿl2]#V-‹E~l„
+@P§ÿ÷FÊ’b#' . "\0" . '¢^ ò”Î"úÃÃóÒ4$ï•Â¬pŒZ–hÿ"û³ÚÇtyO4aÕÆ6î—B¾\'İòOÁ›÷$¢7³$v#ËwfJ;IÚ*åñ¬~±cÊi' . "\0" . 'î\'æ‹lŸÕB¦¯’D†¤§Ù?Ÿ5ËÈ}úŞ„5—5â®’¨F\\!3-f\\=‘ˆ­JJ%9=gR%KRºC/R¶phü6)PB~ŠDêBˆÈ{¥@^øŠıY=4ÊD•šà\\ú¶$=#©”ñc•)•¿|Zü­#)²1³õ¤TeK;È¡IèDõã_#ÍÌEis¡)mÕåbFG6ˆ²$ıÎR ŠıY=5Ì&µLX¬™a1ÓbÆ…àó9B
+¤jiQî#&fLÓÓì‰÷riZ·=–jœdÖÃ‹™Rz_ªûú×Eòå§"``†×s±?«çj´Dè{Ÿ:Ò¯˜AP{c4¥œ»qÀ6Tı85ô)ˆ‰oÈˆŸyÍŠ|}>5' . "\0" . 'ñ+ÿfg³+‰ïô+©µwHáØ®ZnŞıYÍ±ëæNÏ°Â¹àdC¨nÙs®ïx)\\9şèûfL“ˆiŞ¦³;ÿKâágÛ+¿8‘˜µò¤À&ã±Èó—uï˜?ËÙŠÁ.«OÃy®	«[ÆkS¦‡êÓ>‘vñ+±b\'xbbù±—>÷9kf¤Ÿè‰à˜ßn¶ƒ¾C´ô1ÖWTj	Ò–cÂªdQe†rXŠŸÄç‡WşÆ2‡wSL¿v?G‚ ¨Oå6Q²¶-˜Òüo="Ğ—ø2^GIb†üÑ‘è|"²GgÎ€–r¤(kY!M\\+TyMoZª‘b2b‡‹ã7%1QU¸a)WÎ˜*³¦>Ï˜æív$ü¡¬¾üN)@Jä¨„Ãì–Ùï¼Ğ‰ƒíM„¥÷³¥ps“›}O;tHX‘Š,D;“Dm+á7dÚ5môœ€\'§ÿëâSšw©¶•ßHA”´ÙU øAÎ‘t†8K8@Ù´äG¾½˜=¶(…ïe63İ·¦ÏøšÀœãCÕ™Ñ¢í¢{¥OQÖ]Ö§vå¢ĞµG„UÕ¡í«ßé!¢/Jº³ò^~&¸’Hï;7§"üpNI»ee<J“Á”Ú™R`Æ5 ‰o”ôêÔ¡‹¥@5é9d_†ãrâ%8ñgÇ6ş£ Œ±Ozf™…´úL‚‚IçƒıX6–¤Årıië—¿)ÜíŞgÂºOˆƒÌ,ˆx%Š6ğ>ˆæ5Bäwº¤#Ó, |' . "\0" . 'ñOüı¼aTq)Î%²;ÈÌ9@
+çÄß±Ä._ø)æJ88”Ä´•¸Rtƒ¬Ø‚!ÌƒÏŸ”Â=R‘ïìüôŸ(³µê}è{âæ ×øüÂBâËÈ	?gøÊ¼ãÆ×"Ğa¶OKB–”Ä‚œ~Ã§Ô…)²ôdBPeUø_‚¤€+$ÉŒíı\'±1â¼åI©cTæÁßANmÑ´_0³ß£9Q[r‹$‡qÇTœcô`7…uI1áNH¿ŞRùât)œjJé	«Ûõ»µ¸Wü£•zFÕfæA\\?F~H›áÕ©écXê°+Æ;/|yÔi¬ş"âZ–I¤Ña–´L¢ßÕş²«‡e¶pbS„%y¹y™~zºİ#U ß^9Íå`ùŠzÕ¾ã¶‘˜;rı—ÑüırÑÎ„µRCÆƒ$ı^òÑ4Õ¤úã&ÖG7?vˆ§$¡*!•Ÿyoºc¶ˆ®,±I%M~0f]Dß3û@Â‘½RíÅ²MÎ;^!…C¤ÈR2C.ÂË·˜‘ŸŒ²õ£9¹®’Âõ;SüM}˜E>£_‡ßë÷&Ç+MX+·ZáO!³)ç™Á°TÁçµì%T[=‡0!¡í+‘íÌ~~}$×ıİõ#ğ‹¥&K4öÕYÎoâ¡n•"x–ÎŒa|I;L.kVTBbfT]rß¡Í*!çH©Mû³_v±eÉ˜°–póÇOİ-kËAsšÍ¶îË÷IŸYvAB8¤9TÜ¨Pd†Tp>K
+¿Ö¬ïÅ¬Š3šøšJaÖˆ¿èÍ÷“Ş¦àTÎIr@|D"~AæUá€úQÎ÷¦R¤ú`eiIÎŞı÷96íoî3aõÇ4#µçI""Ÿe)c¦‘Ğ×Ú;.©ŸH›m>xşg³*Â!NKè%!»åQŸô÷È®	‘‘àÔY¾n$‹Â©Lg‰Ù‚Ä¦£Wå³(\\Ë.°e‰˜°–îú<z“3š Xb—æ‰¾*vùŞ#é°ñ¥dÄáÃ}d9XÕ	)Ísµ}–mÌ€.mQ"!)Õ¾$…ßn±?j–‡Ä‚Dv!fH8Äñ%±d¬!÷Íª^_IôÇ}øªÈ/¶EÂ¿È,ée©–¨ø”öá_‰‚³<‹åoËRéºL³-„şï\'Ú´,Ö@]¯GÆ3$œú¼M
+‡Õë1«"5Ïî•ëÉìğ†Í¾ªIO‹ÄÁSÚaÉ)‚ß­§Ë"WErÖ$ïâAœbØC
+·-òTß;–GÆIÙ%,“î3ûpp‘oŠä~ûo½8K¥xyeVS½˜' . "\0" . '\\:; ªj³ÅIfyø–»Jò²´ˆ€	«E0×ïQñÌ¾@×?\'ŠªN"­Ë‹$ı’$6ª2ap’›v¹˜¥hWXû0²$e)Xõ¹EÒnõC9fõÙßƒ€	Ëã`â‡+A”çJá˜Í+fS¿œ
+Ñâ(üOï' . "\0" . 'ÎR©ğ‘›ŠŞkúSÜ"âW«îB^\'…Q‚Õ9?–‡ÇDvßJ"z¬îHÕ°·šM•m±Tº~#ò|«3¨µÒ[#ÅIª$õj)¼y¥*¨qÖ€ŒÙmW"y§JÇ2‘îD’ã[zÎ”Übü˜ÿ@Ò¥Ã#ªıbù‹¾¬¨ÄÎVÚÒà4aµäú=fSh»rœ[äxÎ¨à_"#Áä^)[áÏ" !¦Œ‚»ï_ƒÎ/µ‹&¬¥Â;ä‡Ç+$M«ä¼³©iöd¼àøN™M‚' . "\0" . 'ûJáãCËî›	kÙöù‘£8å¢ì%aüHu}fSSI‹ Z6&ÈœŠ€Ï^R ¹ ¥&¬ ùØt‡ƒÑ¿Ñ}üS–ˆ¾øP%
+ŸåóõOäĞÇît4au‡õ' . "\0" . '[ŠdUàuîùú—l›¸[:^ØR_’<ZÈ¶Ì€	k°|©h@d÷¿^™ßë©lØÎ86×²ïwš°ún!ë7 ÆKoH¤åb5­lÂª	”/3í ÉùE!’R®‘Âh’ÁvšàSLX4ª»Ôw"Õ‘(qVÊÙR8¾ïZÏ§_<vãú@áàÖÄ„Õ”~¨‹@qùæHZY:v\\›¤eÂª;Æ|hÈ	€£†GZ‘œf$eDN“ÿnELX­Àè‡¦Œ‘VúŠMÛêê>VWH»#°ÆHëJ)ŒV_^M›4a5EÎ÷Lˆ×¦êÖ¥¾¿#j;f(öaeh4«læE ^\'é¹•»^,…Kç}J?®÷.a?ì`-ŒÀRˆo“ôÊÔDÆ„µìt_®~ªX' . "\0" . 'xôÆÍ]DK–‡ƒ0Ù `ÂÊÆTVÔ–Ç€0Ù `ÂÊÆTVÔ–Ç€0Ù `ÂÊÆTVÔ–Ç€0Ù `ÂÊÆTVÔ–Ç€0Ù `ÂÊÆTVÔ–Ç€0Ù `ÂÊÆTVÔ–Ç€0Ù `ÂÊÆTVÔ–Ç€0Ù `ÂÊÆTVÔ–Ç€0Ù `ÂÊÆTVÔÿÛpÓÅJ”Œ' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:38:07 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dba9efb70e5.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 73, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(73): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:46:12 --> file_put_contents(ttd_petugas/64dbabd4dc131.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 73.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dbabd4dc131.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 73, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(73): file_put_contents('ttd_petugas/64dbabd4dc131.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . '¸IDATx^í	´5Eu…¿JÑ˜hœ€h' . "\0" . 'ã‡8á,b"‚C–³‡¨¬`â„
+‚
+Ê$ˆPL ‚†@D1
+&â‰8 8‹ŠÎ&Šˆ*k÷­Æ~ıßûnwß©«ï>k½õş÷¿îªSûÔÛ·êÔ©s#`Œ@&„Lô´šFÀLXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYQ#`LXFÀdƒ€	+SYÑù"·î	<¸	ğ_šonmŞ˜°æ¨Ûë!9İ£öu—1Š^|Â#{8«˜°<†@ü5`Gà@àfÀ€;·ä©ş´å;~|	˜°–' . "\0" . '²»X4ñ6À.ÀC?nÜ°Ç«€[[WŞù„7lÃ-ÖÁvWóB Êçô`×ô}û-‹œ.Øø~ş«÷âS€w¤Ÿ/„ğÚô#KFÀ„µdÀİ]âõ€¥Õ“HêîSZ¹¸øpâˆ¤ªä4îíÂÏueå77˜şN—±øY0aÍ‚ß] ñ÷€£€;;' . "\0" . '×İ¤³|x?p.ğa¿h¯\\üP:ãw‚ğ‘ömøE"`ÂZ$ºn»%Q¾§§Oî3ååK³AáG-;óxü(pÿô;Şgtî-˜°æ©l‡@¼ 0‚=€‡×šğş' . "\0" . 'Îğµvı4y:~ĞÊNr&„Ç7yËÏ,Öò°vOˆäèÖŠJ¡ãD«¦‡ÿáÿb¼%ğê£-æ6®X\\n¹&¬.¨ùDæ=3mùä—\'ZIœA[´%I|>p|êì<;/©cwÓV°üh
+¿Ô“bŞwB¿Lş¨S€÷BĞÏK–x°Sêt/\',Yw×' . "\0" . 'VüH[
+¿ÔOO~)ı<N>>ZIq­¬V$Ş®øÖİš°ZCæ&#VR»omşuàTàd—ôMoûa‡éZ˜°¦cä\'6E j½x4ğÛı¯EşÎ~Æ6y;˜Ë$7aåb©^êµå{5 ¶ºüwÅ/uÖjüRM@óv°	J}yÆ„ÕKd¥G|VÊ†°İµuFwòŞ±Z¿TS@½lŠT3aõÁ
+ÙèPüqïÜº¦²îí) óğÅt. o‰î¼Û6aÍÑÁµ¯<Ø·–‚E#ÕjJ$õOyÛÛÁÜìfÂÊÍbKÓ7ş°°7pÓZ·ÿ–ˆJ3–¨LÏN¸BÛD=OÕMXyÚmZÇßJ$õ@ÿ®Êû€C he5' . "\0" . '‰ÚÊn“r„`Pƒ‚	kĞæm3¸¨tÂÚö©(Ã+oê^İ?&¢út›ûılT^­I:*hõæş§ß:[;ÖÚÏ¨ÔÀû:ù“¿ª]4>8ÂÅÃƒ)ê@i•%ûAxíğÆ8¼™°†gÓ†#Š:é{YºŒ\\½:£U†ÂäLÿjÃÆ2{,*ıñg“Ò?¶… ï–#`Âê¹æ¯^‘Éóå)­K5÷”.Ÿ¼
+Â·æßoŸZŒº¿¨$’×BP¨†%LXi>*F¥>x" RX¥¨jÌ_"Öƒêò\\â¶À7R¢@­&·ƒ ç»%LXi6£
+6¼xT­åÏ€7¦Æ÷gë#§·£|U/N+ç–®Y2AÀ„•‰¡Ú«•{ê•Ànµw¼‚ş½FRÄ–i5¥ï’»BPá	K&˜°21Ts5£êõÔ3fjõ:à„õu0GùªNX~' . "\0" . '‚B,!`ÂÊÈX›«UÈAÎôzVOù¥^¼	‚üUk*ñÚÀ÷*Á°»BPhƒ%#LXk¼ªñàÀïÖ~¯“¾# È¡n!¾!Å
+‹Ë üAÉV~6KG¥ –ÓüVµ!èL¡	oÎvhQ<~¸mjú”yÂ’&¬ÌQFµÅ+&”#3y_§e7¤…+ohk¬ù®«F[CøîÂ»usGÀ„5wHÕ`ü}àÈ”Š¸Ú‰NúN‚°Ï¢zÎ¿]\'éËß†£˜°zoÉ¨-Ÿ
+‰ªLV5àSdıÿ_AP:bËDV™¤/ªÆâÍ¥ä‘Ü+}ÿ!ğÊŠaiˆ€	«!PË,ª ƒNı”<ïº•şUĞAÁÇ@¸rùzåÖãª¶ƒQ©j°«ºŒ›É—!Ü>7TW¥¯	kUÈO^Ü Eb+ÕKà¨§¯NNvüéÓÙÒeo¢Òö¼Fz3mßAÙ2,S0aõfŠqBÊ~©U•¶¥(Í‹.ëáÒŞ¨›"ËÚN$*åÚú÷ô%ÔÊ-¡2F”¡§CxR6®PQÖ
+Áu]Ôõ{ê(ïÛ×ÔQâ¼ı!|aåjf©À¢·ƒ…íZ¢åõšŒŠƒÓ¶ıõã¡‹Êƒÿˆô»³!(ğ×âVŸç@ş*@Ÿ¶Uùèh[ôÉléŒ@T,Úéõ9úŠ¢ò‡í‘Nmë>ª)DUÆ„ÕÅ¬^auAmæwŠXª¿TÚ½*ºˆ{' . "\0" . '„³gîÂhõú5`‡…NSË‚Ñ‰7(è´ºmW{ò+6yEUï2êbºœòåÉ×Ï–)˜°–:EŠXª£Rª—jÏ—¤Ë*å®ÀFËÌÄ;' . "\0" . 'åVZa7î~ªuíI§ÿ¸^M5ùµ¥kI†VXWAØjæ!¯A&¬¥Ù±TKyC\'Q/Mÿu„\'·×!î˜Úx,ğë•÷ÿ8s´%sÄÏwª´y)„6\'‹í‡3€7LX5¢c©
+ïÄÆ£lµò)Kx=BY!gŠJ…#]E9t¡¼õ‹”Fúhº³9ƒÄ¿v¯4p9„RßÚö«&¬…Ø7:–j!¸6m4>øçôôwFáÓ¶Ú×8ÒåKºe­§' . "\0" . 'ÇNƒÂæ$ê"¾‚Vr–M0aÍuz8–j®pvn,êx×t„&7µ©#]I•Qw5U¤cÎ¿¨(ˆÄéš kÂj' . "\0" . 'R³GâÉébr½ZòY)–j€µıš!³Ü§ŠÊÕºg©@\\Ét¨Q“MéJEó®Q´i+³®£‹ZÅiõWfØÂ][[—÷LX3[:><nWkêÃ©@§c©fÆ¸Mño€²°Ä%Ê°†ÔÈ"é­ô|?ğĞôÆÅªø6­Õ³&¬Îæ¾æäOÎÙªèÓ}ÇRuvÆ£V´Jn(ÑI²\\ÜĞ)¡uë™YçèHoªzTnıUVı½š¾½ÎÏ™°:Y?êbòáµ,
+ªq§;aºfcY2õáQğ,5[#}ÚÀ· +Ã˜Yå÷&¬`A±ıSª{Ö^Ó6Ä—“[a¹¨‡ã?Ü¤õ.Î‘>©ç"Ôâ*«?=x,„½…ÄÛ5a5²êÄíß§Q•GèZóC‹D H˜§ËÈU¹øO@Îô=çHŸHVwş¸Må	“U‡i`Âš
+ÚØíŸrS½‚éYz‡@áÇ’oJ™.€ğóÕ¨XÄãér»üSÕ¿5o;Ä„58oÿ:Î)¿V •N·­' . "\0" . '¢ºww»&dX…€	k‹yàíŸÿ4fA *)ßñÀcj­¼{”é!¨z¥#&¬Àyû×qù5âµ' . "\0" . '­ıàú@¾=Ê$”°Ï2#&¬Ñòİ§3N¤õ~½ˆZW pyÍ¦˜T€â­îÖfÕ¨F¥¼ÑÍq_º¯©“Oe«PöŠqR¦ƒ>¿òËïCPîN²æ„åí_§Yã—*Ä3€›UşS‰Ÿ' . "\0" . 'á3ıƒª˜óŠªW¼ bÔ”ÕâFH©¼Ş4ïa<¿+i­)a)DŞ
+<­rçLFñéß¼§æ Û‹JC£SÀêßÑ9ÀnT<d…¸+pàÎ‰¤^Q­Ä´*ıLXÍ‘º¶!²ªG@;ø³9ˆkşdÔ½òYÉ•PÊU£;ŒAñVK”¨š•Z1‰”DN%AUO\'»ê£L­ª,>îKSô¯´Ş“2YxKØy(ò¨¿Ø©Ö†nòëôÆÁŸİÁ]£7‹4×r W+i=r±ÕŠHùÛ%bª’“‚Q«Á§ÙB$£ÔÑ"!å¡WEjEÿ!¥UÅ¯MÂl	‹	vdJıREB‘ÏJšöÌiöïÀøàíµS@}Ğ=	ÂOç‡R±jºo*x!Ÿ“òÈkW+€OëN[RùÒå¯/¥dÖ—ª­x»:Mõµ$,çQï>-üæF
+QÈ]+ÿ¯?ú!¼zv´Š$‚L«ÿû÷®ùV§uqY…”Jrº‚VSƒ’®°œG}P3tåƒ)Èä“µ{€ÊDªSÀóº©•+^%ŞÊ¯zîøIÍjWP’¶u:…ü,ıÿZÈ€ËyÔ×bÆ.uEVÒskdõÕÑJ¨ivĞbu&çóıÓ*JßëU¢ÇJş%e$Uå·œÛA!k- ,çQ_ë¼°ÁGmËä\\¿i¥‹€ûmß½X‘é`§\\=)QßÓ—' . "\0" . 'UüN_A?[jdLXñî£rî(â¶ş‰å<êê3 ¨Eµhª*uï·ejšNÛ;ù–”šHäô‘ÑWĞIe
+V·[úR,Õ¸L’Î£î)?#ñ9€®”r®+ĞñÄQÃÅ©³‚E•Ã_\'xM·wKä¤ïçÑ!>#ğ^ï9aéº¥U”îiU«ïV¨½½.˜İhÔ~Èl@1×”ßlŸÊ¯”Sëq‰h”^×Yäƒš&ŞŞMC¨ãï{LXÅ²\\Ÿt“"vuáRD¥ê#"+]6µñù§®‘|Qš‹×™Ğ°¢¼µ½K[;oï: ñ+=%¬¨
+\'ï3
+x/ğ¾Q­Ïqnc‹úÁ–D•ÓI`µL›ª;ëPôq¢¨pùŸƒõIoïZB>Ãã}%,-½OMãÒÑ®VQÇAP*‹˜ñÙÀ1µÈõIm+’]÷uçô<¯èçd‚–Íô•°”Öâ¥©hÀ-­êÇ§ u`sğˆ)Êá®Õ—HêLºàlY!=%¬"â®@|!pT-d¡>æ/&’:¹y€èÀaëÉğLX=1„ÕX$EFĞg¥@eÏ\'ŠƒúÛÑåæ «8–"`Âê¡Q¬Ò<ˆÊ«şøQ*2!‹ªu+F[¾³ (ÿ“¥Ç˜°zl«Ö"–êAÀ3F—“\'f×ÔeaåF;Ñæm1^íó&¬ÕâïŞç‚@‘ÜîÍ©´Ö¤Põ¤Õ^9—nİÈÒ0a-rw8?¢‚9÷' . "\0" . '«×Å7€] (©%SLX™n½Õ.î•Ê‰®Ëïr¨o&º^óQÁ‘0©ÕzÃ™ÑèMXËªÆmFø‹1Á?nXÃÈÕ–6iLX3è0‡ïª*«Âr)
+ìÔ}R­²ª9§\\my˜aC=µÑÃÊ¨p„—Ôr©k8Úæiõ¤Ì	Ê
+ZÊ' . "\0" . 'ª-çk­ehîÖ2Pv-ˆJ!´{Úú)IcUÜùFà©’b­JùÖ¨2R«-·¾İ–\'HOˆ[{{×2\'H?ğ)/šŠ—<±¶ªRE›Çå\\¾ª\'Fè½&¬Ş›hè
+U^<wL:eçP€çé€
+áê{5?šÊ[íAY<-k€€	kŒÜÏ!y¨”‘CWgª¹Ó¥®Ò	á\\(¢×•_]«ªê|=cÚàœhı´ïb´2a-W·:¸ã¨' . "\0" . '©üMJ¬+
+]Ät$„‹G¯ÇS¥å[WšS^ªçA8Å ¯&¬õ³ù
+F\\¬’Ja	*âPå˜zkZQ¥º{E=À£“ó½úì×S´ú%+„»ì&¬aØ*D•`×j¨š‚XCÖIß±À	¿ÚÖÅpElr¼Ws¨ë²ò™ÀŸCĞJÌ²¦˜°ÖÔğ‹vÜ:U¡yJ­/åå?x”ñ3¨€C’¨/J#Ò*E¿W
+ãÃ!\\¹xİCß0aõİBÙéWT ‘3}ÿÚõ]y{ªñW©pTd' . "\0" . '}Ù˜ËËïö… ‹(0ay"ÌøX@’·¯4ª-œÊµAórE%¢RÀªC]¿»bt"T6Ëb6 `Âò„˜ñÀ›' . "\0" . 'êUåC©f¤r¤—D¥Ê3»' . "\0" . 'Ê¸Pù´T¾íé.:2“´	Ö@»œai^MAŸÕKÉ:ÅÛ‚ÒºTWT‡Œ!*]©9Âë—£³{ÉVÎÖ[©îQ\'*ã®+5¥(DAÕ’Uò][Á2æJ\'…õL :ù{…‰j¥FÌ®sVv&[µÂñàNcJ·_ªÎÈ¥-¢|SÕ¿RqÕ9”sİbZ!`Âj×º?/”›ª‹(ÓÂ¡^QuÎï”˜°<Z P¬®ê)_6{_±S:õûTr¦_İ¢3?j¶@À„åIÑb•%Q|”®Ğ|³ÒÀùÀíÒef]­9ßyÔ[ÂëÇ7EÀ„å	bŒ@6˜°²1•5FÀ„å9`Œ@6˜°²1•5FÀ„å9`Œ@6˜°²1•5FÀ„å9`Œ@6˜°²1•5FÀ„å9`Œ@6˜°²1•5FÀ„å9`Œ@6˜°²1•5FÀ„å9`Œ@6˜°²1•5FÀ„å9`Œ@6˜°²1•5FÀ„å9`Œ@6ü?i%êÄeXÄİ' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:46:12 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dbabd4dc131.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 73, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(73): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:53:22 --> file_put_contents(ttd_petugas/64dbad82df0ab.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dbad82df0ab.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 74, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(74): file_put_contents('ttd_petugas/64dbad82df0ab.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . '%IDATx^í¬<UÆ¿k•ØP:"Ø' . "\0" . '»Ø"¢¨51jì½—l¨Q”{P"‚l ‚€¤Z;
+ŠörÍoŞ?ÃúŞîìîÌÎÜÙï$“İ}oæÎ™ïÜıöÜ{Ï97ÈbŒ€È‰VÓ# –;0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTVÔ–û€0Ù `ÂÊÆTV4?"ß¯[JZä¨şm#I{Jú¯¤$ıNÒ•’®’ôÇ•#\\›ß³·£±	«\\İê ˆ7•t7Iw–ôxI›Jú©¤›!"Hj½†`øçuä¥?TŞßFÒ$½F
+±¡{õºV¯Ícå‡À:Rº“¤­%m%é.‰¨n·8=fºÓaRxîLWfv‘	+3ƒYİy(H	"â¸ëÈ+¤ÔÆ÷á¯’Ò•Ç5#Ÿÿ%iKI7tyBŞZÒÆ•ã&ú’vÂÅó “Ãµm(‡ç¶ƒE`§TõJršÇSúµ$áÙÕ’NO¯k¿¦™¡ZdxYX•Ì^"éîÉ”ß“´›ş=XÓ¶ô‹2d¼ül½A 2´‡¤gKº½$¾¨T¤t‰¤ŸHâ5½x1=“È„ı’6OŠ,…WöLÉFÕ±‡Õ(œn¬=â’v•´{z½ç÷bbºô” "<&ô¾¤4é)#+Œ\'\'çƒçÛ[
+ßtU®ÿ7aåj¹AëşÜ\'‘^Ô½$İjŠG®’dt¡¤Ÿ­xM9’Ò¤\'Kzy:‹y°m¥@XD‡o$éf3{Ib¾‘a÷õÄ„Õ¡I}ë)á9•¯¬ÔÕ‘ßJú½¤K%>lRGAÌamŸÎúşŠş3ÄHxÆ†’ZòƒÀï•.’tã	¤±¬FLèÔ¸˜°‡ÔNø’*' . "\0" . '9•uI“VÁh’Õ¶s$™3¤€\'µÄRÌãA0™?%é†	S%›şW’Ry.Ÿ™ÈÏNLXÙ™,\'…#İ£ŞÓ&5€¹~İ+ä¤Nöj´Ü«SŠHøÆJ•`V{_‡è»zbAş¾ÊÁâÅj¯ş­ôÏUŞ„Õ•9wßÈ/û‚Âƒ"' . "\0" . '³N#r¢ƒ¦×@¼R¦ï i;IH"ıcH©ËgüSJb¾«ú0ğÇ®A0«P;áu:S—€úŞ½E JPÚíR3…8&æ[ªC;Ò\\2”ÈĞj§DÔxŸñ,!`	Ù”„³sš¬æŞ‡¦9½Q2*‰éêfbÄñ˜×İÃ„µX¼3¾[d®é’î(i3I[Ô|Vç §ïH:K
+ÿçæ×l§ÃÓŠ¹"©<ğ$yÛ”"Àt-R÷÷«¤ğ·ëî_¿	hEş!&Â\'&¬Á™´©*"Æ"éá’ö­IPÎ®íN—2’X’ŞÙ|&éyZÁ‹Ä›áùO¬T_' . "\0" . '£DDÎ†$âí–?çKRœ˜°gÒy¨æ±¤ıHINËÕãü¤ÓÒjÔ9R8o»/îÚb²O2*½%Ş“æ2ÍD6a/±(P¼r\\"ÊÅ,PâÓRh÷ü¼¨*181aÎ¤Ó<PñÅeï’“<Šµ`åî²4ÿtHŞU†$ÓÜw‘çF†¯£Ä„÷4í²>ç£Ät˜GêÄƒ$½6)r^ß¥WÁ„Õ8¤}o°H¤e˜‡\'Q±Šµ–0|ùº¤¯Húj¿‡wÅs•C¸ê\\S0Šêó³b9JLçõ¿ˆ^ü¼¤Ç¥yšˆÉœ˜°gÒÕ(9şØDR÷OÑËk=9I¿Ç©ıËşÙ¶]eœ-Ó“İ¿+‡q‰¤?3”ˆşxÈîR8+Ã‡˜¨²	k"D9P¤j@LxQTË\\K¨ÇD²,u¬XÕëDêC4º2GE†2š»Ù~\\!¦r®é²—õ×~àH f‰ËRÎqlk?¥	«N—Ïâœ"a¸$¨‡NHfuê¸DRÇ÷c¸S¬r½LA—¬PS4­Ï…§ÁäòŸ.‘t\'’¼‘Ë¥ĞD¸E/13aõÒ,u•ŠÄB½;yS“*f²¢÷eI_[Yşîºx¤<ÌŞ’^§™\'éyt‰¥üêÚvšó"s‘_MWœ,0¤˜°²3kARÌGEèÁZBºñ?tä/KáWİ>jdŞ‰/Ò%Q>„Ê™“„I<%†q”ˆ¡
+Á¤@|“e‘	vÒ€–{F—DæŸˆzfÊÍ#?o-ù¤/¦áŞ	İÖ~ŠÌ5•Å+¥LÆ	Õ~æ›>´BTá—]"ŸÏ½#åuÊàÖC¥ğü|tŸNS{XÓáÕÒÙEZD´M…”ÊÏ“î‰çÁ¤ò[¤€Ò‘A§JÅ\\Ô8!kŸtoI:i%}\'°' . "\0" . '`™
+È•-ğÛ¬ûâ}S=ÀT\'›°¦‚kŞ“‹,~ˆhô¨›—W*À†›xRÇH¯ª)Š¿U	Š‰ßqÂ—‰´’ HÛaØj™ø^IlF|R
+OŸ«¹_lÂjÅ@EıqH‰_¿Òkâı,k’wÆ/(	¸Ìå¼º’*V!«C<kœ¶B>]IPÄtı¥¸—¶ÑH5P~°ÊàØ½†\\Ï3›°fîì‘ñÕ¼%rÔˆ!šFÈ;#íb9ÂÓ4ÔÜ¹‘’¹lpÀ$9D	ë/¤î@¨%A"&Í-­!÷“ô¹Ô<qeuKK·¦QÛ›°Ö!Jùe[Vê±_LˆŠ
+Ó
+ËÌ7AJåÜÓEıH·t¿
+Av0)@“ç(	ê$)°ºeaDV€	i@^+…·/ìÖİÈ„U' . "\0" . '_ÕşÚ' . "\0" . '7}5o©G«^‘zI÷®ÔnRv€‡Õ(&È9X…l°<Jƒè/ESExı	oıİL,lÖ|„…—Tõ–Òç>¦EóR9Äc-"ÊÇ	_ˆ*AuËµØ/G¿ï©Ì@…„Ät²/&¬u&8$do<òÒ>¾2¬$	÷\\Šò1ïI…øˆÓ™4éÇA¥a^ Ö“¥—Dr>™/Eö“Âz©fÃJ™°´ÍŞİŞ:¡Œ/+ìÌq¢ˆ*·ôH¦' . "\0" . '6C(‡³Å²Ä°™°zß9§Q°¨	õœ´0…ëF…P¨Ì†yá»Ó´îsû‚@ü¤¤§&mŞ+’Æ—BLXƒ0sbA§}Ş*;¶ÅŠ¤HÍ ,Y#PdE°‹l-V—BLXY›92/õJID7WwI!ô‚%ïwI€-ƒA R–òAÈ¥R fØÒˆ	+KSGjE±JDIÜj*é/GJzÛ2ıêfiÂ™”l,ñÙÊ¥ƒNt^"ÖL§«‹"¿¬¯J¡	U%Hyùˆ¤ƒ—!§+ô»½o$êœÊJ/CımúWÂº]”LXíâÛ@ëE©`‚Z!*63­
+i;tˆÓ`€º·M‹)äe–Ã?æ°¶“r­??;Ğ&¬Ù±kùÊb#Óg¥ÉôÑ1bp¨4ú±nk^µ›OÄ/Iztú@Tûƒ¤P†5,J&¬Ş™»H:~¡¤¬²¿²ï’tôâ7êìPK¢PdQå•‡}•èK)&¬Ş˜½È{…¤%‘ˆ\\"Ïß)…oôF]+²' . "\0" . '"5ï)s].¬Pêšo—VLX›¾¨ÉŠß“G’qıÙó­R l‹e©ˆl*ÂÆ!eí{&ÙwîÇGİÂ„Õö‘}™H§<HÕTá<<ÅP±m•eé(R«H¤/«¸R–hW)ğ·¥ÖBÍ_lpJ~ñS£››’6óášéîÃsÀ7‹”À¦üt)OBY¨oÀÏ=ùÑLX“1jèŒ¢;)2£+~+~‡-»»ßĞ™7Y&¦®”¥)SÇp&¬:(Í}N¤V{ÇmXiŠÍ@_\'éˆeÉ´ŸÆÁ7ï›~ÔÊJ¯K:ÎÌ&¬V¿Å%èrW“ònÄÕ<¶ûİ—[}x7>ÏûÜJémê­İK
+WOÕÌÀO6aµfàbÈV\\»TnÁ¦û;<¡5Ğ3m8n¶@+ç5©S¶‹¶T0aµÒŠœ¿£%Z
+¿ûz7ãV' . "\0" . 'Ï¸Ñ"õŠ¾Q¦]±=Ûu–ñCµ¦º	«Qh‹! QÉ/i–2Åì\'øïFoçÆ€@ü¦¤Wä@)|t' . "\0" . 'ÖÊ#˜°ƒÕCÀÆ tCE ğ;$Qaƒ¡ßó+ëÁ	¶7a5òåğ°ÛHAR§ùLR°V
+-2¤ø¢eLXswxzÚß¯Ú’‡€sãš{q«”nEi í&<Í¥@²»ÅV›} ~:uÊò&¸øO•å‰-K‡@áI=)e2ìXóñ“B¹{sÍK–÷4{XsÙ>²ÅR™œÊ¦£÷õ*à\\€fxq­áÏÅnàgKÚr%‰¹ßIaóº3•MX3C_$é}éò?JÚÌ«€3ƒ™Ù…µ‡{ìóHxËQ×¯±!.rŞÙœ×2&¬)Àºş©‘2µ§¿½X
+ïŸ¹)_˜…\'õÄ•]–5n¸W’Ô‘’wÎnÚ°&¬™üj>á:ï*”ÃÂ™ZóE}E ¶\'U÷¨º4{va5ÖL¨Gª.ì™.=^
+ûÌÔŒ/ê!I1qÎêŞöc<?÷>cOjqf4aÍ„u|³¤7¥Kß">[²EÀ$•‹éLX3Y*+©¬­}Œö©_Ô!&©ÁŸùÖ&¬™ ‹GHzJºôb)ŒV©U_Ô&ñf’vKÛ¦í*i­ˆs”ğÄy›¦˜£mÖLàEbg˜h?R)nï—g²Å‹ŠúR»¯ÄÆiûTÆ[í¾k„ ´¨¢›ÖÔ•Dv²)\'e©[´WˆfsÎï‰˜¦{§‚ªiOjNä}¹	kfÄ#%¨\\N#V)‡liÂ{‚œ ¦ûHÚI¥}&	õóñŒ/“ô)@X–Œ0aÍl¬vìÈä{u¨qæJ}£píÌMûÂ
+3{OÿJûú}GR:DeÉÖÜÆ‹ÛHb[¦ê$.1:ÏÂ9s7¿tÄ;V†vxQxOìÓ7I.OÄtFz=[
+ìñh&¬FŒY”¹ec‰GVš£º(¤ÅŠ¢¥@ Àé6)aœì' . "\0" . 'Şo&éa’ ªÛJÚ´X`Ë®È”öIåúç5pËşV£&ŒÌi}bd>åDIÔÇºPÒ¤ ŸMùğZç=ÛœÍÒçì=5ÚOóml–Î“ïÓ.DóHŒ¤µZZ[3\\dËñ$±ÒØ‘sC·LÇú•÷åßxeH†\'al4BJÕ=›D¶ê=áAéİcš„7ï¶LX­Ø/B' . "\0" . '\'I‚¼êõ½!1VÙ`õ¼ßUçÚê9Ì§A,!¢’œê¬ªM{ÿ:çÿIuÄ¨vQ¾ŞNûï±ãñI{ªãrcÂjÍîÅ:T$%™¯a[Iëµv»Å7LÀì(ùT‰hô}úş»xU}Ç¡ `ÂZ˜%‹0&–ñ‚.RçëŠÈ ÑkÒAFù¾ú7&ÄY¡c+*â—®¨xFWJ&Ÿ…uß¨@À„ÕyG¸‘(é&’¾›†‡ÓjG‘¹[¤0ˆg-"ºÆÃ®i¡õù}@àE¸¾æÏÎË' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:53:22 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dbad82df0ab.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 74, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(74): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:55:09 --> file_put_contents(ttd_petugas/64dbadedbf931.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dbadedbf931.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 74, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(74): file_put_contents('ttd_petugas/64dbadedbf931.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . '`IDATx^íğmÕÇ¿+)E®ˆ+F¹½Ü+¹]$J%š‹bD%wPÊs‰¦š”Æ`4“.&aÌ5cFêŠäR^q=î•g#Fi¤‡òŠZæ»ïÚ÷îÿñ?ÿ³ÏcïsÖ9Ÿ5sæşç¿÷Z¿õùıÎ÷¿öz‘ ' . "\0" . 'dB db\'fB' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa( €`€@6¬l\\…¡€' . "\0" . '‚E@' . "\0" . 'Ù@°²q†B' . "\0" . '1' . "\0" . 'dC' . "\0" . 'ÁÊÆU
+ XÄ' . "\0" . ' +Wa(Ú ï\'ééµ£¤ÒûÃ$m%iƒ¤»‡°dyºwıyÜKÒ2IwJz™î)¯E°† Ï­˜\\ñ¾áyPå½Å¨ú{çß¶°:}\\
+Ç!XæÌÀÑ"bÁqkÇ¯í%íŞûs¿_‘„çI‹:DÈ¢´Í”½F
+OE°¦Ä›Tc\\¢ÁbR–^ïëüıŞãªQ*÷.I·¤×_+ïw‘ôoI%ùšASGÂÅ’NL\\\'…%–âšp%‹nÏÔu' . "\0" . 'ê¼ò¾6ÊÖÆêı¹Ù[§î»Kz€¤ëjˆ[4“,.ó	?«
+Qõı-Røûø+İWæş«í’-‹¤ğ7¿ŸÑ>¬B¬¿c°' . "\0" . 'ó¸=}a-şâúÕù~gI[KZ\'éFI7Kºu‹Hß“qŠ®×©+¥°ÁÊØ˜>vÿ©ˆÈBÂÒ)8=®Ã<nÊèˆgIzgÊï,)œ:Ã‚åªóH8DpMã#á®©3ÛÿÙ«-š;$ıcnK\'ø1ŠÔ(¸RÒ¥©ˆuR8hÆ«QÚdE Ş_’ş¹©¿9Ü3£}XC‘äf@ Ñ nù:í-…V+à)èŸ@¼ZÒşé¾‹¥°
+ÁêŸ"w@' . "\0" . '­ˆ¿‘ôØTÔG¥p"‚Õ
+x
+' . "\0" . 'ú#Ÿ é\'éÏ){¨nC°ú£ÈÕ€@+â’NHE] …×ø=‚Õ
+|
+' . "\0" . 'ê(nß”Vø¶¥R¸ÁªO+!' . "\0" . 'ÖDïÎ°:·^
+û–EÓÂjÍ	Ô#½®÷ÉéÚã¥ğ1«9®‚' . "\0" . 'Z%0§³İË˜WdÓÂjÕ,L`şÎvZXÄ 0aºw¶#Xæ*Ì' . "\0" . 'ºw¶#XD 0aºw¶#Xæ*ÌÀlX¸³Ášíè ö˜0w¶#Xæ.ÌÀìèİÙ`ÍntPsLŞíÖ„¹s 0»zw¶#X³Ôˆ>[ñ>é˜®^?\'éôdĞ%}GÒÏÒşúŞ&Ù‡ÆnşÉL÷†]Gö/boô^¢áóÿª×øÀ‡(é×é(±Î¿÷úİÇ5’¬F°’)%-Şeó1’^~şx' . "\0" . 'Ññ-S—¬©s)š|qÇ$J¦êË"õˆÉ·¿§…~´ûW:íf¡Ÿ{Iò#¡Óm’¾šNc¿\\’WóiÏÕŸw X=Ùs!6•â´Ó 9xw<è›µ,Kç0^“D£×õ>d¶GŠç_HÚ&]ø~)¼­×]V/Bü]	ÄR€üåël-úHv¤ß¦—ß;}½Ñ	nLhŠ[Iú¾¤}’×Jaic¬:”¸fÆ	Ä\'Jzo­ò¥8ù‹7Hr«§¥òçï6}üû”§xZedğVIK¤ğ—:•F°êPâš$Ÿ#é0I/’äÇ»~ÓÍQJbTŠT¸¡ßÌ¦çúèV•5Ë‘ÄÃ¥pIİú!XuIqİ”ˆîWzn¨C$m_£Â”Ô!F›EÉ-ÒÑS\'~Z9kğ")¼¢HV?´¸vÊDw.»åé+zTÎâä–Á§·ˆTpg3©6x¾¤×¦Ëÿ iêöÇu²A°êPâš)!PÌÀ~–¤çIZ)é‘TìNIWHºLÒ¥Rğ#i`ñPI_N·{RêÓ¥àYí}%«/\\\\œâQ¯¨g§y>İªqıÒ:©Îğ|~DÚ·¸˜wö+INeŸ#…S±Á„÷L8b38‹”_>Ó®Ûh§xxıÒÔŠ*ë$š@üBzìvÆ>~~)xriß	Áê7Lõ&Ï\'¥EñXI§ßî’´L
+¿Ô^kPrÜ7f<êÙ5Š»Hr«Õ°N’ÂjÜØõkzÜÛ2èxıˆ$÷E•kĞºÙğ=Iß³V
+~!µJ ğÕ·$=-ûMÁî\'k`tÜØ.øÌôháÿÚó%Ï÷âY‹ÔeŒêµëÿ/-$é¼ô¹—	í&…‡µ
+Á– ÷7L zêÁ¹’œ§ Ïÿ¼¤/I¡2oØ²ïM î&iceaó±Rğüµ¡‚54B2h†@q0Á»%½¹ø.ÊÛ¬•ä¡ñÍ”İ™kñ<3mjwª<DOš—@ôîë%•‹™/‘Âá£‚…`Š$ùŒˆ@Ñ÷ñJIgIZ\\ÉÔ‹?(éŒ~gGfXÜUÒQ©e·gGõ~…,ïi¾+#©Ü&Æ€{JadË”¬iìê÷“äå^2SM~ìó“\'v6˜ŠmOVK:XR·¾²jùŸÂ«4(³¬£;ØİÑ^êÊRpgûÈ‚52”d48¢ŸÊÃİ/ìÈÃı ¯“Â·Ï»îqIZ:ò¨.wü9=îÜÑê{¼¼.nÆSñÿóŠĞŸ/…×
+‚5j¢ä×ÍıTo’´måÆ›$½K’[0Cƒ÷6¦hU½=íÏäµ†ÕäÓ[>\'é³RğÖ¬NaóşU^ÄëI‘3œâE’V%' . "\0" . 'f²—¼«éH‚5RœdVÀÄôSY|>%iyÅî»%}EÒ[ºw®-BX)pçIáäzuŸÆ«¢w»ğò\'/¹yŠ~ØDM¬&¨’çÆİOU´’ÊVÕ{:Zvş’So0ºåõâTÑ«¤pÀlº=zA³GM½ÀÙé4)œÑ«)²äÛA`ú©
+±r«ê3•ıÄı¡G ½ò¹R(÷QïáÁ9­Š+¥àMÿf0E‹ü“RÅı~ßúûÇ…`õÏŒ;ú"0	ıT¥ÁÑ³à½Vu÷É<±Ñ\'¸ô‘âé„bßs½ºuÖ÷‘gn—ÎÙ…Á\'åìŞôôVn1’•½Ñ#Sµ¨b¶;§ıù™íÌ§*ZUî>[Ru„Ï_0†ĞG«ª
+?z Ú©¼µÜÿ5#)ºÏÎ+Êt¡NhºòVÓ„g6ÿøaIoè¨¾çS½U
+¿oK|¾¤wlê“<¡ñ ş[UVGÏ+çky¤°ÏVZ;F_J|É¦‘ÓÍó­¾+i¿æGt·8ú:‘ã(Éôœœrª‚jX%O*l!Åı“PùP‰jº=Íµ:z4ı,ñkiËe—q„Ê‘²ê8®"â3$]Y!½ZÒ!mMë …5.¿Om¹Åœ×’•±ŞÉ›¶5<ŸÊ@£>÷Ö»ÇtàõP»	Ï–FypÄÁZ#…—N­[‹Š;¹úŸN¹¿•7â[!µwh+‚5İ6†ÚÅÓSßËöá˜^KVëÌÁ-…÷£ß|3«½–…ª³' . "\0" . 'çL–Ü(¸:¥)>\\’(ÊõÜë­ÿÔf…¬6iO}YÑ­*·®ÊQ¸C¥à“gJq»$T«ò`Î²,O]xŸ|^C©8ô)sOX$ÿœ²T"án¼k…“÷·ò©7­ï`MYh¯:Åôïìéş+§ÕRxu3öÄGKr§¾7õÛ¡£ŒËS‹ê›Í”İ™ktKã!éÓƒ¥à~­)JÅv1WU.<ºêzºïªõ„`µ|ZŒJ:>ÕÎìKG;m¡hMyf¹O
+oV¹9õ£ßÛ%?)éå©LO‘ğºÄ)IÅ*ì‘*ä~È£¤°f\\D°ÆE~ªÊŞcİëïœ<S|¹~4š*FÓå-\\îr¦ wQ8E
+1¤èşr7ÍRØ{F4Tdü¤7V2?Y
+å¶Ç•¹p¶ÿwç³òOüÆ' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:55:09 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dbadedbf931.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 74, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(74): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-08-15 23:57:00 --> file_put_contents(ttd_petugas/64dbae5c52141.png): failed to open stream: No such file or directory
+in APPPATH/Controllers/Admin/TandaTanganPetugas.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(ttd_petugas/64dbae5c52141.png): failed to open stream: No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php', 74, [...])
+ 2 APPPATH/Controllers/Admin/TandaTanganPetugas.php(74): file_put_contents('ttd_petugas/64dbae5c52141.png', '‰PNG
+
+' . "\0" . '' . "\0" . '' . "\0" . 'IHDR' . "\0" . '' . "\0" . ',' . "\0" . '' . "\0" . '' . "\0" . '–' . "\0" . '' . "\0" . '' . "\0" . 'd[µÒ' . "\0" . '' . "\0" . '' . "\0" . 'sRGB' . "\0" . '®Îé' . "\0" . '' . "\0" . '”IDATx^í	ŒeE†ÿR@QPQh£¨#®hÄDÀ' . "\0" . 'Ñ\\Q‰1 h„·Ä˜(8q‹F\\"Œ€ƒÁ' . "\0" . '2
+F¸K”QQ£qÁŒÈâVæ¿]o¸ó¦»ßë~ïõ½çŞ¯’Ng¦ß­{ê;§ÿ®º÷Ô©$ ' . "\0" . ' R;1€€,‚' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b' . "\0" . 'C' . "\0" . 'Á
+ã*…' . "\0" . ',b CòÎ’*é!’&éù’îtª”üœ' . "\0" . '‚Üı1?ï&iI—t”¤=$İ*i÷"Rş÷}àq³¤#¤tSxus¤V7ıpT›É¢4ß×öê¿’Î“Ò	öÃå@°„ß¿[ç{Izª¤SÊ²í.I{šTŒÓııAÒïËw/Ÿ&éŞ5ÖçJé´ş±ïÆˆ¬nø±Å£È“ô\\IKz¤,ÓØ;%ıZÒoËÒÏÂôÕòï?Î‰Tòq¨å$İ(i›òƒ³¤tú2mà²†	 X; {·Ïûz¤C$í:æ‚dQšç+İ2f?Ã‚eqzùÏHÚMJ‰Ñ@°:­]&g¿‘³0yöt¨¤½FØgaú¤JºäqZ® -v·ì‡ğ¿“´KùÔR:³]ü°f)¬¥Ğâ³’òN’<{|=z–Kú¶¤k$}MÒRú×Ê ÌõÙÕ_%íÉìjeÈÏê.Ö¬Èv¦ß|?IÏ*åçPOä‡çµÿIúA\'‹ÔµÍä@U³+/#wdvÕ™`‚Õ_Ni$y;IO¯Í ü–mÛÿ´6ƒÚ ¥Û¦dÌİä+$V:¸½<»òr”˜' . "\0" . '‚ØyÓ3=?C’_õ?fÌ¿©»RÒ×%]-%¿¥kQË\'JúXÍ ó¥ôÚˆ)Ë$€`-\\ÜËª¥’ÊË¼ƒÊLjÔp¼´ÚPfQ×Hé£.hîçÙÛqœî0X¶şLÒª•{nÖÜÈûpg«ó^Î~†ca²@ùëÉc,ñş.é÷<‡J?)?^Ò·$İ¿Øë7‘J‰¥`´Á‰(Ú²_á;Qó™%Õ`Õ#°@ùõÿ¦’³ô)ùáy V¥W|¿dĞÛn/Shßr5ÒšŠ`µĞ)K3){û‰S3¨Gq½—x×Jº®|ß(¥<Æu-ıHöŒÊ3+Ï°Üş9·ìMaÑ:D' . "\0" . 'Á
+çÌlAˆ“—zŞ‹7ª9Q³&P]ªZPíOô3+?»róÌğ0)]5
+
+?G' . "\0" . 'ÁjµÏª_FÏÈıİeVF5?hÌüÜ›;ÚòZI\'×÷F)}¼£ƒíı°¬Ö…@µÄóŞ·K­§q6o,oğ¼,r”³º{Ğ¶J_X+¥7÷`à½"‚Õ
+×W"õ"I«Ë¾¼QVİPr <‹ºNJŞÔÛ³¶UúÂe’÷² gn›p¸Ö„' . "\0" . '—ùØ"åWò(§ø9Ôõì‡#}aùqûJkEı—)é,Iû•¬ò…îîgPş:[J^æÑ6 }¡ÏÁ€`ÍÜûÕLêååËÅäjWKZ/éÒn?$Ÿ8é“ĞëÂµÖL¼˜$é%’^Y²Ì©‰9WoL]¦Æ™ún¤/LÌ4^ÖÔ|Vıõ·H½LÒá‹tû·²/ïdfRãÂÏSW_xAí
+ÒÆÅ×¡Ï!X9³*År„¤c%)i¡ƒ\\İ`¤ÏKÉÛGhcÈ÷‘ôYI/­]²^J/»>ØÖ’]Y-M¼Æ"å_Wàœ¯ıEÒÅs"¥oÆŞú²dHSº ?PÒ—$=»tèíCI:SB¬kl‡e\'rZ¤ÖÔ6Ø_í|(ÿ‚Y¤®’ÒÆîÈ{–-7û—Ü=·ÜNæKë)kQÇg×+÷ƒs•O¯ùérIHú29RÓøMÊ)ï´h¹¹šÄáRº~½ÓG\\ÖV¾ËŞLì4‹”ÏÔ›¯ùa×+·H]ÜÏLóY}öòÏ³(/İ\\öæ™ŸïXı"X•¿ªcÒıvÏBå¥ßBÍá-Rë¤YK+x¦omöƒu?`÷ƒv·Ÿ±jY	æéœÇ#ĞcÁªèú¡¹EÊïêÇ™×éı¨ˆ”ßğ¹Lm&²7-Ÿ#m>Å[‘dö:Øa;í™`UõÌ~`‘r®Ôà/ù°o–t¡¤ÏIÉ\'ÂĞfF Ê±²PÕ«,øMà+¤ä3iØL ‚•·)\'û™”+"ì°€ÿ½ìøBÉ•rF5mææÍ±:GJo™ù­¹AH¬ê¯¶«qZ¤œ}¾ëŞñùy_,i®#¬yÈ˜+FÏ›cuÅ÷"ûtö¶wL°ò‹HS{%>LñI®ä\\©+8şiöA¶õÈ±j‚zîÙÁªjœ@ÒSJ…Î…ü2È•ò¶R@k„' . "\0" . '9V`ïÈMƒ
+VUWju>È„Ï%.xç™ÔERò¦cZ£È±jnH°ª™”—zNEç4Ÿ¾WKCèğáÑ¢«hk£½-¬±gR¦%½MJ?o#èşÚT½¥=OÒ«È±êoLkä-¬J¤<“ò&ãÇ.2PŸî4„©i…Ã´ûÉûÌm×¾µÉ±š6æõ×°`å“$=¸ğö–/õöX„¿·jX¤.@¤Ú¥Ùé$Ÿªí	´Á~+ëúa4,‹@ƒ‚U‰ÕGÆ°z RŞ¿wÓŸç#¨v|XÒñCf|FJ¯iÔ4n@[‹™TÈĞª^Œ¸Ò‚¿š®‘Ò†CÂèVhP°Ìaó’ĞvøD—m9ƒ™T«bdLcò	’Î*m‘:VJ³>E	4,Xx\'>j‹ÍùeŸæ`8®´ú¹3“ËÓ 0ÖT0öµ“ü¤r–â^5>pcµ”¾ÛW*Œ{v¬Ù±ípÏÕæòÓ%½W’ó¬íRIÇIÉ%i˜:kêH»ŞaŞ½ì$pÑÃA»s®Uúd×GÏøš%€`5Ë?Øİ³EÊypõr=N59š%Á\\Ô\\+¨ãVÖìê,ÆK†¬Û„O”™Õ]+kwë+«¯{ÜÙ\'9·ª~Ì™ŸQ½NJ.~HƒÀŠ@°Vu´åí%½knC¹<Ã4Äq”ü6%€`­(î(7ËKòôGÔ,vnÕú¹<8Ñ:Š\'»f\'‚Õ5N4¼sÉVŞów¥¤7pÌÙDp¹x
+¬)@ìFÙGŸ}¨V=ÃÃúsy¨îª­44N' . "\0" . 'ÁjÜM÷.Ë¿C‡,ù´¤S¥tkÓr X½…*[İi	ÇIÚ¶†Á‡ÈOu…ŞF«`µÚ=³2®z¨î²Å]šÏd<[Ò»¥t÷¬îL¿˜„' . "\0" . '‚5	½V\\[•èq¹ô6\'ïW…áĞgU6,oİŸ€@s¬æØOáÎ[Tm}ÓÂ¢•]†ú}’^?”SåĞu’NäÔë)¸ƒ.fN' . "\0" . 'Áš9âYŞ EÒ FúåRš9UÉŸo-ÉŸ;Ô,¹]Ò™’>(%o\\¦A +„›2r1ÁÊ~Ë·ZÒµ«ıœÊÅöŞNĞĞï­ñVh×Ï\'XùIï”´ËĞĞ<;MJ›Bã{M' . "\0" . 'Á
+íş-ëIÛIÚihH®§îºêÚ×oVè8ØB°†Gr›¤Ë$½šºê¡Œñ5VèpÈ>ızÿ¡!X¨Ş#¥µ¡‡†ñ˜‡' . "\0" . '‚:,²SÖÔ†ğK)Õ…=:Œ‡À0+|LT¢µJÒ&)~8' . "\0" . '‹@°@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0@°ˆ@ +Œ«0ø?Ü‚µe—[‡' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . 'IEND®B`‚')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-15 23:57:00 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/API/ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Debug/Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorExc
+ã€Previous Exceptionã€‘
+ErrorException
+file_put_contents(ttd_petugas/64dbae5c52141.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', '/Users/chanchan...', 74, Array)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(74): file_put_contents('ttd_petugas/64d...', '\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->insert()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#7 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

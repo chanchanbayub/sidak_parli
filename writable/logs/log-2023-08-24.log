@@ -1,0 +1,8 @@
+CRITICAL - 2023-08-24 22:19:30 --> Call to undefined method App\Models\Admin\JenisPelanggaranModel::getJenisPelanggaran
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/DataPenindakan.php(61): CodeIgniter\Model->__call('getJenisPelanggaran', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\DataPenindakan->tambah_penindakan()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DataPenindakan))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')

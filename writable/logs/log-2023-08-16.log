@@ -1,0 +1,171 @@
+ERROR - 2023-08-16 23:31:46 --> mysqli_sql_exception: Unknown column 'tanda_tangan_petugas_table.tanda_tangan_petugas' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `petugas...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `petugas...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `petugas...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `petugas...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/PetugasModel.php(60): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(26): App\Models\Admin\PetugasModel->getKomandanRegu()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-16 23:31:46 --> Unknown column 'tanda_tangan_petugas_table.tanda_tangan_petugas' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`, `tanda_tangan_petugas_table`.`tanda_tangan_petugas`
+FROM `petugas_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `petugas_table`.`ukpd_id`
+JOIN `unit_regu_table` ON `unit_regu_table`.`id` = `petugas_table`.`unit_id`
+JOIN `jabatan_table` ON `jabatan_table`.`id` = `petugas_table`.`jabatan_id`
+JOIN `role_management_table` ON `role_management_table`.`id` = `petugas_table`.`role_id`
+JOIN `status_petugas_table` ON `status_petugas_table`.`id` = `petugas_table`.`status_id`
+WHERE `jabatan_id` = 3
+OR `jabatan_id` = 6
+ORDER BY `petugas_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`, `tanda_tangan_petugas_table`.`tanda_tangan_petugas`
+FROM `petugas_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `petugas_table`.`ukpd_id`
+JOIN `unit_regu_table` ON `unit_regu_table`.`id` = `petugas_table`.`unit_id`
+JOIN `jabatan_table` ON `jabatan_table`.`id` = `petugas_table`.`jabatan_id`
+JOIN `role_management_table` ON `role_management_table`.`id` = `petugas_table`.`role_id`
+JOIN `status_petugas_table` ON `status_petugas_table`.`id` = `petugas_table`.`status_id`
+WHERE `jabatan_id` = 3
+OR `jabatan_id` = 6
+ORDER BY `petugas_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`, `tanda_tangan_petugas_table`.`tanda_tangan_petugas`
+FROM `petugas_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `petugas_table`.`ukpd_id`
+JOIN `unit_regu_table` ON `unit_regu_table`.`id` = `petugas_table`.`unit_id`
+JOIN `jabatan_table` ON `jabatan_table`.`id` = `petugas_table`.`jabatan_id`
+JOIN `role_management_table` ON `role_management_table`.`id` = `petugas_table`.`role_id`
+JOIN `status_petugas_table` ON `status_petugas_table`.`id` = `petugas_table`.`status_id`
+WHERE `jabatan_id` = 3
+OR `jabatan_id` = 6
+ORDER BY `petugas_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`, `tanda_tangan_petugas_table`.`tanda_tangan_petugas`
+FROM `petugas_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `petugas_table`.`ukpd_id`
+JOIN `unit_regu_table` ON `unit_regu_table`.`id` = `petugas_table`.`unit_id`
+JOIN `jabatan_table` ON `jabatan_table`.`id` = `petugas_table`.`jabatan_id`
+JOIN `role_management_table` ON `role_management_table`.`id` = `petugas_table`.`role_id`
+JOIN `status_petugas_table` ON `status_petugas_table`.`id` = `petugas_table`.`status_id`
+WHERE `jabatan_id` = :jabatan_id:
+OR `jabatan_id` = :jabatan_id.1:
+ORDER BY `petugas_table`.`id` desc', [...], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/PetugasModel.php(60): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/TandaTanganPetugas.php(26): App\Models\Admin\PetugasModel->getKomandanRegu()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-16 23:34:23 --> mysqli_sql_exception: Unknown column 'ukpd_table.ukpd' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `petugas...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `petugas...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `petugas...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `petugas...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/TandaTanganPetugasModel.php(40): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(27): App\Models\Admin\TandaTanganPetugasModel->getTandaTanganPetugasNull()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-16 23:34:23 --> Unknown column 'ukpd_table.ukpd' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `tanda_tangan_petugas_table`
+JOIN `petugas_table` ON `petugas_table`.`id` = `tanda_tangan_petugas_table`.`petugas_id`
+WHERE `tanda_tangan_petugas_table`.`tanda_tangan_petugas` IS NULL
+ORDER BY `petugas_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `tanda_tangan_petugas_table`
+JOIN `petugas_table` ON `petugas_table`.`id` = `tanda_tangan_petugas_table`.`petugas_id`
+WHERE `tanda_tangan_petugas_table`.`tanda_tangan_petugas` IS NULL
+ORDER BY `petugas_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `tanda_tangan_petugas_table`
+JOIN `petugas_table` ON `petugas_table`.`id` = `tanda_tangan_petugas_table`.`petugas_id`
+WHERE `tanda_tangan_petugas_table`.`tanda_tangan_petugas` IS NULL
+ORDER BY `petugas_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `tanda_tangan_petugas_table`
+JOIN `petugas_table` ON `petugas_table`.`id` = `tanda_tangan_petugas_table`.`petugas_id`
+WHERE `tanda_tangan_petugas_table`.`tanda_tangan_petugas` IS NULL
+ORDER BY `petugas_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/TandaTanganPetugasModel.php(40): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/TandaTanganPetugas.php(27): App\Models\Admin\TandaTanganPetugasModel->getTandaTanganPetugasNull()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-16 23:37:33 --> Call to undefined method App\Models\Admin\TandaTanganPetugasModel::getTandaTanganPetugasNull
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/TandaTanganPetugas.php(27): CodeIgniter\Model->__call('getTandaTanganPetugasNull', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-16 23:45:15 --> mysqli_sql_exception: Unknown column 'ukpd_table.ukpd' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `petugas...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `petugas...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `petugas...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `petugas...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/PetugasModel.php(57): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TandaTanganPetugas.php(26): App\Models\Admin\PetugasModel->getKomandanRegu()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-16 23:45:15 --> Unknown column 'ukpd_table.ukpd' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `petugas_table`
+RIGHT JOIN `tanda_tangan_petugas_table` ON `tanda_tangan_petugas_table`.`petugas_id` = `petugas_table`.`id`
+WHERE `tanda_tangan_petugas_table`.`tanda_tangan_petugas` IS NULL
+OR `jabatan_id` = 3
+OR `jabatan_id` = 6
+ORDER BY `petugas_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `petugas_table`
+RIGHT JOIN `tanda_tangan_petugas_table` ON `tanda_tangan_petugas_table`.`petugas_id` = `petugas_table`.`id`
+WHERE `tanda_tangan_petugas_table`.`tanda_tangan_petugas` IS NULL
+OR `jabatan_id` = 3
+OR `jabatan_id` = 6
+ORDER BY `petugas_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `petugas_table`
+RIGHT JOIN `tanda_tangan_petugas_table` ON `tanda_tangan_petugas_table`.`petugas_id` = `petugas_table`.`id`
+WHERE `tanda_tangan_petugas_table`.`tanda_tangan_petugas` IS NULL
+OR `jabatan_id` = 3
+OR `jabatan_id` = 6
+ORDER BY `petugas_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`username`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `petugas_table`
+RIGHT JOIN `tanda_tangan_petugas_table` ON `tanda_tangan_petugas_table`.`petugas_id` = `petugas_table`.`id`
+WHERE `tanda_tangan_petugas_table`.`tanda_tangan_petugas` IS NULL
+OR `jabatan_id` = :jabatan_id:
+OR `jabatan_id` = :jabatan_id.1:
+ORDER BY `petugas_table`.`id` desc', [...], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/PetugasModel.php(57): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/TandaTanganPetugas.php(26): App\Models\Admin\PetugasModel->getKomandanRegu()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TandaTanganPetugas->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TandaTanganPetugas))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')

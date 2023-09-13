@@ -1,0 +1,178 @@
+CRITICAL - 2023-08-02 11:19:20 --> Undefined variable: jabatan
+in APPPATH/Views/admin/status_petugas.php on line 38.
+ 1 APPPATH/Views/admin/status_petugas.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jabatan', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/status_petugas.php', 38, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/status_petugas.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/status_petugas', [], true)
+ 5 APPPATH/Controllers/Admin/StatusPetugas.php(26): view('admin/status_petugas', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\StatusPetugas->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\StatusPetugas))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-02 11:41:44 --> Undefined property: App\Controllers\Admin\StatusPetugas::$jabatanModel
+in APPPATH/Controllers/Admin/StatusPetugas.php on line 82.
+ 1 APPPATH/Controllers/Admin/StatusPetugas.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Admin\\StatusPetugas::$jabatanModel', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/StatusPetugas.php', 82, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\StatusPetugas->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\StatusPetugas))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-02 15:49:06 --> mysqli_sql_exception: Unknown column 'status_petugas_table.status_petugas' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `petugas...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `petugas...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `petugas...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `petugas...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/PetugasModel.php(29): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Petugas.php(42): App\Models\Admin\PetugasModel->getPetugas()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Petugas->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-02 15:49:06 --> Unknown column 'status_petugas_table.status_petugas' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `petugas_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `petugas_table`.`ukpd_id`
+JOIN `unit_regu_table` ON `unit_regu_table`.`id` = `petugas_table`.`unit_id`
+JOIN `jabatan_table` ON `jabatan_table`.`id` = `petugas_table`.`jabatan_id`
+JOIN `role_management_table` ON `role_management_table`.`id` = `petugas_table`.`role_id`
+ORDER BY `petugas_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `petugas_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `petugas_table`.`ukpd_id`
+JOIN `unit_regu_table` ON `unit_regu_table`.`id` = `petugas_table`.`unit_id`
+JOIN `jabatan_table` ON `jabatan_table`.`id` = `petugas_table`.`jabatan_id`
+JOIN `role_management_table` ON `role_management_table`.`id` = `petugas_table`.`role_id`
+ORDER BY `petugas_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `petugas_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `petugas_table`.`ukpd_id`
+JOIN `unit_regu_table` ON `unit_regu_table`.`id` = `petugas_table`.`unit_id`
+JOIN `jabatan_table` ON `jabatan_table`.`id` = `petugas_table`.`jabatan_id`
+JOIN `role_management_table` ON `role_management_table`.`id` = `petugas_table`.`role_id`
+ORDER BY `petugas_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `petugas_table`.`id`, `petugas_table`.`ukpd_id`, `petugas_table`.`unit_id`, `petugas_table`.`nama`, `petugas_table`.`nip`, `petugas_table`.`pangkat`, `petugas_table`.`golongan`, `petugas_table`.`jabatan_id`, `petugas_table`.`role_id`, `petugas_table`.`status_id`, `ukpd_table`.`ukpd`, `unit_regu_table`.`unit_regu`, `jabatan_table`.`jabatan`, `role_management_table`.`role_management`, `status_petugas_table`.`status_petugas`
+FROM `petugas_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `petugas_table`.`ukpd_id`
+JOIN `unit_regu_table` ON `unit_regu_table`.`id` = `petugas_table`.`unit_id`
+JOIN `jabatan_table` ON `jabatan_table`.`id` = `petugas_table`.`jabatan_id`
+JOIN `role_management_table` ON `role_management_table`.`id` = `petugas_table`.`role_id`
+ORDER BY `petugas_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/PetugasModel.php(29): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/Petugas.php(42): App\Models\Admin\PetugasModel->getPetugas()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Petugas->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-02 15:55:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`petugas_table`, CONSTRAINT `petugas_table_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `status_petugas_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('UPDATE `petugas...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `petugas...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `petugas...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `petugas...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Petugas.php(264): CodeIgniter\Model->update('1', Array)
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Petugas->update()
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+#10 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#13 {main}
+CRITICAL - 2023-08-02 15:55:06 --> Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`petugas_table`, CONSTRAINT `petugas_table_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `status_petugas_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('UPDATE `petugas_table` SET `ukpd_id` = \'11\', `unit_id` = \'7\', `nama` = \'tststs\', `nip` = \'123131\', `golongan` = \'-\', `pangkat` = \'-\', `jabatan_id` = \'2\', `role_id` = \'2\', `status_id` = \'\', `updated_at` = \'2023-08-02 15:55:06\'
+WHERE `petugas_table`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `petugas_table` SET `ukpd_id` = \'11\', `unit_id` = \'7\', `nama` = \'tststs\', `nip` = \'123131\', `golongan` = \'-\', `pangkat` = \'-\', `jabatan_id` = \'2\', `role_id` = \'2\', `status_id` = \'\', `updated_at` = \'2023-08-02 15:55:06\'
+WHERE `petugas_table`.`id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `petugas_table` SET `ukpd_id` = \'11\', `unit_id` = \'7\', `nama` = \'tststs\', `nip` = \'123131\', `golongan` = \'-\', `pangkat` = \'-\', `jabatan_id` = \'2\', `role_id` = \'2\', `status_id` = \'\', `updated_at` = \'2023-08-02 15:55:06\'
+WHERE `petugas_table`.`id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `petugas_table` SET `ukpd_id` = :ukpd_id:, `unit_id` = :unit_id:, `nama` = :nama:, `nip` = :nip:, `golongan` = :golongan:, `pangkat` = :pangkat:, `jabatan_id` = :jabatan_id:, `role_id` = :role_id:, `status_id` = :status_id:, `updated_at` = :updated_at:
+WHERE `petugas_table`.`id` IN :petugas_table.id:', [...], false)
+ 5 SYSTEMPATH/Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH/Controllers/Admin/Petugas.php(264): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Petugas->update()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+11 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-02 15:56:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`petugas_table`, CONSTRAINT `petugas_table_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `status_petugas_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('UPDATE `petugas...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `petugas...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `petugas...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `petugas...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Petugas.php(264): CodeIgniter\Model->update('1', Array)
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Petugas->update()
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+#10 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#13 {main}
+CRITICAL - 2023-08-02 15:56:59 --> Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`petugas_table`, CONSTRAINT `petugas_table_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `status_petugas_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('UPDATE `petugas_table` SET `ukpd_id` = \'11\', `unit_id` = \'7\', `nama` = \'tststs\', `nip` = \'123131\', `golongan` = \'-\', `pangkat` = \'-\', `jabatan_id` = \'2\', `role_id` = \'2\', `status_id` = \'\', `updated_at` = \'2023-08-02 15:56:59\'
+WHERE `petugas_table`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `petugas_table` SET `ukpd_id` = \'11\', `unit_id` = \'7\', `nama` = \'tststs\', `nip` = \'123131\', `golongan` = \'-\', `pangkat` = \'-\', `jabatan_id` = \'2\', `role_id` = \'2\', `status_id` = \'\', `updated_at` = \'2023-08-02 15:56:59\'
+WHERE `petugas_table`.`id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `petugas_table` SET `ukpd_id` = \'11\', `unit_id` = \'7\', `nama` = \'tststs\', `nip` = \'123131\', `golongan` = \'-\', `pangkat` = \'-\', `jabatan_id` = \'2\', `role_id` = \'2\', `status_id` = \'\', `updated_at` = \'2023-08-02 15:56:59\'
+WHERE `petugas_table`.`id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `petugas_table` SET `ukpd_id` = :ukpd_id:, `unit_id` = :unit_id:, `nama` = :nama:, `nip` = :nip:, `golongan` = :golongan:, `pangkat` = :pangkat:, `jabatan_id` = :jabatan_id:, `role_id` = :role_id:, `status_id` = :status_id:, `updated_at` = :updated_at:
+WHERE `petugas_table`.`id` IN :petugas_table.id:', [...], false)
+ 5 SYSTEMPATH/Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH/Controllers/Admin/Petugas.php(264): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Petugas->update()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+11 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-02 23:00:45 --> Invalid file: "admin/petugas_detail.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/petugas_detail.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/petugas_detail', [], true)
+ 3 APPPATH/Controllers/Admin/Petugas.php(295): view('admin/petugas_detail', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Petugas->detail('12345')
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-02 23:01:25 --> Undefined variable: title
+in APPPATH/Views/layout/template.php on line 8.
+ 1 APPPATH/Views/layout/template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/layout/template.php', 8, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/layout/template.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(240): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/petugas_detail', [], true)
+ 6 APPPATH/Controllers/Admin/Petugas.php(295): view('admin/petugas_detail', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Petugas->detail('12345')
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-02 23:15:50 --> Undefined property: stdClass::$Golongan
+in APPPATH/Views/admin/petugas_detail.php on line 53.
+ 1 APPPATH/Views/admin/petugas_detail.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$Golongan', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/petugas_detail.php', 53, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/petugas_detail.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/petugas_detail', [], true)
+ 5 APPPATH/Controllers/Admin/Petugas.php(296): view('admin/petugas_detail', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Petugas->detail('12345')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Petugas))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')

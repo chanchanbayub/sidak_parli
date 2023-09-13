@@ -1,0 +1,523 @@
+ERROR - 2023-08-31 22:18:50 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('CREATE TABLE `o...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 /Users/chanchanbayubahari/Desktop/e-parli/app/Database/Migrations/2023-08-31-151134_Ocp.php(79): CodeIgniter\Database\Forge->createTable('ocp_table', false, Array)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(877): App\Database\Migrations\Ocp->up()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-08-31 22:19:34 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('CREATE TABLE `o...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 /Users/chanchanbayubahari/Desktop/e-parli/app/Database/Migrations/2023-08-31-151134_Ocp.php(79): CodeIgniter\Database\Forge->createTable('ocp_table', false, Array)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(877): App\Database\Migrations\Ocp->up()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-08-31 22:21:08 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('CREATE TABLE `o...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `o...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `o...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `o...')
+#4 /Users/chanchanbayubahari/Desktop/e-parli/app/Database/Migrations/2023-08-31-151134_Ocp.php(78): CodeIgniter\Database\Forge->createTable('ocp_table', false, Array)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(877): App\Database\Migrations\Ocp->up()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2023-08-31 22:26:27 --> Call to undefined method App\Models\Admin\OcpModel::getDataOcp
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/Ocp.php(22): CodeIgniter\Model->__call('getDataOcp', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 22:28:18 --> Call to undefined method App\Models\Admin\OcpModel::getDataOcp
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/Ocp.php(22): CodeIgniter\Model->__call('getDataOcp', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-31 22:38:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_t...' at line 1 in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-31 22:38:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_t...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota` `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota` `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota` `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota` `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-31 22:38:50 --> mysqli_sql_exception: Unknown column 'kota.kota' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-31 22:38:50 --> Unknown column 'kota.kota' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-31 22:39:36 --> mysqli_sql_exception: Unknown column 'kota.kota' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-31 22:39:36 --> Unknown column 'kota.kota' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-31 22:40:29 --> mysqli_sql_exception: Unknown column 'kota.kota' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-31 22:40:29 --> Unknown column 'kota.kota' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-31 22:40:50 --> mysqli_sql_exception: Unknown column 'kota.kota' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-31 22:40:50 --> Unknown column 'kota.kota' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`jenis_penindakan_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`jenis_penindakan_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`jenis_penindakan_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kota`, `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`jenis_penindakan_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-31 22:41:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_t...' at line 1 in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-31 22:41:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_t...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kabupaten_kota` `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`jenis_penindakan_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kabupaten_kota` `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`jenis_penindakan_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kabupaten_kota` `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`jenis_penindakan_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ocp_table`.`ukpd_id`, `ocp_table`.`jenis_penindakan_id`, `ocp_table`.`nomor_kendaraan_ocp`, `ocp_table`.`provinsi_id`, `ocp_table`.`kota_id`, `ocp_table`.`kecamatan_id`, `ocp_table`.`lokasi_penindakan`, `ocp_table`.`foto_penindakan`, `ukpd_table`.`ukpd`, `jenis_penindakan_table`.`jenis_penindakan`, `provinsi`.`provinsi`, `kota`.`kabupaten_kota` `kecamatan`.`kecamatan`
+FROM `ocp_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `ocp_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `ocp_table`.`jenis_penindakan_id`
+JOIN `provinsi` ON `provinsi`.`id` = `ocp_table`.`provinsi_id`
+JOIN `kota` ON `kota`.`id` = `ocp_table`.`kota_id`
+JOIN `kecamatan` ON `kecamatan`.`id` = `ocp_table`.`kecamatan_id`
+ORDER BY `ocp_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/OcpModel.php(37): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/Ocp.php(22): App\Models\Admin\OcpModel->getDataOcp()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 22:42:33 --> Undefined variable: ocp
+in APPPATH/Views/admin/ocp.php on line 41.
+ 1 APPPATH/Views/admin/ocp.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: ocp', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php', 41, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/ocp', [], true)
+ 5 APPPATH/Controllers/Admin/Ocp.php(26): view('admin/ocp', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 22:43:08 --> Undefined variable: ocp
+in APPPATH/Views/admin/ocp.php on line 41.
+ 1 APPPATH/Views/admin/ocp.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: ocp', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php', 41, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/ocp', [], true)
+ 5 APPPATH/Controllers/Admin/Ocp.php(26): view('admin/ocp', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 22:45:51 --> Call to a member function getUkpd() on null
+in APPPATH/Controllers/Admin/Ocp.php on line 25.
+ 1 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 22:48:16 --> Call to undefined method App\Models\Admin\JenisPenindakanModel::getJenisPenindakan
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/Ocp.php(29): CodeIgniter\Model->__call('getJenisPenindakan', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 22:49:17 --> Undefined variable: jenis_penindakan_id
+in APPPATH/Views/admin/ocp.php on line 95.
+ 1 APPPATH/Views/admin/ocp.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jenis_penindakan_id', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php', 95, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/ocp', [], true)
+ 5 APPPATH/Controllers/Admin/Ocp.php(34): view('admin/ocp', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 22:51:48 --> Call to undefined method App\Models\Admin\JenisPenindakanModel::getResultObject
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/Ocp.php(29): CodeIgniter\Model->__call('getResultObject', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 22:51:54 --> Call to undefined method App\Models\Admin\JenisPenindakanModel::getResultsObject
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/Ocp.php(29): CodeIgniter\Model->__call('getResultsObject', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 23:31:50 --> Call to a member function getRandomName() on null
+in APPPATH/Controllers/Admin/Ocp.php on line 159.
+ 1 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->insert()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 23:41:31 --> Undefined property: stdClass::$nomor_kendaraan
+in APPPATH/Views/admin/ocp.php on line 46.
+ 1 APPPATH/Views/admin/ocp.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nomor_kendaraan', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php', 46, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/ocp', [], true)
+ 5 APPPATH/Controllers/Admin/Ocp.php(46): view('admin/ocp', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 23:41:46 --> Undefined property: stdClass::$id
+in APPPATH/Views/admin/ocp.php on line 48.
+ 1 APPPATH/Views/admin/ocp.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php', 48, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/ocp.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/ocp', [], true)
+ 5 APPPATH/Controllers/Admin/Ocp.php(46): view('admin/ocp', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 23:49:29 --> Trying to get property 'foto_penindakan' of non-object
+in APPPATH/Controllers/Admin/Ocp.php on line 205.
+ 1 APPPATH/Controllers/Admin/Ocp.php(205): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_penindakan\' of non-object', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ocp.php', 205, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-31 23:52:23 --> unlink(data_penindakan_ocp/1693500162_3ca90eb45d13c9a87ba8.png): No such file or directory
+in APPPATH/Controllers/Admin/Ocp.php on line 208.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(data_penindakan_ocp/1693500162_3ca90eb45d13c9a87ba8.png): No such file or directory', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ocp.php', 208, [...])
+ 2 APPPATH/Controllers/Admin/Ocp.php(208): unlink('data_penindakan_ocp/1693500162_3ca90eb45d13c9a87ba8.png')
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ocp->delete()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ocp))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')

@@ -1,0 +1,324 @@
+CRITICAL - 2023-08-20 22:20:51 --> Undefined variable: jenis_kendaraan
+in APPPATH/Views/admin/bap.php on line 83.
+ 1 APPPATH/Views/admin/bap.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jenis_kendaraan', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/bap', [], true)
+ 5 APPPATH/Controllers/Admin/BAP.php(34): view('admin/bap', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-20 22:25:29 --> Undefined variable: ukpd
+in APPPATH/Views/admin/bap.php on line 83.
+ 1 APPPATH/Views/admin/bap.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: ukpd', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php', 83, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/bap', [], true)
+ 5 APPPATH/Controllers/Admin/BAP.php(34): view('admin/bap', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-20 22:55:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1 in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-20 22:55:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+JOIN `jenis_penindakan` ON `jenis_penindakan`.`id` = `bap_table`.`jenis_penindakan_id`
+JOIN `status_penderekan` ON `status_penderekan`.`id` = `bap_table`.`status_bap_id`
+ORDER BY `bap_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+JOIN `jenis_penindakan` ON `jenis_penindakan`.`id` = `bap_table`.`jenis_penindakan_id`
+JOIN `status_penderekan` ON `status_penderekan`.`id` = `bap_table`.`status_bap_id`
+ORDER BY `bap_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+JOIN `jenis_penindakan` ON `jenis_penindakan`.`id` = `bap_table`.`jenis_penindakan_id`
+JOIN `status_penderekan` ON `status_penderekan`.`id` = `bap_table`.`status_bap_id`
+ORDER BY `bap_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+JOIN `jenis_penindakan` ON `jenis_penindakan`.`id` = `bap_table`.`jenis_penindakan_id`
+JOIN `status_penderekan` ON `status_penderekan`.`id` = `bap_table`.`status_bap_id`
+ORDER BY `bap_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-20 22:56:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1 in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-20 22:56:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `bap_table`.`jenis_penindakan_id`
+JOIN `status_penderekan_table` ON `status_penderekan_table`.`id` = `bap_table`.`status_bap_id`
+ORDER BY `bap_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `bap_table`.`jenis_penindakan_id`
+JOIN `status_penderekan_table` ON `status_penderekan_table`.`id` = `bap_table`.`status_bap_id`
+ORDER BY `bap_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `bap_table`.`jenis_penindakan_id`
+JOIN `status_penderekan_table` ON `status_penderekan_table`.`id` = `bap_table`.`status_bap_id`
+ORDER BY `bap_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+JOIN `jenis_penindakan_table` ON `jenis_penindakan_table`.`id` = `bap_table`.`jenis_penindakan_id`
+JOIN `status_penderekan_table` ON `status_penderekan_table`.`id` = `bap_table`.`status_bap_id`
+ORDER BY `bap_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-20 22:57:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1 in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-20 22:57:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-20 22:57:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1 in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-20 22:57:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-20 22:57:58 --> Undefined variable: fieldTable
+in APPPATH/Models/Admin/BAPModel.php on line 25.
+ 1 APPPATH/Models/Admin/BAPModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: fieldTable', '/Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/BAPModel.php', 25, [])
+ 2 APPPATH/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+ 3 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-08-20 22:58:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1 in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_tab...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_tab...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_tab...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_tab...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-08-20 22:58:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FRO...' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `bap_table`.`id, bap_table`.`ukpd_id, bap_table`.`jenis_penindakan_id,` `bap_table`.`nomor_bap,bap_table`.`status_bap_id`
+FROM `bap_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `bap_table`.`ukpd_id`
+ORDER BY `bap_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/BAPModel.php(30): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/BAP.php(31): App\Models\Admin\BAPModel->getBAP()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-20 22:59:13 --> Undefined property: stdClass::$ukpd
+in APPPATH/Views/admin/bap.php on line 44.
+ 1 APPPATH/Views/admin/bap.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$ukpd', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php', 44, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/bap', [], true)
+ 5 APPPATH/Controllers/Admin/BAP.php(38): view('admin/bap', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-20 22:59:48 --> Undefined property: stdClass::$nama_dinas
+in APPPATH/Views/admin/bap.php on line 44.
+ 1 APPPATH/Views/admin/bap.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_dinas', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php', 44, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/bap', [], true)
+ 5 APPPATH/Controllers/Admin/BAP.php(38): view('admin/bap', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-20 23:00:54 --> Undefined property: stdClass::$status_bap
+in APPPATH/Views/admin/bap.php on line 47.
+ 1 APPPATH/Views/admin/bap.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$status_bap', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php', 47, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/bap.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/bap', [], true)
+ 5 APPPATH/Controllers/Admin/BAP.php(38): view('admin/bap', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-20 23:20:10 --> Call to undefined method App\Models\Admin\UkpdModel::getPenindakan
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/BAP.php(149): CodeIgniter\Model->__call('getPenindakan', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->edit()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-20 23:26:33 --> Call to undefined method App\Models\Admin\UkpdModel::getPenindakan
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/BAP.php(149): CodeIgniter\Model->__call('getPenindakan', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->edit()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-08-20 23:26:55 --> Call to undefined method App\Models\Admin\UkpdModel::getPenindakan
+in SYSTEMPATH/Model.php on line 838.
+ 1 APPPATH/Controllers/Admin/BAP.php(149): CodeIgniter\Model->__call('getPenindakan', [])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\BAP->edit()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\BAP))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')

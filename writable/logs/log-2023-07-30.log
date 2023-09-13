@@ -1,0 +1,701 @@
+CRITICAL - 2023-07-30 01:50:52 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Admin/Ukpd.php on line 93.
+ 1 APPPATH/Controllers/Admin/Ukpd.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ukpd.php', 93, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ukpd->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ukpd))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 01:51:11 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Admin/Ukpd.php on line 93.
+ 1 APPPATH/Controllers/Admin/Ukpd.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ukpd.php', 93, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ukpd->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ukpd))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 01:55:12 --> mysqli_sql_exception: Table 'e-parli.ukpd' doesn't exist in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/SPTModel.php(25): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/SPT.php(26): App\Models\Admin\SPTModel->getSPT()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-07-30 01:55:12 --> Table 'e-parli.ukpd' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `nomor_spt_table`
+JOIN `ukpd` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `nomor_spt_table`
+JOIN `ukpd` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `nomor_spt_table`
+JOIN `ukpd` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `nomor_spt_table`
+JOIN `ukpd` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/SPTModel.php(25): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/SPT.php(26): App\Models\Admin\SPTModel->getSPT()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 01:55:20 --> mysqli_sql_exception: Column 'id' in order clause is ambiguous in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/SPTModel.php(25): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/SPT.php(26): App\Models\Admin\SPTModel->getSPT()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-07-30 01:55:20 --> Column 'id' in order clause is ambiguous
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/SPTModel.php(25): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/SPT.php(26): App\Models\Admin\SPTModel->getSPT()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 13:22:56 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('127.0.0.1', 'root', '', 'e-parli', 3306, '', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/UkpdModel.php(24): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ukpd.php(22): App\Models\Admin\UkpdModel->getUkpd()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ukpd->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ukpd))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/UkpdModel.php(24): CodeIgniter\Model->__call('get', Array)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ukpd.php(22): App\Models\Admin\UkpdModel->getUkpd()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ukpd->index()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ukpd))
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#11 {main}
+CRITICAL - 2023-07-30 13:22:56 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ukpd_table`
+ORDER BY `id` desc', [], false)
+ 3 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Models/Admin/UkpdModel.php(24): CodeIgniter\Model->__call('get', [])
+ 5 APPPATH/Controllers/Admin/Ukpd.php(22): App\Models\Admin\UkpdModel->getUkpd()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ukpd->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ukpd))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 13:23:41 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Admin/SPT.php on line 110.
+ 1 APPPATH/Controllers/Admin/SPT.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/SPT.php', 110, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 13:23:45 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Admin/SPT.php on line 110.
+ 1 APPPATH/Controllers/Admin/SPT.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/SPT.php', 110, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 13:24:00 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Admin/SPT.php on line 110.
+ 1 APPPATH/Controllers/Admin/SPT.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/SPT.php', 110, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 13:25:46 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Admin/SPT.php on line 110.
+ 1 APPPATH/Controllers/Admin/SPT.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/SPT.php', 110, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 13:31:57 --> Undefined property: stdClass::$ukpd
+in APPPATH/Views/admin/spt.php on line 43.
+ 1 APPPATH/Views/admin/spt.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$ukpd', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/spt.php', 43, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/spt.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/spt', [], true)
+ 5 APPPATH/Controllers/Admin/SPT.php(31): view('admin/spt', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 13:32:20 --> mysqli_sql_exception: Unknown column 'ukpd.ukpd' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `nomor_s...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_s...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_s...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_s...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/SPTModel.php(25): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/SPT.php(26): App\Models\Admin\SPTModel->getSPT()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-07-30 13:32:20 --> Unknown column 'ukpd.ukpd' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `nomor_spt_table`.`id`, `nomor_spt_table`.`ukpd_id`, `nomor_spt_table`.`nomor_surat`, `nomor_spt_table`.`tanggal_surat`, `ukpd`.`ukpd`
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `nomor_spt_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_spt_table`.`id`, `nomor_spt_table`.`ukpd_id`, `nomor_spt_table`.`nomor_surat`, `nomor_spt_table`.`tanggal_surat`, `ukpd`.`ukpd`
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `nomor_spt_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_spt_table`.`id`, `nomor_spt_table`.`ukpd_id`, `nomor_spt_table`.`nomor_surat`, `nomor_spt_table`.`tanggal_surat`, `ukpd`.`ukpd`
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `nomor_spt_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_spt_table`.`id`, `nomor_spt_table`.`ukpd_id`, `nomor_spt_table`.`nomor_surat`, `nomor_spt_table`.`tanggal_surat`, `ukpd`.`ukpd`
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `nomor_spt_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/SPTModel.php(25): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/SPT.php(26): App\Models\Admin\SPTModel->getSPT()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 13:33:07 --> mysqli_sql_exception: Unknown column 'ukpd.nama_dinas' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `nomor_s...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_s...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_s...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_s...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/SPTModel.php(25): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/SPT.php(26): App\Models\Admin\SPTModel->getSPT()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-07-30 13:33:07 --> Unknown column 'ukpd.nama_dinas' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `nomor_spt_table`.`id`, `nomor_spt_table`.`ukpd_id`, `nomor_spt_table`.`nomor_surat`, `nomor_spt_table`.`tanggal_surat`, `ukpd`.`nama_dinas`
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `nomor_spt_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomor_spt_table`.`id`, `nomor_spt_table`.`ukpd_id`, `nomor_spt_table`.`nomor_surat`, `nomor_spt_table`.`tanggal_surat`, `ukpd`.`nama_dinas`
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `nomor_spt_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomor_spt_table`.`id`, `nomor_spt_table`.`ukpd_id`, `nomor_spt_table`.`nomor_surat`, `nomor_spt_table`.`tanggal_surat`, `ukpd`.`nama_dinas`
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `nomor_spt_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nomor_spt_table`.`id`, `nomor_spt_table`.`ukpd_id`, `nomor_spt_table`.`nomor_surat`, `nomor_spt_table`.`tanggal_surat`, `ukpd`.`nama_dinas`
+FROM `nomor_spt_table`
+JOIN `ukpd_table` ON `ukpd_table`.`id` = `nomor_spt_table`.`ukpd_id`
+ORDER BY `nomor_spt_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/SPTModel.php(25): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/SPT.php(26): App\Models\Admin\SPTModel->getSPT()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\SPT->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SPT))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 14:32:32 --> There is no data to insert.
+in SYSTEMPATH/BaseModel.php on line 762.
+ 1 SYSTEMPATH/BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH/BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH/Controllers/Admin/JenisKendaraan.php(52): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\JenisKendaraan->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JenisKendaraan))
+ 7 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 15:49:14 --> mysqli_sql_exception: Table 'e-parli.type_kendaran_table' doesn't exist in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `type_ke...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `type_ke...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `type_ke...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `type_ke...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/TypeKendaraanModel.php(25): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TypeKendaraan.php(22): App\Models\Admin\TypeKendaraanModel->getTypeKendaraan()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-07-30 15:49:14 --> Table 'e-parli.type_kendaran_table' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaran_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaran_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaran_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaran_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/TypeKendaraanModel.php(25): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/TypeKendaraan.php(22): App\Models\Admin\TypeKendaraanModel->getTypeKendaraan()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 15:49:28 --> mysqli_sql_exception: Table 'e-parli.type_kendaran_table' doesn't exist in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `type_ke...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `type_ke...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `type_ke...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `type_ke...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/TypeKendaraanModel.php(25): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TypeKendaraan.php(22): App\Models\Admin\TypeKendaraanModel->getTypeKendaraan()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-07-30 15:49:28 --> Table 'e-parli.type_kendaran_table' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaran_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaran_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaran_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaran_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/TypeKendaraanModel.php(25): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/TypeKendaraan.php(22): App\Models\Admin\TypeKendaraanModel->getTypeKendaraan()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 15:49:38 --> mysqli_sql_exception: Unknown column 'jenis_kendaraan.jenis_kendaraan' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `type_ke...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `type_ke...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `type_ke...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `type_ke...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/TypeKendaraanModel.php(25): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TypeKendaraan.php(22): App\Models\Admin\TypeKendaraanModel->getTypeKendaraan()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-07-30 15:49:38 --> Unknown column 'jenis_kendaraan.jenis_kendaraan' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaraan_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaraan_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaraan_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `type_kendaraan_table`.`id`, `type_kendaraan_table`.`jenis_kendaraan_id`, `type_kendaraan_table`.`type_kendaraan`, `jenis_kendaraan`.`jenis_kendaraan`
+FROM `type_kendaraan_table`
+JOIN `jenis_kendaraan_table` ON `jenis_kendaraan_table`.`id` = `type_kendaraan_table`.`jenis_kendaraan_id`
+ORDER BY `type_kendaraan_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/TypeKendaraanModel.php(25): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/TypeKendaraan.php(22): App\Models\Admin\TypeKendaraanModel->getTypeKendaraan()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 15:49:57 --> Invalid file: "admin/type_kendaraan.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/type_kendaraan.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/type_kendaraan', [], true)
+ 3 APPPATH/Controllers/Admin/TypeKendaraan.php(26): view('admin/type_kendaraan', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 15:51:44 --> Undefined variable: ukpd
+in APPPATH/Views/admin/type_kendaraan.php on line 79.
+ 1 APPPATH/Views/admin/type_kendaraan.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: ukpd', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/type_kendaraan.php', 79, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/type_kendaraan.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/type_kendaraan', [], true)
+ 5 APPPATH/Controllers/Admin/TypeKendaraan.php(26): view('admin/type_kendaraan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 15:53:02 --> Undefined property: stdClass::$ukpd
+in APPPATH/Views/admin/type_kendaraan.php on line 80.
+ 1 APPPATH/Views/admin/type_kendaraan.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$ukpd', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/type_kendaraan.php', 80, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/type_kendaraan.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/type_kendaraan', [], true)
+ 5 APPPATH/Controllers/Admin/TypeKendaraan.php(30): view('admin/type_kendaraan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 16:10:35 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Admin/TypeKendaraan.php on line 103.
+ 1 APPPATH/Controllers/Admin/TypeKendaraan.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TypeKendaraan.php', 103, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TypeKendaraan->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TypeKendaraan))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 16:29:05 --> Undefined variable: title
+in APPPATH/Views/layout/template.php on line 8.
+ 1 APPPATH/Views/layout/template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/layout/template.php', 8, [])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/layout/template.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(240): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 6 APPPATH/Controllers/Admin/Dashboard.php(11): view('admin/dashboard')
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 17:16:55 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:174
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(174): mysqli->real_connect('127.0.0.1', 'root', '', 'e-parli', 3306, '', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/UkpdModel.php(24): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ukpd.php(22): App\Models\Admin\UkpdModel->getUkpd()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ukpd->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ukpd))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/UkpdModel.php(24): CodeIgniter\Model->__call('get', Array)
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/Ukpd.php(22): App\Models\Admin\UkpdModel->getUkpd()
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\Ukpd->index()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ukpd))
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#11 {main}
+CRITICAL - 2023-07-30 17:16:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ukpd_table`
+ORDER BY `id` desc', [], false)
+ 3 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Models/Admin/UkpdModel.php(24): CodeIgniter\Model->__call('get', [])
+ 5 APPPATH/Controllers/Admin/Ukpd.php(22): App\Models\Admin\UkpdModel->getUkpd()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\Ukpd->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Ukpd))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 17:26:54 --> mysqli_sql_exception: Unknown column 'ukpd_table.ukpd' in 'field list' in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `tempat_...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tempat_...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tempat_...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tempat_...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/app/Models/Admin/TempatPenyimpananModel.php(25): CodeIgniter\Model->__call('get', Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TempatPenyimpanan.php(25): App\Models\Admin\TempatPenyimpananModel->getTempatPenyimpanan()
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->index()
+#8 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#12 {main}
+CRITICAL - 2023-07-30 17:26:54 --> Unknown column 'ukpd_table.ukpd' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT `tempat_penyimpanan_table`.`id`, `tempat_penyimpanan_table`.`ukpd_id`, `tempat_penyimpanan_table`.`tempat_penyimpanan`, `ukpd_table`.`ukpd`
+FROM `tempat_penyimpanan_table`
+ORDER BY `tempat_penyimpanan_table`.`id` desc', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tempat_penyimpanan_table`.`id`, `tempat_penyimpanan_table`.`ukpd_id`, `tempat_penyimpanan_table`.`tempat_penyimpanan`, `ukpd_table`.`ukpd`
+FROM `tempat_penyimpanan_table`
+ORDER BY `tempat_penyimpanan_table`.`id` desc')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tempat_penyimpanan_table`.`id`, `tempat_penyimpanan_table`.`ukpd_id`, `tempat_penyimpanan_table`.`tempat_penyimpanan`, `ukpd_table`.`ukpd`
+FROM `tempat_penyimpanan_table`
+ORDER BY `tempat_penyimpanan_table`.`id` desc')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `tempat_penyimpanan_table`.`id`, `tempat_penyimpanan_table`.`ukpd_id`, `tempat_penyimpanan_table`.`tempat_penyimpanan`, `ukpd_table`.`ukpd`
+FROM `tempat_penyimpanan_table`
+ORDER BY `tempat_penyimpanan_table`.`id` desc', [], false)
+ 5 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Models/Admin/TempatPenyimpananModel.php(25): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH/Controllers/Admin/TempatPenyimpanan.php(25): App\Models\Admin\TempatPenyimpananModel->getTempatPenyimpanan()
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 17:27:50 --> Invalid file: "admin/tempat_penyimapan.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/tempat_penyimapan.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/tempat_penyimapan', [], true)
+ 3 APPPATH/Controllers/Admin/TempatPenyimpanan.php(30): view('admin/tempat_penyimapan', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 17:28:40 --> Invalid file: "admin/tempat_penyimapan.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/tempat_penyimapan.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/tempat_penyimapan', [], true)
+ 3 APPPATH/Controllers/Admin/TempatPenyimpanan.php(30): view('admin/tempat_penyimapan', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 17:31:02 --> Invalid file: "admin/tempat_penyimapan.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/tempat_penyimapan.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/tempat_penyimapan', [], true)
+ 3 APPPATH/Controllers/Admin/TempatPenyimpanan.php(30): view('admin/tempat_penyimapan', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 17:31:04 --> Invalid file: "admin/tempat_penyimapan.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/tempat_penyimapan.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/tempat_penyimapan', [], true)
+ 3 APPPATH/Controllers/Admin/TempatPenyimpanan.php(30): view('admin/tempat_penyimapan', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 17:31:15 --> Invalid file: "admin/tempat_penyimpan.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/tempat_penyimpan.php')
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/tempat_penyimpan', [], true)
+ 3 APPPATH/Controllers/Admin/TempatPenyimpanan.php(30): view('admin/tempat_penyimpan', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 17:39:00 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`tempat_penyimpanan_table`, CONSTRAINT `tempat_penyimpanan_table_ukpd_id_foreign` FOREIGN KEY (`ukpd_id`) REFERENCES `ukpd_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TempatPenyimpanan.php(64): CodeIgniter\BaseModel->save(Array)
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->insert()
+#10 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#14 {main}
+CRITICAL - 2023-07-30 17:39:00 --> Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`tempat_penyimpanan_table`, CONSTRAINT `tempat_penyimpanan_table_ukpd_id_foreign` FOREIGN KEY (`ukpd_id`) REFERENCES `ukpd_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'irti monas\', \'2023-07-30 17:39:00\', \'2023-07-30 17:39:00\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'irti monas\', \'2023-07-30 17:39:00\', \'2023-07-30 17:39:00\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'irti monas\', \'2023-07-30 17:39:00\', \'2023-07-30 17:39:00\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (:ukpd_id:, :tempat_penyimpanan:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Admin/TempatPenyimpanan.php(64): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->insert()
+11 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+12 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 17:39:52 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`tempat_penyimpanan_table`, CONSTRAINT `tempat_penyimpanan_table_ukpd_id_foreign` FOREIGN KEY (`ukpd_id`) REFERENCES `ukpd_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TempatPenyimpanan.php(64): CodeIgniter\BaseModel->save(Array)
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->insert()
+#10 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#14 {main}
+CRITICAL - 2023-07-30 17:39:52 --> Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`tempat_penyimpanan_table`, CONSTRAINT `tempat_penyimpanan_table_ukpd_id_foreign` FOREIGN KEY (`ukpd_id`) REFERENCES `ukpd_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'tettee\', \'2023-07-30 17:39:52\', \'2023-07-30 17:39:52\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'tettee\', \'2023-07-30 17:39:52\', \'2023-07-30 17:39:52\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'tettee\', \'2023-07-30 17:39:52\', \'2023-07-30 17:39:52\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (:ukpd_id:, :tempat_penyimpanan:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Admin/TempatPenyimpanan.php(64): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->insert()
+11 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+12 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+ERROR - 2023-07-30 17:41:16 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`tempat_penyimpanan_table`, CONSTRAINT `tempat_penyimpanan_table_ukpd_id_foreign` FOREIGN KEY (`ukpd_id`) REFERENCES `ukpd_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 /Users/chanchanbayubahari/Desktop/e-parli/app/Controllers/Admin/TempatPenyimpanan.php(64): CodeIgniter\BaseModel->save(Array)
+#9 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->insert()
+#10 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+#11 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/chanchanbayubahari/Desktop/e-parli/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/chanchanbayubahari/Desktop/e-parli/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/chanchan...')
+#14 {main}
+CRITICAL - 2023-07-30 17:41:16 --> Cannot add or update a child row: a foreign key constraint fails (`e-parli`.`tempat_penyimpanan_table`, CONSTRAINT `tempat_penyimpanan_table_ukpd_id_foreign` FOREIGN KEY (`ukpd_id`) REFERENCES `ukpd_table` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'kantor suku dinas perhubungan jakarta selatan\', \'2023-07-30 17:41:16\', \'2023-07-30 17:41:16\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'kantor suku dinas perhubungan jakarta selatan\', \'2023-07-30 17:41:16\', \'2023-07-30 17:41:16\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (\'\', \'kantor suku dinas perhubungan jakarta selatan\', \'2023-07-30 17:41:16\', \'2023-07-30 17:41:16\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tempat_penyimpanan_table` (`ukpd_id`, `tempat_penyimpanan`, `created_at`, `updated_at`) VALUES (:ukpd_id:, :tempat_penyimpanan:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Admin/TempatPenyimpanan.php(64): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->insert()
+11 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+12 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
+CRITICAL - 2023-07-30 17:55:40 --> Undefined property: stdClass::$tempat_penyimapan
+in APPPATH/Views/admin/tempat_penyimpanan.php on line 44.
+ 1 APPPATH/Views/admin/tempat_penyimpanan.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$tempat_penyimapan', '/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/tempat_penyimpanan.php', 44, [...])
+ 2 SYSTEMPATH/View/View.php(224): include('/Users/chanchanbayubahari/Desktop/e-parli/app/Views/admin/tempat_penyimpanan.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('admin/tempat_penyimpanan', [], true)
+ 5 APPPATH/Controllers/Admin/TempatPenyimpanan.php(30): view('admin/tempat_penyimpanan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin\TempatPenyimpanan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TempatPenyimpanan))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/chanchanbayubahari/Desktop/e-parli/public/index.php')
