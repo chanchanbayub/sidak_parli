@@ -51,7 +51,8 @@ application/logs/*
 # Icon must end with two \r
 Icon
 
-
+.env
+public/
 # Thumbnails
 ._*
 
@@ -95,7 +96,7 @@ Temporary Items
 .history
 .ionide
 
-.env
-public/
+
+
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,codeigniter
