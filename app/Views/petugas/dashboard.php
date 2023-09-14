@@ -39,14 +39,14 @@
                     <div class="col-xxl-6 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
-                                <h5 class="card-title">Jumlah <span>| Penderekan</span></h5>
+                                <h5 class="card-title">Jumlah Penderekan <span>| Hari Ini, <?= tanggal_indonesia(date('Y-m-d'))  ?>, <?= date_indo("Y-m-d") ?> </span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                         <a href="/petugas/data_penindakan"> <i class="bi bi-car-front"></i></a>
                                     </div>
                                     <div class="ps-3">
-                                        <h6><?= $jumlah_penderekan ?> <span class="text-muted small pt-2 ps-1">Kendaraan / Hari</span></h6>
+                                        <h6><?= $jumlah_penderekan ?> <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>
 
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
-                                <h5 class="card-title">Jumlah <span>| Penderekan Terbayar </span></h5>
+                                <h5 class="card-title">Jumlah <span>| Terbayar (Hari Ini) </span> <br> <span> <?= date_indo('Y-m-d') ?></span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -74,7 +74,7 @@
 
                                     </div>
                                     <div class="ps-3">
-                                        <h6><?= $jumlah_penderekan_terbayar ?> <span class="text-muted small pt-2 ps-1">Kendaraan / Hari</span></h6>
+                                        <h6><?= $jumlah_penderekan_terbayar ?> <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
-                                <h5 class="card-title">Jumlah <span>| Penderekan Dalam Proses </span></h5>
+                                <h5 class="card-title">Jumlah <span>| Penderekan Dalam Proses </span> <br> <span> <?= date_indo('Y-m-d') ?></span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -93,7 +93,7 @@
 
                                     </div>
                                     <div class="ps-3">
-                                        <h6><?= $jumlah_penderekan_belum_terbayar ?> <span class="text-muted small pt-2 ps-1">Kendaraan / Hari</span> </h6>
+                                        <h6><?= $jumlah_penderekan_belum_terbayar ?> <span class="text-muted small pt-2 ps-1">Kendaraan</span> </h6>
 
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
-                                <h5 class="card-title">Jumlah <span>| Penderekan Selesai </span></h5>
+                                <h5 class="card-title">Jumlah <span>| Penderekan Selesai (SP) </span> <br> <span> <?= date_indo('Y-m-d') ?></span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -113,7 +113,7 @@
 
                                     </div>
                                     <div class="ps-3">
-                                        <h6><?= $jumlah_penderekan_selesai ?> <span class="text-muted small pt-2 ps-1">Kendaraan / Hari</span> </h6>
+                                        <h6><?= $jumlah_penderekan_selesai ?> <span class="text-muted small pt-2 ps-1">Kendaraan </span> </h6>
                                     </div>
                                 </div>
                             </div>

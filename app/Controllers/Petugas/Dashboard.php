@@ -19,6 +19,7 @@ class Dashboard extends BaseController
         $this->petugasModel = new PetugasModel();
         $this->dataPenindakanModel = new DataPenindakanModel();
         $this->unitReguModel = new UnitReguModel();
+        helper(["format"]);
     }
 
     public function index()
