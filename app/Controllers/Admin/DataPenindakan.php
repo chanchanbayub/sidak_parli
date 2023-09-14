@@ -404,8 +404,8 @@ class DataPenindakan extends BaseController
                         'bap_id' => $bap_id,
                         'kartu_identitas_id' => $kartu_identitas_id,
                         'nomor_identitas' => $nomor_identitas,
-                        'nama_pengemudi' => $nama_pengemudi,
-                        'alamat_pengemudi' => $alamat_pengemudi,
+                        'nama_pengemudi' => strtolower($nama_pengemudi),
+                        'alamat_pengemudi' => strtolower($alamat_pengemudi),
                         'nomor_hp' => $nomor_hp,
                         'tanda_tangan_pelanggar' => $createRandomImage,
                     ]);
@@ -487,7 +487,6 @@ class DataPenindakan extends BaseController
     public function detail($nomor_bap)
     {
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
-
         $data = [
             'title' => 'DETAIL DATA PENINDAKAN',
             'detail_data' => $detail_data_penindakan
