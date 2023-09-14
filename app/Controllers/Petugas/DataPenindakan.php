@@ -17,6 +17,7 @@ use App\Models\Admin\LokasiPenindakanModel;
 use App\Models\Admin\PetugasModel;
 use App\Models\Admin\ProvinsiModel;
 use App\Models\Admin\SPTModel;
+use App\Models\Admin\SuratPengeluaranModel;
 use App\Models\Admin\TempatPenyimpananModel;
 use App\Models\Admin\TypeKendaraanModel;
 use App\Models\Admin\UkpdModel;
@@ -45,6 +46,7 @@ class DataPenindakan extends BaseController
     protected $lokasiPenindakanModel;
     protected $dataPelanggarModel;
     protected $fotoPenindakanModel;
+    protected $suratPengeluaranModel;
 
 
     public function __construct()
@@ -68,6 +70,7 @@ class DataPenindakan extends BaseController
         $this->lokasiPenindakanModel = new LokasiPenindakanModel();
         $this->dataPelanggarModel = new DataPelanggarModel();
         $this->fotoPenindakanModel = new FotoPenindakanModel();
+        $this->suratPengeluaranModel = new SuratPengeluaranModel();
         $this->validation = \Config\Services::validation();
     }
 
@@ -378,8 +381,8 @@ class DataPenindakan extends BaseController
                         'bap_id' => $bap_id,
                         'kartu_identitas_id' => $kartu_identitas_id,
                         'nomor_identitas' => $nomor_identitas,
-                        'nama_pengemudi' => $nama_pengemudi,
-                        'alamat_pengemudi' => $alamat_pengemudi,
+                        'nama_pengemudi' => strtolower($nama_pengemudi),
+                        'alamat_pengemudi' => strtolower($alamat_pengemudi),
                         'nomor_hp' => $nomor_hp,
                         'tanda_tangan_pelanggar' => $createRandomImage,
                     ]);
@@ -780,15 +783,31 @@ class DataPenindakan extends BaseController
                 ]);
                 $noBap = $this->bapModel->where(["id" => $bap_id])->get()->getRowObject();
 
+                $spk = $this->suratPengeluaranModel->where(["bap_id" => $noBap->id])->get()->getRowObject();
+
                 if (!empty($nama_pengemudi)) {
-
-                    $this->bapModel->update($noBap->id, [
-                        'id' => $noBap->id,
-                        'bap_id' => $bap_id,
-                        'status_bap_id' => 3
-                    ]);
+                    if ($spk != null) {
+                        if ($spk->jenis_spk_id == 1) {
+                            $this->bapModel->update($noBap->id, [
+                                'id' => $noBap->id,
+                                'bap_id' => $bap_id,
+                                'status_bap_id' => 5
+                            ]);
+                        } else {
+                            $this->bapModel->update($noBap->id, [
+                                'id' => $noBap->id,
+                                'bap_id' => $bap_id,
+                                'status_bap_id' => 4
+                            ]);
+                        }
+                    } else {
+                        $this->bapModel->update($noBap->id, [
+                            'id' => $noBap->id,
+                            'bap_id' => $bap_id,
+                            'status_bap_id' => 3
+                        ]);
+                    }
                 } else {
-
                     $this->bapModel->update($noBap->id, [
                         'id' => $noBap->id,
                         'bap_id' => $bap_id,

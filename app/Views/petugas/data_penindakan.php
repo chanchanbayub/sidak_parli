@@ -55,6 +55,8 @@
                                                 <td> <span class="badge bg-danger"><?= $data->status_penderekan ?></span> </td>
                                             <?php elseif ($data->status_bap_id == 4) : ?>
                                                 <td> <span class="badge bg-success"><?= $data->status_penderekan ?></span> </td>
+                                            <?php elseif ($data->status_bap_id == 5) : ?>
+                                                <td> <span class="badge bg-danger"><?= $data->status_penderekan ?></span> </td>
                                             <?php endif; ?>
                                         </tr>
                                     <?php endforeach; ?>

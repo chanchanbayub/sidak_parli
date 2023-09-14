@@ -29,8 +29,14 @@
                         <h3><?= $detail_data->type_kendaraan ?></h3>
                         <?php if ($detail_data->nama_pengemudi == null) : ?>
                             <h6> <span class="badge bg-warning">Data Belum Lengkap</span> </h6>
-                        <?php else : ?>
-                            <h6><span class="badge bg-danger"><?= $detail_data->status_penderekan ?></span></h6>
+                        <?php elseif ($detail_data->nama_pengemudi != null) : ?>
+                            <?php if ($detail_data->status_bap_id == 3) : ?>
+                                <h6><span class="badge bg-danger"><?= $detail_data->status_penderekan ?></span></h6>
+                            <?php elseif ($detail_data->status_bap_id == 4) : ?>
+                                <h6><span class="badge bg-success"><?= $detail_data->status_penderekan ?></span></h6>
+                            <?php elseif ($detail_data->status_bap_id == 5) : ?>
+                                <h6><span class="badge bg-danger"><?= $detail_data->status_penderekan ?></span></h6>
+                            <?php endif; ?>
                         <?php endif; ?>
 
                     </div>
