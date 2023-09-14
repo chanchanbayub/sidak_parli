@@ -880,17 +880,34 @@ class DataPenindakan extends BaseController
                     'nama_gedung' => strtolower($nama_gedung),
 
                 ]);
+
                 $noBap = $this->bapModel->where(["id" => $bap_id])->get()->getRowObject();
 
+                $spk = $this->suratPengeluaranModel->where(["bap_id" => $noBap->id])->get()->getRowObject();
+
                 if (!empty($nama_pengemudi)) {
-
-                    $this->bapModel->update($noBap->id, [
-                        'id' => $noBap->id,
-                        'bap_id' => $bap_id,
-                        'status_bap_id' => 3
-                    ]);
+                    if ($spk != null) {
+                        if ($spk->jenis_spk_id == 1) {
+                            $this->bapModel->update($noBap->id, [
+                                'id' => $noBap->id,
+                                'bap_id' => $bap_id,
+                                'status_bap_id' => 5
+                            ]);
+                        } else {
+                            $this->bapModel->update($noBap->id, [
+                                'id' => $noBap->id,
+                                'bap_id' => $bap_id,
+                                'status_bap_id' => 4
+                            ]);
+                        }
+                    } else {
+                        $this->bapModel->update($noBap->id, [
+                            'id' => $noBap->id,
+                            'bap_id' => $bap_id,
+                            'status_bap_id' => 3
+                        ]);
+                    }
                 } else {
-
                     $this->bapModel->update($noBap->id, [
                         'id' => $noBap->id,
                         'bap_id' => $bap_id,
