@@ -224,7 +224,7 @@ class DataPenindakan extends BaseController
                     ]
                 ],
                 'foto_penindakan_1' => [
-                    'rules' => 'uploaded[foto_penindakan_1]|is_image[foto_penindakan_1]|max_size[foto_penindakan_1,2048]',
+                    'rules' => 'uploaded[foto_penindakan_1]|is_image[foto_penindakan_1]|max_size[foto_penindakan_1,5120]',
                     'errors' => [
                         'uploaded' => 'Foto Kendaraan Tidak Boleh Kosong!',
                         'is_image' => 'Yang Anda Upload Bukan Foto!',
@@ -232,7 +232,7 @@ class DataPenindakan extends BaseController
                     ]
                 ],
                 'foto_penindakan_2' => [
-                    'rules' => 'uploaded[foto_penindakan_2]|is_image[foto_penindakan_2]|max_size[foto_penindakan_2,2048]',
+                    'rules' => 'uploaded[foto_penindakan_2]|is_image[foto_penindakan_2]|max_size[foto_penindakan_2,5120]',
                     'errors' => [
                         'uploaded' => 'Foto Kendaraan Tidak Boleh Kosong!',
                         'is_image' => 'Yang Anda Upload Bukan Foto!',

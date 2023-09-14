@@ -250,7 +250,7 @@ class DataPenindakan extends BaseController
                     ]
                 ],
                 'foto_penindakan_1' => [
-                    'rules' => 'uploaded[foto_penindakan_1]|is_image[foto_penindakan_1]|max_size[foto_penindakan_1,2048]',
+                    'rules' => 'uploaded[foto_penindakan_1]|is_image[foto_penindakan_1]|max_size[foto_penindakan_1,5120]',
                     'errors' => [
                         'uploaded' => 'Foto Kendaraan Tidak Boleh Kosong!',
                         'is_image' => 'Yang Anda Upload Bukan Foto!',
@@ -258,7 +258,7 @@ class DataPenindakan extends BaseController
                     ]
                 ],
                 'foto_penindakan_2' => [
-                    'rules' => 'uploaded[foto_penindakan_2]|is_image[foto_penindakan_2]|max_size[foto_penindakan_2,2048]',
+                    'rules' => 'uploaded[foto_penindakan_2]|is_image[foto_penindakan_2]|max_size[foto_penindakan_2,5120]',
                     'errors' => [
                         'uploaded' => 'Foto Kendaraan Tidak Boleh Kosong!',
                         'is_image' => 'Yang Anda Upload Bukan Foto!',
@@ -564,6 +564,10 @@ class DataPenindakan extends BaseController
 
             $foto_penindakan = $this->fotoPenindakanModel->where(["bap_id" => $bap_id])->get()->getRowObject();
 
+            $suratPengeluaran = $this->suratPengeluaranModel->where(["bap_id" => $data_penindakan->bap_id])->get()->getRowObject();
+
+            $path_spk = 'spk/' . $suratPengeluaran->nomor_surat;
+
             $path_foto_penindakan_1 = 'data_penindakan/' . $foto_penindakan->foto_penindakan_1;
             $path_foto_penindakan_2 = 'data_penindakan/' . $foto_penindakan->foto_penindakan_2;
 
@@ -572,6 +576,10 @@ class DataPenindakan extends BaseController
             }
             if ($foto_penindakan->foto_penindakan_2 != null) {
                 unlink($path_foto_penindakan_2);
+            }
+
+            if (file_exists($path_spk)) {
+                unlink($path_spk);
             }
 
             if ($path_tanda_tangan_pelanggar != null) {

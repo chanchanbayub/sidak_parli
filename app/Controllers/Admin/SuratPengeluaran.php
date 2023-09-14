@@ -54,7 +54,7 @@ class SuratPengeluaran extends BaseController
                     ]
                 ],
                 'nomor_surat' => [
-                    'rules' => 'uploaded[nomor_surat]|ext_in[nomor_surat,pdf]|max_size[nomor_surat,2048]',
+                    'rules' => 'uploaded[nomor_surat]|ext_in[nomor_surat,pdf]|max_size[nomor_surat,5120]',
                     'errors' => [
                         'uploaded' => 'SPK Tidak Boleh Kosong!',
                         'ext_in' => 'Yang Anda Upload Bukan PDF!',
