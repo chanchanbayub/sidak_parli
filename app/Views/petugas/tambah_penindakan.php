@@ -342,7 +342,6 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tidak Setuju</button>
                         <button type="button" class="btn btn-primary" id="kirim">Setujui</button>
                     </div>
                 </form>
