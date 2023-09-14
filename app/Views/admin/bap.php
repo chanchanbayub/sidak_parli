@@ -23,42 +23,43 @@
                         <p>
                             <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#smallModal">Tambah Nomor BAP</button>
                         </p>
-
-                        <!-- Table with stripped rows -->
-                        <table class="table datatable">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">UKPD</th>
-                                    <th scope="col">Jenis Penindakan</th>
-                                    <th scope="col">Nomor BAP</th>
-                                    <th scope="col">Status BAP</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1; ?>
-                                <?php foreach ($bap as $data) : ?>
+                        <div class="table-responsive">
+                            <!-- Table with stripped rows -->
+                            <table class="table datatable">
+                                <thead>
                                     <tr>
-                                        <th scope="row"><?= $no++ ?>. </th>
-                                        <td><?= $data->ukpd ?> </td>
-                                        <td><?= $data->jenis_penindakan ?> </td>
-                                        <td><?= $data->nomor_bap ?> </td>
-                                        <td><?= $data->status_penderekan ?> </td>
-                                        <td>
-                                            <?php if (session()->get('role_id') == 1) : ?>
-                                                <button class="btn btn-sm btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
-                                                    <i class="bi bi-trash"></i>
-                                                </button>
-                                            <?php endif; ?>
-                                            <button class="btn btn-sm btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>" type="button">
-                                                <i class="bi bi-pencil-square"></i>
-                                            </button>
-                                        </td>
+                                        <th scope="col">#</th>
+                                        <th scope="col">UKPD</th>
+                                        <th scope="col">Jenis Penindakan</th>
+                                        <th scope="col">Nomor BAP</th>
+                                        <th scope="col">Status BAP</th>
+                                        <th scope="col">Action</th>
                                     </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <?php $no = 1; ?>
+                                    <?php foreach ($bap as $data) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $no++ ?>. </th>
+                                            <td><?= $data->ukpd ?> </td>
+                                            <td><?= $data->jenis_penindakan ?> </td>
+                                            <td><?= $data->nomor_bap ?> </td>
+                                            <td><?= $data->status_penderekan ?> </td>
+                                            <td>
+                                                <?php if (session()->get('role_id') == 1) : ?>
+                                                    <button class="btn btn-sm btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                <?php endif; ?>
+                                                <button class="btn btn-sm btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>" type="button">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
                         <!-- End Table with stripped rows -->
                     </div>
                 </div>
@@ -69,7 +70,7 @@
 
 <!-- Modal Type Kendaraan  -->
 <div class="modal fade" id="smallModal" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Tambah Nomor BAP</h5>
@@ -163,7 +164,7 @@
 
 <!-- Modal Edit UKPD -->
 <div class="modal fade" id="editModal" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Edit Nomor BAP</h5>

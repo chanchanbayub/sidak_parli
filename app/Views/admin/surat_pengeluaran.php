@@ -78,7 +78,7 @@
 </main><!-- End #main -->
 
 <div class="modal fade" id="ubahStatus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Tambah SPK </h5>
@@ -156,7 +156,7 @@
 
 <!-- Modal Edit UKPD -->
 <div class="modal fade" id="editModal" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Edit Nomor Surat Pengeluaran</h5>

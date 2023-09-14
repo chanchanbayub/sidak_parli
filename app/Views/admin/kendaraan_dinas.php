@@ -68,7 +68,7 @@
 
 <!-- Modal Tambah UKPD -->
 <div class="modal fade" id="smallModal" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Tambah Kendaraan</h5>
@@ -165,7 +165,7 @@
 
 <!-- Modal Edit UKPD -->
 <div class="modal fade" id="editModal" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Edit Kendaraan Dinas</h5>

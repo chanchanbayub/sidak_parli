@@ -23,40 +23,41 @@
                         <p>
                             <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#smallModal">Tambah Unit Regu</button>
                         </p>
-
-                        <!-- Table with stripped rows -->
-                        <table class="table datatable">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">UKPD</th>
-                                    <th scope="col">Unit Regu</th>
-
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1; ?>
-                                <?php foreach ($unit_regu as $data) : ?>
+                        <div class="table-responsive">
+                            <!-- Table with stripped rows -->
+                            <table class="table datatable">
+                                <thead>
                                     <tr>
-                                        <th scope="row"><?= $no++ ?>. </th>
-                                        <td><?= $data->ukpd ?> </td>
-                                        <td><?= $data->unit_regu ?> </td>
-                                        <td>
-                                            <?php if (session()->get('role_id') == 1) : ?>
-                                                <button class="btn btn-sm btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
-                                                    <i class="bi bi-trash"></i>
-                                                </button>
-                                            <?php endif; ?>
-                                            <button class="btn btn-sm btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>" type="button">
-                                                <i class="bi bi-pencil-square"></i>
-                                            </button>
-                                        </td>
+                                        <th scope="col">#</th>
+                                        <th scope="col">UKPD</th>
+                                        <th scope="col">Unit Regu</th>
+
+                                        <th scope="col">Action</th>
                                     </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                        <!-- End Table with stripped rows -->
+                                </thead>
+                                <tbody>
+                                    <?php $no = 1; ?>
+                                    <?php foreach ($unit_regu as $data) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $no++ ?>. </th>
+                                            <td><?= $data->ukpd ?> </td>
+                                            <td><?= $data->unit_regu ?> </td>
+                                            <td>
+                                                <?php if (session()->get('role_id') == 1) : ?>
+                                                    <button class="btn btn-sm btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                <?php endif; ?>
+                                                <button class="btn btn-sm btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>" type="button">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                            <!-- End Table with stripped rows -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,7 +67,7 @@
 
 <!-- Modal Tempat Penyimpanan -->
 <div class="modal fade" id="smallModal" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Tambah Unit / Regu</h5>
@@ -130,7 +131,7 @@
 
 <!-- Modal Edit Tempat Penyimpanan -->
 <div class="modal fade" id="editModal" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Edit Unit / Regu</h5>

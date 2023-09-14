@@ -26,39 +26,37 @@
                         <p>
                             <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#smallModal">Tambah Tanda Tangan</button>
                         </p>
-
-                        <!-- Table with stripped rows -->
-                        <table class="table datatable">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nama Petugas</th>
-                                    <th scope="col">Tanda Tangan</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1; ?>
-                                <?php foreach ($tanda_tangan_petugas as $data) : ?>
+                        <div class="table-responsive">
+                            <!-- Table with stripped rows -->
+                            <table class="table datatable">
+                                <thead>
                                     <tr>
-                                        <th scope="row"><?= $no++ ?>. </th>
-                                        <td style="vertical-align:middle;"><?= $data->nama ?> </td>
-                                        <td style="vertical-align:middle;"> <img src="/<?= $data->tanda_tangan_petugas ?>" alt="" width="80"> </td>
-                                        <td>
-                                            <?php if (session()->get('role_id') == 1) : ?>
-                                                <button class="btn btn-sm btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
-                                                    <i class="bi bi-trash"></i>
-                                                </button>
-                                            <?php endif; ?>
-                                            <button class="btn btn-sm btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>" type="button">
-                                                <i class="bi bi-pencil-square"></i>
-                                            </button>
-                                        </td>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nama Petugas</th>
+                                        <th scope="col">Tanda Tangan</th>
+                                        <th scope="col">Action</th>
                                     </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                        <!-- End Table with stripped rows -->
+                                </thead>
+                                <tbody>
+                                    <?php $no = 1; ?>
+                                    <?php foreach ($tanda_tangan_petugas as $data) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $no++ ?>. </th>
+                                            <td style="vertical-align:middle;"><?= $data->nama ?> </td>
+                                            <td style="vertical-align:middle;"> <img src="/<?= $data->tanda_tangan_petugas ?>" alt="" width="80"> </td>
+                                            <td>
+                                                <?php if (session()->get('role_id') == 1) : ?>
+                                                    <button class="btn btn-sm btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                <?php endif; ?>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                            <!-- End Table with stripped rows -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,7 +66,7 @@
 
 <!-- Modal Tempat Penyimpanan -->
 <div class="modal fade" id="smallModal" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Tambah Tanda Tangan Petugas</h5>
