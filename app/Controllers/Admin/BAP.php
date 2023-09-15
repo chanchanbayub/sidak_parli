@@ -7,6 +7,7 @@ use App\Models\Admin\BAPModel;
 use App\Models\Admin\JenisPenindakanModel;
 use App\Models\Admin\StatusPenderekanModel;
 use App\Models\Admin\UkpdModel;
+use App\Models\Admin\UnitReguModel;
 
 class BAP extends BaseController
 {
@@ -15,7 +16,7 @@ class BAP extends BaseController
     protected $jenisPenindakanModel;
     protected $statusPenderekanModel;
     protected $validation;
-    protected $spreeadsheet;
+    protected $unitReguModel;
 
     public function __construct()
     {
@@ -23,6 +24,7 @@ class BAP extends BaseController
         $this->ukpdModel = new UkpdModel();
         $this->jenisPenindakanModel = new JenisPenindakanModel();
         $this->statusPenderekanModel = new StatusPenderekanModel();
+        $this->unitReguModel = new UnitReguModel();
         $this->validation = \Config\Services::validation();
     }
 
@@ -32,6 +34,7 @@ class BAP extends BaseController
             'bap' => $this->bapModel->getBAP(),
             'ukpd' => $this->ukpdModel->getUkpd(),
             'jenis_penindakan' => $this->jenisPenindakanModel->getPenindakan(),
+            'unit_regu' => $this->unitReguModel->getUnit(),
             'status_penderekan' => $this->statusPenderekanModel->getStatusPenderekanKeluar(),
             'title' => 'BERITA ACARA PENINDAKAN',
         ];
@@ -57,15 +60,23 @@ class BAP extends BaseController
                     ]
                 ],
                 'nomor_bap_awal' => [
-                    'rules' => 'required',
+                    'rules' => 'required|is_unique[bap_table.nomor_bap]',
                     'errors' => [
-                        'required' => 'Nomor BAP Awal Tidak Boleh Kosong !'
+                        'required' => 'Nomor BAP Awal Tidak Boleh Kosong !',
+                        'is_unique' => 'Nomor BAP Tidak Boleh Sama !'
                     ]
                 ],
                 'nomor_bap_akhir' => [
+                    'rules' => 'required|is_unique[bap_table.nomor_bap]',
+                    'errors' => [
+                        'required' => 'Nomor BAP Akhir Tidak Boleh Kosong !',
+                        'is_unique' => 'Nomor BAP Tidak Boleh Sama !'
+                    ]
+                ],
+                'unit_id' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required' => 'Nomor BAP Akhir Tidak Boleh Kosong !'
+                        'required' => 'Unit / Regu Tidak Boleh Kosong!'
                     ]
                 ],
                 'status_bap_id' => [
@@ -81,6 +92,7 @@ class BAP extends BaseController
                         'jenis_penindakan_id' => $this->validation->getError('jenis_penindakan_id'),
                         'nomor_bap_awal' => $this->validation->getError('nomor_bap_awal'),
                         'nomor_bap_akhir' => $this->validation->getError('nomor_bap_akhir'),
+                        'unit_id' => $this->validation->getError('unit_id'),
                         'status_bap_id' => $this->validation->getError('status_bap_id'),
                     ]
                 ];
@@ -90,6 +102,7 @@ class BAP extends BaseController
                 $jenis_penindakan_id = $this->request->getPost('jenis_penindakan_id');
                 $nomor_bap_awal = $this->request->getPost('nomor_bap_awal');
                 $nomor_bap_akhir = $this->request->getPost('nomor_bap_akhir');
+                $unit_id = $this->request->getPost('unit_id');
                 $status_bap_id = $this->request->getPost('status_bap_id');
 
                 if (!is_numeric($nomor_bap_awal)) {
@@ -98,6 +111,7 @@ class BAP extends BaseController
                         'ukpd_id' => $ukpd_id,
                         'jenis_penindakan_id' => $jenis_penindakan_id,
                         'nomor_bap' => $nomor_bap,
+                        'unit_id' => $unit_id,
                         'status_bap_id' => $status_bap_id,
                     ]);
                 } else {
@@ -122,6 +136,7 @@ class BAP extends BaseController
                             'ukpd_id' => $ukpd_id,
                             'jenis_penindakan_id' => $jenis_penindakan_id,
                             'nomor_bap' => $nomor_bap,
+                            'unit_id' => $unit_id,
                             'status_bap_id' => $status_bap_id,
                         ]);
                     }
@@ -147,6 +162,7 @@ class BAP extends BaseController
                 'ukpd' => $this->ukpdModel->getUkpd(),
                 'jenis_penindakan' => $this->jenisPenindakanModel->getPenindakan(),
                 'status_penderekan' => $this->statusPenderekanModel->getStatusPenderekan(),
+                'unit_regu' => $this->unitReguModel->getUnit()
             ];
 
             return json_encode($data);
@@ -179,12 +195,14 @@ class BAP extends BaseController
             $ukpd_id = $this->request->getPost('ukpd_id');
             $jenis_penindakan_id = $this->request->getPost('jenis_penindakan_id');
             $nomor_bap = $this->request->getPost('nomor_bap');
+            $unit_id = $this->request->getPost('unit_id');
             $status_bap_id = $this->request->getPost('status_bap_id');
 
             $this->bapModel->update($id, [
                 'ukpd_id' => $ukpd_id,
                 'jenis_penindakan_id' => $jenis_penindakan_id,
                 'nomor_bap' => $nomor_bap,
+                'unit_id' => $unit_id,
                 'status_bap_id' => $status_bap_id,
             ]);
 
