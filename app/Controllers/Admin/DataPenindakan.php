@@ -487,6 +487,7 @@ class DataPenindakan extends BaseController
     public function detail($nomor_bap)
     {
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
+        // dd($detail_data_penindakan);
         $data = [
             'title' => 'DETAIL DATA PENINDAKAN',
             'detail_data' => $detail_data_penindakan

@@ -19,15 +19,19 @@
 
                 <div class="card">
                     <div class="card-body">
-
                         <h5 class="card-title"><?= $title ?></h5>
-                        <span>
-                            <a href="/admin/data_penindakan/tambah_penindakan" class="btn btn-outline-secondary btn-sm"><i class="bi bi-plus">Tambah Data</i></a>
-                            <?php if (session()->get('role_id') == 1 || session()->get('role_id') == 2) : ?>
-                                <a href="/exportExcel" class="btn btn-outline-success btn-sm"><i class="bi bi-file-earmark-excel"></i> Export</a>
-                            <?php endif; ?>
-                        </span>
+                        <div class="btn-group-sm" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Action
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <?php if (session()->get('role_id') == 1 || session()->get('role_id') == 2) : ?>
+                                    <a href="/admin/data_penindakan/tambah_penindakan" class="dropdown-item btn-sm"><i class="bi bi-plus"></i>Tambah Data</a>
+                                    <a href="/exportExcel" class="dropdown-item btn-sm"><i class="bi bi-file-earmark-excel"></i> Export Excel</a>
+                                <?php endif; ?>
 
+                            </ul>
+                        </div>
                         <!-- Table with stripped rows -->
                         <div class="table-responsive">
                             <table class="table datatable">
@@ -41,9 +45,7 @@
                                         <th scope="col">Tempat Penyimpanan</th>
                                         <th scope="col">Tanggal Penindakan</th>
                                         <th scope="col">Status</th>
-                                        <?php if (session()->get('role_id') == 1) : ?>
-                                            <th scope="col">Action</th>
-                                        <?php endif; ?>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -52,7 +54,25 @@
                                         <tr>
                                             <th scope="row"><?= $no++ ?>.</th>
                                             <td><?= $data->ukpd ?> </td>
-                                            <td> <a href="/admin/data_penindakan/detail/<?= $data->nomor_bap ?>">Lihat Detail</a> </td>
+                                            <td>
+                                                <div class="btn-group-sm" role="group">
+                                                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Action
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                        <?php if (session()->get('role_id') == 1) : ?>
+                                                            <a class="dropdown-item btn-sm" href="/admin/data_penindakan/detail/<?= $data->nomor_bap ?>"> <i class="bi bi-eye"></i> Lihat Detail</a>
+                                                            <a class="dropdown-item btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>">
+                                                                <i class="bi bi-trash"></i> Hapus
+                                                            </a>
+                                                        <?php endif; ?>
+                                                        <?php if ($data->status_bap_id == 3 || $data->status_bap_id == 4 || $data->status_bap_id == 5) : ?>
+                                                            <a class="dropdown-item btn-sm" target="_blank" href="/pdf/bap_digital/<?= $data->nomor_bap ?>"><i class="bi bi-download"></i>Download BAP</a>
+                                                        <?php endif; ?>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
                                             <td><?= $data->nomor_kendaraan ?> </td>
                                             <td><?= $data->jenis_penindakan ?> </td>
                                             <td><a href="https://goo.gl/maps/DPPnRATpuFLpvhet8"><?= $data->tempat_penyimpanan ?></a></td>
@@ -65,17 +85,6 @@
                                                 <td> <span class="badge bg-success"><?= $data->status_penderekan ?></span> </td>
                                             <?php elseif ($data->status_bap_id == 5) : ?>
                                                 <td> <span class="badge bg-danger"><?= $data->status_penderekan ?></span> </td>
-                                            <?php endif; ?>
-
-                                            <?php if (session()->get('role_id') == 1) : ?>
-                                                <td>
-                                                    <button class="btn btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
-                                                        <i class="bi bi-trash"></i>
-                                                    </button>
-                                                    <?php if ($data->status_bap_id == 3 || $data->status_bap_id == 4 || $data->status_bap_id == 5) : ?>
-                                                        <a class="btn btn-sm" target="_blank" href="/pdf/bap_digital/<?= $data->nomor_bap ?>"><i class="bi bi-download"></i></a>
-                                                    <?php endif; ?>
-                                                </td>
                                             <?php endif; ?>
                                         </tr>
                                     <?php endforeach; ?>

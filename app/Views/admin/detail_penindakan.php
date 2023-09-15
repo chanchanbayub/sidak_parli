@@ -53,7 +53,7 @@
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                         <?php if ($detail_data->nama_pengemudi != null) : ?>
                             <a href="/pdf/bap_digital/<?= $detail_data->nomor_bap ?>" target="_blank" class="btn btn-sm btn-primary" type="button">
-                                <i class="bi bi-download"> </i> Download Berita Acara
+                                <i class="bi bi-download"> </i> Download BAP
                             </a>
                         <?php else : ?>
                             <a href="/admin/data_penindakan/edit_data/<?= $detail_data->nomor_bap ?>" class="btn btn-sm btn-warning" type="button">
@@ -62,6 +62,16 @@
                         <?php endif; ?>
                     </div>
                 </div>
+                <?php if ($detail_data->jenis_spk != null) : ?>
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                            <h6><?= $detail_data->jenis_spk ?></h6>
+                            <a href="/spk/<?= $detail_data->nomor_surat ?>" target="_blank" class="btn btn-sm btn-primary" type="button">
+                                <i class="bi bi-download"> </i> Surat Pengeluaran Kendaraan
+                            </a>
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div class="col-xl-8">
