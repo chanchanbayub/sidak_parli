@@ -565,8 +565,6 @@ class DataPenindakan extends BaseController
 
             $suratPengeluaran = $this->suratPengeluaranModel->where(["bap_id" => $data_penindakan->bap_id])->get()->getRowObject();
 
-            $path_spk = 'spk/' . $suratPengeluaran->nomor_surat;
-
             $path_foto_penindakan_1 = 'data_penindakan/' . $foto_penindakan->foto_penindakan_1;
             $path_foto_penindakan_2 = 'data_penindakan/' . $foto_penindakan->foto_penindakan_2;
 
@@ -577,8 +575,11 @@ class DataPenindakan extends BaseController
                 unlink($path_foto_penindakan_2);
             }
 
-            if (file_exists($path_spk)) {
-                unlink($path_spk);
+            if ($suratPengeluaran != null) {
+                $path_spk = 'spk/' . $suratPengeluaran->nomor_surat;
+                if (file_exists($path_spk)) {
+                    unlink($path_spk);
+                }
             }
 
             if ($path_tanda_tangan_pelanggar != null) {

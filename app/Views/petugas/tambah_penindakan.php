@@ -298,7 +298,7 @@
                             </div>
 
                             <div class="text-center">
-                                <button type="submit send" class="btn btn-primary save">Kirim</button>
+                                <button type="submit" class="btn btn-primary save">Kirim</button>
                                 <button type="reset" class="btn btn-secondary">Reset</button>
                             </div>
                         </form><!-- End floating Labels Form -->
@@ -617,7 +617,7 @@
             formData.append('tanda_tangan_pelanggar', signature);
             sendData(formData);
         })
-    })
+    });
 
     function sendData(formData) {
         $("#kebijakan_privasi").modal('hide');
@@ -632,7 +632,7 @@
             cache: false,
             beforeSend: function() {
                 $('.save').html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span>Loading...");
-                $(".send").prop('disabled', true);
+                $(".save").prop('disabled', true);
             },
             success: function(response) {
                 $(".save").html('Kirim');
@@ -801,7 +801,7 @@
             },
             error: function() {
                 $(".save").html('Kirim');
-                $(".save").prop('disable', false);
+                $(".save").prop('disabled', false);
                 Swal.fire({
                     icon: 'error',
                     title: `Data Belum Tersimpan!`
