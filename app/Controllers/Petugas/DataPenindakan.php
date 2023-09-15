@@ -209,9 +209,10 @@ class DataPenindakan extends BaseController
                     ]
                 ],
                 'bap_id' => [
-                    'rules' => 'required',
+                    'rules' => 'required|is_unique[data_penindakan_table.bap_id]',
                     'errors' => [
-                        'required' => 'Nomor BAP Tidak Boleh Kosong!'
+                        'required' => 'Nomor BAP Tidak Boleh Kosong!',
+                        'is_unique' => 'Nomor BAP Telah Digunakan, Silahkan Pilih BAP Baru'
                     ]
                 ],
                 'jenis_pelanggaran_id' => [
