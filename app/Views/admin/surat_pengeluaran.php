@@ -32,7 +32,7 @@
                                         <th scope="col">#</th>
                                         <th scope="col">Nomor Kendaraan</th>
                                         <th scope="col">Jenis Surat (SPK)</th>
-                                        <th scope="col">Nomor Surat</th>
+                                        <th scope="col">File SPK</th>
                                         <th scope="col">Status Kendaraan</th>
                                         <th scope="col">Action</th>
                                     </tr>
