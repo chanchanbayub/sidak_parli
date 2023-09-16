@@ -57,16 +57,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="unit_id">Unit / Regu :</label>
-                                <select class="form-select" name="unit_id" id="unit_id" disabled>
-                                    <option value="">--Silahkan Pilih--</option>
-                                </select>
-                                <div class="invalid-feedback error-unit">
 
-                                </div>
-
-                            </div>
                             <div class="col-md-6">
                                 <label for="jenis_penindakan_id">Jenis Penindakan :</label>
                                 <select class="form-select" name="jenis_penindakan_id" id="jenis_penindakan_id" disabled>
@@ -80,6 +71,19 @@
                                 </div>
 
                             </div>
+
+                            <div class="col-md-6">
+                                <label for="unit_id">Unit / Regu :</label>
+                                <select class="form-select" name="unit_id" id="unit_id" disabled>
+                                    <option value="">--Silahkan Pilih--</option>
+
+                                </select>
+                                <div class="invalid-feedback error-unit">
+
+                                </div>
+
+                            </div>
+
                             <div class="col-md-4">
                                 <label for="bap_id">Nomor BAP :</label>
                                 <select class="form-select" name="bap_id" id="bap_id" disabled>
@@ -485,17 +489,19 @@
         });
     });
 
-    $(document).on('change', "#jenis_penindakan_id", function(e) {
+    $(document).on('change', "#unit_id", function(e) {
         e.preventDefault();
-        let jenis_penindakan_id = $(this).val();
         let ukpd_id = $("#ukpd_id").val();
+        let jenis_penindakan_id = $("#jenis_penindakan_id").val();
+        let unit_id = $(this).val();
         $.ajax({
             url: '/admin/data_penindakan/getNomorBap',
             method: 'get',
             dataType: 'JSON',
             data: {
-                jenis_penindakan_id: jenis_penindakan_id,
                 ukpd_id: ukpd_id,
+                jenis_penindakan_id: jenis_penindakan_id,
+                unit_id: unit_id,
             },
             success: function(response) {
 
@@ -507,7 +513,6 @@
                     $("#bap_id").html(nomor_bap);
                     $("#bap_id").removeAttr('disabled');
                 } else {
-
                     let nomor_bap = `<option value = ""> --Silahkan Pilih-- </option>`;
                     $("#bap_id").html(nomor_bap);
                     $("#bap_id").attr('disabled', 'disabled');
@@ -696,6 +701,8 @@
                 $(".save").prop('disabled', true);
             },
             success: function(response) {
+                // $('.save').html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span>Loading...");
+                // $(".save").prop('disabled', true);
                 $(".save").html('Kirim');
                 $(".save").prop('disabled', false);
                 if (response.error) {
@@ -856,7 +863,7 @@
                     });
                     setTimeout(function() {
                         document.location.href = '/admin/data_penindakan';
-                    }, 1500);
+                    }, 1000);
                 }
             },
             error: function() {

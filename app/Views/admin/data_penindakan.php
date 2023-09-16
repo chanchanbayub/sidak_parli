@@ -29,7 +29,6 @@
                                     <a href="/admin/data_penindakan/tambah_penindakan" class="dropdown-item btn-sm"><i class="bi bi-plus"></i>Tambah Data</a>
                                     <a href="/exportExcel" class="dropdown-item btn-sm"><i class="bi bi-file-earmark-excel"></i> Export Excel</a>
                                 <?php endif; ?>
-
                             </ul>
                         </div>
                         <!-- Table with stripped rows -->

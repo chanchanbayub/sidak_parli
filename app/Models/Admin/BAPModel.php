@@ -31,16 +31,17 @@ class BAPModel extends Model
             ->get()->getResultObject();
     }
 
-    public function getNomorBap($ukpd_id, $jenis_penindakan_id)
+    public function getNomorBap($ukpd_id, $jenis_penindakan_id, $unit_id)
     {
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = bap_table.ukpd_id')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id')
-            ->join('unit_regu_table', 'unit_regu_table.id = bap_table.unit_id', 'left')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id')
+            ->join('unit_regu_table', 'unit_regu_table.id = bap_table.unit_id')
             ->where(["bap_table.ukpd_id" => $ukpd_id])
-            ->where(["bap_table.jenis_penindakan_id" => $jenis_penindakan_id])
+            ->where(["bap_table.jenis_penindakan_id" => $ukpd_id])
+            ->where(["bap_table.unit_id" => $unit_id])
             ->where(["bap_table.status_bap_id" => 1])
             ->orderBy('bap_table.id asc')
             ->get()->getResultObject();

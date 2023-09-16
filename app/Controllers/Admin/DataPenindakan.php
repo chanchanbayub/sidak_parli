@@ -136,8 +136,9 @@ class DataPenindakan extends BaseController
 
             $ukpd_id = $this->request->getVar('ukpd_id');
             $jenis_penindakan_id = $this->request->getVar('jenis_penindakan_id');
+            $unit_id = $this->request->getVar('unit_id');
 
-            $nomor_bap = $this->bapModel->getNomorBap($ukpd_id, $jenis_penindakan_id);
+            $nomor_bap = $this->bapModel->getNomorBap($ukpd_id, $jenis_penindakan_id, $unit_id);
 
             $data = [
                 'nomor_bap' => $nomor_bap
@@ -424,7 +425,6 @@ class DataPenindakan extends BaseController
                     'ukpd_id' => $ukpd_id,
                     'ppns_id' => $ppns_id,
                     'spt_id' => $spt_id,
-                    'unit_id' => $unit_id,
                     'jenis_penindakan_id' => $jenis_penindakan_id,
                     'bap_id' => $bap_id,
                     'jenis_pelanggaran_id' => $jenis_pelanggaran_id,
@@ -462,7 +462,7 @@ class DataPenindakan extends BaseController
 
                 $noBap = $this->bapModel->where(["id" => $bap_id])->get()->getRowObject();
 
-                if ($nama_pengemudi != null) {
+                if ($nama_pengemudi != null || $alamat_pengemudi != null) {
                     $this->bapModel->update($noBap->id, [
                         'id' => $noBap->id,
                         'bap_id' => $bap_id,
@@ -487,7 +487,7 @@ class DataPenindakan extends BaseController
     public function detail($nomor_bap)
     {
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
-        // dd($detail_data_penindakan);
+
         $data = [
             'title' => 'DETAIL DATA PENINDAKAN',
             'detail_data' => $detail_data_penindakan
