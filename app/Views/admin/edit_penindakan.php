@@ -29,6 +29,7 @@
                                 <input type="hidden" name="foto_lama" id="foto_lama" value="<?= $data_penindakan->foto_penindakan_1 ?>">
                                 <input type="hidden" name="foto_lama_2" id="foto_lama_2" value="<?= $data_penindakan->foto_penindakan_2 ?>">
                                 <input type="hidden" name="bap_id" id="bap_id" value="<?= $data_penindakan->bap_id ?>">
+                                <input type="hidden" name="unit_id" id="unit_id" value="<?= $data_penindakan->unit_id ?>">
                                 <input type="hidden" name="tanda_tangan_pelanggar_lama" id="tanda_tangan_pelanggar_lama" value="<?= $data_penindakan->tanda_tangan_pelanggar ?>">
                                 <label for="ukpd_id">UKPD :</label>
                                 <select class="form-select" name="ukpd_id" id="ukpd_id">
@@ -67,23 +68,6 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="unit_id">Unit / Regu :</label>
-                                <select class="form-select" name="unit_id" id="unit_id">
-                                    <option value="">--Silahkan Pilih--</option>
-                                    <?php foreach ($unit_regu as $unit_regu) : ?>
-                                        <?php if ($unit_regu->id == $data_penindakan->unit_id) : ?>
-                                            <option value="<?= $unit_regu->id ?>" selected><?= $unit_regu->unit_regu ?></option>
-                                        <?php else : ?>
-                                            <option value="<?= $unit_regu->id ?>"><?= $unit_regu->unit_regu ?></option>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
-                                </select>
-                                <div class="invalid-feedback error-unit">
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-6">
                                 <label for="jenis_penindakan_id">Jenis Penindakan :</label>
                                 <select class="form-select" name="jenis_penindakan_id" id="jenis_penindakan_id">
                                     <option value="">--Silahkan Pilih--</option>
@@ -99,13 +83,28 @@
                                 <div class="invalid-feedback error-jenis-penindakan ">
 
                                 </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="unit_id">Unit / Regu :</label>
+                                <select class="form-select" name="unit_id" id="unit_id" disabled>
+                                    <option value="">--Silahkan Pilih--</option>
+                                    <?php foreach ($unit_regu as $unit_regu) : ?>
+                                        <?php if ($unit_regu->id == $data_penindakan->unit_id) : ?>
+                                            <option value="<?= $unit_regu->id ?>" selected><?= $unit_regu->unit_regu ?></option>
+                                        <?php else : ?>
+                                            <option value="<?= $unit_regu->id ?>"><?= $unit_regu->unit_regu ?></option>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </select>
+                                <div class="invalid-feedback error-unit">
+
+                                </div>
 
                             </div>
+
                             <div class="col-md-4">
                                 <label for="bap_id">Nomor BAP :</label>
                                 <input type="text" class="form-control" name="bap_id" id="bap_id" value="<?= $data_penindakan->nomor_bap ?>" disabled>
-                                </select>
-
                                 <div class="invalid-feedback error-bap">
 
                                 </div>
@@ -419,9 +418,7 @@
         $('#spt_id').select2({
             theme: 'bootstrap4',
         });
-        $('#unit_id').select2({
-            theme: 'bootstrap4',
-        });
+
         $('#jenis_penindakan_id').select2({
             theme: 'bootstrap4',
         });
@@ -474,37 +471,6 @@
     // End Signature Pad
 
     $(".form-select").css('width', '100%');
-
-    $(document).on('change', "#jenis_penindakan_id", function(e) {
-        e.preventDefault();
-        let jenis_penindakan_id = $(this).val();
-        let ukpd_id = $("#ukpd_id").val();
-        $.ajax({
-            url: '/admin/data_penindakan/getNomorBap',
-            method: 'get',
-            dataType: 'JSON',
-            data: {
-                jenis_penindakan_id: jenis_penindakan_id,
-                ukpd_id: ukpd_id,
-            },
-            success: function(response) {
-
-                if (response.nomor_bap.length != 0) {
-                    let nomor_bap = `<option value = ""> --Silahkan Pilih-- </option>`
-                    response.nomor_bap.forEach(function(e) {
-                        nomor_bap += `<option value ="${e.id}"> ${e.nomor_bap} </option>`;
-                    })
-                    $("#bap_id").html(nomor_bap);
-                    $("#bap_id").removeAttr('disabled');
-                } else {
-
-                    let nomor_bap = `<option value = ""> --Silahkan Pilih-- </option>`;
-                    $("#bap_id").html(nomor_bap);
-                    $("#bap_id").attr('disabled', 'disabled');
-                }
-            }
-        });
-    });
 
     $(document).on('change', "#jenis_kendaraan_id", function(e) {
         e.preventDefault();
@@ -606,7 +572,8 @@
         let tanggal_pelanggaran = $("#tanggal_pelanggaran").val();
         let jam_pelanggaran = $("#jam_pelanggaran").val();
         let tempat_penyimpanan_id = $("#tempat_penyimpanan_id").val();
-        let foto = $("#foto").val();
+        let foto_penindakan_1 = $("#foto_penindakan_1").val();
+        let foto_penindakan_2 = $("#foto_penindakan_2").val();
         // table kendaraan
         let jenis_kendaraan_id = $("#jenis_kendaraan_id").val();
         let type_kendaraan_id = $("#type_kendaraan_id").val();
@@ -642,7 +609,8 @@
         formData.append('tanggal_pelanggaran', tanggal_pelanggaran);
         formData.append('jam_pelanggaran', jam_pelanggaran);
         formData.append('tempat_penyimpanan_id', tempat_penyimpanan_id);
-        formData.append('foto', foto);
+        formData.append('foto_penindakan_1', foto_penindakan_1);
+        formData.append('foto_penindakan_2', foto_penindakan_2);
 
         formData.append('jenis_kendaraan_id', jenis_kendaraan_id);
         formData.append('type_kendaraan_id', type_kendaraan_id);

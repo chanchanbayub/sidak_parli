@@ -524,6 +524,7 @@ class DataPenindakan extends BaseController
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
 
         // dd($detail_data_penindakan);
+
         if ($detail_data_penindakan == null) {
             return redirect()->back();
         } else {
@@ -575,13 +576,13 @@ class DataPenindakan extends BaseController
             $path_foto_penindakan_2 = 'data_penindakan/' . $foto_penindakan->foto_penindakan_2;
 
             if ($foto_penindakan->foto_penindakan_1 != null) {
-                if (file_exists($foto_penindakan->foto_penindakan_1)) {
+                if (file_exists($path_foto_penindakan_1)) {
                     unlink($path_foto_penindakan_1);
                 }
             }
 
             if ($foto_penindakan->foto_penindakan_2 != null) {
-                if (file_exists($foto_penindakan->foto_penindakan_2)) {
+                if (file_exists($path_foto_penindakan_2)) {
                     unlink($path_foto_penindakan_2);
                 }
             }
@@ -783,11 +784,18 @@ class DataPenindakan extends BaseController
                 } else {
                     $namaFile1 = $foto_penindakan_1->getRandomName();
                     $namaFile2 = $foto_penindakan_2->getRandomName();
-                    unlink('data_penindakan/' . $foto_lama);
-                    unlink('data_penindakan/' . $foto_lama_2);
+                    $path_foto_penindakan_1 = 'data_penindakan/' . $foto_lama;
+                    $path_foto_penindakan_2 = 'data_penindakan/' . $foto_lama_2;
+                    if (file_exists($path_foto_penindakan_1) && file_exists($path_foto_penindakan_2)) {
+                        unlink('data_penindakan/' . $foto_lama);
+                        unlink('data_penindakan/' . $foto_lama_2);
+                    }
                     $foto_penindakan_1->move('data_penindakan', $namaFile1);
                     $foto_penindakan_2->move('data_penindakan', $namaFile2);
                 }
+
+
+
                 // table Kendaraan
                 $jenis_kendaraan_id = $this->request->getVar('jenis_kendaraan_id');
                 $type_kendaraan_id = $this->request->getVar('type_kendaraan_id');
@@ -862,22 +870,11 @@ class DataPenindakan extends BaseController
                     'ukpd_id' => $ukpd_id,
                     'ppns_id' => $ppns_id,
                     'spt_id' => $spt_id,
-                    'unit_id' => $unit_id,
-                    'jenis_penindakan_id' => $jenis_penindakan_id,
                     'bap_id' => $bap_id,
                     'jenis_pelanggaran_id' => $jenis_pelanggaran_id,
                     'tanggal_pelanggaran' => $tanggal_pelanggaran,
                     'jam_pelanggaran' => $jam_pelanggaran,
                     'tempat_penyimpanan_id' => $tempat_penyimpanan_id,
-                ]);
-
-                $foto_penindakan = $this->fotoPenindakanModel->where(["bap_id" => $bap_id])->get()->getRowObject();
-
-                $this->fotoPenindakanModel->update($foto_penindakan->id, [
-                    'id' => $foto_penindakan->id,
-                    'bap_id' => $foto_penindakan->bap_id,
-                    'foto_penindakan_1' => $namaFile1,
-                    'foto_penindakan_2' => $namaFile2,
                 ]);
 
                 $data_kendaraan = $this->dataKendaraanModel->where(["bap_id" => $bap_id])->get()->getRowObject();
@@ -903,6 +900,15 @@ class DataPenindakan extends BaseController
                     'nama_jalan' => strtolower($nama_jalan),
                     'nama_gedung' => strtolower($nama_gedung),
 
+                ]);
+
+                $foto_penindakan = $this->fotoPenindakanModel->where(["bap_id" => $bap_id])->get()->getRowObject();
+
+                $this->fotoPenindakanModel->update($foto_penindakan->id, [
+                    'id' => $foto_penindakan->id,
+                    'bap_id' => $foto_penindakan->bap_id,
+                    'foto_penindakan_1' => $namaFile1,
+                    'foto_penindakan_2' => $namaFile2,
                 ]);
 
                 $noBap = $this->bapModel->where(["id" => $bap_id])->get()->getRowObject();
