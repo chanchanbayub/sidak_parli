@@ -61,9 +61,9 @@
                                                     <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                                         <?php if (session()->get('role_id') == 1) : ?>
                                                             <a class="dropdown-item btn-sm" href="/admin/data_penindakan/detail/<?= $data->nomor_bap ?>"> <i class="bi bi-eye"></i> Lihat Detail</a>
-                                                            <a class="dropdown-item btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>">
+                                                            <button class="dropdown-item btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>">
                                                                 <i class="bi bi-trash"></i> Hapus
-                                                            </a>
+                                                            </button>
                                                         <?php endif; ?>
                                                         <?php if ($data->status_bap_id == 3 || $data->status_bap_id == 4 || $data->status_bap_id == 5) : ?>
                                                             <a class="dropdown-item btn-sm" target="_blank" href="/pdf/bap_digital/<?= $data->nomor_bap ?>"><i class="bi bi-download"></i>Download BAP</a>
@@ -74,7 +74,7 @@
 
                                             <td><?= $data->nomor_kendaraan ?> </td>
                                             <td><?= $data->jenis_penindakan ?> </td>
-                                            <td><a href="https://goo.gl/maps/DPPnRATpuFLpvhet8"><?= $data->tempat_penyimpanan ?></a></td>
+                                            <td><a href=" https://goo.gl/maps/DPPnRATpuFLpvhet8"><?= $data->tempat_penyimpanan ?></a></td>
                                             <td><?= $data->tanggal_pelanggaran ?></td>
                                             <?php if ($data->status_bap_id == 2 || $data->status_bap_id == 1) : ?>
                                                 <td> <span class="badge bg-warning"><?= $data->status_penderekan ?></span> </td>
@@ -109,7 +109,7 @@
             <div class="modal-body">
                 <form id="delete_form">
                     <?= csrf_field(); ?>
-                    <input type="hidden" class="form-control" id="id_delete" name="id">
+                    <input type="text" class="form-control" id="id_delete" name="id">
                     <div class="modal-body">
                         <p>Apakah Anda Yakin ?</p>
                     </div>
@@ -184,7 +184,6 @@
                 id: id,
             },
             success: function(response) {
-
                 $("#id_delete").val(response.id);
 
             }
@@ -203,6 +202,7 @@
                 id: id,
             },
             beforeSend: function() {
+                $("#deleteModal").modal('hide');
                 $('.button_delete').html('<i class="bi bi-box-arrow-in-right"></i>');
                 $('.button_delete').prop('disabled', true);
             },

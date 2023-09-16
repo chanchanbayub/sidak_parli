@@ -9,7 +9,7 @@ class DataPenindakanModel extends Model
     protected $table            = 'data_penindakan_table';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['ukpd_id', 'ppns_id', 'spt_id',  'jenis_penindakan_id', 'bap_id', 'jenis_pelanggaran_id', 'tanggal_pelanggaran', 'jam_pelanggaran', 'tempat_penyimpanan_id'];
+    protected $allowedFields    = ['ukpd_id', 'ppns_id', 'spt_id',  'bap_id', 'jenis_pelanggaran_id', 'tanggal_pelanggaran', 'jam_pelanggaran', 'tempat_penyimpanan_id'];
 
     // Dates
     protected $useTimestamps = true;
@@ -18,7 +18,7 @@ class DataPenindakanModel extends Model
     protected $updatedField  = 'updated_at';
 
     protected $fieldTable =
-    'data_penindakan_table.id, data_penindakan_table.ukpd_id, data_penindakan_table.ppns_id, data_penindakan_table.spt_id, data_penindakan_table.jenis_penindakan_id,data_penindakan_table.bap_id, data_penindakan_table.jenis_pelanggaran_id,data_penindakan_table.tanggal_pelanggaran, data_penindakan_table.jam_pelanggaran, data_penindakan_table.tempat_penyimpanan_id,
+    'data_penindakan_table.id, data_penindakan_table.ukpd_id, data_penindakan_table.ppns_id, data_penindakan_table.spt_id,data_penindakan_table.bap_id, data_penindakan_table.jenis_pelanggaran_id,data_penindakan_table.tanggal_pelanggaran, data_penindakan_table.jam_pelanggaran, data_penindakan_table.tempat_penyimpanan_id,
     ukpd_table.ukpd,
     status_penderekan_table.status_penderekan,
     bap_table.nomor_bap, bap_table.status_bap_id, bap_table.unit_id,
@@ -43,13 +43,16 @@ class DataPenindakanModel extends Model
     jenis_spk_table.jenis_spk
     ';
 
+    protected $dataTable = 'data_penindakan_table.id, data_penindakan_table.ukpd_id, data_penindakan_table.ppns_id, data_penindakan_table.spt_id,data_penindakan_table.bap_id, data_penindakan_table.jenis_pelanggaran_id,data_penindakan_table.tanggal_pelanggaran, data_penindakan_table.jam_pelanggaran, data_penindakan_table.tempat_penyimpanan_id,
+    ukpd_table.ukpd, bap_table.nomor_bap, bap_table.jenis_penindakan_id ,bap_table.unit_id, bap_table.status_bap_id,data_kendaraan_table.nomor_kendaraan, jenis_penindakan_table.jenis_penindakan, tempat_penyimpanan_table.tempat_penyimpanan, status_penderekan_table.status_penderekan';
+
     public function getDataPenindakan()
     {
         return $this->table($this->table)
-            ->select($this->fieldTable)
+            ->select($this->dataTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -76,11 +79,10 @@ class DataPenindakanModel extends Model
     public function getDataPenindakanPenderekan()
     {
         return $this->table($this->table)
-            ->select('data_penindakan_table.id, data_penindakan_table.ukpd_id, data_penindakan_table.ppns_id, data_penindakan_table.spt_id, data_penindakan_table.jenis_penindakan_id,data_penindakan_table.bap_id, data_penindakan_table.jenis_pelanggaran_id,data_penindakan_table.tanggal_pelanggaran, data_penindakan_table.jam_pelanggaran, data_penindakan_table.tempat_penyimpanan_id,
-            ukpd_table.ukpd, bap_table.nomor_bap, bap_table.unit_id, bap_table.status_bap_id,data_kendaraan_table.nomor_kendaraan, jenis_penindakan_table.jenis_penindakan, tempat_penyimpanan_table.tempat_penyimpanan, status_penderekan_table.status_penderekan')
+            ->select($this->dataTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id', 'left')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = data_penindakan_table.tempat_penyimpanan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
@@ -94,8 +96,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -125,8 +127,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -143,7 +145,7 @@ class DataPenindakanModel extends Model
             ->join('provinsi', 'provinsi.id = lokasi_penindakan_table.provinsi_id')
             ->join('kota', 'kota.id = lokasi_penindakan_table.kota_id')
             ->join('kecamatan', 'kecamatan.id = lokasi_penindakan_table.kecamatan_id')
-            ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
+            ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id', 'left')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
             ->where(["bap_table.nomor_bap" => $nomor_bap])
@@ -156,8 +158,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -185,7 +187,9 @@ class DataPenindakanModel extends Model
     public function totalPenderekan()
     {
         return $this->table($this->table)
-            ->where(["jenis_penindakan_id" => 1])
+
+            ->where(["bap_table.jenis_penindakan_id" => 1])
+
             ->countAllResults();
     }
 
@@ -202,8 +206,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -223,7 +227,7 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["data_penindakan_table.jenis_penindakan_id" => 1])
+            ->where(["bap_table.jenis_penindakan_id" => 1])
             ->where(["bap_table.status_bap_id" => 4])
             ->get()->getResultObject();
     }
@@ -233,8 +237,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -254,7 +258,7 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["data_penindakan_table.jenis_penindakan_id" => 1])
+            ->where(["bap_table.jenis_penindakan_id" => 1])
             ->where(["bap_table.status_bap_id" => 4])
             ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
             ->get()->getResultObject();
@@ -265,8 +269,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -286,7 +290,7 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["data_penindakan_table.jenis_penindakan_id" => 1])
+            ->where(["bap_table.jenis_penindakan_id" => 1])
             ->where(["bap_table.status_bap_id" => 3])
             ->orWhere(["bap_table.status_bap_id" => 2])
             ->get()->getResultObject();
@@ -297,8 +301,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -318,7 +322,7 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["data_penindakan_table.jenis_penindakan_id" => 1])
+            ->where(["bap_table.jenis_penindakan_id" => 1])
             ->where(["bap_table.status_bap_id" => 3])
             ->orWhere(["bap_table.status_bap_id" => 2])
             ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
@@ -330,8 +334,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -351,7 +355,7 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["data_penindakan_table.jenis_penindakan_id" => 1])
+            ->where(["bap_table.jenis_penindakan_id" => 1])
             ->where(["bap_table.status_bap_id" => 5])
             ->get()->getResultObject();
     }
@@ -361,8 +365,8 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = data_penindakan_table.jenis_penindakan_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id')
             ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
@@ -382,7 +386,7 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["data_penindakan_table.jenis_penindakan_id" => 1])
+            ->where(["bap_table.jenis_penindakan_id" => 1])
             ->where(["bap_table.status_bap_id" => 5])
             ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
             ->get()->getResultObject();

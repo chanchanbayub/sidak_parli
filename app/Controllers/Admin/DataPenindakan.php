@@ -487,6 +487,7 @@ class DataPenindakan extends BaseController
     public function detail($nomor_bap)
     {
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
+        // dd($detail_data_penindakan);
 
         $data = [
             'title' => 'DETAIL DATA PENINDAKAN',
@@ -556,24 +557,33 @@ class DataPenindakan extends BaseController
 
             $data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithId($id);
 
-            $bap_id = $data_penindakan->bap_id;
+            $data_kendaraan = $this->dataKendaraanModel->where(["bap_id" => $data_penindakan->bap_id])->get()->getRowObject();
 
-            // $path_foto_penindakan = 'data_penindakan/' . $data_penindakan->foto;
+            $lokasi_penindakan = $this->lokasiPenindakanModel->where(["bap_id" => $data_penindakan->bap_id])->get()->getRowObject();
 
             $path_tanda_tangan_pelanggar = $data_penindakan->tanda_tangan_pelanggar;
 
-            $foto_penindakan = $this->fotoPenindakanModel->where(["bap_id" => $bap_id])->get()->getRowObject();
+            $foto_penindakan = $this->fotoPenindakanModel->where(["bap_id" => $data_penindakan->bap_id])->get()->getRowObject();
+
+            $data_pelanggar = $this->dataPelanggarModel->where(["bap_id" => $data_penindakan->bap_id])->get()->getRowObject();
 
             $suratPengeluaran = $this->suratPengeluaranModel->where(["bap_id" => $data_penindakan->bap_id])->get()->getRowObject();
+
+            $bap = $this->bapModel->where(["id" => $data_penindakan->bap_id])->get()->getRowObject();
 
             $path_foto_penindakan_1 = 'data_penindakan/' . $foto_penindakan->foto_penindakan_1;
             $path_foto_penindakan_2 = 'data_penindakan/' . $foto_penindakan->foto_penindakan_2;
 
             if ($foto_penindakan->foto_penindakan_1 != null) {
-                unlink($path_foto_penindakan_1);
+                if (file_exists($foto_penindakan->foto_penindakan_1)) {
+                    unlink($path_foto_penindakan_1);
+                }
             }
+
             if ($foto_penindakan->foto_penindakan_2 != null) {
-                unlink($path_foto_penindakan_2);
+                if (file_exists($foto_penindakan->foto_penindakan_2)) {
+                    unlink($path_foto_penindakan_2);
+                }
             }
 
             if ($suratPengeluaran != null) {
@@ -589,12 +599,24 @@ class DataPenindakan extends BaseController
                 }
             }
 
-            $this->dataPenindakanModel->delete($data_penindakan->id);
-            $this->fotoPenindakanModel->delete($bap_id);
-            $this->dataKendaraanModel->delete($bap_id);
-            $this->lokasiPenindakanModel->delete($bap_id);
-            $this->dataPelanggarModel->delete($bap_id);
-            $this->bapModel->delete($bap_id);
+            if ($suratPengeluaran != null) {
+                $this->dataPenindakanModel->delete($data_penindakan->id);
+                $this->fotoPenindakanModel->delete($foto_penindakan->id);
+                $this->dataKendaraanModel->delete($data_kendaraan->id);
+                $this->lokasiPenindakanModel->delete($lokasi_penindakan->id);
+                $this->dataPelanggarModel->delete($data_pelanggar->id);
+                $this->suratPengeluaranModel->delete($suratPengeluaran->id);
+                $this->bapModel->delete($bap->id);
+            } else {
+                $this->dataPenindakanModel->delete($data_penindakan->id);
+                $this->fotoPenindakanModel->delete($foto_penindakan->id);
+                $this->dataKendaraanModel->delete($data_kendaraan->id);
+                $this->lokasiPenindakanModel->delete($lokasi_penindakan->id);
+                $this->dataPelanggarModel->delete($data_pelanggar->id);
+                $this->bapModel->delete($bap->id);
+            }
+
+
 
             $alert = [
                 'success' => 'Data Berhasil di Hapus!'
