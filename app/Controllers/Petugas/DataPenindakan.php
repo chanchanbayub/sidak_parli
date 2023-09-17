@@ -77,9 +77,10 @@ class DataPenindakan extends BaseController
     public function index()
     {
 
+        $data_penindakan = $this->dataPenindakanModel->getDataPenindakanPenderekan(session()->get('ukpd_id'), session()->get('unit_id'));
         $data = [
             'title' => 'DATA PENINDAKAN',
-            'data_penindakan' => $this->dataPenindakanModel->getDataPenindakanPenderekan(session()->get('unit_id'), session()->get('ukpd_id'))
+            'data_penindakan' => $data_penindakan
         ];
 
         // dd($data["data_penindakan"]);
@@ -88,7 +89,6 @@ class DataPenindakan extends BaseController
 
     public function tambah_penindakan()
     {
-
         $data = [
             'title' => 'TAMBAH DATA PENINDAKAN',
             'ukpd' => $this->ukpdModel->getUkpd(),
@@ -101,28 +101,12 @@ class DataPenindakan extends BaseController
             'ppns' => $this->petugasModel->getPPNS(session()->get('ukpd_id')),
             'spt' => $this->sptModel->getNewSPT(session()->get('ukpd_id')),
             'unit_regu' => $this->unitReguModel->getUnitWhereUKPD(session()->get('ukpd_id')),
+            'nomor_bap' => $this->bapModel->where(["unit_id" => session()->get('unit_id')])->where(["status_bap_id" => 1])->get()->getResultObject(),
             'tempat_penyimpanan' => $this->tempatPenyimpananModel->getTempatPenyimpananWhereUKPD(session()->get('ukpd_id'))
         ];
 
 
         return view('petugas/tambah_penindakan', $data);
-    }
-
-    public function getNomorBap()
-    {
-        if ($this->request->isAJAX()) {
-
-            $ukpd_id = $this->request->getVar('ukpd_id');
-            $jenis_penindakan_id = $this->request->getVar('jenis_penindakan_id');
-
-            $nomor_bap = $this->bapModel->getNomorBap($ukpd_id, $jenis_penindakan_id);
-
-            $data = [
-                'nomor_bap' => $nomor_bap
-            ];
-
-            return json_encode($data);
-        }
     }
 
     public function getTypeKendaraan()
@@ -402,8 +386,6 @@ class DataPenindakan extends BaseController
                     'ukpd_id' => $ukpd_id,
                     'ppns_id' => $ppns_id,
                     'spt_id' => $spt_id,
-                    'unit_id' => $unit_id,
-                    'jenis_penindakan_id' => $jenis_penindakan_id,
                     'bap_id' => $bap_id,
                     'jenis_pelanggaran_id' => $jenis_pelanggaran_id,
                     'tanggal_pelanggaran' => $tanggal_pelanggaran,
@@ -643,8 +625,7 @@ class DataPenindakan extends BaseController
                 $ukpd_id = $this->request->getVar('ukpd_id');
                 $ppns_id = $this->request->getVar('ppns_id');
                 $spt_id = $this->request->getVar('spt_id');
-                $unit_id = $this->request->getVar('unit_id');
-                $jenis_penindakan_id = $this->request->getVar('jenis_penindakan_id');
+
                 $bap_id = $this->request->getVar('bap_id');
                 $jenis_pelanggaran_id = $this->request->getVar('jenis_pelanggaran_id');
                 $tanggal_pelanggaran = $this->request->getVar('tanggal_pelanggaran');
@@ -740,8 +721,6 @@ class DataPenindakan extends BaseController
                     'ukpd_id' => $ukpd_id,
                     'ppns_id' => $ppns_id,
                     'spt_id' => $spt_id,
-                    'unit_id' => $unit_id,
-                    'jenis_penindakan_id' => $jenis_penindakan_id,
                     'bap_id' => $bap_id,
                     'jenis_pelanggaran_id' => $jenis_pelanggaran_id,
                     'tanggal_pelanggaran' => $tanggal_pelanggaran,

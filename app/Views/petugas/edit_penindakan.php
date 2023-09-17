@@ -67,6 +67,24 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
+                                <label for="jenis_penindakan_id">Jenis Penindakan :</label>
+                                <select class="form-select" name="jenis_penindakan_id" id="jenis_penindakan_id">
+                                    <option value="">--Silahkan Pilih--</option>
+                                    <?php foreach ($jenis_penindakan as $jenis_penindakan) : ?>
+                                        <?php if ($jenis_penindakan->id == $data_penindakan->jenis_penindakan_id) : ?>
+                                            <option value="<?= $jenis_penindakan->id ?>" selected> <?= $jenis_penindakan->jenis_penindakan ?></option>
+                                        <?php else : ?>
+                                            <option value="<?= $jenis_penindakan->id ?>"> <?= $jenis_penindakan->jenis_penindakan ?></option>
+                                        <?php endif; ?>
+
+                                    <?php endforeach; ?>
+                                </select>
+                                <div class="invalid-feedback error-jenis-penindakan ">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
                                 <label for="unit_id">Unit / Regu :</label>
                                 <select class="form-select" name="unit_id" id="unit_id">
                                     <option value="">--Silahkan Pilih--</option>
@@ -83,24 +101,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-6">
-                                <label for="jenis_penindakan_id">Jenis Penindakan :</label>
-                                <select class="form-select" name="jenis_penindakan_id" id="jenis_penindakan_id">
-                                    <option value="">--Silahkan Pilih--</option>
-                                    <?php foreach ($jenis_penindakan as $jenis_penindakan) : ?>
-                                        <?php if ($jenis_penindakan->id == $data_penindakan->jenis_penindakan_id) : ?>
-                                            <option value="<?= $jenis_penindakan->id ?>" selected> <?= $jenis_penindakan->jenis_penindakan ?></option>
-                                        <?php else : ?>
-                                            <option value="<?= $jenis_penindakan->id ?>"> <?= $jenis_penindakan->jenis_penindakan ?></option>
-                                        <?php endif; ?>
 
-                                    <?php endforeach; ?>
-                                </select>
-                                <div class="invalid-feedback error-jenis-penindakan ">
-
-                                </div>
-
-                            </div>
                             <div class="col-md-4">
                                 <label for="bap_id">Nomor BAP :</label>
                                 <input type="text" class="form-control" name="bap_id" id="bap_id" value="<?= $data_penindakan->nomor_bap ?>" disabled>

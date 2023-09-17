@@ -104,14 +104,14 @@ class DataPenindakanModel extends Model
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
             ->where(["ukpd_table.id" => $ukpd_id])
-            ->where(["unit_regu_table.id" => $unit_id])
+            ->where(["bap_table.unit_id" => $unit_id])
             ->orderBy('data_penindakan_table.id desc')
             ->get()->getResultObject();
     }
-    public function getDataPenindakanPenderekan($unit_id, $ukpd_id)
+    public function getDataPenindakanPenderekan($ukpd_id, $unit_id)
     {
         return $this->table($this->table)
-            ->select($this->dataTable)
+
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id', 'left')
             ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
@@ -119,9 +119,20 @@ class DataPenindakanModel extends Model
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
             ->where(["ukpd_table.id" => $ukpd_id])
-            ->where(["bap_table.id" => $unit_id])
+            ->where(["bap_table.unit_id" => $unit_id])
             ->orderBy('data_penindakan_table.id desc')
             ->get()->getResultObject();
+        // ->select("*")
+        // ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
+        // ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id', 'left')
+        // // ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
+        // // ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = data_penindakan_table.tempat_penyimpanan_id', 'left')
+        // // ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
+        // ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
+        // ->where(["ukpd_table.id" => $ukpd_id])
+        // ->where(["bap_table.id" => $unit_id])
+        // ->orderBy('data_penindakan_table.id desc')
+        // ->get()->getResultObject();
     }
 
     public function getDataPenindakanStatusBAPTerbayar()

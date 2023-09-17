@@ -58,23 +58,6 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="unit_id">Unit / Regu :</label>
-                                <select class="form-select" name="unit_id" id="unit_id">
-                                    <option value="">--Silahkan Pilih--</option>
-                                    <?php foreach ($unit_regu as $unit_regu) : ?>
-                                        <?php if ($unit_regu->id == session()->get('unit_id')) : ?>
-                                            <option value="<?= $unit_regu->id ?>" selected><?= $unit_regu->unit_regu ?></option>
-                                        <?php else : ?>
-                                            <option value="<?= $unit_regu->id ?>"><?= $unit_regu->unit_regu ?></option>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
-                                </select>
-                                <div class="invalid-feedback error-unit">
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-6">
                                 <label for="jenis_penindakan_id">Jenis Penindakan :</label>
                                 <select class="form-select" name="jenis_penindakan_id" id="jenis_penindakan_id">
                                     <option value="">--Silahkan Pilih--</option>
@@ -87,11 +70,30 @@
                                 </div>
 
                             </div>
+
+                            <div class="col-md-6">
+                                <label for="unit_id">Unit / Regu :</label>
+                                <select class="form-select" name="unit_id" id="unit_id">
+                                    <option value="">--Silahkan Pilih--</option>
+                                    <?php foreach ($unit_regu as $unit_regu) : ?>
+                                        <?php if ($unit_regu->id == session()->get('unit_id')) : ?>
+                                            <option value="<?= $unit_regu->id ?>" selected><?= $unit_regu->unit_regu ?></option>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </select>
+                                <div class="invalid-feedback error-unit">
+
+                                </div>
+
+                            </div>
+
                             <div class="col-md-4">
                                 <label for="bap_id">Nomor BAP :</label>
-                                <select class="form-select" name="bap_id" id="bap_id" disabled>
+                                <select class="form-select" name="bap_id" id="bap_id">
                                     <option value="">--Silahkan Pilih--</option>
-
+                                    <?php foreach ($nomor_bap as $nomor_bap) : ?>
+                                        <option value="<?= $nomor_bap->id ?>"> <?= $nomor_bap->nomor_bap ?></option>
+                                    <?php endforeach; ?>
                                 </select>
 
                                 <div class="invalid-feedback error-bap">
@@ -427,37 +429,6 @@
 
     $(".form-select").css('width', '100%');
 
-    $(document).on('change', "#jenis_penindakan_id", function(e) {
-        e.preventDefault();
-        let jenis_penindakan_id = $(this).val();
-        let ukpd_id = $("#ukpd_id").val();
-        $.ajax({
-            url: '/petugas/data_penindakan/getNomorBap',
-            method: 'get',
-            dataType: 'JSON',
-            data: {
-                jenis_penindakan_id: jenis_penindakan_id,
-                ukpd_id: ukpd_id,
-            },
-            success: function(response) {
-
-                if (response.nomor_bap.length != 0) {
-                    let nomor_bap = `<option value = ""> --Silahkan Pilih-- </option>`
-                    response.nomor_bap.forEach(function(e) {
-                        nomor_bap += `<option value ="${e.id}"> ${e.nomor_bap} </option>`;
-                    })
-                    $("#bap_id").html(nomor_bap);
-                    $("#bap_id").removeAttr('disabled');
-                } else {
-
-                    let nomor_bap = `<option value = ""> --Silahkan Pilih-- </option>`;
-                    $("#bap_id").html(nomor_bap);
-                    $("#bap_id").attr('disabled', 'disabled');
-                }
-            }
-        });
-    });
-
     $(document).on('change', "#jenis_kendaraan_id", function(e) {
         e.preventDefault();
         let jenis_kendaraan_id = $(this).val();
@@ -787,8 +758,6 @@
                         $(".error-nama-jalan").html('');
                     }
                     // end Lokasi Penindakan
-
-
                 } else {
                     Swal.fire({
                         icon: 'success',
@@ -796,7 +765,7 @@
                     });
                     setTimeout(function() {
                         document.location.href = '/petugas/data_penindakan';
-                    }, 1500);
+                    }, 1000);
                 }
             },
             error: function() {

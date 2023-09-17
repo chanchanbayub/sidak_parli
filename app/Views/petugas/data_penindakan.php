@@ -36,6 +36,7 @@
                                         <th scope="col">Nomor Kendaraan</th>
                                         <th scope="col">Jenis Penindakan</th>
                                         <th scope="col">Tempat Penyimpanan</th>
+                                        <th scope="col">Tanggal Penindakan</th>
                                         <th scope="col">Status</th>
                                     </tr>
                                 </thead>
@@ -49,6 +50,7 @@
                                             <td><?= $data->nomor_kendaraan ?> </td>
                                             <td><?= $data->jenis_penindakan ?> </td>
                                             <td><a href="https://goo.gl/maps/DPPnRATpuFLpvhet8" target="_blank"><?= $data->tempat_penyimpanan ?></a> </td>
+                                            <td><?= $data->tanggal_pelanggaran ?></td>
                                             <?php if ($data->status_bap_id == 2 || $data->status_bap_id == 1) : ?>
                                                 <td> <span class="badge bg-warning"><?= $data->status_penderekan ?></span> </td>
                                             <?php elseif ($data->status_bap_id == 3) : ?>

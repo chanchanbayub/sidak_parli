@@ -40,7 +40,7 @@ class BAPModel extends Model
             ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id')
             ->join('unit_regu_table', 'unit_regu_table.id = bap_table.unit_id')
             ->where(["bap_table.ukpd_id" => $ukpd_id])
-            ->where(["bap_table.jenis_penindakan_id" => $ukpd_id])
+            ->where(["bap_table.jenis_penindakan_id" => $jenis_penindakan_id])
             ->where(["bap_table.unit_id" => $unit_id])
             ->where(["bap_table.status_bap_id" => 1])
             ->orderBy('bap_table.id asc')
