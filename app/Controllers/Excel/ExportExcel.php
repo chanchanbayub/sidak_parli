@@ -33,6 +33,7 @@ class ExportExcel extends BaseController
         //     $data_penindakan = $this->dataPenindakanModel->totalPenderekanSelesai();
         // } else {
         $data_penindakan = $this->dataPenindakanModel->getDataPenindakan();
+        // dd($data_penindakan);
 
 
         $sheet = $spreadSheet->getActiveSheet();
