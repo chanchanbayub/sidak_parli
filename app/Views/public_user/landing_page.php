@@ -191,7 +191,7 @@ use CodeIgniter\Filters\CSRF;
                         } else if (response.data_penindakan.status_bap_id == 4 || response.data_penindakan.status_bap_id == 5) {
                             $(".status").addClass("badge badge-success status")
                             $("#download").css('display', 'block');
-                            $("#download").attr('href', `/spk/${response.data_penindakan.nomor_surat}`);
+                            $("#download").attr('href', `/spk/${response.data_penindakan.nomor_spk_pdf}`);
                             $("#download").html('<i class="fa fa-download"></i> Download SPK');
                         }
                         $(".status").html(response.data_penindakan.status_penderekan);
