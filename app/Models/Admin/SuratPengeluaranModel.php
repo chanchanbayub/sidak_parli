@@ -9,7 +9,7 @@ class SuratPengeluaranModel extends Model
     protected $table            = 'surat_pengeluaran_table';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['bap_id', 'jenis_spk_id', 'nomor_surat'];
+    protected $allowedFields    = ['bap_id', 'jenis_spk_id', 'nomor_spk_pdf'];
 
     // Dates
     protected $useTimestamps = true;
@@ -17,7 +17,7 @@ class SuratPengeluaranModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
-    protected $fieldTable = 'surat_pengeluaran_table.id, surat_pengeluaran_table.bap_id, surat_pengeluaran_table.jenis_spk_id, surat_pengeluaran_table.nomor_surat,
+    protected $fieldTable = 'surat_pengeluaran_table.id, surat_pengeluaran_table.bap_id, surat_pengeluaran_table.jenis_spk_id, surat_pengeluaran_table.nomor_spk_pdf,
     data_kendaraan_table.nomor_kendaraan,
     jenis_spk_table.jenis_spk,
     status_penderekan_table.status_penderekan,

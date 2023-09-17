@@ -39,7 +39,7 @@ class DataPenindakanModel extends Model
     kota.kabupaten_kota,
     kecamatan.kecamatan,
     foto_penindakan_table.foto_penindakan_1,foto_penindakan_table.foto_penindakan_2,
-    surat_pengeluaran_table.nomor_surat,
+    surat_pengeluaran_table.nomor_spk_pdf,
     jenis_spk_table.jenis_spk
     ';
 

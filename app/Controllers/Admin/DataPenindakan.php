@@ -588,7 +588,7 @@ class DataPenindakan extends BaseController
             }
 
             if ($suratPengeluaran != null) {
-                $path_spk = 'spk/' . $suratPengeluaran->nomor_surat;
+                $path_spk = 'spk/' . $suratPengeluaran->nomor_spk_pdf;
                 if (file_exists($path_spk)) {
                     unlink($path_spk);
                 }

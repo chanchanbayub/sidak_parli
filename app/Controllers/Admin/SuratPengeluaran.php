@@ -53,8 +53,8 @@ class SuratPengeluaran extends BaseController
                         'required' => 'Jenis SPK Tidak Boleh Kosong !'
                     ]
                 ],
-                'nomor_surat' => [
-                    'rules' => 'uploaded[nomor_surat]|ext_in[nomor_surat,pdf]|max_size[nomor_surat,5120]',
+                'nomor_spk_pdf' => [
+                    'rules' => 'uploaded[nomor_spk_pdf]|ext_in[nomor_spk_pdf,pdf]|max_size[nomor_spk_pdf,5120]',
                     'errors' => [
                         'uploaded' => 'SPK Tidak Boleh Kosong!',
                         'ext_in' => 'Yang Anda Upload Bukan PDF!',
@@ -66,21 +66,21 @@ class SuratPengeluaran extends BaseController
                     'error' => [
                         'bap_id' => $this->validation->getError('bap_id'),
                         'jenis_spk_id' => $this->validation->getError('jenis_spk_id'),
-                        'nomor_surat' => $this->validation->getError('nomor_surat'),
+                        'nomor_spk_pdf' => $this->validation->getError('nomor_spk_pdf'),
                     ]
                 ];
             } else {
                 $bap_id = $this->request->getVar('bap_id');
                 $jenis_spk_id = $this->request->getVar('jenis_spk_id');
-                $nomor_surat = $this->request->getFile('nomor_surat');
+                $nomor_spk_pdf = $this->request->getFile('nomor_spk_pdf');
 
-                $spk = $nomor_surat->getRandomName();
-                // dd($nomor_surat);
+                $spk = $nomor_spk_pdf->getRandomName();
+                // dd($nomor_spk_pdf);
 
                 $this->suratPengeluaranModel->save([
                     'bap_id' => $bap_id,
                     'jenis_spk_id' => $jenis_spk_id,
-                    'nomor_surat' => $spk
+                    'nomor_spk_pdf' => $spk
                 ]);
 
                 $noBap = $this->bapModel->where(["id" => $bap_id])->get()->getRowObject();
@@ -97,7 +97,7 @@ class SuratPengeluaran extends BaseController
                     ]);
                 }
 
-                $nomor_surat->move('spk', $spk);
+                $nomor_spk_pdf->move('spk', $spk);
 
                 $alert = [
                     'success' => 'Status Kendaraan Berahasil di Ubah'
@@ -133,7 +133,7 @@ class SuratPengeluaran extends BaseController
 
             $surat_pengeluaran = $this->suratPengeluaranModel->where(["id" => $id])->first();
 
-            $path_spk = 'spk/' . $surat_pengeluaran["nomor_surat"];
+            $path_spk = 'spk/' . $surat_pengeluaran["nomor_spk_pdf"];
 
             if ($path_spk != null) {
                 if (file_exists($path_spk)) {
@@ -181,13 +181,13 @@ class SuratPengeluaran extends BaseController
                 $id = $this->request->getVar('id');
                 $spk_lama = $this->request->getVar('spk_lama');
                 $jenis_spk_id = $this->request->getVar('jenis_spk_id');
-                $nomor_surat = $this->request->getFile('nomor_surat');
+                $nomor_spk_pdf = $this->request->getFile('nomor_spk_pdf');
 
-                if ($nomor_surat->getError() == 4) {
+                if ($nomor_spk_pdf->getError() == 4) {
                     $namaFile = $spk_lama;
                 } else {
-                    $namaFile = $nomor_surat->getRandomName();
-                    $nomor_surat->move('spk', $namaFile);
+                    $namaFile = $nomor_spk_pdf->getRandomName();
+                    $nomor_spk_pdf->move('spk', $namaFile);
                     $spk = 'spk/' . $spk_lama;
 
                     if ($spk != null) {
@@ -201,7 +201,7 @@ class SuratPengeluaran extends BaseController
                     'id' => $spk["id"],
                     'bap_id' => $spk["bap_id"],
                     'jenis_spk_id' => $jenis_spk_id,
-                    'nomor_surat' => $namaFile
+                    'nomor_spk_pdf' => $namaFile
                 ]);
 
                 $noBap = $this->bapModel->where(["id" => $spk["bap_id"]])->get()->getRowObject();

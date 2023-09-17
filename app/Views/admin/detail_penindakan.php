@@ -66,7 +66,7 @@
                     <div class="card">
                         <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                             <h6><?= $detail_data->jenis_spk ?></h6>
-                            <a href="/spk/<?= $detail_data->nomor_surat ?>" target="_blank" class="btn btn-sm btn-primary" type="button">
+                            <a href="/spk/<?= $detail_data->nomor_spk_pdf ?>" target="_blank" class="btn btn-sm btn-primary" type="button">
                                 <i class="bi bi-download"> </i> Surat Pengeluaran Kendaraan
                             </a>
                         </div>

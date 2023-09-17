@@ -44,7 +44,7 @@
                                             <th scope="row"><?= $no++ ?>.</th>
                                             <td><?= $data->nomor_kendaraan ?> </td>
                                             <td><?= $data->jenis_spk ?> </td>
-                                            <td> <a href="/spk/<?= $data->nomor_surat ?>" target="_blank"><?= $data->jenis_spk ?></a> </td>
+                                            <td> <a href="/spk/<?= $data->nomor_spk_pdf ?>" target="_blank"><?= $data->jenis_spk ?></a> </td>
                                             <?php if ($data->status_bap_id == 2 || $data->status_bap_id == 1) : ?>
                                                 <td> <span class="badge bg-warning"><?= $data->status_penderekan ?></span> </td>
                                             <?php elseif ($data->status_bap_id == 3) : ?>
@@ -112,8 +112,8 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="nomor_surat" class="col-form-label">Surat SPK (PDF)</label>
-                        <input type="file" class="form-control" id="nomor_surat" name="nomor_surat">
+                        <label for="nomor_spk_pdf" class="col-form-label">Surat SPK (PDF)</label>
+                        <input type="file" class="form-control" id="nomor_spk_pdf" name="nomor_spk_pdf">
                         <div class="invalid-feedback error-nomor-surat">
 
                         </div>
@@ -177,8 +177,8 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="nomor_surat_edit" class="col-form-label">Surat Pengeluaran Kendaraan (PDF):</label>
-                        <input type="file" class="form-control" id="nomor_surat_edit" name="nomor_surat">
+                        <label for="nomor_spk_pdf_edit" class="col-form-label">Surat Pengeluaran Kendaraan (PDF):</label>
+                        <input type="file" class="form-control" id="nomor_spk_pdf_edit" name="nomor_spk_pdf">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -215,13 +215,13 @@
 
         let bap_id = $("#bap_id").val();
         let jenis_spk_id = $("#jenis_spk_id").val();
-        let nomor_spk = $("#nomor_surat").val();
+        let nomor_spk = $("#nomor_spk_pdf").val();
 
         let formData = new FormData(this);
 
         formData.append('bap_id', bap_id);
         formData.append('jenis_spk_id', jenis_spk_id);
-        formData.append('nomor_surat', nomor_spk);
+        formData.append('nomor_spk_pdf', nomor_spk);
 
         $.ajax({
             url: '/admin/surat_pengeluaran/insert',
@@ -237,7 +237,8 @@
                 $('#update_status').prop('disabled', true);
             },
             success: function(response) {
-                $('#update_status').html('<i class="bi bi-trash"></i> Delete');
+                $("#ubah_status").modal('hide');
+                $('#update_status').html('<i class="bi bi-box-arrow-in-right"></i>');
                 $('#update_status').prop('disabled', false);
                 if (response.error) {
                     if (response.error.bap_id) {
@@ -254,11 +255,11 @@
                         $("#jenis_spk_id").removeClass('is-invalid');
                         $(".error-jenis-spk").html('');
                     }
-                    if (response.error.nomor_surat) {
-                        $("#nomor_surat").addClass('is-invalid');
-                        $(".error-nomor-surat").html(response.error.nomor_surat);
+                    if (response.error.nomor_spk_pdf) {
+                        $("#nomor_spk_pdf").addClass('is-invalid');
+                        $(".error-nomor-surat").html(response.error.nomor_spk_pdf);
                     } else {
-                        $("#nomor_surat").removeClass('is-invalid');
+                        $("#nomor_spk_pdf").removeClass('is-invalid');
                         $(".error-nomor-surat").html('');
                     }
 
@@ -268,7 +269,7 @@
                         title: `${response.success}`,
                     });
                     setTimeout(function() {
-                        location.reload();
+                        location.reload(true);
                     }, 1000)
                 }
             },
@@ -314,6 +315,7 @@
                 $('.button_delete').prop('disabled', true);
             },
             success: function(response) {
+                $("#deleteModal").modal('hide');
                 $('.button_delete').html('<i class="bi bi-trash"></i> Delete');
                 $('.button_delete').prop('disabled', false);
                 Swal.fire({
@@ -353,7 +355,7 @@
                 $("#jenis_spk_id_edit").html(jenis_spk);
                 $("#jenis_spk_id_edit").val(response.spk.jenis_spk_id).trigger('change');
 
-                $("#spk_lama").val(response.spk.nomor_surat);
+                $("#spk_lama").val(response.spk.nomor_spk_pdf);
             }
         });
     });
@@ -363,7 +365,7 @@
         let id = $("#id_edit").val();
         let spk = $("#spk_lama").val();
         let jenis_spk_id = $("#jenis_spk_id_edit").val();
-        let nomor_spk = $("#nomor_surat_edit").val();
+        let nomor_spk = $("#nomor_spk_pdf_edit").val();
         let bap_id = $("#bap_id").val();
 
         let formData = new FormData(this);
@@ -372,7 +374,7 @@
         formData.append('bap_id', bap_id);
         formData.append('spk_lama', spk);
         formData.append('jenis_spk_id', jenis_spk_id);
-        formData.append('nomor_surat', nomor_spk);
+        formData.append('nomor_spk_pdf', nomor_spk);
 
         $.ajax({
             url: '/admin/surat_pengeluaran/update',
@@ -388,6 +390,7 @@
                 $('.update').prop('disabled', true);
             },
             success: function(response) {
+                $("#editModal").modal('hide');
                 $('.update').html('<i class="bi bi-box-arrow-in-right"></i> Kirim');
                 $('.update').prop('disabled', false);
                 if (response.error) {
@@ -404,7 +407,7 @@
                         title: `${response.success}`,
                     });
                     setTimeout(function() {
-                        location.reload();
+                        location.reload(true);
                     }, 1000)
                 }
 
