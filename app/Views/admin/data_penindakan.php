@@ -60,10 +60,11 @@
                                                     </button>
                                                     <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                                         <?php if (session()->get('role_id') == 1) : ?>
-                                                            <a class="dropdown-item btn-sm" href="/admin/data_penindakan/detail/<?= $data->nomor_bap ?>"> <i class="bi bi-eye"></i> Lihat Detail</a>
-                                                            <button class="dropdown-item btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>">
-                                                                <i class="bi bi-trash"></i> Hapus
+                                                            <button class="dropdown-item btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>"> <i class="bi bi-trash"></i> Hapus
                                                             </button>
+                                                            <a class="dropdown-item btn-sm" href="/admin/data_penindakan/detail/<?= $data->nomor_bap ?>"> <i class="bi bi-eye"></i> Lihat Detail</a>
+                                                        <?php elseif (session()->get('role_id') == 2) : ?>
+                                                            <a class="dropdown-item btn-sm" href="/admin/data_penindakan/detail/<?= $data->nomor_bap ?>"> <i class="bi bi-eye"></i> Lihat Detail</a>
                                                         <?php endif; ?>
                                                         <?php if ($data->status_bap_id == 3 || $data->status_bap_id == 4 || $data->status_bap_id == 5) : ?>
                                                             <a class="dropdown-item btn-sm" target="_blank" href="/pdf/bap_digital/<?= $data->nomor_bap ?>"><i class="bi bi-download"></i>Download BAP</a>
