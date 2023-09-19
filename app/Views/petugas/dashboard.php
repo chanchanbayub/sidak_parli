@@ -105,7 +105,7 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
-                                <h5 class="card-title">Jumlah <span>| Penderekan Selesai (SP) </span> <br> <span> <?= date_indo('Y-m-d') ?></span></h5>
+                                <h5 class="card-title">Jumlah <span>| Penderekan Selesai </span> <br> <span> <?= date_indo('Y-m-d') ?></span></h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">

@@ -25,14 +25,15 @@ class Dashboard extends BaseController
     public function index()
     {
         $date = date('Y-m-d');
+        $unit_id = session()->get('unit_id');
 
-        $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail($date, session()->get('unit_id'));
+        $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail($date, $unit_id);
         $jumlah = count($totalPenderekanTerbayarDetail);
 
-        $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail($date, session()->get('unit_id'));
+        $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail($date, $unit_id);
         $total_belum_terbayar = count($totalPenderekanBelumTerbayarDetail);
 
-        $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai($date, session()->get('unit_id'));
+        $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai($date, $unit_id);
         $total_selesai = count($totalPenderekanSelesai);
 
 

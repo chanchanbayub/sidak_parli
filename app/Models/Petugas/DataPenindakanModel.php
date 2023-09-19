@@ -191,9 +191,9 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["bap_table.jenis_penindakan_id" => 1])
             ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
             ->where(["bap_table.unit_id" => $unit_id])
+            ->where(["bap_table.jenis_penindakan_id" => 1])
             ->countAllResults();
     }
 
@@ -223,10 +223,9 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["bap_table.jenis_penindakan_id" => 1])
-            ->where(["bap_table.status_bap_id" => 4])
             ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
             ->where(["bap_table.unit_id" => $unit_id])
+            ->where(["bap_table.status_bap_id" => 4])
             ->get()->getResultObject();
     }
 
@@ -256,11 +255,9 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["bap_table.jenis_penindakan_id" => 1])
-            ->where(["bap_table.status_bap_id" => 3])
-            ->orWhere(["bap_table.status_bap_id" => 2])
             ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
             ->where(["bap_table.unit_id" => $unit_id])
+            ->where(["bap_table.status_bap_id" => 3])
             ->get()->getResultObject();
     }
 
@@ -290,10 +287,9 @@ class DataPenindakanModel extends Model
             ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id')
             ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
             ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
-            ->where(["bap_table.jenis_penindakan_id" => 1])
-            ->where(["bap_table.status_bap_id" => 5])
             ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
             ->where(["bap_table.unit_id" => $unit_id])
+            ->where(["bap_table.status_bap_id" => 5])
             ->get()->getResultObject();
     }
 
