@@ -211,14 +211,14 @@
 
                             <div class="col-md-4">
                                 <label for="nama_jalan">Lokasi Penderekan (Nama Jalan) :</label>
-                                <input type="text" class="form-control" id="nama_jalan" name="nama_jalan">
+                                <input type="text" class="form-control" id="nama_jalan" name="nama_jalan" placeholder="wahid khasyim">
                                 <div class="invalid-feedback error-nama-jalan">
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <label for="nama_gedung">Ciri Khusus (Nama Gedung (opsional)) :</label>
-                                <input type="text" class="form-control" id="nama_gedung" name="nama_gedung">
+                                <input type="text" class="form-control" id="nama_gedung" name="nama_gedung" placeholder="depan gedung dprd">
                                 <div class="invalid-feedback">
 
                                 </div>
