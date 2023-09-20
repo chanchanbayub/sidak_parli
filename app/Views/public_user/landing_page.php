@@ -43,7 +43,7 @@ use CodeIgniter\Filters\CSRF;
                         <div class="p-5">
                             <div class="text-center">
                                 <!-- <img src="/assets2/img/logo_sidak2.png" alt="Logo dishub" class="rounded mx-auto d-block img-fluid" width="500px"> -->
-                                <h5 class="h5 font-weight-bold">SISTEM INFORMASI DATA HASIL PENINDAKAN PARKIR LIAR DINAS PERHUBUNGAN PROVINSI DKI JAKARTA</h5>
+                                <h5 class="h5 font-weight-bold">SISTEM INFORMASI DATA PENINDAKAN PARKIR LIAR DINAS PERHUBUNGAN PROVINSI DKI JAKARTA</h5>
                             </div>
                             <br>
                             <h6 class="h4 font-weight-bold mb-4 "> Cek Status <br> Kendaraan Anda </h6>
