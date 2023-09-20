@@ -110,7 +110,7 @@
             <div class="modal-body">
                 <form id="delete_form">
                     <?= csrf_field(); ?>
-                    <input type="text" class="form-control" id="id_delete" name="id">
+                    <input type="hidden" class="form-control" id="id_delete" name="id">
                     <div class="modal-body">
                         <p>Apakah Anda Yakin ?</p>
                     </div>
