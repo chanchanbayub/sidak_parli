@@ -187,11 +187,14 @@ use CodeIgniter\Filters\CSRF;
                             $("#download").css('display', 'block')
                             $("#download").html('<i class="fa fa-download"></i> Download BAP');
                             $("#download").attr('href', `/pdf/bap_digital/${response.data_penindakan.nomor_bap}`);
+                            $("#whatsapp").css('display', 'block');
+                            $("#whatsapp").attr('href', `https://api.whatsapp.com/send?phone=6285799200900&text=PARKIR%20${response.data_penindakan.nomor_kendaraan}%20${response.data_penindakan.nama_jalan}`);
                             $(".status").addClass("badge badge-danger status")
                         } else if (response.data_penindakan.status_bap_id == 4 || response.data_penindakan.status_bap_id == 5) {
                             $(".status").addClass("badge badge-success status")
                             $("#download").css('display', 'block');
                             $("#download").attr('href', `/spk/${response.data_penindakan.nomor_spk_pdf}`);
+                            $("#whatsapp").css('display', 'none');
                             $("#download").html('<i class="fa fa-download"></i> Download SPK');
                         }
                         $(".status").html(response.data_penindakan.status_penderekan);
@@ -213,8 +216,6 @@ use CodeIgniter\Filters\CSRF;
                             $("#title").html('KENDARAAN ANDA DI ANGKUT MOTOR !')
                         }
 
-
-                        $("#whatsapp").attr('href', `https://api.whatsapp.com/send?phone=6285799200900&text=PARKIR%20${response.data_penindakan.nomor_kendaraan}%20${response.data_penindakan.nama_jalan}`);
                     }
                 },
                 error: function(response) {
