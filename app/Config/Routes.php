@@ -183,14 +183,16 @@ $routes->group('/admin', function ($routes) {
 
     $routes->get('unit_regu_detail', 'Admin\UnitRegu::detail_data');
     $routes->get('unit_regu_detail/(:any)', 'Admin\UnitRegu::detail_unit/$1');
-    // $routes->get('ocp', 'Admin\Ocp::index');
-    // $routes->get('ocp/getKota', 'Admin\Ocp::getKota');
-    // $routes->get('ocp/getKecamatan', 'Admin\Ocp::getKecamatan');
-    // $routes->post('ocp/insert', 'Admin\Ocp::insert');
-    // $routes->get('ocp/detail/(:any)', 'Admin\Ocp::detail/$1');
-    // $routes->get('ocp/edit', 'Admin\Ocp::edit');
-    // $routes->post('ocp/delete', 'Admin\Ocp::delete');
-    // $routes->post('ocp/update', 'Admin\Ocp::update');
+
+
+    $routes->get('ocp', 'Admin\Ocp::index');
+    $routes->get('ocp/getKota', 'Admin\Ocp::getKota');
+    $routes->get('ocp/getKecamatan', 'Admin\Ocp::getKecamatan');
+    $routes->post('ocp/insert', 'Admin\Ocp::insert');
+    $routes->get('ocp/detail/(:any)', 'Admin\Ocp::detail/$1');
+    $routes->get('ocp/edit', 'Admin\Ocp::edit');
+    $routes->post('ocp/delete', 'Admin\Ocp::delete');
+    $routes->post('ocp/update', 'Admin\Ocp::update');
 
     // KENDARAAN DINAS
     $routes->get('kendaraan_dinas', 'Admin\KendaraanDinas::index');

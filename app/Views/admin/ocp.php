@@ -45,12 +45,23 @@
                                             <td><?= $data->jenis_penindakan ?> </td>
                                             <td> <a href="ocp/detail/<?= $data->id ?>"> <?= $data->nomor_kendaraan_ocp ?> </a> </td>
                                             <td>
-                                                <button class="btn btn-sm btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
-                                                    <i class="bi bi-trash"></i>
-                                                </button>
-                                                <!-- <button class="btn btn-sm btn-warning" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>" type="button">
-                                                    <i class="bi bi-pencil-square"></i>
-                                                </button> -->
+                                                <div class="btn-group" role="group">
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Action
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <button class="dropdown-item" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
+                                                                <i class="bi bi-trash"></i> Hapus
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button class="dropdown-item" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>" type="button">
+                                                                <i class="bi bi-pencil-square"></i> Edit
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -307,7 +318,6 @@
 
                     </div>
 
-
                     <div class="form-group">
                         <label for="lokasi_penindakan_edit" class="col-form-label">Lokasi Penindakan:</label>
                         <input type="text" name="lokasi_penindakan" id="lokasi_penindakan_edit" class="form-control">
@@ -342,7 +352,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> <i class="bi bi-x-lg"></i> Batal</button>
-                        <button type="submit" class="btn btn-primary update"> Kirim</button>
+                        <button type="submit" class="btn btn-primary update"><i class="bi bi-box-arrow-in-right"></i> Kirim</button>
                     </div>
                 </form>
             </div>
@@ -614,7 +624,7 @@
                 id: id,
             },
             beforeSend: function() {
-                $('.button_delete').html('<i class="bi bi-box-arrow-in-right"></i>');
+                $('.button_delete').html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span>Loading...");
                 $('.button_delete').prop('disabled', true);
             },
             success: function(response) {
@@ -625,7 +635,7 @@
                     title: `${response.success}`,
                 });
                 setTimeout(function() {
-                    location.reload();
+                    location.reload(true);
                 }, 1000)
             },
             error: function(response) {
@@ -647,8 +657,9 @@
                 id: id,
             },
             success: function(response) {
-                console.log(response);
-                $("#id_edit").val(response.id);
+                $("#id_edit").val(response.ocp.id);
+                $("#foto_lama").val(response.ocp.foto_penindakan);
+                $("#lokasi_penindakan_edit").val(response.ocp.lokasi_penindakan);
 
                 let ukpd_id = `<option value=""> Silahkan Pilih </option>`;
 
@@ -693,6 +704,34 @@
 
                 $("#unit_id_edit").html(unit_id_data);
                 $("#unit_id_edit").val(response.ocp.unit_id).trigger('change');
+
+                let kota_data = `<option value=""> Silahkan Pilih </option>`;
+
+                response.kota.forEach(function(e) {
+                    if (e.id == response.ocp.kota_id) {
+                        kota_data += `<option value="${e.id}" selected> ${e.kabupaten_kota} </option>`;
+                    } else {
+                        kota_data += `<option value="${e.id}"> ${e.kabupaten_kota} </option>`;
+                    }
+                });
+
+                $("#kota_id_edit").html(kota_data);
+                $("#kota_id_edit").val(response.ocp.kota_id).trigger('change');
+
+                let kecamatan_data = `<option value=""> Silahkan Pilih </option>`;
+
+                response.kecamatan.forEach(function(e) {
+                    if (e.id == response.ocp.kecamatan_id) {
+                        kecamatan_data += `<option value="${e.id}" selected> ${e.kecamatan} </option>`;
+                    } else {
+                        kecamatan_data += `<option value="${e.id}"> ${e.kecamatan} </option>`;
+                    }
+                });
+
+                $("#kecamatan_id_edit").html(kecamatan_data);
+                $("#kecamatan_id_edit").val(response.ocp.kecamatan_id).trigger('change');
+
+
             }
         });
     });
@@ -724,43 +763,61 @@
         });
     });
 
-    $("#edit_penindakan").submit(function(e) {
+    $("#edit_form").submit(function(e) {
         e.preventDefault();
-        let id = $('#id_edit').val();
-        let jenis_penindakan = $('#jenis_penindakan_edit').val();
+        let id = $("#id_edit").val();
+        let foto_lama = $("#foto_lama").val();
+        let ukpd_id = $('#ukpd_id_edit').val();
+        let jenis_penindakan_id = $('#jenis_penindakan_id_edit').val();
+        let unit_id = $('#unit_id_edit').val();
+        let nomor_kendaraan_ocp = $('#nomor_kendaraan_ocp_edit').val();
+        let provinsi_id = $('#provinsi_id_edit').val();
+        let kota_id = $('#kota_id_edit').val();
+        let kecamatan_id = $('#kecamatan_id_edit').val();
+        let tanggal_ocp = $('#tanggal_ocp_edit').val();
+        let jam_ocp = $('#jam_ocp_edit').val();
+        let lokasi_penindakan = $('#lokasi_penindakan_edit').val();
+        let foto_penindakan = $('#foto_penindakan_edit').val();
+
+        let formData = new FormData(this);
+
+        formData.append('id', id);
+        formData.append('foto_lama', foto_lama);
+        formData.append('ukpd_id', ukpd_id);
+        formData.append('jenis_penindakan_id', jenis_penindakan_id);
+        formData.append('unit_id', unit_id);
+        formData.append('nomor_kendaraan_ocp', nomor_kendaraan_ocp);
+        formData.append('provinsi_id', provinsi_id);
+        formData.append('kota_id', kota_id);
+        formData.append('tanggal_ocp', tanggal_ocp);
+        formData.append('jam_ocp', jam_ocp);
+        formData.append('kecamatan_id', kecamatan_id);
+        formData.append('lokasi_penindakan', lokasi_penindakan);
+        formData.append('foto_penindakan', foto_penindakan);
         $.ajax({
-            url: '/admin/jenis_penindakan/update',
-            method: 'post',
-            dataType: 'JSON',
-            data: {
-                id: id,
-                jenis_penindakan: jenis_penindakan,
-            },
+            url: '/admin/ocp/update',
+            data: formData,
+            dataType: 'json',
+            enctype: 'multipart/form-data',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            cache: false,
             beforeSend: function() {
-                $('.update').html('<i class="bi bi-box-arrow-in-right"></i>');
+                $('.update').html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span>Loading...");
                 $('.update').prop('disabled', true);
             },
             success: function(response) {
                 $('.update').html('<i class="bi bi-box-arrow-in-right"></i> Kirim');
                 $('.update').prop('disabled', false);
-                if (response.error) {
-                    if (response.error.jenis_penindakan) {
-                        $("#jenis_penindakan_edit").addClass('is-invalid');
-                        $(".error-penindakan-edit").html(response.error.jenis_penindakan);
-                    } else {
-                        $("#jenis_penindakan_edit").removeClass('is-invalid');
-                        $(".error-penindakan-edit").html('');
-                    }
 
-                } else {
-                    Swal.fire({
-                        icon: 'success',
-                        title: `${response.success}`,
-                    });
-                    setTimeout(function() {
-                        location.reload();
-                    }, 1000)
-                }
+                Swal.fire({
+                    icon: 'success',
+                    title: `${response.success}`,
+                });
+                setTimeout(function() {
+                    location.reload(true);
+                }, 1000)
             },
             error: function() {
                 Swal.fire({

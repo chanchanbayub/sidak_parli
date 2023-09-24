@@ -9,7 +9,7 @@
             <ol class="breadcrumb">
 
                 <li class="breadcrumb-item">PAGES</li>
-                <li class="breadcrumb-item"><a href="/admin/data_penindakan">KEMBALI</a></li>
+                <li class="breadcrumb-item"><a href="/admin/ocp">KEMBALI</a></li>
             </ol>
         </nav>
     </div><!-- End Page Title -->

@@ -149,7 +149,7 @@ class Ocp extends BaseController
                     ]
                 ],
                 'foto_penindakan' => [
-                    'rules' => 'uploaded[foto_penindakan]|is_image[foto_penindakan]|max_size[foto_penindakan,2048]',
+                    'rules' => 'uploaded[foto_penindakan]|is_image[foto_penindakan]|max_size[foto_penindakan,4048]',
                     'errors' => [
                         'uploaded' => 'Foto Kendaraan Tidak Boleh Kosong!',
                         'is_image' => 'Yang Anda Upload Bukan Foto!',
@@ -203,7 +203,6 @@ class Ocp extends BaseController
 
                 ]);
 
-
                 $alert = [
                     'success' => 'OPS Cabut Pentil Berhasil di Simpan !'
                 ];
@@ -221,12 +220,17 @@ class Ocp extends BaseController
 
             $id = $this->request->getVar('id');
 
+            $ocp = $this->ocpModel->getDataOcpWithID($id);
+
+            $kecamatan = $this->kecamatanModel->where("kabkot_id", $ocp->kota_id)->get()->getResultObject();
+
             $data = [
                 'ukpd' => $this->ukpdModel->getUkpd(),
-                'ocp' => $this->ocpModel->getDataOcpWithID($id),
+                'ocp' => $ocp,
                 'jenis_penindakan' => $this->jenisPenindakanModel->where(["id" => 2])->orWhere(["id" => 3])->orWhere(["id" => 4])->get()->getResultObject(),
                 'provinsi' => $this->provinsiModel->get()->getRowObject(),
                 'kota' => $this->kotaModel->getKota(),
+                'kecamatan' => $kecamatan,
                 'unit_regu' => $this->unitReguModel->getUnit(),
             ];
 
@@ -250,7 +254,7 @@ class Ocp extends BaseController
             $this->ocpModel->delete($ocp->id);
 
             $alert = [
-                'success' => 'Data Berhasil di Hapus!'
+                'success' => 'Data OCP Berhasil di Hapus!'
             ];
 
             return json_encode($alert);
@@ -261,34 +265,52 @@ class Ocp extends BaseController
     {
         if ($this->request->isAJAX()) {
 
-            if (!$this->validate([
-                'jenis_penindakan' => [
-                    'rules' => 'required',
-                    'errors' => [
-                        'required' => 'Jenis Penindakan Tidak Boleh Kosong !'
-                    ]
-                ],
+            $id = $this->request->getPost('id');
+            $foto_lama = $this->request->getPost('foto_lama');
+            $ukpd_id = $this->request->getPost('ukpd_id');
+            $unit_id = $this->request->getPost('unit_id');
+            $jenis_penindakan_id = $this->request->getPost('jenis_penindakan_id');
+            $nomor_kendaraan_ocp = $this->request->getPost('nomor_kendaraan_ocp');
+            $provinsi_id = $this->request->getPost('provinsi_id');
+            $kota_id = $this->request->getPost('kota_id');
+            $kecamatan_id = $this->request->getPost('kecamatan_id');
+            $tanggal_ocp = $this->request->getPost('tanggal_ocp');
+            $jam_ocp = $this->request->getPost('jam_ocp');
+            $lokasi_penindakan = $this->request->getPost('lokasi_penindakan');
+            $foto_penindakan = $this->request->getFile('foto_penindakan');
 
-            ])) {
-                $alert = [
-                    'error' => [
-                        'jenis_penindakan' => $this->validation->getError('jenis_penindakan'),
-
-                    ]
-                ];
+            if ($foto_penindakan->getError() == 4) {
+                $namaFile = $foto_lama;
             } else {
-                $id = $this->request->getPost('id');
-                $jenis_penindakan = $this->request->getPost('jenis_penindakan');
-
-
-                $this->jenisPenindakanModel->update($id, [
-                    'jenis_penindakan' => strtolower($jenis_penindakan)
-                ]);
-
-                $alert = [
-                    'success' => 'Jenis Penindakan Berhasil di Ubah !'
-                ];
+                $namaFile = $foto_penindakan->getRandomName();
+                $path_foto_lama = 'ocp_data_penindakan/' . $foto_lama;
+                if (file_exists($path_foto_lama)) {
+                    unlink($path_foto_lama);
+                }
+                $foto_penindakan->move('ocp_data_penindakan', $namaFile);
             }
+
+            $this->ocpModel->update($id, [
+                'ukpd_id' => $ukpd_id,
+                'jenis_penindakan_id' => $jenis_penindakan_id,
+                'unit_id' => $unit_id,
+                'nomor_kendaraan_ocp' => strtolower($nomor_kendaraan_ocp),
+                'provinsi_id' => $provinsi_id,
+                'kota_id' => $kota_id,
+                'tanggal_ocp' => $tanggal_ocp,
+                'jam_ocp' => $jam_ocp,
+                'kota_id' => $kota_id,
+                'kecamatan_id' => $kecamatan_id,
+                'lokasi_penindakan' => strtolower($lokasi_penindakan),
+                'foto_penindakan' =>  $namaFile,
+
+            ]);
+
+            $alert = [
+                'success' => 'OPS Cabut Pentil Berhasil di Ubah !'
+            ];
+
+
 
             return json_encode($alert);
         }

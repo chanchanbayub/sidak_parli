@@ -119,7 +119,7 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#penindakan-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-database-lock"></i><span>Master Data Penindakan </span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-car-front"></i><span>Master Data Penindakan </span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="penindakan-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -131,10 +131,28 @@
         </li><!-- End Components Nav -->
 
         <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#ocp-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-bicycle"></i><span>Penindakan Roda 2 </span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="ocp-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/admin/ocp">
+                        <i class="bi bi-circle"></i><span>OCP</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-circle"></i><span>Angkut Motor (segera hadir)</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Components Nav -->
+
+        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#pengeluaran-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-database-lock"></i><span>Surat Pengeluaran </span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="pengeluaran-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <ul id="pengeluaran-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="/admin/surat_pengeluaran">
                         <i class="bi bi-circle"></i><span>Surat Pengeluaran Kendaraan</span>
