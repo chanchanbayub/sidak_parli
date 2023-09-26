@@ -19,6 +19,7 @@ class Petugas extends BaseController
     protected $roleManagementModel;
     protected $statusPetugasModel;
     protected $validation;
+    protected $sessionRole;
 
     public function __construct()
     {
@@ -29,22 +30,39 @@ class Petugas extends BaseController
         $this->roleManagementModel = new RoleManagementModel();
         $this->statusPetugasModel = new StatusPetugasModel();
         $this->validation = \Config\Services::validation();
+
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
-        $data = [
+        if ($this->sessionRole == 2) {
+            $petugas = $this->petugasModel->getPetugasWithUKPD(session()->get('ukpd_id'));
+        } else {
+            $petugas = $this->petugasModel->getPetugas();
+        }
 
+        $data = [
             'ukpd' => $this->ukpdModel->getUkpd(),
             'unit_regu' => $this->unitReguModel->getUnit(),
             'jabatan' => $this->jabatanModel->getJabatan(),
             'role_management' => $this->roleManagementModel->getRoleManagement(),
-            'petugas' => $this->petugasModel->getPetugas(),
+            'petugas' => $petugas,
             'status_petugas' => $this->statusPetugasModel->getStatusPetugas(),
             'title' => 'Petugas',
         ];
 
         return view('admin/petugas', $data);
+    }
+    public function getUnit()
+    {
+        if ($this->request->isAJAX()) {
+            $ukpd = $this->request->getVar('ukpd_id');
+
+            $unit_regu = $this->unitReguModel->getUnitWhereUKPD($ukpd);
+
+            return json_encode($unit_regu);
+        }
     }
 
     public function insert()

@@ -122,6 +122,7 @@ $routes->group('/admin', function ($routes) {
     // Petugas
     $routes->get('petugas', 'Admin\Petugas::index');
     $routes->post('petugas/insert', 'Admin\Petugas::insert');
+    $routes->get('petugas/getUnit', 'Admin\Petugas::getUnit');
     $routes->get('petugas/edit', 'Admin\Petugas::edit');
     $routes->post('petugas/delete', 'Admin\Petugas::delete');
     $routes->post('petugas/update', 'Admin\Petugas::update');

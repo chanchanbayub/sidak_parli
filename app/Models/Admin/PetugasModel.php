@@ -30,6 +30,20 @@ class PetugasModel extends Model
             ->get()->getResultObject();
     }
 
+    public function getPetugasWithUKPD($ukpd_id)
+    {
+        return $this->table($this->table)
+            ->select("petugas_table.id, petugas_table.ukpd_id,petugas_table.unit_id, petugas_table.nama, petugas_table.username ,petugas_table.nip, petugas_table.pangkat ,petugas_table.golongan,petugas_table.jabatan_id, petugas_table.role_id,petugas_table.status_id, ukpd_table.ukpd, unit_regu_table.unit_regu, jabatan_table.jabatan, role_management_table.role_management, status_petugas_table.status_petugas")
+            ->join('ukpd_table', 'ukpd_table.id = petugas_table.ukpd_id')
+            ->join('unit_regu_table', 'unit_regu_table.id = petugas_table.unit_id')
+            ->join('jabatan_table', 'jabatan_table.id = petugas_table.jabatan_id')
+            ->join('role_management_table', 'role_management_table.id = petugas_table.role_id')
+            ->join('status_petugas_table', 'status_petugas_table.id = petugas_table.status_id')
+            ->where(["petugas_table.ukpd_id" => $ukpd_id])
+            ->orderBy('petugas_table.id desc')
+            ->get()->getResultObject();
+    }
+
     // public function getJumlahPetugas()
     // {
     //     return $this->table($this->table)

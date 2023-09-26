@@ -379,6 +379,29 @@
         });
     });
 
+    $("#ukpd_id").change(function(e) {
+        e.preventDefault();
+        ukpd_id = $(this).val();
+        $.ajax({
+            url: '/admin/petugas/getUnit',
+            method: 'get',
+            dataType: 'JSON',
+            data: {
+                ukpd_id: ukpd_id,
+            },
+            success: function(response) {
+                console.log(response);
+                let unit_data = `<option value=""> --Silahkan Pilih-- </option>`
+
+                response.forEach(function(e) {
+                    unit_data += `<option value="${e.id}"> ${e.unit_regu} </option>`
+                });
+
+                $("#unit_id").html(unit_data);
+            }
+        });
+    })
+
     $("#tambah_petugas").submit(function(e) {
         e.preventDefault();
         let ukpd_id = $('#ukpd_id').val();
