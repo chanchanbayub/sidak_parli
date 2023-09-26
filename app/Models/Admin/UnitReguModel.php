@@ -31,8 +31,9 @@ class UnitReguModel extends Model
     public function getUnitWhereUKPD($ukpd_id)
     {
         return $this->table($this->table)
-            ->select("unit_regu_table.id, unit_regu_table.ukpd_id, unit_regu_table.unit_regu")
+            ->select("unit_regu_table.id, unit_regu_table.ukpd_id, unit_regu_table.unit_regu, ukpd_table.ukpd")
             ->orderBy('unit_regu_table.id desc')
+            ->join('ukpd_table', 'ukpd_table.id = unit_regu_table.ukpd_id')
             ->where(["ukpd_id" => $ukpd_id])
             ->get()->getResultObject();
     }

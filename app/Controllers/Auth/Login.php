@@ -90,6 +90,7 @@ class Login extends BaseController
                             'unit_regu' => $user_data->unit_regu,
                             'role_management' => $user_data->role_management,
                             'role_id' => $user_data->role_id,
+                            'ukpd_id' => $user_data->ukpd_id,
                             'status_id' => $user_data->status_id,
                             'isLogedIn' => true
                         ];

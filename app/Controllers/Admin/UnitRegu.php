@@ -13,6 +13,7 @@ class UnitRegu extends BaseController
     protected $unitReguModel;
     protected $kendaraanDinasModel;
     protected $validation;
+    protected $sessionRole;
 
     public function __construct()
     {
@@ -20,12 +21,19 @@ class UnitRegu extends BaseController
         $this->ukpdModel = new UkpdModel();
         $this->kendaraanDinasModel = new KendaraanDinasModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
+        if ($this->sessionRole == 2) {
+            $unit_regu = $this->unitReguModel->getUnitWhereUKPD(session()->get('ukpd_id'));
+        } else {
+            $unit_regu = $this->unitReguModel->getUnit();
+        }
+
         $data = [
-            'unit_regu' => $this->unitReguModel->getUnit(),
+            'unit_regu' => $unit_regu,
             'ukpd' => $this->ukpdModel->getUkpd(),
             'title' => 'Unit Regu',
         ];
