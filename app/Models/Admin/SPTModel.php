@@ -16,13 +16,22 @@ class SPTModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
-    public function getSPT()
+    public function getSPT($ukpd_id)
     {
-        return $this->table($this->table)
-            ->select("nomor_spt_table.id, nomor_spt_table.ukpd_id, nomor_spt_table.nomor_surat, nomor_spt_table.tanggal_surat, ukpd_table.ukpd")
-            ->orderBy('nomor_spt_table.id desc')
-            ->join('ukpd_table', 'ukpd_table.id = nomor_spt_table.ukpd_id')
-            ->get()->getResultObject();
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->select("nomor_spt_table.id, nomor_spt_table.ukpd_id, nomor_spt_table.nomor_surat, nomor_spt_table.tanggal_surat, ukpd_table.ukpd")
+                ->orderBy('nomor_spt_table.id desc')
+                ->join('ukpd_table', 'ukpd_table.id = nomor_spt_table.ukpd_id')
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->select("nomor_spt_table.id, nomor_spt_table.ukpd_id, nomor_spt_table.nomor_surat, nomor_spt_table.tanggal_surat, ukpd_table.ukpd")
+                ->orderBy('nomor_spt_table.id desc')
+                ->join('ukpd_table', 'ukpd_table.id = nomor_spt_table.ukpd_id')
+                ->where(["nomor_spt_table.ukpd_id" => $ukpd_id])
+                ->get()->getResultObject();
+        }
     }
 
     public function getNewSPT($ukpd_id)

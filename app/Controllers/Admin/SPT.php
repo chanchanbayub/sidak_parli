@@ -11,19 +11,27 @@ class SPT extends BaseController
     protected $sptModel;
     protected $ukpdModel;
     protected $validation;
+    protected $sessionRole;
 
     public function __construct()
     {
         $this->sptModel = new SPTModel();
         $this->ukpdModel = new UkpdModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
         helper(["format"]);
     }
 
     public function index()
     {
+        if ($this->sessionRole == 2) {
+            $spt = $this->sptModel->getSPT(session()->get("ukpd_id"));
+        } else {
+            $spt = $this->sptModel->getSPT("");
+        }
+
         $data = [
-            'spt' => $this->sptModel->getSPT(),
+            'spt' => $spt,
             'title' => 'SURAT PENUGASAN ANGGOTA',
             'ukpd' => $this->ukpdModel->getUkpd()
         ];
