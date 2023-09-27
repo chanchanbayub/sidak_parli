@@ -76,18 +76,32 @@ class DataPenindakanModel extends Model
             ->get()->getResultObject();
     }
 
-    public function getDataPenindakanPenderekan()
+    public function getDataPenindakanPenderekan($ukpd_id)
     {
-        return $this->table($this->table)
-            ->select($this->dataTable)
-            ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id')
-            ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id', 'left')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
-            ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = data_penindakan_table.tempat_penyimpanan_id', 'left')
-            ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
-            ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
-            ->orderBy('data_penindakan_table.id desc')
-            ->get()->getResultObject();
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->select($this->dataTable)
+                ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id')
+                ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id', 'left')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
+                ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = data_penindakan_table.tempat_penyimpanan_id', 'left')
+                ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
+                ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
+                ->orderBy('data_penindakan_table.id desc')
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->select($this->dataTable)
+                ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id')
+                ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id', 'left')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
+                ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = data_penindakan_table.tempat_penyimpanan_id', 'left')
+                ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
+                ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
+                ->where(["data_penindakan_table.ukpd_id" => $ukpd_id])
+                ->orderBy('data_penindakan_table.id desc')
+                ->get()->getResultObject();
+        }
     }
 
 

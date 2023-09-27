@@ -50,7 +50,7 @@ class DataPenindakan extends BaseController
     protected $jenisSPKModel;
     protected $suratPengeluaranModel;
     protected $fotoPenindakanModel;
-
+    protected $sessionRole;
 
     public function __construct()
     {
@@ -76,19 +76,22 @@ class DataPenindakan extends BaseController
         $this->suratPengeluaranModel = new SuratPengeluaranModel();
         $this->fotoPenindakanModel = new FotoPenindakanModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
-        $data_penindakan = $this->dataPenindakanModel->getDataPenindakanPenderekan();
-        // dd($data_penindakan);
+        if ($this->sessionRole == 2) {
+            $data_penindakan = $this->dataPenindakanModel->getDataPenindakanPenderekan(session()->get('ukpd_id'));
+        } else {
+            $data_penindakan = $this->dataPenindakanModel->getDataPenindakanPenderekan("");
+        }
         $data = [
             'title' => 'DATA PENINDAKAN',
-            'data_penindakan' => $this->dataPenindakanModel->getDataPenindakanPenderekan(),
-            'jenis_spk' => $this->jenisSPKModel->getJenisSPK()
+            'data_penindakan' => $data_penindakan,
+            'jenis_spk' => $this->jenisSPKModel->getJenisSPK(session()->get('ukpd_id'))
         ];
 
-        // dd($data["data_penindakan"]);
         return view('admin/data_penindakan', $data);
     }
 
@@ -97,7 +100,7 @@ class DataPenindakan extends BaseController
         $data = [
             'title' => 'TAMBAH DATA PENINDAKAN',
             'ukpd' => $this->ukpdModel->getUkpd(),
-            'jenis_penindakan' => $this->jenisPenindakanModel->where(["id" => 1])->orWhere(["id" => 5])->get()->getResultObject(),
+            'jenis_penindakan' => $this->jenisPenindakanModel->where(["id" => 1])->get()->getResultObject(),
             'jenis_kendaraan' => $this->jenisKendaraanModel->getJenisKendaraan(),
             'jenis_pelanggaran' => $this->jenisPelanggaranModel->getPelanggaran(),
             'type_kendaraan' => $this->typeKendaraanModel->getTypeKendaraan(),
