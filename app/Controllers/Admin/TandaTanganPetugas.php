@@ -11,23 +11,31 @@ class TandaTanganPetugas extends BaseController
     protected $tandaTanganPetugasModel;
     protected $petugasModel;
     protected $validation;
+    protected $sessionRole;
 
     public function __construct()
     {
         $this->tandaTanganPetugasModel = new TandaTanganPetugasModel();
         $this->petugasModel = new PetugasModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
+        if ($this->sessionRole == 2) {
+            $tanda_tangan_petugas = $this->tandaTanganPetugasModel->getTandaTanganPetugas(session()->get('ukpd_id'));
+            $petugas = $this->petugasModel->getKomandanRegu(session()->get('ukpd_id'));
+        } else {
+            $tanda_tangan_petugas = $this->tandaTanganPetugasModel->getTandaTanganPetugas("");
+            $petugas = $this->petugasModel->getKomandanRegu("");
+        }
+
         $data = [
-            'tanda_tangan_petugas' => $this->tandaTanganPetugasModel->getTandaTanganPetugas(),
-            'petugas' => $this->petugasModel->getKomandanRegu(),
+            'tanda_tangan_petugas' => $tanda_tangan_petugas,
+            'petugas' => $petugas,
             'title' => 'Tanda Tangan Petugas',
         ];
-
-
 
         return view('admin/tanda_tangan_petugas', $data);
     }

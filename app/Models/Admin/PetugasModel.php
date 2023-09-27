@@ -81,15 +81,27 @@ class PetugasModel extends Model
             ->get()->getRowObject();
     }
 
-    public function getKomandanRegu()
+    public function getKomandanRegu($ukpd_id)
     {
-        return $this->table($this->table)
-            ->select("petugas_table.id, petugas_table.ukpd_id,petugas_table.unit_id, petugas_table.nama, petugas_table.username ,petugas_table.nip, petugas_table.pangkat ,petugas_table.golongan, petugas_table.jabatan_id, petugas_table.role_id, petugas_table.status_id, 
-            tanda_tangan_petugas_table.tanda_tangan_petugas")
-            ->join('tanda_tangan_petugas_table', 'tanda_tangan_petugas_table.petugas_id = petugas_table.id', "left")
-            ->where(["tanda_tangan_petugas_table.tanda_tangan_petugas" => null])
-            ->orderBy('petugas_table.id desc')
-            ->get()->getResultObject();
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->select("petugas_table.id, petugas_table.ukpd_id,petugas_table.unit_id, petugas_table.nama, petugas_table.username ,petugas_table.nip, petugas_table.pangkat ,petugas_table.golongan, petugas_table.jabatan_id, petugas_table.role_id, petugas_table.status_id, 
+                tanda_tangan_petugas_table.tanda_tangan_petugas")
+                ->join('tanda_tangan_petugas_table', 'tanda_tangan_petugas_table.petugas_id = petugas_table.id', "left")
+                ->where(["tanda_tangan_petugas_table.tanda_tangan_petugas" => null])
+                ->orderBy('petugas_table.id desc')
+
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->select("petugas_table.id, petugas_table.ukpd_id,petugas_table.unit_id, petugas_table.nama, petugas_table.username ,petugas_table.nip, petugas_table.pangkat ,petugas_table.golongan, petugas_table.jabatan_id, petugas_table.role_id, petugas_table.status_id, 
+                tanda_tangan_petugas_table.tanda_tangan_petugas")
+                ->join('tanda_tangan_petugas_table', 'tanda_tangan_petugas_table.petugas_id = petugas_table.id', "left")
+                ->where(["tanda_tangan_petugas_table.tanda_tangan_petugas" => null])
+                ->where(["petugas_table.ukpd_id" => $ukpd_id])
+                ->orderBy('petugas_table.id desc')
+                ->get()->getResultObject();
+        }
     }
 
     public function getPPNS($ukpd_id)
