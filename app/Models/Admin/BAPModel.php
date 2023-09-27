@@ -19,16 +19,28 @@ class BAPModel extends Model
 
     protected $fieldTable = 'bap_table.id, bap_table.ukpd_id, bap_table.jenis_penindakan_id, bap_table.nomor_bap,bap_table.status_bap_id, ukpd_table.ukpd, jenis_penindakan_table.jenis_penindakan, status_penderekan_table.status_penderekan, unit_regu_table.unit_regu';
 
-    public function getBAP()
+    public function getBAP($ukpd_id)
     {
-        return $this->table($this->table)
-            ->select($this->fieldTable)
-            ->join('ukpd_table', 'ukpd_table.id = bap_table.ukpd_id')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id')
-            ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id')
-            ->join('unit_regu_table', 'unit_regu_table.id = bap_table.unit_id', 'left')
-            ->orderBy('bap_table.id desc')
-            ->get()->getResultObject();
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('ukpd_table', 'ukpd_table.id = bap_table.ukpd_id')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id')
+                ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id')
+                ->join('unit_regu_table', 'unit_regu_table.id = bap_table.unit_id', 'left')
+                ->orderBy('bap_table.id desc')
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('ukpd_table', 'ukpd_table.id = bap_table.ukpd_id')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id')
+                ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id')
+                ->join('unit_regu_table', 'unit_regu_table.id = bap_table.unit_id', 'left')
+                ->where(["bap_table.ukpd_id" => $ukpd_id])
+                ->orderBy('bap_table.id desc')
+                ->get()->getResultObject();
+        }
     }
 
     public function getNomorBap($ukpd_id, $jenis_penindakan_id, $unit_id)

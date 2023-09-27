@@ -17,6 +17,7 @@ class BAP extends BaseController
     protected $statusPenderekanModel;
     protected $validation;
     protected $unitReguModel;
+    protected $sessionRole;
 
     public function __construct()
     {
@@ -26,15 +27,23 @@ class BAP extends BaseController
         $this->statusPenderekanModel = new StatusPenderekanModel();
         $this->unitReguModel = new UnitReguModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
+        if ($this->sessionRole == 2) {
+            $bap = $this->bapModel->getBAP(session()->get('ukpd_id'));
+            $unit_regu = $this->unitReguModel->getUnitWhereUKPD(session()->get('ukpd_id'));
+        } else {
+            $bap = $this->bapModel->getBAP("");
+            $unit_regu = $this->unitReguModel->getUnit();
+        }
         $data = [
-            'bap' => $this->bapModel->getBAP(),
+            'bap' => $bap,
             'ukpd' => $this->ukpdModel->getUkpd(),
             'jenis_penindakan' => $this->jenisPenindakanModel->getPenindakan(),
-            'unit_regu' => $this->unitReguModel->getUnit(),
+            'unit_regu' => $unit_regu,
             'status_penderekan' => $this->statusPenderekanModel->getStatusPenderekanKeluar(),
             'title' => 'BERITA ACARA PENINDAKAN',
         ];
