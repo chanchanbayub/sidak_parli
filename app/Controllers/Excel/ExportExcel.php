@@ -15,11 +15,13 @@ class ExportExcel extends BaseController
 
     protected $dataPenindakanModel;
     protected $ocpModel;
+    protected $sessionRole;
 
     public function __construct()
     {
         $this->dataPenindakanModel = new DataPenindakanModel();
         $this->ocpModel = new OcpModel();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
@@ -32,7 +34,11 @@ class ExportExcel extends BaseController
         // } else if ($this->request->getVar('/detail_selesai')) {
         //     $data_penindakan = $this->dataPenindakanModel->totalPenderekanSelesai();
         // } else {
-        $data_penindakan = $this->dataPenindakanModel->getDataPenindakan();
+        if ($this->sessionRole == 2) {
+            $data_penindakan = $this->dataPenindakanModel->getDataPenindakan(session()->get('role_id'));
+        } else {
+            $data_penindakan = $this->dataPenindakanModel->getDataPenindakan("");
+        }
         // dd($data_penindakan);
 
 
