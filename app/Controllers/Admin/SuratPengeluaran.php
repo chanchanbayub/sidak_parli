@@ -15,6 +15,7 @@ class SuratPengeluaran extends BaseController
     protected $dataPenindakanModel;
     protected $bapModel;
     protected $validation;
+    protected $sessionRole;
 
     public function __construct()
     {
@@ -23,15 +24,25 @@ class SuratPengeluaran extends BaseController
         $this->dataPenindakanModel = new DataPenindakanModel();
         $this->bapModel = new BAPModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
+
+        if ($this->sessionRole == 2) {
+            $spk = $this->suratPengeluaranModel->getSPK(session()->get('ukpd_id'));
+            $data_penindakan = $this->dataPenindakanModel->getDataPenindakanStatusBAPTerbayar(session()->get('ukpd_id'));
+        } else {
+            $spk = $this->suratPengeluaranModel->getSPK("");
+            $data_penindakan = $this->dataPenindakanModel->getDataPenindakanStatusBAPTerbayar("");
+        }
+
         $data = [
-            'surat_pengeluaran' => $this->suratPengeluaranModel->getSPK(),
+            'surat_pengeluaran' => $spk,
             'title' => 'Surat Pengeluaran Kendaraan',
             'jenis_spk' => $this->jenisSPKModel->getJenisSPK(),
-            'data_penindakan' => $this->dataPenindakanModel->getDataPenindakanStatusBAPTerbayar()
+            'data_penindakan' => $data_penindakan
         ];
 
         return view('admin/surat_pengeluaran', $data);

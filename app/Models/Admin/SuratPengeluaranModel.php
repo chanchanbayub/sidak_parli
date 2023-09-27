@@ -23,15 +23,27 @@ class SuratPengeluaranModel extends Model
     status_penderekan_table.status_penderekan,
     bap_table.status_bap_id';
 
-    public function getSPK()
+    public function getSPK($ukpd_id)
     {
-        return $this->table($this->table)
-            ->select($this->fieldTable)
-            ->join('bap_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
-            ->join('status_penderekan_table', 'bap_table.status_bap_id = status_penderekan_table.id', 'left')
-            ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id', 'left')
-            ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id')
-            ->orderBy('surat_pengeluaran_table.id desc')
-            ->get()->getResultObject();
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('bap_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
+                ->join('status_penderekan_table', 'bap_table.status_bap_id = status_penderekan_table.id', 'left')
+                ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id', 'left')
+                ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id')
+                ->orderBy('surat_pengeluaran_table.id desc')
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('bap_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
+                ->join('status_penderekan_table', 'bap_table.status_bap_id = status_penderekan_table.id', 'left')
+                ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id', 'left')
+                ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id')
+                ->where(['bap_table.ukpd_id' => $ukpd_id])
+                ->orderBy('surat_pengeluaran_table.id desc')
+                ->get()->getResultObject();
+        }
     }
 }
