@@ -83,7 +83,11 @@
                         <select name="ukpd_id" id="ukpd_id" class="form-select">
                             <option value=""> -- Silahkan Pilih --</option>
                             <?php foreach ($ukpd as $data) : ?>
-                                <option value="<?= $data->id ?>"> <?= $data->ukpd ?></option>
+                                <?php if ($data->id == session()->get('ukpd_id')) : ?>
+                                    <option value="<?= $data->id ?>" selected> <?= $data->ukpd ?></option>
+                                <?php else : ?>
+                                    <option value="<?= $data->id ?>"> <?= $data->ukpd ?></option>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
                         <div class="invalid-feedback error-ukpd">

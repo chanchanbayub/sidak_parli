@@ -19,11 +19,18 @@ class KendaraanDinasModel extends Model
 
     protected $fieldTable = 'kendaraan_dinas_table.id, kendaraan_dinas_table.ukpd_id, kendaraan_dinas_table.nomor_kendaraan_dinas, kendaraan_dinas_table.merk_kendaraan_dinas, kendaraan_dinas_table.unit_id, foto_kendaraan_dinas, ukpd_table.ukpd, unit_regu_table.unit_regu';
 
-    public function getKendaraanDinas()
+    public function getKendaraanDinas($ukpd_id)
     {
-        return $this->table($this->table)
-            ->orderBy('kendaraan_dinas_table.id desc')
-            ->get()->getResultObject();
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->orderBy('kendaraan_dinas_table.id desc')
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->orderBy('kendaraan_dinas_table.id desc')
+                ->where(["ukpd_id" => $ukpd_id])
+                ->get()->getResultObject();
+        }
     }
 
     public function getKdoWithId($id)

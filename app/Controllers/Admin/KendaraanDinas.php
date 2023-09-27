@@ -13,6 +13,7 @@ class KendaraanDinas extends BaseController
     protected $ukpdModel;
     protected $unitReguModel;
     protected $validation;
+    protected $sessionRole;
 
     public function __construct()
     {
@@ -20,15 +21,24 @@ class KendaraanDinas extends BaseController
         $this->ukpdModel = new UkpdModel();
         $this->unitReguModel = new UnitReguModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
+        if ($this->sessionRole == 2) {
+            $kdo = $this->kendaraanDinasModel->getKendaraanDinas(session()->get('ukpd_id'));
+            $unit_regu = $this->unitReguModel->getUnitWhereUKPD(session()->get('ukpd_id'));
+        } else {
+            $kdo = $this->kendaraanDinasModel->getKendaraanDinas();
+            $unit_regu = $this->unitReguModel->getUnit();
+        }
+
         $data = [
-            'kendaraan_dinas' => $this->kendaraanDinasModel->getKendaraanDinas(),
+            'kendaraan_dinas' => $kdo,
             'title' => 'Kendaraan Dinas Operasional Derek',
             'ukpd' => $this->ukpdModel->getUkpd(),
-            'unit_regu' => $this->unitReguModel->getUnit()
+            'unit_regu' => $unit_regu
         ];
 
         return view('admin/kendaraan_dinas', $data);
