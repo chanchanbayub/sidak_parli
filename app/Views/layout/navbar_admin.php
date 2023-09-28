@@ -49,11 +49,13 @@
                         <i class="bi bi-circle"></i><span>Jenis Pelanggaran</span>
                     </a>
                 </li>
-                <li>
-                    <a href="/admin/role_management">
-                        <i class="bi bi-circle"></i><span>Role Management</span>
-                    </a>
-                </li>
+                <?php if (session()->get('role_id') == 1) : ?>
+                    <li>
+                        <a href="/admin/role_management">
+                            <i class="bi bi-circle"></i><span>Role Management</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
                 <li>
                     <a href="/admin/jabatan">
                         <i class="bi bi-circle"></i><span>Jabatan</span>

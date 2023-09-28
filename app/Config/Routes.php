@@ -188,6 +188,7 @@ $routes->group('/admin', function ($routes) {
 
     $routes->get('ocp', 'Admin\Ocp::index');
     $routes->get('ocp/getKota', 'Admin\Ocp::getKota');
+    $routes->get('ocp/getUnit', 'Admin\Ocp::getUnit');
     $routes->get('ocp/getKecamatan', 'Admin\Ocp::getKecamatan');
     $routes->post('ocp/insert', 'Admin\Ocp::insert');
     $routes->get('ocp/detail/(:any)', 'Admin\Ocp::detail/$1');

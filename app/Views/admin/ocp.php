@@ -114,7 +114,7 @@
 
                     <div class="form-group">
                         <label for="unit_id" class="col-form-label">Unit / Regu:</label>
-                        <select class="form-select" name="unit_id" id="unit_id">
+                        <select class="form-select" name="unit_id" id="unit_id" disabled>
                             <option value="">--Silahkan Pilih--</option>
                             <?php foreach ($unit_regu as $unit_regu) : ?>
                                 <option value="<?= $unit_regu->id ?>"><?= $unit_regu->unit_regu ?></option>
@@ -414,6 +414,33 @@
             dropdownParent: $('#editModal')
         });
 
+    });
+
+    $(document).on('change', "#ukpd_id", function(e) {
+        e.preventDefault();
+        let ukpd_id = $(this).val();
+        $.ajax({
+            url: '/admin/ocp/getUnit',
+            method: 'get',
+            dataType: 'JSON',
+            data: {
+                ukpd_id: ukpd_id,
+            },
+            success: function(response) {
+                if (response.unit.length > 0) {
+                    let unit = `<option value = ""> --Silahkan Pilih-- </option>`
+                    response.unit.forEach(function(e) {
+                        unit += `<option value ="${e.id}"> ${e.unit_regu} </option>`;
+                    })
+                    $("#unit_id").html(unit);
+                    $("#unit_id").removeAttr('disabled');
+                } else {
+                    let unit = `<option value = ""> --Silahkan Pilih-- </option>`;
+                    $("#unit_id").html(unit);
+                    $("#unit_id").attr('disabled', 'disabled');
+                }
+            }
+        });
     });
 
     $(document).on('change', "#provinsi_id", function(e) {

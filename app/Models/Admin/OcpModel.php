@@ -25,18 +25,33 @@ class OcpModel extends Model
     unit_regu_table.unit_regu,
     kecamatan.kecamatan';
 
-    public function getDataOcp()
+    public function getDataOcp($ukpd_id)
     {
-        return $this->table($this->table)
-            ->select($this->fieldTable)
-            ->join('ukpd_table', 'ukpd_table.id = ocp_table.ukpd_id')
-            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = ocp_table.jenis_penindakan_id')
-            ->join('provinsi', 'provinsi.id = ocp_table.provinsi_id')
-            ->join('kota', 'kota.id = ocp_table.kota_id')
-            ->join('kecamatan', 'kecamatan.id = ocp_table.kecamatan_id')
-            ->join('unit_regu_table', 'unit_regu_table.id = ocp_table.unit_id')
-            ->orderBy('ocp_table.id desc')
-            ->get()->getResultObject();
+
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('ukpd_table', 'ukpd_table.id = ocp_table.ukpd_id')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = ocp_table.jenis_penindakan_id')
+                ->join('provinsi', 'provinsi.id = ocp_table.provinsi_id')
+                ->join('kota', 'kota.id = ocp_table.kota_id')
+                ->join('kecamatan', 'kecamatan.id = ocp_table.kecamatan_id')
+                ->join('unit_regu_table', 'unit_regu_table.id = ocp_table.unit_id')
+                ->orderBy('ocp_table.id desc')
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('ukpd_table', 'ukpd_table.id = ocp_table.ukpd_id')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = ocp_table.jenis_penindakan_id')
+                ->join('provinsi', 'provinsi.id = ocp_table.provinsi_id')
+                ->join('kota', 'kota.id = ocp_table.kota_id')
+                ->join('kecamatan', 'kecamatan.id = ocp_table.kecamatan_id')
+                ->join('unit_regu_table', 'unit_regu_table.id = ocp_table.unit_id')
+                ->where(["ocp_table.ukpd_id" => $ukpd_id])
+                ->orderBy('ocp_table.id desc')
+                ->get()->getResultObject();
+        }
     }
 
     public function getDataOcpWithUnit($ukpd_id, $unit_id)

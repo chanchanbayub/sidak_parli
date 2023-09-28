@@ -21,6 +21,7 @@ class Ocp extends BaseController
     protected $kecamatanModel;
     protected $unitReguModel;
     protected $validation;
+    protected $sessionRole;
 
     public function __construct()
     {
@@ -32,12 +33,20 @@ class Ocp extends BaseController
         $this->kecamatanModel = new KecamatanModel();
         $this->unitReguModel = new UnitReguModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
+
+        if (session()->get('role_id') == 2) {
+            $ocp = $this->ocpModel->getDataOcp(session()->get('ukpd_id'));
+        } else {
+            $ocp = $this->ocpModel->getDataOcp();
+        }
+
         $data = [
-            'ocp' => $this->ocpModel->getDataOcp(),
+            'ocp' => $ocp,
             'jenis_penindakan' => $this->jenisPenindakanModel->where("id", 2)->orWhere(["id" => 3])->orWhere(["id" => 4])->get()->getResultObject(),
             'title' => 'OPS CABUT PENTIL',
             'ukpd' => $this->ukpdModel->getUkpd(),
@@ -73,6 +82,22 @@ class Ocp extends BaseController
 
             $data = [
                 'kota' => $kota
+            ];
+
+            return json_encode($data);
+        }
+    }
+
+    public function getUnit()
+    {
+        if ($this->request->isAJAX()) {
+
+            $ukpd_id = $this->request->getVar('ukpd_id');
+
+            $unit_regu = $this->unitReguModel->getUnitWhereUKPD($ukpd_id);
+
+            $data = [
+                'unit' => $unit_regu
             ];
 
             return json_encode($data);
