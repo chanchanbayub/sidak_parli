@@ -42,7 +42,7 @@ class Ocp extends BaseController
         if (session()->get('role_id') == 2) {
             $ocp = $this->ocpModel->getDataOcp(session()->get('ukpd_id'));
         } else {
-            $ocp = $this->ocpModel->getDataOcp();
+            $ocp = $this->ocpModel->getDataOcp("");
         }
 
         $data = [
