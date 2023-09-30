@@ -18,7 +18,7 @@
                 <form id="filter">
                     <?= csrf_field(); ?>
                     <div class="input-group mb-3">
-                        <select name="ukpd_id" id="ukpd_id" class="form-control">
+                        <select name="ukpd_id" id="ukpd_id" class="form-control" required>
                             <option value="">Silahkan Pilih</option>
                             <?php foreach ($ukpd as $data) : ?>
                                 <option value="<?= $data->id ?>"> <?= $data->ukpd ?></option>
@@ -42,7 +42,7 @@
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <a href="/admin/data_penindakan"> <i class="bi bi-car-front"></i></a>
+                                        <a href="/admin/data_penindakan" class="data_perhari"> <i class="bi bi-car-front"></i></a>
                                     </div>
                                     <div class="ps-3">
                                         <h6 id="perhari"><?= $total_penderekan_perhari ?> <span class="text-muted small pt-2 ps-1">Kendaraan </span></h6>
@@ -67,7 +67,7 @@
                                 <h5 class="card-title">Jumlah <span>| Terbayar (Hari Ini) </span> <br> <span> <?= date_indo('Y-m-d') ?></span></h5>
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <a href="/admin/data_penindakan/detail_terbayar_perhari"><i class="bi bi-car-front"></i></a>
+                                        <a href="/admin/data_penindakan/detail_terbayar_perhari" class="data_terbayar_perhari"><i class="bi bi-car-front"></i></a>
                                     </div>
                                     <div class="ps-3">
                                         <h6 id="terbayar_perhari"><?= $jumlah_terbayar_perhari ?> <span class="text-muted small pt-2 ps-1">Kendaraan </span></h6>
@@ -85,7 +85,7 @@
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <a href="/admin/data_penindakan/detail_belum_terbayar_perhari"><i class="bi bi-car-front"></i></a>
+                                        <a href="/admin/data_penindakan/detail_belum_terbayar_perhari" class="data_belum_terbayar"><i class="bi bi-car-front"></i></a>
 
                                     </div>
                                     <div class="ps-3">
@@ -105,7 +105,7 @@
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <a href="/admin/data_penindakan/detail_selesai_perhari"> <i class="bi bi-car-front"></i></a>
+                                        <a href="/admin/data_penindakan/detail_selesai_perhari" class="data_selesai"> <i class="bi bi-car-front"></i></a>
 
                                     </div>
                                     <div class="ps-3">
@@ -123,7 +123,7 @@
     <section class="section dashboard">
         <div class="row">
             <div class="col-lg-12">
-                <h5 class="card-title text-capitalize title_keseluruhan"> laporan harian penderekan </h5>
+                <h5 class="card-title text-capitalize title_keseluruhan"> laporan keseluruhan penderekan </h5>
                 <div class="row">
                     <!-- Sales Card -->
                     <div class="col-xxl-6 col-md-6">
@@ -269,12 +269,18 @@
                 $("#selesai_perhari").html(`<h6 id="selesai_perhari">${response.jumlah_selesai_perhari}<span class="text-muted small pt-2 ps-1">Kendaraan </span></h6> `)
 
                 // Keseluruhan
-                $(".title_keseluruhan").html(`laporan harian penderekan ${response.ukpd.ukpd}`);
+                $(".title_keseluruhan").html(`laporan keseluruhan penderekan ${response.ukpd.ukpd}`);
                 $("#total_penderekan").html(`<h6 id="total_penderekan">${response.jumlah_penderekan} <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>`)
                 $("#total_terbayar").html(`<h6 id="total_terbayar">${response.jumlah_penderekan_terbayar} <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>`)
                 $("#total_belum_terbayar").html(`<h6 id="total_belum_terbayar">${response.jumlah_penderekan_belum_terbayar} <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>`)
                 $("#total_selesai").html(`<h6 id="total_belum_terbayar">${response.jumlah_penderekan_selesai} <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>`)
                 $("#jumlah_unit").html(` <h6 id="jumlah_unit"> ${response.jumlah_unit} <span class="text-muted small pt-2 ps-1">Unit / Regu</span></h6>`)
+
+                $(".data_perhari").attr("href", `/admin/data_penindakan/master_data/${response.ukpd.id}`);
+                $(".data_terbayar_perhari").attr("href", `/admin/data_penindakan/detail_terbayar_perhari_with_ukpd/${response.ukpd.id}`);
+                $(".data_belum_terbayar").attr("href", `/admin/data_penindakan/detail_belum_terbayar_perhari_with_ukpd/${response.ukpd.id}`);
+                $(".data_selesai").attr("href", `/admin/data_penindakan/detail_selesai_perhari_with_ukpd/${response.ukpd.id}`);
+
             },
             error: function(response) {
                 $('.send').html('Filter');

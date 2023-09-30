@@ -95,6 +95,25 @@ class DataPenindakan extends BaseController
         return view('admin/data_penindakan', $data);
     }
 
+    public function getDataWithUkpd($ukpd_id)
+    {
+        $ukpd = $this->ukpdModel->where(["id" => $ukpd_id])->get()->getRowObject();
+
+        if ($ukpd  ==  null) {
+            return redirect()->back();
+        } else {
+            $data_penindakan = $this->dataPenindakanModel->getDataPenindakanPenderekan($ukpd_id);
+        }
+
+        $data = [
+            'title' => 'DATA PENINDAKAN',
+            'data_penindakan' => $data_penindakan,
+            'jenis_spk' => $this->jenisSPKModel->getJenisSPK(session()->get('ukpd_id'))
+        ];
+
+        return view('admin/data_penindakan', $data);
+    }
+
     public function tambah_penindakan()
     {
         $data = [
@@ -961,9 +980,8 @@ class DataPenindakan extends BaseController
         if ($this->sessionRole == 2) {
             $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail(session()->get('ukpd_id'));
         } else {
-            $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail("");
+            $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail('');
         }
-
 
         $data = [
             'title' => 'DATA PENINDAKAN YANG SUDAH TERBAYAR',
@@ -971,7 +989,6 @@ class DataPenindakan extends BaseController
             'jenis_spk' => $this->jenisSPKModel->getJenisSPK()
         ];
 
-        // dd($data["data_penindakan"]);
         return view('admin/data_penindakan', $data);
     }
 
@@ -1025,6 +1042,27 @@ class DataPenindakan extends BaseController
             'jenis_spk' => $this->jenisSPKModel->getJenisSPK()
         ];
 
+        return view('admin/data_penindakan', $data);
+    }
+
+    public function detail_terbayar_perhari_with_ukpd($ukpd_id)
+    {
+        $ukpd = $this->ukpdModel->where(["id" => $ukpd_id])->get()->getRowObject();
+
+        $date = date('Y-m-d');
+
+        if ($ukpd  ==  null) {
+            return redirect()->back();
+        } else {
+            $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetailPerhari($date, $ukpd_id);
+        }
+
+        $data = [
+            'title' => 'DATA PENINDAKAN YANG SUDAH TERBAYAR / HARI',
+            'data_penindakan' => $totalPenderekanTerbayarDetail,
+            'jenis_spk' => $this->jenisSPKModel->getJenisSPK()
+        ];
+
         // dd($data["data_penindakan"]);
         return view('admin/data_penindakan', $data);
     }
@@ -1044,10 +1082,55 @@ class DataPenindakan extends BaseController
         return view('admin/data_penindakan', $data);
     }
 
+    public function detail_belum_terbayar_perhari_with_ukpd($ukpd_id)
+    {
+
+        $ukpd = $this->ukpdModel->where(["id" => $ukpd_id])->get()->getRowObject();
+
+        $date = date('Y-m-d');
+
+        if ($ukpd  ==  null) {
+            return redirect()->back();
+        } else {
+            $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetailPerhari($date, $ukpd_id);
+        }
+
+        $data = [
+            'title' => 'DATA PENINDAKAN YANG BELUM TERBAYAR / HARI',
+            'data_penindakan' => $totalPenderekanBelumTerbayarDetail,
+            'jenis_spk' => $this->jenisSPKModel->getJenisSPK()
+        ];
+
+        // dd($data["data_penindakan"]);
+        return view('admin/data_penindakan', $data);
+    }
+
     public function detail_selesai_perhari()
     {
         $date = date('Y-m-d');
         $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesaiPerhari($date, "");
+
+        $data = [
+            'title' => 'DATA PENINDAKAN STATUS SELESAI / HARI',
+            'data_penindakan' => $totalPenderekanSelesai,
+            'jenis_spk' => $this->jenisSPKModel->getJenisSPK()
+        ];
+
+        // dd($data["data_penindakan"]);
+        return view('admin/data_penindakan', $data);
+    }
+
+    public function detail_selesai_perhari_with_ukpd($ukpd_id)
+    {
+
+        $ukpd = $this->ukpdModel->where(["id" => $ukpd_id])->get()->getRowObject();
+        $date = date('Y-m-d');
+
+        if ($ukpd  ==  null) {
+            return redirect()->back();
+        } else {
+            $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesaiPerhari($date, "");
+        }
 
         $data = [
             'title' => 'DATA PENINDAKAN STATUS SELESAI / HARI',
