@@ -12,6 +12,7 @@ class LandingPage extends BaseController
 
     public function __construct()
     {
+        session()->destroy();
         $this->dataPenindakan = new DataPenindakanModel();
         $this->validaton = \Config\Services::validation();
     }

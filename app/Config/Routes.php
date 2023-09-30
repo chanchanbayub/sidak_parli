@@ -36,6 +36,8 @@ $routes->get('/search', 'Wr\LandingPage::search');
 
 $routes->group('/admin', function ($routes) {
     $routes->get('dashboard', 'Admin\Dashboard::index');
+    $routes->get('dashboard/filter', 'Admin\Dashboard::filterPenderekan');
+
     // UKPD
     $routes->get('ukpd', 'Admin\Ukpd::index');
     $routes->post('ukpd/insert', 'Admin\Ukpd::insert');
