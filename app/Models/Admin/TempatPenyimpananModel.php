@@ -9,7 +9,7 @@ class TempatPenyimpananModel extends Model
     protected $table            = 'tempat_penyimpanan_table';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['ukpd_id', 'tempat_penyimpanan', 'link_gmaps'];
+    protected $allowedFields    = ['ukpd_id', 'tempat_penyimpanan', 'latitude', 'longitude'];
 
     // Dates
     protected $useTimestamps = true;
@@ -20,7 +20,7 @@ class TempatPenyimpananModel extends Model
     public function getTempatPenyimpanan()
     {
         return $this->table($this->table)
-            ->select("tempat_penyimpanan_table.id, tempat_penyimpanan_table.ukpd_id, tempat_penyimpanan_table.tempat_penyimpanan,tempat_penyimpanan_table.link_gmaps, ukpd_table.ukpd")
+            ->select("tempat_penyimpanan_table.id, tempat_penyimpanan_table.ukpd_id, tempat_penyimpanan_table.tempat_penyimpanan,tempat_penyimpanan_table.latitude, tempat_penyimpanan_table.longitude,ukpd_table.ukpd")
             ->orderBy('tempat_penyimpanan_table.id desc')
             ->join('ukpd_table', 'ukpd_table.id = tempat_penyimpanan_table.ukpd_id')
             ->get()->getResultObject();
@@ -28,7 +28,7 @@ class TempatPenyimpananModel extends Model
     public function getTempatPenyimpananWhereUKPD($ukpd_id)
     {
         return $this->table($this->table)
-            ->select("tempat_penyimpanan_table.id, tempat_penyimpanan_table.ukpd_id, tempat_penyimpanan_table.tempat_penyimpanan,tempat_penyimpanan_table.link_gmaps, ukpd_table.ukpd")
+            ->select("tempat_penyimpanan_table.id, tempat_penyimpanan_table.ukpd_id, tempat_penyimpanan_table.tempat_penyimpanan,tempat_penyimpanan_table.latitude, tempat_penyimpanan_table.longitude, ukpd_table.ukpd")
             ->where(["ukpd_id" => $ukpd_id])
             ->orderBy('tempat_penyimpanan_table.id desc')
             ->join('ukpd_table', 'ukpd_table.id = tempat_penyimpanan_table.ukpd_id')

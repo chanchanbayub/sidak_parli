@@ -42,7 +42,17 @@
                                             <th scope="row"><?= $no++ ?>. </th>
                                             <td><?= $data->ukpd ?> </td>
                                             <td><?= $data->tempat_penyimpanan ?> </td>
-                                            <td> <a href="<?= $data->link_gmaps ?>" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php if ($data->ukpd_id == 1 || $data->ukpd_id == 2) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/J9vsbKenvkYBAsJG8" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php elseif ($data->ukpd_id == 3) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/fZQutJk8LvA72ffG7" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php elseif ($data->ukpd_id == 4) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/93AJwFwyh9wcoz4t8" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php elseif ($data->ukpd_id == 5) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/Hk8zbUnE6MhK1eXN9" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php elseif ($data->ukpd_id == 6) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/zd9hLUzBP5z1kzLH7" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php endif; ?>
                                             <td>
                                                 <?php if (session()->get('role_id') == 1) : ?>
                                                     <button class="btn btn-sm btn-danger" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>" type="button">
@@ -96,9 +106,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="link_gmaps" class="col-form-label">Link Google Maps:</label>
-                        <textarea name="link_gmaps" id="link_gmaps" class="form-control"></textarea>
-                        <div class="invalid-feedback error-link-gmaps">
+                        <label for="latitude" class="col-form-label">Latitude:</label>
+                        <input name="latitude" id="latitude" class="form-control">
+                        <div class="invalid-feedback error-latitude">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="longitude" class="col-form-label">Longitude:</label>
+                        <input name="longitude" id="longitude" class="form-control">
+                        <div class="invalid-feedback error-longitude">
                         </div>
                     </div>
 
@@ -200,7 +216,9 @@
         e.preventDefault();
         let ukpd_id = $('#ukpd_id').val();
         let tempat_penyimpanan = $("#tempat_penyimpanan").val();
-        let link_gmaps = $("#link_gmaps").val();
+        let latitude = $("#latitude").val();
+        let longitude = $("#longitude").val();
+
         $.ajax({
             url: '/admin/tempat_penyimpanan/insert',
             method: 'post',
@@ -208,7 +226,9 @@
             data: {
                 ukpd_id: ukpd_id,
                 tempat_penyimpanan: tempat_penyimpanan,
-                link_gmaps: link_gmaps,
+                latitude: latitude,
+                longitude: longitude,
+
             },
             beforeSend: function() {
                 $('.save').html('<i class="bi bi-box-arrow-in-right"></i>');
@@ -232,12 +252,19 @@
                         $("#tempat_penyimpanan").removeClass('is-invalid');
                         $(".error-tempat-penyimpanan").html('');
                     }
-                    if (response.error.link_gmaps) {
-                        $("#link_gmaps").addClass('is-invalid');
-                        $(".error-link-gmaps").html(response.error.link_gmaps);
+                    if (response.error.latitude) {
+                        $("#latitude").addClass('is-invalid');
+                        $(".error-latitude").html(response.error.latitude);
                     } else {
-                        $("#link_gmaps").removeClass('is-invalid');
-                        $(".error-link-gmaps").html('');
+                        $("#latitude").removeClass('is-invalid');
+                        $(".error-latitude").html('');
+                    }
+                    if (response.error.longitude) {
+                        $("#longitude").addClass('is-invalid');
+                        $(".error-longitude").html(response.error.longitude);
+                    } else {
+                        $("#longitude").removeClass('is-invalid');
+                        $(".error-longitude").html('');
                     }
                 } else {
                     Swal.fire({

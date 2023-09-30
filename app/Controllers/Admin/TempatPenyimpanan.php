@@ -11,18 +11,26 @@ class TempatPenyimpanan extends BaseController
     protected $ukpdModel;
     protected $tempatPenyimpananModel;
     protected $validation;
+    protected $sessionRole;
 
     public function __construct()
     {
         $this->tempatPenyimpananModel = new TempatPenyimpananModel();
         $this->ukpdModel = new UkpdModel();
         $this->validation = \Config\Services::validation();
+        $this->sessionRole = session()->get('role_id');
     }
 
     public function index()
     {
+        if ($this->sessionRole == 2) {
+            $tempat_penyimpanan = $this->tempatPenyimpananModel->getTempatPenyimpananWhereUKPD(session()->get('ukpd_id'));
+        } else {
+            $tempat_penyimpanan = $this->tempatPenyimpananModel->getTempatPenyimpanan("");
+        }
+
         $data = [
-            'tempat_penyimpanan' => $this->tempatPenyimpananModel->getTempatPenyimpanan(),
+            'tempat_penyimpanan' => $tempat_penyimpanan,
             'ukpd' => $this->ukpdModel->getUkpd(),
             'title' => 'Tempat Penyimpanan',
         ];
@@ -48,31 +56,42 @@ class TempatPenyimpanan extends BaseController
                         'required' => 'Tempat Penyimpanan Tidak Boleh Kosong !'
                     ]
                 ],
-                'link_gmaps' => [
-                    'rules' => 'required|valid_url_strict',
+                'latitude' => [
+                    'rules' => 'required',
                     'errors' => [
-                        'required' => 'Link Google Maps Tidak Boleh Kosong !',
-                        'valid_url_strict' => 'Link Yang Anda Masukan Tidak Valid!'
+                        'required' => 'Latitude Tidak Boleh Kosong !'
                     ]
                 ],
+                'longitude' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'Longitude Tidak Boleh Kosong !'
+                    ]
+                ],
+
             ])) {
                 $alert = [
                     'error' => [
                         'ukpd_id' => $this->validation->getError('ukpd_id'),
                         'tempat_penyimpanan' => $this->validation->getError('tempat_penyimpanan'),
-                        'link_gmaps' => $this->validation->getError('link_gmaps'),
+                        'latitude' => $this->validation->getError('latitude'),
+                        'longitude' => $this->validation->getError('longitude'),
+
                     ]
                 ];
             } else {
 
                 $ukpd_id = $this->request->getPost('ukpd_id');
                 $tempat_penyimpanan = $this->request->getPost('tempat_penyimpanan');
-                $link_gmaps = $this->request->getPost('link_gmaps');
+                $latitude = $this->request->getPost('latitude');
+                $longitude = $this->request->getPost('longitude');
+
 
                 $this->tempatPenyimpananModel->save([
                     'ukpd_id' => strtolower($ukpd_id),
                     'tempat_penyimpanan' => strtolower($tempat_penyimpanan),
-                    'link_gmaps' => strtolower($link_gmaps),
+                    'latitude' => strtolower($latitude),
+                    'longitude' => strtolower($longitude),
 
                 ]);
 
