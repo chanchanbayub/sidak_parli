@@ -957,9 +957,13 @@ class DataPenindakan extends BaseController
     }
 
     public function detail_terbayar()
-
     {
-        $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail();
+        if ($this->sessionRole == 2) {
+            $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail(session()->get('ukpd_id'));
+        } else {
+            $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail("");
+        }
+
 
         $data = [
             'title' => 'DATA PENINDAKAN YANG SUDAH TERBAYAR',
@@ -972,9 +976,13 @@ class DataPenindakan extends BaseController
     }
 
     public function detail_belum_terbayar()
-
     {
-        $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail();
+        if ($this->sessionRole == 2) {
+            $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail(session()->get('ukpd_id'));
+        } else {
+            $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail("");
+        }
+
 
         $data = [
             'title' => 'DATA PENINDAKAN YANG BELUM TERBAYAR',
@@ -987,9 +995,13 @@ class DataPenindakan extends BaseController
     }
 
     public function detail_selesai()
-
     {
-        $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai();
+        if ($this->sessionRole == 2) {
+            $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai(session()->get('ukpd_id'));
+        } else {
+            $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai("");
+        }
+
 
         $data = [
             'title' => 'DATA PENINDAKAN STATUS SELESAI',
@@ -1005,7 +1017,7 @@ class DataPenindakan extends BaseController
     public function detail_terbayar_perhari()
     {
         $date = date('Y-m-d');
-        $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetailPerhari($date);
+        $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetailPerhari($date, "");
 
         $data = [
             'title' => 'DATA PENINDAKAN YANG SUDAH TERBAYAR / HARI',
@@ -1020,7 +1032,7 @@ class DataPenindakan extends BaseController
     public function detail_belum_terbayar_perhari()
     {
         $date = date('Y-m-d');
-        $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetailPerhari($date);
+        $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetailPerhari($date, "");
 
         $data = [
             'title' => 'DATA PENINDAKAN YANG BELUM TERBAYAR / HARI',
@@ -1035,7 +1047,7 @@ class DataPenindakan extends BaseController
     public function detail_selesai_perhari()
     {
         $date = date('Y-m-d');
-        $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesaiPerhari($date);
+        $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesaiPerhari($date, "");
 
         $data = [
             'title' => 'DATA PENINDAKAN STATUS SELESAI / HARI',
