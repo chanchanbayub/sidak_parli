@@ -137,7 +137,7 @@
 
                                     </div>
                                     <div class="ps-3">
-                                        <h6><?= $jumlah_unit ?> <span class="text-muted small pt-2 ps-1">Unit / Regu</span></h6>
+                                        <h6 id="jumlah_unit"><?= $jumlah_unit ?> <span class="text-muted small pt-2 ps-1">Unit / Regu</span></h6>
                                     </div>
                                 </div>
                             </div>
@@ -274,6 +274,7 @@
                 $("#total_terbayar").html(`<h6 id="total_terbayar">${response.jumlah_penderekan_terbayar} <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>`)
                 $("#total_belum_terbayar").html(`<h6 id="total_belum_terbayar">${response.jumlah_penderekan_belum_terbayar} <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>`)
                 $("#total_selesai").html(`<h6 id="total_belum_terbayar">${response.jumlah_penderekan_selesai} <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>`)
+                $("#jumlah_unit").html(` <h6 id="jumlah_unit"> ${response.jumlah_unit} <span class="text-muted small pt-2 ps-1">Unit / Regu</span></h6>`)
             },
             error: function(response) {
                 $('.send').html('Filter');

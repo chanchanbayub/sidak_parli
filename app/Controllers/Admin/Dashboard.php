@@ -106,10 +106,12 @@ class Dashboard extends BaseController
 
             $totalPenderekan = $this->dataPenindakanModel->totalPenderekan($ukpd);
 
+            $jumlah_unit = $this->unitReguModel->getUnitWhereUKPD($ukpd);
+
             $data = [
 
                 'ukpd' => $this->ukpdModel->where(["id" => $ukpd])->first(),
-                'jumlah_unit'  => $this->unitReguModel->countAllResults(),
+                'jumlah_unit'  => count($jumlah_unit),
                 'laporan_harian' => 'Laporan Harian ' . $ukpd,
 
                 'jumlah_penderekan' => $totalPenderekan,
