@@ -267,6 +267,18 @@ $routes->group('/petugas', function ($routes) {
     $routes->post('ocp/delete', 'Petugas\Ocp::delete');
     $routes->post('ocp/update', 'Petugas\Ocp::update');
 
+    // Angkut Motor
+    $routes->get('angkut_motor', 'Petugas\AngkutMotor::index');
+    $routes->get('angkut_motor/getDetail/(:any)', 'Petugas\AngkutMotor::getDetail/$1');
+    $routes->get('angkut_motor/getUnit', 'Petugas\AngkutMotor::getUnit');
+    $routes->get('angkut_motor/getKota', 'Petugas\AngkutMotor::getKota');
+    $routes->get('angkut_motor/getKecamatan', 'Petugas\AngkutMotor::getKecamatan');
+    $routes->post('angkut_motor/insert', 'Petugas\AngkutMotor::insert');
+    $routes->get('angkut_motor/edit', 'Petugas\AngkutMotor::edit');
+    $routes->get('angkut_motor/detail/(:any)', 'Petugas\AngkutMotor::detail/$1');
+    $routes->post('angkut_motor/delete', 'Petugas\AngkutMotor::delete');
+    $routes->post('angkut_motor/update', 'Petugas\AngkutMotor::update');
+
     $routes->get('user_profile/(:num)', 'Petugas\UserProfile::index/$1');
 });
 /*
