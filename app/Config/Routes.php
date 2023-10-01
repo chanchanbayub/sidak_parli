@@ -217,6 +217,17 @@ $routes->group('/admin', function ($routes) {
 
     $routes->get('user_profile/(:num)', 'Admin\UserProfile::index/$1');
     $routes->post('user_profile/update', 'Admin\UserProfile::update');
+
+    // Angkut Motor
+    $routes->get('angkut_motor', 'Admin\AngkutMotor::index');
+    $routes->get('angkut_motor/getUnit', 'Admin\AngkutMotor::getUnit');
+    $routes->get('angkut_motor/getKota', 'Admin\AngkutMotor::getKota');
+    $routes->get('angkut_motor/getKecamatan', 'Admin\AngkutMotor::getKecamatan');
+    $routes->post('angkut_motor/insert', 'Admin\AngkutMotor::insert');
+    $routes->get('angkut_motor/edit', 'Admin\AngkutMotor::edit');
+    $routes->get('angkut_motor/detail/(:any)', 'Admin\AngkutMotor::detail/$1');
+    $routes->post('angkut_motor/delete', 'Admin\AngkutMotor::delete');
+    $routes->post('angkut_motor/update', 'Admin\AngkutMotor::update');
 });
 
 $routes->get('/pdf/bap_digital/(:any)', 'Pdf\Pdf::index/$1');

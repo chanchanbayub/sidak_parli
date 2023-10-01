@@ -9,7 +9,7 @@ class AngkutMotorModel extends Model
     protected $table            = 'angkut_motor_table';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['ukpd_id', 'nopol', 'merk_kendaraan', 'warna_kendaraan', 'provinsi_id', 'kota_id', 'kecamatan_id', 'lokasi_angkut', 'nama_pengemudi', 'alamat_pengemudi', 'tempat_penyimpanan_id'];
+    protected $allowedFields    = ['ukpd_id', 'jenis_penindakan_id', 'unit_id', 'nopol', 'merk_kendaraan', 'warna_kendaraan', 'tanggal_pelanggaran_angkut', 'jam_pelanggaran_angkut', 'provinsi_id', 'kota_id', 'kecamatan_id', 'lokasi_angkut', 'nama_pengemudi', 'alamat_pengemudi', 'tempat_penyimpanan_id', 'foto_kendaraan_angkut'];
 
     // Dates
     protected $useTimestamps = true;

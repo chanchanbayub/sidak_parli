@@ -143,7 +143,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/admin/angkut_motor">
                         <i class="bi bi-circle"></i><span>Angkut Motor (segera hadir)</span>
                     </a>
                 </li>
