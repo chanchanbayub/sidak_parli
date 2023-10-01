@@ -42,9 +42,9 @@ class AngkutMotor extends BaseController
     {
 
         if (session()->get('role_id') == 2) {
-            $angkut_motor = $this->angkutMotorModel->findAll();
+            $angkut_motor = $this->angkutMotorModel->getAngkutMotor(session()->get('ukpd_id'));
         } else {
-            $angkut_motor = $this->angkutMotorModel->findAll();
+            $angkut_motor = $this->angkutMotorModel->getAngkutMotor("");
         }
 
         $data = [
@@ -269,13 +269,13 @@ class AngkutMotor extends BaseController
 
             $id = $this->request->getVar('id');
 
-            $ocp = $this->ocpModel->getDataOcpWithID($id);
+            $angkut_motor = $this->angkutMotorModel->where(["id" => $id])->get()->getRowObject();
 
-            $kecamatan = $this->kecamatanModel->where("kabkot_id", $ocp->kota_id)->get()->getResultObject();
+            $kecamatan = $this->kecamatanModel->where("kabkot_id", $angkut_motor->kota_id)->get()->getResultObject();
 
             $data = [
                 'ukpd' => $this->ukpdModel->getUkpd(),
-                'ocp' => $ocp,
+                'angkut_motor' => $angkut_motor,
                 'jenis_penindakan' => $this->jenisPenindakanModel->where(["id" => 2])->orWhere(["id" => 3])->orWhere(["id" => 4])->get()->getResultObject(),
                 'provinsi' => $this->provinsiModel->get()->getRowObject(),
                 'kota' => $this->kotaModel->getKota(),
@@ -292,21 +292,22 @@ class AngkutMotor extends BaseController
         if ($this->request->isAJAX()) {
             $id = $this->request->getVar('id');
 
-            $ocp = $this->ocpModel->getDataOcpWithID($id);
+            $angkut_motor = $this->angkutMotorModel->where(["id" => $id])->first();
 
-            $path_foto_ocp = 'ocp_data_penindakan/' . $ocp->foto_penindakan;
+            $path_foto_angkut = 'angkut_motor/' . $angkut_motor["foto_kendaraan_angkut"];
 
-            if ($path_foto_ocp != null) {
-                unlink($path_foto_ocp);
+            if ($path_foto_angkut != null) {
+                unlink($path_foto_angkut);
             }
 
-            $this->ocpModel->delete($ocp->id);
+            $this->angkutMotorModel->delete($angkut_motor["id"]);
 
             $alert = [
-                'success' => 'Data OCP Berhasil di Hapus!'
+                'success' => 'Data Angkut Motor Berhasil di Hapus!'
             ];
 
             return json_encode($alert);
+            // return json_encode($alert);
         }
     }
 

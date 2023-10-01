@@ -41,7 +41,30 @@
                                     <?php foreach ($angkut_motor as $data) : ?>
                                         <tr>
                                             <th scope="row"><?= $no++ ?> </th>
+                                            <td><?= $data->ukpd ?></td>
+                                            <td><?= $data->jenis_penindakan ?></td>
+                                            <td><?= $data->nopol ?></td>
+                                            <td>
+                                                <div class="btn-group-sm" role="group">
+                                                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Action
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                        <?php if (session()->get('role_id') == 1) : ?>
+                                                            <a class="dropdown-item btn-sm" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>">
+                                                                <i class=" bi bi-trash"></i> Hapus
+                                                            </a>
+                                                        <?php endif; ?>
+                                                        <a class="dropdown-item btn-sm" href="#" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>">
+                                                            <i class="bi bi-eye"></i> Lihat Detail
+                                                        </a>
+                                                        <a class="dropdown-item btn-sm" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>">
+                                                            <i class="bi bi-pencil-square"></i> Edit
+                                                        </a>
 
+                                                    </ul>
+                                                </div>
+                                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -186,16 +209,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="nama_pemilik" class="col-form-label">Nama Pemilik:</label>
-                        <input type="text" class="form-control" id="nama_pemilik" name="nama_pemilik">
+                        <label for="nama_pengemudi" class="col-form-label">Nama Pengemudi:</label>
+                        <input type="text" class="form-control" id="nama_pengemudi" name="nama_pengemudi">
                         <div class="invalid-feedback error-nama-pemilik">
 
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="alamat_pemilik" class="col-form-label">Alamat Pemilik:</label>
-                        <input type="text" class="form-control" id="alamat_pemilik" name="alamat_pemilik">
+                        <label for="alamat_pengemudi" class="col-form-label">Alamat Pengemudi:</label>
+                        <input type="text" class="form-control" id="alamat_pengemudi" name="alamat_pengemudi">
                         <div class="invalid-feedback error-alamat-pemilik">
 
                         </div>
@@ -237,7 +260,7 @@
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Delete OPS Cabut Pentil</h5>
+                <h5 class="modal-title">Hapus Angkut Motor</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -720,14 +743,14 @@
         e.preventDefault();
         let id = $(this).attr('data-id');
         $.ajax({
-            url: '/admin/ocp/edit',
+            url: '/admin/angkut_motor/edit',
             method: 'get',
             dataType: 'JSON',
             data: {
                 id: id,
             },
             success: function(response) {
-                $("#id_delete").val(response.ocp.id);
+                $("#id_delete").val(response.angkut_motor.id);
             }
         });
     });
@@ -736,7 +759,7 @@
         e.preventDefault();
         let id = $("#id_delete").val();
         $.ajax({
-            url: '/admin/ocp/delete',
+            url: '/admin/angkut_motor/delete',
             method: 'post',
             dataType: 'JSON',
             data: {
