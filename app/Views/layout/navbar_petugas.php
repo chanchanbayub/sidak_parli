@@ -19,6 +19,24 @@
                         <i class="bi bi-circle"></i><span>Data Penindakan</span>
                     </a>
                 </li>
+                <li>
+                    <a href="/petugas/ocp">
+                        <i class="bi bi-circle"></i><span>OPS Cabut Pentil</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End Components Nav -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#angkut-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-bicycle"></i><span>Penindakan Roda 2 </span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="angkut-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/petugas/angkut_motor">
+                        <i class="bi bi-circle"></i><span>Angkut Motor</span>
+                    </a>
+                </li>
+
             </ul>
         </li><!-- End Components Nav -->
 
