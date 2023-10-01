@@ -3,7 +3,9 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\Admin\AngkutMotorModel;
 use App\Models\Admin\DataPenindakanModel;
+use App\Models\Admin\OcpModel;
 use App\Models\Admin\PetugasModel;
 use App\Models\Admin\UkpdModel;
 use App\Models\Admin\UnitReguModel;
@@ -14,6 +16,8 @@ class Dashboard extends BaseController
     protected $dataPenindakanModel;
     protected $unitReguModel;
     protected $ukpdModel;
+    protected $angkutMotorModel;
+    protected $ocpModel;
 
 
     public function __construct()
@@ -22,6 +26,8 @@ class Dashboard extends BaseController
         $this->dataPenindakanModel = new DataPenindakanModel();
         $this->unitReguModel = new UnitReguModel();
         $this->ukpdModel = new UkpdModel();
+        $this->angkutMotorModel = new AngkutMotorModel();
+        $this->ocpModel = new OcpModel();
         helper(["format"]);
     }
 
@@ -54,6 +60,13 @@ class Dashboard extends BaseController
 
         $totalPenderekan = $this->dataPenindakanModel->totalPenderekan("");
 
+        // laporan angkut motor keseluruhan
+        $jumlah_angkut_motor = $this->angkutMotorModel->countAllResults();
+        $jumlah_ocp_roda_2 = $this->ocpModel->where(["jenis_penindakan_id" => 2])->countAllResults();
+        $jumlah_ocp_roda_3 = $this->ocpModel->where(["jenis_penindakan_id" => 3])->countAllResults();
+        $jumlah_ocp_roda_4 = $this->ocpModel->where(["jenis_penindakan_id" => 4])->countAllResults();
+
+
         $data = [
             'title' => 'SIDAK PARLI DASHBOARD',
             'ukpd' => $this->ukpdModel->getUKPD(),
@@ -69,7 +82,14 @@ class Dashboard extends BaseController
             'total_penderekan_perhari' => $totalPenderekanPerhari,
             'jumlah_terbayar_perhari' => $jumlah_perhari,
             'jumlah_belum_bayar_perhari' => $total_belum_terbayar_perhari,
-            'jumlah_selesai_perhari' => $total_selesai_perhari
+            'jumlah_selesai_perhari' => $total_selesai_perhari,
+
+            // angkut motor
+            'jumlah_angkut_motor' => $jumlah_angkut_motor,
+
+            'jumlah_ocp_roda_2' => $jumlah_ocp_roda_2,
+            'jumlah_ocp_roda_3' => $jumlah_ocp_roda_3,
+            'jumlah_ocp_roda_4' => $jumlah_ocp_roda_4,
         ];
         return view('admin/dashboard', $data);
     }
