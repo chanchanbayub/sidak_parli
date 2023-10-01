@@ -75,7 +75,17 @@
 
                                             <td><?= $data->nomor_kendaraan ?> </td>
                                             <td><?= $data->jenis_penindakan ?> </td>
-                                            <td><a href=" https://goo.gl/maps/DPPnRATpuFLpvhet8"><?= $data->tempat_penyimpanan ?></a></td>
+                                            <?php if ($data->ukpd_id == 1 || $data->ukpd_id == 2) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/J9vsbKenvkYBAsJG8" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php elseif ($data->ukpd_id == 3) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/fZQutJk8LvA72ffG7" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php elseif ($data->ukpd_id == 4) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/93AJwFwyh9wcoz4t8" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php elseif ($data->ukpd_id == 5) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/Hk8zbUnE6MhK1eXN9" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php elseif ($data->ukpd_id == 6) : ?>
+                                                <td> <a href="https://maps.app.goo.gl/zd9hLUzBP5z1kzLH7" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-pin-map"></i> Lihat Lokasi</a> </td>
+                                            <?php endif; ?>
                                             <td><?= $data->tanggal_pelanggaran ?></td>
                                             <?php if ($data->status_bap_id == 2 || $data->status_bap_id == 1) : ?>
                                                 <td> <span class="badge bg-warning"><?= $data->status_penderekan ?></span> </td>

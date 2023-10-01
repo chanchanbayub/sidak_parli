@@ -112,7 +112,7 @@ use CodeIgniter\Filters\CSRF;
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <p id="maps_lokasi">Tempat Penyimpanan Kendaraan : <a href="https://goo.gl/maps/DPPnRATpuFLpvhet8" id="lokasi" target="_blank" rel="noopener noreferrer">Lihat Lokasi</a> </p>
+                                <p id="maps_lokasi">Tempat Penyimpanan Kendaraan : <a href="" id="lokasi" target="_blank" rel="noopener noreferrer">Lihat Lokasi</a> </p>
                             </div>
                         </div>
                         <div class="row">
@@ -197,6 +197,19 @@ use CodeIgniter\Filters\CSRF;
                             $("#whatsapp").css('display', 'none');
                             $("#download").html('<i class="fa fa-download"></i> Download SPK');
                         }
+
+                        if (response.data_penindakan.ukpd_id == 1 || response.data_penindakan.ukpd_id == 2) {
+                            $("#lokasi").attr('href', 'https://maps.app.goo.gl/J9vsbKenvkYBAsJG8');
+                        } else if (response.data_penindakan.ukpd_id == 3) {
+                            $("#lokasi").attr('href', 'https://maps.app.goo.gl/fZQutJk8LvA72ffG7');
+                        } else if (response.data_penindakan.ukpd_id == 4) {
+                            $("#lokasi").attr('href', 'https://maps.app.goo.gl/93AJwFwyh9wcoz4t8');
+                        } else if (response.data_penindakan.ukpd_id == 5) {
+                            $("#lokasi").attr('href', 'https://maps.app.goo.gl/Hk8zbUnE6MhK1eXN9');
+                        } else if (response.data_penindakan.ukpd_id == 6) {
+                            $("#lokasi").attr('href', 'https://maps.app.goo.gl/zd9hLUzBP5z1kzLH7');
+                        }
+
                         $(".status").html(response.data_penindakan.status_penderekan);
                         $(".status").css("text-transform", 'capitalize');
                         $(".jenis_pelanggaran").html(response.data_penindakan.jenis_pelanggaran);
