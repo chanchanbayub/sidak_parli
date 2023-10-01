@@ -114,11 +114,15 @@ class AngkutMotor extends BaseController
         if ($this->request->isAJAX()) {
 
             $kota_id = $this->request->getVar('kota_id');
+            $id = $this->request->getVar('id');
+
+            $angkut_motor = $this->angkutMotorModel->where(["id" => $id])->first();
 
             $kecamatan = $this->kecamatanModel->getKecamatanWithKota($kota_id);
 
             $data = [
-                'kecamatan' => $kecamatan
+                'kecamatan' => $kecamatan,
+                'angkut_motor' => $angkut_motor
             ];
 
             return json_encode($data);
@@ -276,11 +280,12 @@ class AngkutMotor extends BaseController
             $data = [
                 'ukpd' => $this->ukpdModel->getUkpd(),
                 'angkut_motor' => $angkut_motor,
-                'jenis_penindakan' => $this->jenisPenindakanModel->where(["id" => 2])->orWhere(["id" => 3])->orWhere(["id" => 4])->get()->getResultObject(),
-                'provinsi' => $this->provinsiModel->get()->getRowObject(),
+                'jenis_penindakan' => $this->jenisPenindakanModel->where("id", 5)->get()->getResultObject(),
+                'provinsi' => $this->provinsiModel->getProvinsi(),
                 'kota' => $this->kotaModel->getKota(),
                 'kecamatan' => $kecamatan,
                 'unit_regu' => $this->unitReguModel->getUnit(),
+                'tempat_penyimpanan' => $this->tempatPenyimpananModel->getTempatPenyimpanan()
             ];
 
             return json_encode($data);
@@ -320,44 +325,56 @@ class AngkutMotor extends BaseController
             $ukpd_id = $this->request->getPost('ukpd_id');
             $unit_id = $this->request->getPost('unit_id');
             $jenis_penindakan_id = $this->request->getPost('jenis_penindakan_id');
-            $nomor_kendaraan_ocp = $this->request->getPost('nomor_kendaraan_ocp');
+            $nopol = $this->request->getPost('nopol');
+            $warna_kendaraan = $this->request->getPost('warna_kendaraan');
+            $merk_kendaraan = $this->request->getPost('merk_kendaraan');
             $provinsi_id = $this->request->getPost('provinsi_id');
             $kota_id = $this->request->getPost('kota_id');
             $kecamatan_id = $this->request->getPost('kecamatan_id');
-            $tanggal_ocp = $this->request->getPost('tanggal_ocp');
-            $jam_ocp = $this->request->getPost('jam_ocp');
-            $lokasi_penindakan = $this->request->getPost('lokasi_penindakan');
-            $foto_penindakan = $this->request->getFile('foto_penindakan');
+            $tanggal_pelanggaran_angkut = $this->request->getPost('tanggal_pelanggaran_angkut');
+            $jam_pelanggaran_angkut = $this->request->getPost('jam_pelanggaran_angkut');
+            $lokasi_angkut = $this->request->getPost('lokasi_angkut');
+            $nama_pengemudi = $this->request->getPost('nama_pengemudi');
+            $alamat_pengemudi = $this->request->getPost('alamat_pengemudi');
 
-            if ($foto_penindakan->getError() == 4) {
+            $tempat_penyimpanan_id = $this->request->getPost('tempat_penyimpanan_id');
+
+            $foto_kendaraan_angkut = $this->request->getFile('foto_kendaraan_angkut');
+
+            if ($foto_kendaraan_angkut->getError() == 4) {
                 $namaFile = $foto_lama;
             } else {
-                $namaFile = $foto_penindakan->getRandomName();
-                $path_foto_lama = 'ocp_data_penindakan/' . $foto_lama;
+                $namaFile = $foto_kendaraan_angkut->getRandomName();
+                $path_foto_lama = 'angkut_motor/' . $foto_lama;
                 if (file_exists($path_foto_lama)) {
                     unlink($path_foto_lama);
                 }
-                $foto_penindakan->move('ocp_data_penindakan', $namaFile);
+                $foto_kendaraan_angkut->move('angkut_motor', $namaFile);
             }
 
-            $this->ocpModel->update($id, [
+            $this->angkutMotorModel->update($id, [
                 'ukpd_id' => $ukpd_id,
                 'jenis_penindakan_id' => $jenis_penindakan_id,
                 'unit_id' => $unit_id,
-                'nomor_kendaraan_ocp' => strtolower($nomor_kendaraan_ocp),
+                'nopol' => strtolower($nopol),
+                'warna_kendaraan' => strtolower($warna_kendaraan),
+                'merk_kendaraan' => strtolower($merk_kendaraan),
                 'provinsi_id' => $provinsi_id,
                 'kota_id' => $kota_id,
-                'tanggal_ocp' => $tanggal_ocp,
-                'jam_ocp' => $jam_ocp,
+                'tanggal_pelanggaran_angkut' => $tanggal_pelanggaran_angkut,
+                'jam_pelanggaran_angkut' => $jam_pelanggaran_angkut,
                 'kota_id' => $kota_id,
                 'kecamatan_id' => $kecamatan_id,
-                'lokasi_penindakan' => strtolower($lokasi_penindakan),
-                'foto_penindakan' =>  $namaFile,
+                'lokasi_angkut' => strtolower($lokasi_angkut),
+                'nama_pengemudi' => strtolower($nama_pengemudi),
+                'alamat_pengemudi' => strtolower($alamat_pengemudi),
+                'tempat_penyimpanan_id' => $tempat_penyimpanan_id,
+                'foto_kendaraan_angkut' =>  $namaFile,
 
             ]);
 
             $alert = [
-                'success' => 'OPS Cabut Pentil Berhasil di Ubah !'
+                'success' => 'Data Angkut Motor Berhasil di Ubah !'
             ];
 
 

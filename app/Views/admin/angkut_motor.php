@@ -285,18 +285,19 @@
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Edit Data OCP</h5>
+                <h5 class="modal-title">Edit Data Angkut Motor</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="edit_form" autocomplete="off">
                     <?= csrf_field(); ?>
                     <div class="form-group">
-                        <input type="hidden" class="form-control" id="id_edit" name="id">
-                        <input type="hidden" class="form-control" id="foto_lama" name="foto_lama">
+                        <input type="hidden" name="id" id="id_edit">
+                        <input type="hidden" name="foto_lama" id="foto_lama">
                         <label for="ukpd_id_edit" class="col-form-label">UKPD:</label>
-                        <select name="ukpd_id" id="ukpd_id_edit" class="form-select">
-                            <option value="">--silahkan pilih--</option>
+                        <select class="form-select" name="ukpd_id" id="ukpd_id_edit">
+                            <option value="">--Silahkan Pilih--</option>
+
                         </select>
                         <div class="invalid-feedback error-ukpd-edit">
 
@@ -304,97 +305,139 @@
                     </div>
                     <div class="form-group">
                         <label for="jenis_penindakan_id_edit" class="col-form-label">Jenis Penindakan:</label>
-                        <select name="jenis_penindakan_id" id="jenis_penindakan_id_edit" class="form-select">
-                            <option value="">--silahkan pilih--</option>
+                        <select class="form-select" name="jenis_penindakan_id" id="jenis_penindakan_id_edit">
+                            <option value="">--Silahkan Pilih--</option>
+
                         </select>
-                        <div class="invalid-feedback error-penindakan-edit">
+                        <div class="invalid-feedback error-jenis-penindakan-edit">
 
                         </div>
-
                     </div>
+
                     <div class="form-group">
                         <label for="unit_id_edit" class="col-form-label">Unit / Regu:</label>
-                        <select name="unit_id" id="unit_id_edit" class="form-select">
-                            <option value="">--silahkan pilih--</option>
+                        <select class="form-select" name="unit_id" id="unit_id_edit">
+                            <option value="">--Silahkan Pilih--</option>
+
                         </select>
                         <div class="invalid-feedback error-unit-edit">
 
                         </div>
-
                     </div>
                     <div class="form-group">
-                        <label for="nomor_kendaraan_ocp_edit" class="col-form-label">Nomor Kendaraan OCP:</label>
-                        <input type="text" name="nomor_kendaraan_ocp" id="nomor_kendaraan_ocp_edit" class="form-control">
+                        <label for="nopol_edit" class="col-form-label">Nomor Kendaraan:</label>
+                        <input type="text" class="form-control" id="nopol_edit" name="nopol" placeholder="cth : b 1234 aa">
                         <div class="invalid-feedback error-nomor-kendaraan-edit">
 
                         </div>
-
                     </div>
+
+                    <div class="form-group">
+                        <label for="merk_kendaraan_edit" class="col-form-label">Merk Kendaraan:</label>
+                        <input type="text" class="form-control" id="merk_kendaraan_edit" name="merk_kendaraan">
+                        <div class="invalid-feedback error-merk-kendaraan-edit">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="warna_kendaraan_edit" class="col-form-label">Warna Kendaraan:</label>
+                        <input type="text" class="form-control" id="warna_kendaraan_edit" name="warna_kendaraan">
+                        <div class="invalid-feedback error-warna-kendaraan-edit">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal_pelanggaran_angkut_edit" class="col-form-label">Tanggal Pelanggaran:</label>
+                        <input type="date" class="form-control" id="tanggal_pelanggaran_angkut_edit" name="tanggal_pelanggaran_angkut" value="<?= date('Y-m-d') ?>">
+                        <div class=" invalid-feedback error-tanggal-edit">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jam_pelanggaran_angkut_edit" class="col-form-label">Jam Pelanggaran:</label>
+                        <input type="time" class="form-control" id="jam_pelanggaran_angkut_edit" name="jam_pelanggaran_angkut" value="<?= date('H:i') ?>">
+                        <div class="invalid-feedback error-jam-edit">
+
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label for="provinsi_id_edit" class="col-form-label">Provinsi:</label>
-                        <select name="provinsi_id" id="provinsi_id_edit" class="form-select">
-                            <option value="<?= $provinsi->id ?>"><?= $provinsi->provinsi ?></option>
+                        <select class="form-select" name="provinsi_id" id="provinsi_id_edit">
+                            <option value="">--Silahkan Pilih--</option>
+
                         </select>
                         <div class="invalid-feedback error-provinsi-edit">
 
                         </div>
-
                     </div>
                     <div class="form-group">
                         <label for="kota_id_edit" class="col-form-label">Kota:</label>
-                        <select name="kota_id" id="kota_id_edit" class="form-select">
-                            <option value="">--silahkan pilih--</option>
+                        <select class="form-select" name="kota_id" id="kota_id_edit">
+                            <option value="">--Silahkan Pilih--</option>
+
+                        </select>
+                        <div class="invalid-feedback error-kota-edit">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kecamatan_id_edit" class="col-form-label">kecamatan:</label>
+                        <select class="form-select" name="kecamatan_id" id="kecamatan_id_edit">
+                            <option value="">--Silahkan Pilih--</option>
 
                         </select>
                         <div class="invalid-feedback error-kecamatan-edit">
 
                         </div>
-
                     </div>
+
                     <div class="form-group">
-                        <label for="kecamatan_id_edit" class="col-form-label">Kecamatan:</label>
-                        <select name="kecamatan_id" id="kecamatan_id_edit" class="form-select">
-                            <option value="">--silahkan pilih--</option>
+                        <label for="lokasi_angkut_edit" class="col-form-label">Lokasi Penindakan:</label>
+                        <input type="text" class="form-control" id="lokasi_angkut_edit" name="lokasi_angkut" placeholder="cth : MH Thamrin">
+                        <div class="invalid-feedback error-lokasi-angkut-edit">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nama_pengemudi_edit" class="col-form-label">Nama Pengemudi:</label>
+                        <input type="text" class="form-control" id="nama_pengemudi_edit" name="nama_pengemudi">
+                        <div class="invalid-feedback error-nama-pemilik-edit">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat_pengemudi_edit" class="col-form-label">Alamat Pengemudi:</label>
+                        <input type="text" class="form-control" id="alamat_pengemudi_edit" name="alamat_pengemudi">
+                        <div class="invalid-feedback error-alamat-pemilik-edit">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tempat_penyimpanan_id_edit" class="col-form-label">Tempat Penyimpanan:</label>
+                        <select class="form-select" name="tempat_penyimpanan_id" id="tempat_penyimpanan_id_edit">
+                            <option value="">--Silahkan Pilih--</option>
 
                         </select>
-                        <div class="invalid-feedback error-kecamatan-edit">
-
-                        </div>
-
-                    </div>
-
-                    <div class="form-group">
-                        <label for="lokasi_penindakan_edit" class="col-form-label">Lokasi Penindakan:</label>
-                        <input type="text" name="lokasi_penindakan" id="lokasi_penindakan_edit" class="form-control">
-                        <div class="invalid-feedback error-lokasi-penindakan-edit">
-
-                        </div>
-
-                    </div>
-                    <div class="form-group">
-                        <label for="tanggal_ocp_edit" class="col-form-label">Tanggal Penindakan</label>
-                        <input type="text" name="tanggal_ocp" id="tanggal_ocp_edit" class="form-control">
-                        <div class="invalid-feedback error-tanggal-edit">
-
-                        </div>
-
-                    </div>
-                    <div class="form-group">
-                        <label for="jam_ocp_edit" class="col-form-label">Jam Penindakan:</label>
-                        <input type="text" name="jam_ocp" id="jam_ocp_edit" class="form-control">
-                        <div class="invalid-feedback error-tanggal-edit">
+                        <div class="invalid-feedback error-tempat-penyimpanan-edit">
 
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="foto_penindakan_edit" class="col-form-label">Foto Penindakan:</label>
-                        <input type="file" name="foto_penindakan" id="foto_penindakan_edit" class="form-control">
-                        <div class="invalid-feedback error-foto-edit">
+                        <label for="foto_kendaraan_angkut_edit" class="col-form-label">Foto Kendaraan:</label>
+                        <input type="file" class="form-control" id="foto_kendaraan_angkut_edit" name="foto_kendaraan_angkut">
+                        <div class="invalid-feedback error-foto_edit">
 
                         </div>
                     </div>
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> <i class="bi bi-x-lg"></i> Batal</button>
                         <button type="submit" class="btn btn-primary update"><i class="bi bi-box-arrow-in-right"></i> Kirim</button>
@@ -459,6 +502,11 @@
             dropdownParent: $('#editModal')
         });
         $('#unit_id_edit').select2({
+            theme: 'bootstrap4',
+            dropdownParent: $('#editModal')
+        });
+
+        $('#tempat_penyimpanan_edit').select2({
             theme: 'bootstrap4',
             dropdownParent: $('#editModal')
         });
@@ -792,21 +840,25 @@
         e.preventDefault();
         let id = $(this).attr('data-id');
         $.ajax({
-            url: '/admin/ocp/edit',
+            url: '/admin/angkut_motor/edit',
             method: 'get',
             dataType: 'JSON',
             data: {
                 id: id,
             },
             success: function(response) {
-                $("#id_edit").val(response.ocp.id);
-                $("#foto_lama").val(response.ocp.foto_penindakan);
-                $("#lokasi_penindakan_edit").val(response.ocp.lokasi_penindakan);
+                $("#id_edit").val(response.angkut_motor.id);
+                $("#foto_lama").val(response.angkut_motor.foto_kendaraan_angkut);
+                $("#lokasi_angkut_edit").val(response.angkut_motor.lokasi_angkut);
+                $("#nama_pengemudi_edit").val(response.angkut_motor.nama_pengemudi);
+                $("#alamat_pengemudi_edit").val(response.angkut_motor.alamat_pengemudi);
+                $("#merk_kendaraan_edit").val(response.angkut_motor.merk_kendaraan);
+                $("#warna_kendaraan_edit").val(response.angkut_motor.warna_kendaraan);
 
                 let ukpd_id = `<option value=""> Silahkan Pilih </option>`;
 
                 response.ukpd.forEach(function(e) {
-                    if (e.id == response.ocp.ukpd_id) {
+                    if (e.id == response.angkut_motor.ukpd_id) {
                         ukpd_id += `<option value="${e.id}" selected> ${e.ukpd} </option>`;
                     } else {
                         ukpd_id += `<option value="${e.id}"> ${e.ukpd} </option>`;
@@ -814,12 +866,12 @@
                 });
 
                 $("#ukpd_id_edit").html(ukpd_id);
-                $("#ukpd_id_edit").val(response.ocp.ukpd_id).trigger('change');
+                $("#ukpd_id_edit").val(response.angkut_motor.ukpd_id).trigger('change');
 
                 let jenis_penindakan_id = `<option value=""> Silahkan Pilih </option>`;
 
                 response.jenis_penindakan.forEach(function(e) {
-                    if (e.id == response.ocp.jenis_penindakan_id) {
+                    if (e.id == response.angkut_motor.jenis_penindakan_id) {
                         jenis_penindakan_id += `<option value="${e.id}" selected> ${e.jenis_penindakan} </option>`;
                     } else {
                         jenis_penindakan_id += `<option value="${e.id}"> ${e.jenis_penindakan} </option>`;
@@ -827,17 +879,17 @@
                 });
 
                 $("#jenis_penindakan_id_edit").html(jenis_penindakan_id);
-                $("#jenis_penindakan_id_edit").val(response.ocp.jenis_penindakan_id).trigger('change');
+                $("#jenis_penindakan_id_edit").val(response.angkut_motor.jenis_penindakan_id).trigger('change');
 
 
-                $("#nomor_kendaraan_ocp_edit").val(response.ocp.nomor_kendaraan_ocp);
-                $("#tanggal_ocp_edit").val(response.ocp.tanggal_ocp);
-                $("#jam_ocp_edit").val(response.ocp.jam_ocp);
+                $("#nopol_edit").val(response.angkut_motor.nopol);
+                $("#tanggal_pelanggaran_angkut_edit").val(response.angkut_motor.tanggal_pelanggaran_angkut);
+                $("#jam_pelanggaran_angkut_edit").val(response.angkut_motor.jam_pelanggaran_angkut);
 
                 let unit_id_data = `<option value=""> Silahkan Pilih </option>`;
 
                 response.unit_regu.forEach(function(e) {
-                    if (e.id == response.ocp.unit_id) {
+                    if (e.id == response.angkut_motor.unit_id) {
                         unit_id_data += `<option value="${e.id}" selected> ${e.unit_regu} </option>`;
                     } else {
                         unit_id_data += `<option value="${e.id}"> ${e.unit_regu} </option>`;
@@ -845,12 +897,26 @@
                 });
 
                 $("#unit_id_edit").html(unit_id_data);
-                $("#unit_id_edit").val(response.ocp.unit_id).trigger('change');
+                $("#unit_id_edit").val(response.angkut_motor.unit_id).trigger('change');
+
+                let provinsi_data = `<option value=""> Silahkan Pilih </option>`;
+
+                response.provinsi.forEach(function(e) {
+                    if (e.id == response.angkut_motor.provinsi_id) {
+                        provinsi_data += `<option value="${e.id}" selected> ${e.provinsi} </option>`;
+                    } else {
+                        provinsi_data += `<option value="${e.id}"> ${e.provinsi} </option>`;
+                    }
+                });
+
+                $("#provinsi_id_edit").html(provinsi_data);
+                $("#provinsi_id_edit").val(response.angkut_motor.provinsi_id).trigger('change');
+
 
                 let kota_data = `<option value=""> Silahkan Pilih </option>`;
 
                 response.kota.forEach(function(e) {
-                    if (e.id == response.ocp.kota_id) {
+                    if (e.id == response.angkut_motor.kota_id) {
                         kota_data += `<option value="${e.id}" selected> ${e.kabupaten_kota} </option>`;
                     } else {
                         kota_data += `<option value="${e.id}"> ${e.kabupaten_kota} </option>`;
@@ -858,12 +924,12 @@
                 });
 
                 $("#kota_id_edit").html(kota_data);
-                $("#kota_id_edit").val(response.ocp.kota_id).trigger('change');
+                $("#kota_id_edit").val(response.angkut_motor.kota_id).trigger('change');
 
                 let kecamatan_data = `<option value=""> Silahkan Pilih </option>`;
 
                 response.kecamatan.forEach(function(e) {
-                    if (e.id == response.ocp.kecamatan_id) {
+                    if (e.id == response.angkut_motor.kecamatan_id) {
                         kecamatan_data += `<option value="${e.id}" selected> ${e.kecamatan} </option>`;
                     } else {
                         kecamatan_data += `<option value="${e.id}"> ${e.kecamatan} </option>`;
@@ -871,35 +937,55 @@
                 });
 
                 $("#kecamatan_id_edit").html(kecamatan_data);
-                $("#kecamatan_id_edit").val(response.ocp.kecamatan_id).trigger('change');
+                $("#kecamatan_id_edit").val(response.angkut_motor.kecamatan_id).trigger('change');
+
+                let tempat_penyimpanan_data = `<option value=""> Silahkan Pilih </option>`;
+
+                response.tempat_penyimpanan.forEach(function(e) {
+                    if (e.id == response.angkut_motor.tempat_penyimapan_id) {
+                        tempat_penyimpanan_data += `<option value="${e.id}" selected> ${e.tempat_penyimpanan} </option>`;
+                    } else {
+                        tempat_penyimpanan_data += `<option value="${e.id}"> ${e.tempat_penyimpanan} </option>`;
+                    }
+                });
+
+                $("#tempat_penyimpanan_id_edit").html(tempat_penyimpanan_data);
+                $("#tempat_penyimpanan_id_edit").val(response.angkut_motor.tempat_penyimpanan_id).trigger('change');
 
 
             }
         });
     });
 
-    $(document).on('change', "#provinsi_id_edit", function(e) {
+    $(document).on('change', "#kota_id_edit", function(e) {
         e.preventDefault();
-        let provinsi_id = $(this).val();
+        let kota_id = $(this).val();
+        let id = $("#id_edit").val();
         $.ajax({
-            url: '/admin/ocp/getKota',
+            url: '/admin/angkut_motor/getKecamatan',
             method: 'get',
             dataType: 'JSON',
             data: {
-                provinsi_id: provinsi_id,
+                kota_id: kota_id,
+                id: id,
             },
             success: function(response) {
-                if (response.kota.length > 0) {
-                    let kota = `<option value = ""> --Silahkan Pilih-- </option>`
-                    response.kota.forEach(function(e) {
-                        kota += `<option value ="${e.id}"> ${e.kabupaten_kota} </option>`;
+                if (response.kecamatan.length > 0) {
+                    let kecamatan = `<option value = ""> --Silahkan Pilih-- </option>`
+                    response.kecamatan.forEach(function(e) {
+                        if (e.id == response.angkut_motor.kecamatan_id) {
+                            kecamatan += `<option value ="${e.id}" selected> ${e.kecamatan} </option>`;
+                        } else {
+                            kecamatan += `<option value ="${e.id}"> ${e.kecamatan} </option>`;
+                        }
+
                     })
-                    $("#kota_id_edit").html(kota);
-                    $("#kota_id_edit").removeAttr('disabled');
+                    $("#kecamatan_id_edit").html(kecamatan);
+                    $("#kecamatan_id_edit").removeAttr('disabled');
                 } else {
-                    let kota = `<option value = ""> --Silahkan Pilih-- </option>`;
-                    $("#kota_id_edit").html(kota);
-                    $("#kota_id_edit").attr('disabled', 'disabled');
+                    let kecamatan = `<option value = ""> --Silahkan Pilih-- </option>`;
+                    $("#kecamatan_id_edit").html(kecamatan);
+                    $("#kecamatan_id_edit").attr('disabled', 'disabled');
                 }
             }
         });
@@ -912,14 +998,19 @@
         let ukpd_id = $('#ukpd_id_edit').val();
         let jenis_penindakan_id = $('#jenis_penindakan_id_edit').val();
         let unit_id = $('#unit_id_edit').val();
-        let nomor_kendaraan_ocp = $('#nomor_kendaraan_ocp_edit').val();
+        let nopol = $('#nopol_edit').val();
+        let merk_kendaraan = $('#merk_kendaraan_edit').val();
+        let warna_kendaraan = $('#warna_kendaraan_edit').val();
         let provinsi_id = $('#provinsi_id_edit').val();
         let kota_id = $('#kota_id_edit').val();
         let kecamatan_id = $('#kecamatan_id_edit').val();
-        let tanggal_ocp = $('#tanggal_ocp_edit').val();
-        let jam_ocp = $('#jam_ocp_edit').val();
-        let lokasi_penindakan = $('#lokasi_penindakan_edit').val();
-        let foto_penindakan = $('#foto_penindakan_edit').val();
+        let tanggal_pelanggaran_angkut = $('#tanggal_pelanggaran_angkut_edit').val();
+        let jam_pelanggaran_angkut = $('#jam_pelanggaran_angkut_edit').val();
+        let lokasi_angkut = $('#lokasi_angkut_edit').val();
+        let tempat_penyimapan_id = $('#tempat_penyimapan_id_edit').val();
+        let foto_kendaraan_id = $('#foto_kendaraan_id_edit').val();
+        let nama_pengemudi = $('#nama_pengemudi_edit').val();
+        let alamat_pengemudi = $('#alamat_pengemudi_edit').val();
 
         let formData = new FormData(this);
 
@@ -928,16 +1019,22 @@
         formData.append('ukpd_id', ukpd_id);
         formData.append('jenis_penindakan_id', jenis_penindakan_id);
         formData.append('unit_id', unit_id);
-        formData.append('nomor_kendaraan_ocp', nomor_kendaraan_ocp);
+        formData.append('nopol', nopol);
+        formData.append('merk_kendaraan', merk_kendaraan);
+        formData.append('warna_kendaraan', warna_kendaraan);
         formData.append('provinsi_id', provinsi_id);
         formData.append('kota_id', kota_id);
-        formData.append('tanggal_ocp', tanggal_ocp);
-        formData.append('jam_ocp', jam_ocp);
+        formData.append('tanggal_pelanggaran_angkut', tanggal_pelanggaran_angkut);
+        formData.append('jam_pelanggaran_angkut', jam_pelanggaran_angkut);
+
         formData.append('kecamatan_id', kecamatan_id);
-        formData.append('lokasi_penindakan', lokasi_penindakan);
-        formData.append('foto_penindakan', foto_penindakan);
+        formData.append('lokasi_angkut', lokasi_angkut);
+        formData.append('foto_kendaraan_angkut', foto_kendaraan_angkut);
+        formData.append('nama_pengemudi', nama_pengemudi);
+        formData.append('alamat_pengemudi', alamat_pengemudi);
+
         $.ajax({
-            url: '/admin/ocp/update',
+            url: '/admin/angkut_motor/update',
             data: formData,
             dataType: 'json',
             enctype: 'multipart/form-data',
