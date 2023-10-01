@@ -48,4 +48,20 @@ class AngkutMotorModel extends Model
                 ->get()->getResultObject();
         }
     }
+
+    public function getAngkutMotorWhereId($id)
+    {
+        return $this->table($this->table)
+            ->select($this->fieldTable)
+            ->join('ukpd_table', 'ukpd_table.id = angkut_motor_table.ukpd_id', 'left')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = angkut_motor_table.jenis_penindakan_id', 'left')
+            ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = angkut_motor_table.tempat_penyimpanan_id', 'left')
+            ->join('unit_regu_table', 'unit_regu_table.id = angkut_motor_table.unit_id', 'left')
+            ->join('provinsi', 'provinsi.id = angkut_motor_table.provinsi_id')
+            ->join('kota', 'kota.id = angkut_motor_table.kota_id')
+            ->join('kecamatan', 'kecamatan.id = angkut_motor_table.kecamatan_id')
+            ->where(["angkut_motor_table.id" => $id])
+            ->orderBy('angkut_motor_table.id desc')
+            ->get()->getRowObject();
+    }
 }

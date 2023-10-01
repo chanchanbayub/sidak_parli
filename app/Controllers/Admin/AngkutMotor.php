@@ -62,18 +62,20 @@ class AngkutMotor extends BaseController
         return view('admin/angkut_motor', $data);
     }
 
-    public function detail($id)
+    public function getDetail($id)
     {
-        $detail_ocp = $this->ocpModel->getDataOcpWithID($id);
 
+        $angkut_motor = $this->angkutMotorModel->getAngkutMotorWhereId($id);
 
         $data = [
-            'title' => 'DETAIL DATA PENINDAKAN',
-            'detail_ocp' => $detail_ocp
+            'title' => 'DETAIL DATA PENINDAKAN ANGKUT MOTOR',
+            'angkut_motor' => $angkut_motor
         ];
 
-        return view('admin/detail_ocp', $data);
+
+        return view('admin/detail_angkut_motor', $data);
     }
+
 
     public function getKota()
     {

@@ -220,6 +220,7 @@ $routes->group('/admin', function ($routes) {
 
     // Angkut Motor
     $routes->get('angkut_motor', 'Admin\AngkutMotor::index');
+    $routes->get('angkut_motor/getDetail/(:any)', 'Admin\AngkutMotor::getDetail/$1');
     $routes->get('angkut_motor/getUnit', 'Admin\AngkutMotor::getUnit');
     $routes->get('angkut_motor/getKota', 'Admin\AngkutMotor::getKota');
     $routes->get('angkut_motor/getKecamatan', 'Admin\AngkutMotor::getKecamatan');

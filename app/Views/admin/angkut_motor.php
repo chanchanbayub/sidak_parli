@@ -55,8 +55,8 @@
                                                                 <i class=" bi bi-trash"></i> Hapus
                                                             </a>
                                                         <?php endif; ?>
-                                                        <a class="dropdown-item btn-sm" href="#" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<?= $data->id ?>">
-                                                            <i class="bi bi-eye"></i> Lihat Detail
+                                                        <a class="dropdown-item btn-sm" href="/admin/angkut_motor/getDetail/<?= $data->id ?>" id="view">
+                                                            <i class=" bi bi-eye"></i> Lihat Detail
                                                         </a>
                                                         <a class="dropdown-item btn-sm" id="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data->id ?>">
                                                             <i class="bi bi-pencil-square"></i> Edit
