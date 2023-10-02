@@ -61,7 +61,12 @@ class Dashboard extends BaseController
         $totalPenderekan = $this->dataPenindakanModel->totalPenderekan("");
 
         // laporan angkut motor keseluruhan
-        $jumlah_angkut_motor = $this->angkutMotorModel->countAllResults();
+        $angkut_motor_perhari = $this->angkutMotorModel->getJumlahAngkutMotorPerhari($date, "");
+        $perhari = count($angkut_motor_perhari);
+
+        $jumlah_angkut_motor = $this->angkutMotorModel->getJumlahAngkutMotor("");
+        $total_angkut_motor = count($jumlah_angkut_motor);
+
         $jumlah_ocp_roda_2 = $this->ocpModel->where(["jenis_penindakan_id" => 2])->countAllResults();
         $jumlah_ocp_roda_3 = $this->ocpModel->where(["jenis_penindakan_id" => 3])->countAllResults();
         $jumlah_ocp_roda_4 = $this->ocpModel->where(["jenis_penindakan_id" => 4])->countAllResults();
@@ -85,7 +90,7 @@ class Dashboard extends BaseController
             'jumlah_selesai_perhari' => $total_selesai_perhari,
 
             // angkut motor
-            'jumlah_angkut_motor' => $jumlah_angkut_motor,
+            'jumlah_angkut_motor' => $total_angkut_motor,
 
             'jumlah_ocp_roda_2' => $jumlah_ocp_roda_2,
             'jumlah_ocp_roda_3' => $jumlah_ocp_roda_3,

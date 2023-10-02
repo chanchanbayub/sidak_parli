@@ -64,4 +64,65 @@ class AngkutMotorModel extends Model
             ->orderBy('angkut_motor_table.id desc')
             ->get()->getRowObject();
     }
+
+    public function getJumlahAngkutMotor($ukpd_id)
+    {
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('ukpd_table', 'ukpd_table.id = angkut_motor_table.ukpd_id', 'left')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = angkut_motor_table.jenis_penindakan_id', 'left')
+                ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = angkut_motor_table.tempat_penyimpanan_id', 'left')
+                ->join('unit_regu_table', 'unit_regu_table.id = angkut_motor_table.unit_id', 'left')
+                ->join('provinsi', 'provinsi.id = angkut_motor_table.provinsi_id')
+                ->join('kota', 'kota.id = angkut_motor_table.kota_id')
+                ->join('kecamatan', 'kecamatan.id = angkut_motor_table.kecamatan_id')
+                ->orderBy('angkut_motor_table.id desc')
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('ukpd_table', 'ukpd_table.id = angkut_motor_table.ukpd_id', 'left')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = angkut_motor_table.jenis_penindakan_id', 'left')
+                ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = angkut_motor_table.tempat_penyimpanan_id', 'left')
+                ->join('unit_regu_table', 'unit_regu_table.id = angkut_motor_table.unit_id', 'left')
+                ->join('provinsi', 'provinsi.id = angkut_motor_table.provinsi_id')
+                ->join('kota', 'kota.id = angkut_motor_table.kota_id')
+                ->join('kecamatan', 'kecamatan.id = angkut_motor_table.kecamatan_id')
+                ->where(["ukpd_table.id" => $ukpd_id])
+                ->orderBy('angkut_motor_table.id desc')
+                ->get()->getResultObject();
+        }
+    }
+
+    public function getJumlahAngkutMotorPerhari($tanggal_pelanggaran, $ukpd_id)
+    {
+        if ($ukpd_id == null) {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('ukpd_table', 'ukpd_table.id = angkut_motor_table.ukpd_id', 'left')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = angkut_motor_table.jenis_penindakan_id', 'left')
+                ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = angkut_motor_table.tempat_penyimpanan_id', 'left')
+                ->join('unit_regu_table', 'unit_regu_table.id = angkut_motor_table.unit_id', 'left')
+                ->join('provinsi', 'provinsi.id = angkut_motor_table.provinsi_id')
+                ->join('kota', 'kota.id = angkut_motor_table.kota_id')
+                ->join('kecamatan', 'kecamatan.id = angkut_motor_table.kecamatan_id')
+                ->orderBy('angkut_motor_table.id desc')
+                ->get()->getResultObject();
+        } else {
+            return $this->table($this->table)
+                ->select($this->fieldTable)
+                ->join('ukpd_table', 'ukpd_table.id = angkut_motor_table.ukpd_id', 'left')
+                ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = angkut_motor_table.jenis_penindakan_id', 'left')
+                ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = angkut_motor_table.tempat_penyimpanan_id', 'left')
+                ->join('unit_regu_table', 'unit_regu_table.id = angkut_motor_table.unit_id', 'left')
+                ->join('provinsi', 'provinsi.id = angkut_motor_table.provinsi_id')
+                ->join('kota', 'kota.id = angkut_motor_table.kota_id')
+                ->join('kecamatan', 'kecamatan.id = angkut_motor_table.kecamatan_id')
+                ->where(["ukpd_table.id" => $ukpd_id])
+                ->where(["angkut_motor_table.tanggal_pelanggaran_angkut" => $tanggal_pelanggaran])
+                ->orderBy('angkut_motor_table.id desc')
+                ->get()->getResultObject();
+        }
+    }
 }
