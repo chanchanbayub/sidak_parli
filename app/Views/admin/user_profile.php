@@ -28,6 +28,7 @@
 
             </div>
 
+
             <div class="col-md-8">
 
                 <div class="card">
@@ -38,11 +39,11 @@
                             <li class="nav-item">
                                 <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Profile Petugas</button>
                             </li>
-
-                            <li class="nav-item">
-                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
-                            </li>
-
+                            <?php if (session()->get('role_id') == 1) : ?>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                         <div class="tab-content pt-2">
 
@@ -91,6 +92,7 @@
                                     <div class="col-lg-9 col-md-8"><?= $petugas_detail->status_petugas ?></div>
                                 </div>
                             </div>
+
                             <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                                 <!-- Profile Edit Form -->
