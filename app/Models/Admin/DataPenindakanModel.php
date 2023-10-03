@@ -135,7 +135,7 @@ class DataPenindakanModel extends Model
                 ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
                 ->join('type_kendaraan_table', 'data_kendaraan_table.type_kendaraan_id = type_kendaraan_table.id', 'left')
                 ->where(["data_penindakan_table.ukpd_id" => $ukpd_id])
-                ->orderBy('data_penindakan_table.id desc')
+                ->orderBy('data_penindakan_table.id', 'desc')
                 ->get()->getResultObject();
         }
     }

@@ -418,7 +418,7 @@
     let signaturePad = $("#canva").signature({
         syncField: '#signature64',
         syncFormat: 'PNG',
-        color: '#0000FF',
+        // color: '#0000FF',
         // guideline: true
     });
 
