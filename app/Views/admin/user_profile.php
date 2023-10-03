@@ -39,11 +39,11 @@
                             <li class="nav-item">
                                 <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Profile Petugas</button>
                             </li>
-                            <?php if (session()->get('role_id') == 1) : ?>
-                                <li class="nav-item">
-                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
-                                </li>
-                            <?php endif; ?>
+
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                            </li>
+
                         </ul>
                         <div class="tab-content pt-2">
 
