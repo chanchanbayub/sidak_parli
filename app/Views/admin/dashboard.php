@@ -242,7 +242,7 @@
                     <!-- Sales Card -->
 
 
-                    <div class="col-xxl-12 col-md-12">
+                    <!-- <div class="col-xxl-12 col-md-12">
                         <div class="card info-card sales-card">
                             <div class="card-body">
                                 <h5 class="card-title">Jumlah <span>| ANGKUT MOTOR </span></h5>
@@ -252,13 +252,14 @@
                                         <a href="#"> <i class="bi bi-car-front"></i></a>
                                     </div>
                                     <div class="ps-3">
-                                        <h6 id="total_angkut_motor"><?= $jumlah_angkut_motor ?> <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>
+                                        <h6 id="total_angkut_motor"> <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                    </div><!-- End Sales Card -->
+                    </div> -->
+                    <!-- End Sales Card -->
                 </div>
             </div>
     </section>
@@ -268,7 +269,7 @@
             <div class="col-lg-12">
                 <div class="row">
                     <!-- Sales Card -->
-                    <div class="col-xxl-4 col-md-6">
+                    <!-- <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
                                 <h5 class="card-title">Jumlah <span>| OCP Roda 2</span></h5>
@@ -279,15 +280,16 @@
 
                                     </div>
                                     <div class="ps-3">
-                                        <h6 id="ocp_roda_2"><?= $jumlah_ocp_roda_2 ?> <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>
+                                        <h6 id="ocp_roda_2"> <span class="text-muted small pt-2 ps-1">Kendaraan</span></h6>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                    </div><!-- End Sales Card -->
+                    </div> -->
+                    <!-- End Sales Card -->
 
-                    <div class="col-xxl-4 col-md-6">
+                    <!-- <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
                                 <h5 class="card-title">Jumlah <span>| OCP RODA 3</span></h5>
@@ -298,16 +300,16 @@
 
                                     </div>
                                     <div class="ps-3">
-                                        <h6 id="ocp_roda_3"><?= $jumlah_ocp_roda_3 ?> <span class="text-muted small pt-2 ps-1">Kendaraan</span> </h6>
+                                        <h6 id="ocp_roda_3"> <span class="text-muted small pt-2 ps-1">Kendaraan</span> </h6>
 
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                    </div><!-- End Sales Card -->
+                    </div>End Sales Card -->
 
-                    <div class="col-xxl-4 col-md-6">
+                    <!-- <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
                                 <h5 class="card-title">Jumlah <span>| OCP RODA 4</span></h5>
@@ -318,13 +320,13 @@
 
                                     </div>
                                     <div class="ps-3">
-                                        <h6 id="ocp_roda_4"><?= $jumlah_ocp_roda_4 ?> <span class="text-muted small pt-2 ps-1">Kendaraan</span> </h6>
+                                        <h6 id="ocp_roda_4"><span class="text-muted small pt-2 ps-1">Kendaraan</span> </h6>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                    </div><!-- End Sales Card -->
+                    </div>End Sales Card -->
                 </div>
             </div>
     </section>

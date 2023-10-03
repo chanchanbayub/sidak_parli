@@ -18,6 +18,7 @@ class Dashboard extends BaseController
     protected $ukpdModel;
     protected $angkutMotorModel;
     protected $ocpModel;
+    protected $db;
 
 
     public function __construct()
@@ -28,6 +29,7 @@ class Dashboard extends BaseController
         $this->ukpdModel = new UkpdModel();
         $this->angkutMotorModel = new AngkutMotorModel();
         $this->ocpModel = new OcpModel();
+        $this->db = \Config\Database::connect();
         helper(["format"]);
     }
 
@@ -35,36 +37,36 @@ class Dashboard extends BaseController
     {
         $date = date('Y-m-d');
 
-        $totalPenderekanTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanTerbayarDetailPerhari($date, "");
+        $totalPenderekanTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanTerbayarDetailPerhari($date, null);
 
         $jumlah_perhari = count($totalPenderekanTerbayarDetailPerhari);
 
-        $totalPenderekanBelumTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetailPerhari($date, "");
+        $totalPenderekanBelumTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetailPerhari($date, null);
         $total_belum_terbayar_perhari = count($totalPenderekanBelumTerbayarDetailPerhari);
 
-        $totalPenderekanSelesaiPerhari = $this->dataPenindakanModel->totalPenderekanSelesaiPerhari($date, "");
+        $totalPenderekanSelesaiPerhari = $this->dataPenindakanModel->totalPenderekanSelesaiPerhari($date, null);
         $total_selesai_perhari = count($totalPenderekanSelesaiPerhari);
 
-        $totalPenderekanPerhari = $this->dataPenindakanModel->totalPenderekanPerhari($date, "");
+        $totalPenderekanPerhari = $this->dataPenindakanModel->totalPenderekanPerhari($date, null);
 
 
         // Laporan Keseluruhan
-        $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail("");
+        $totalPenderekanTerbayarDetail = $this->dataPenindakanModel->totalPenderekanTerbayarDetail(null);
         $jumlah = count($totalPenderekanTerbayarDetail);
 
-        $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail("");
+        $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail(null);
         $total_belum_terbayar = count($totalPenderekanBelumTerbayarDetail);
 
-        $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai("");
+        $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai(null);
         $total_selesai = count($totalPenderekanSelesai);
 
-        $totalPenderekan = $this->dataPenindakanModel->totalPenderekan("");
+        $totalPenderekan = $this->dataPenindakanModel->totalPenderekan(null);
 
         // laporan angkut motor keseluruhan
-        $angkut_motor_perhari = $this->angkutMotorModel->getJumlahAngkutMotorPerhari($date, "");
+        $angkut_motor_perhari = $this->angkutMotorModel->getJumlahAngkutMotorPerhari($date, null);
         $perhari = count($angkut_motor_perhari);
 
-        $jumlah_angkut_motor = $this->angkutMotorModel->getJumlahAngkutMotor("");
+        $jumlah_angkut_motor = $this->angkutMotorModel->getJumlahAngkutMotor(null);
         $total_angkut_motor = count($jumlah_angkut_motor);
 
         $jumlah_ocp_roda_2 = $this->ocpModel->where(["jenis_penindakan_id" => 2])->countAllResults();
@@ -90,12 +92,14 @@ class Dashboard extends BaseController
             'jumlah_selesai_perhari' => $total_selesai_perhari,
 
             // angkut motor
-            'jumlah_angkut_motor' => $total_angkut_motor,
+            // 'jumlah_angkut_motor' => $total_angkut_motor,
 
-            'jumlah_ocp_roda_2' => $jumlah_ocp_roda_2,
-            'jumlah_ocp_roda_3' => $jumlah_ocp_roda_3,
-            'jumlah_ocp_roda_4' => $jumlah_ocp_roda_4,
+            // 'jumlah_ocp_roda_2' => $jumlah_ocp_roda_2,
+            // 'jumlah_ocp_roda_3' => $jumlah_ocp_roda_3,
+            // 'jumlah_ocp_roda_4' => $jumlah_ocp_roda_4,
         ];
+
+        $this->db->reconnect();
         return view('admin/dashboard', $data);
     }
 
