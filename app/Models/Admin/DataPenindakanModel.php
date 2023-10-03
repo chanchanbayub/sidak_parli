@@ -173,7 +173,7 @@ class DataPenindakanModel extends Model
     public function getDataPenindakanWithNomorBAP($nomor_bap)
     {
         return $this->table($this->table)
-            ->select($this->dataTable)
+            ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
             ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
             ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
