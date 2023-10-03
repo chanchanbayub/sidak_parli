@@ -45,6 +45,7 @@ class DataPenindakanModel extends Model
 
     protected $dataTable = 'data_penindakan_table.id, data_penindakan_table.ukpd_id, data_penindakan_table.ppns_id, data_penindakan_table.spt_id,data_penindakan_table.bap_id, data_penindakan_table.jenis_pelanggaran_id,data_penindakan_table.tanggal_pelanggaran, data_penindakan_table.jam_pelanggaran, data_penindakan_table.tempat_penyimpanan_id,
     jenis_kendaraan_table.jenis_kendaraan,
+    type_kendaraan_table.type_kendaraan,
     ukpd_table.ukpd, bap_table.nomor_bap, bap_table.jenis_penindakan_id ,bap_table.unit_id, bap_table.status_bap_id,data_kendaraan_table.nomor_kendaraan, jenis_penindakan_table.jenis_penindakan, tempat_penyimpanan_table.tempat_penyimpanan, status_penderekan_table.status_penderekan';
 
     public function getDataPenindakan($ukpd_id)
@@ -119,6 +120,7 @@ class DataPenindakanModel extends Model
                 ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
                 ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
                 ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
+                ->join('type_kendaraan_table', 'data_kendaraan_table.type_kendaraan_id = type_kendaraan_table.id', 'left')
                 ->orderBy('data_penindakan_table.id desc')
                 ->get()->getResultObject();
         } else {
@@ -131,6 +133,7 @@ class DataPenindakanModel extends Model
                 ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
                 ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
                 ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
+                ->join('type_kendaraan_table', 'data_kendaraan_table.type_kendaraan_id = type_kendaraan_table.id', 'left')
                 ->where(["data_penindakan_table.ukpd_id" => $ukpd_id])
                 ->orderBy('data_penindakan_table.id desc')
                 ->get()->getResultObject();
@@ -142,7 +145,7 @@ class DataPenindakanModel extends Model
     {
         if ($ukpd_id == null) {
             return $this->table($this->table)
-                ->select($this->fieldTable)
+                ->select($this->dataTable)
                 ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id')
                 ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id', 'left')
                 ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
@@ -150,6 +153,7 @@ class DataPenindakanModel extends Model
                 ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
                 ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
                 ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
+                ->join('type_kendaraan_table', 'data_kendaraan_table.type_kendaraan_id = type_kendaraan_table.id', 'left')
                 ->where(["bap_table.status_bap_id" => 3])
                 ->orderBy('data_penindakan_table.id desc')
                 ->get()->getResultObject();
@@ -163,6 +167,7 @@ class DataPenindakanModel extends Model
                 ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
                 ->join('data_kendaraan_table', ' bap_table.id = data_kendaraan_table.bap_id', 'left')
                 ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
+                ->join('type_kendaraan_table', 'data_kendaraan_table.type_kendaraan_id = type_kendaraan_table.id', 'left')
                 ->where(["bap_table.status_bap_id" => 3])
                 ->where(["data_penindakan_table.ukpd_id" => $ukpd_id])
                 ->orderBy('data_penindakan_table.id desc')
