@@ -76,8 +76,9 @@ class DataPenindakan extends BaseController
 
     public function index()
     {
-
+        // dd(session()->get('unit_id'));
         $data_penindakan = $this->dataPenindakanModel->getDataPenindakanPenderekan(session()->get('ukpd_id'), session()->get('unit_id'));
+
         $data = [
             'title' => 'DATA PENINDAKAN',
             'data_penindakan' => $data_penindakan
@@ -422,7 +423,7 @@ class DataPenindakan extends BaseController
 
                 $noBap = $this->bapModel->where(["id" => $bap_id])->get()->getRowObject();
 
-                if ($nama_pengemudi != null) {
+                if ($nama_pengemudi != null || $alamat_pengemudi != null || $nomor_hp != null || $nomor_identitas != null) {
                     $this->bapModel->update($noBap->id, [
                         'id' => $noBap->id,
                         'bap_id' => $bap_id,
@@ -446,6 +447,7 @@ class DataPenindakan extends BaseController
 
     public function detail($nomor_bap)
     {
+        // dd(session()->get('role_id'));
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
         // dd($detail_data_penindakan);
 
@@ -460,6 +462,7 @@ class DataPenindakan extends BaseController
     public function edit_data($nomor_bap)
     {
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
+        // dd($nomor_bap);
 
         // dd($detail_data_penindakan);
         if ($detail_data_penindakan == null) {

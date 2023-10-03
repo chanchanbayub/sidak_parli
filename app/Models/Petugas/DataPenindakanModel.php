@@ -222,7 +222,7 @@ class DataPenindakanModel extends Model
         return $this->table($this->table)
             ->select($this->fieldTable)
             ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
-            ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id', 'left')
+            ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
             ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
             ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
             ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id', 'left')
@@ -234,7 +234,7 @@ class DataPenindakanModel extends Model
             ->join('unit_regu_table', 'unit_regu_table.id = bap_table.unit_id', 'left')
             ->join('data_pelanggar_table', 'data_pelanggar_table.bap_id = data_penindakan_table.bap_id', 'left')
             ->join('kartu_identitas_table', 'kartu_identitas_table.id = data_pelanggar_table.kartu_identitas_id', 'left')
-            ->join('petugas_table', 'petugas_table.unit_id = unit_regu_table.id', 'left')
+            ->join('petugas_table', 'petugas_table.unit_id = unit_regu_table.id')
             ->join('tanda_tangan_petugas_table', 'tanda_tangan_petugas_table.petugas_id = petugas_table.id', 'left')
             ->join('lokasi_penindakan_table', 'lokasi_penindakan_table.bap_id = data_penindakan_table.bap_id', 'left')
             ->join('provinsi', 'provinsi.id = lokasi_penindakan_table.provinsi_id', 'left')
@@ -246,6 +246,7 @@ class DataPenindakanModel extends Model
             ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
             ->where(["bap_table.unit_id" => $unit_id])
             ->where(["bap_table.status_bap_id" => 3])
+            ->orWhere(["bap_table.status_bap_id" => 2])
             ->get()->getResultObject();
     }
 

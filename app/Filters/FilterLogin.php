@@ -25,7 +25,7 @@ class FilterLogin implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (!session('isLogedIn')) {
+        if (!session()->get('isLogedIn')) {
             return redirect()->to('/auth/login');
         }
     }

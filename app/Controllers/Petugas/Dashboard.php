@@ -32,6 +32,7 @@ class Dashboard extends BaseController
 
         $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail($date, $unit_id);
         $total_belum_terbayar = count($totalPenderekanBelumTerbayarDetail);
+        // dd($totalPenderekanBelumTerbayarDetail);
 
         $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai($date, $unit_id);
         $total_selesai = count($totalPenderekanSelesai);
