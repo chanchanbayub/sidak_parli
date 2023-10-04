@@ -25,11 +25,11 @@ class Login extends BaseController
 
     public function index()
     {
-        if (session('isLogedIn') == true) {
+        if (session()->get('isLogedIn')) {
             return redirect()->back();
         }
 
-        // dd(session()->get('username'));
+
         $data = [
             'title' => 'SIDAK PARLI | LOGIN'
         ];
@@ -77,7 +77,6 @@ class Login extends BaseController
                             'id' => $user_data->id,
                             'status_id' => 1
                         ]);
-
                         $data = [
                             'id' => $user_data->id,
                             'ukpd' => $user_data->ukpd,
@@ -101,11 +100,11 @@ class Login extends BaseController
                             'url' => '/admin/dashboard'
                         ];
                     } else if ($user_data->role_id == 3) {
-
                         $this->petugasModel->update($user_data->id, [
                             'id' => $user_data->id,
                             'status_id' => 1
                         ]);
+
                         $data = [
                             'id' => $user_data->id,
                             'ukpd' => $user_data->ukpd,
@@ -123,6 +122,8 @@ class Login extends BaseController
                             'isLogedIn' => true
                         ];
                         session()->set($data);
+
+
 
                         $alert = [
                             'success' => 'Berhasil Login !',

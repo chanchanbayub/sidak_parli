@@ -484,7 +484,7 @@ class DataPenindakan extends BaseController
 
                 $noBap = $this->bapModel->where(["id" => $bap_id])->get()->getRowObject();
 
-                if ($nama_pengemudi != null || $alamat_pengemudi != null) {
+                if ($nama_pengemudi != null || $alamat_pengemudi != null || $tanda_tangan_pelanggar != null) {
                     $this->bapModel->update($noBap->id, [
                         'id' => $noBap->id,
                         'bap_id' => $bap_id,
@@ -508,8 +508,11 @@ class DataPenindakan extends BaseController
 
     public function detail($nomor_bap)
     {
+
+        // dd(session()->get('role_id'));
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
         // dd($detail_data_penindakan);
+
 
         $data = [
             'title' => 'DETAIL DATA PENINDAKAN',
@@ -541,12 +544,9 @@ class DataPenindakan extends BaseController
         }
     }
 
-    public function edit_data($nomor_bap)
+    public function editData($nomor_bap)
     {
         $detail_data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
-
-        // dd($detail_data_penindakan);
-
         if ($detail_data_penindakan == null) {
             return redirect()->back();
         } else {

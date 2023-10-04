@@ -36,18 +36,20 @@ class Dashboard extends BaseController
     public function index()
     {
         $date = date('Y-m-d');
+        // dd($date);
 
-        $totalPenderekanTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanTerbayarDetailPerhari($date, null);
+        $totalPenderekanTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanTerbayarDetailPerhari($date, "");
 
         $jumlah_perhari = count($totalPenderekanTerbayarDetailPerhari);
 
-        $totalPenderekanBelumTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetailPerhari($date, null);
+        $totalPenderekanBelumTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetailPerhari($date, "");
         $total_belum_terbayar_perhari = count($totalPenderekanBelumTerbayarDetailPerhari);
 
-        $totalPenderekanSelesaiPerhari = $this->dataPenindakanModel->totalPenderekanSelesaiPerhari($date, null);
+
+        $totalPenderekanSelesaiPerhari = $this->dataPenindakanModel->totalPenderekanSelesaiPerhari($date, "");
         $total_selesai_perhari = count($totalPenderekanSelesaiPerhari);
 
-        $totalPenderekanPerhari = $this->dataPenindakanModel->totalPenderekanPerhari($date, null);
+        $totalPenderekanPerhari = $this->dataPenindakanModel->totalPenderekanPerhari($date, "");
 
 
         // Laporan Keseluruhan
@@ -56,6 +58,7 @@ class Dashboard extends BaseController
 
         $totalPenderekanBelumTerbayarDetail = $this->dataPenindakanModel->totalPenderekanBelumTerbayarDetail(null);
         $total_belum_terbayar = count($totalPenderekanBelumTerbayarDetail);
+        // dd($total_belum_terbayar);
 
         $totalPenderekanSelesai = $this->dataPenindakanModel->totalPenderekanSelesai(null);
         $total_selesai = count($totalPenderekanSelesai);
@@ -79,17 +82,19 @@ class Dashboard extends BaseController
             'ukpd' => $this->ukpdModel->getUKPD(),
             'jumlah_unit'  => $this->unitReguModel->countAllResults(),
 
+            // harian
+            'total_penderekan_perhari' => $totalPenderekanPerhari,
+            'jumlah_terbayar_perhari' => $jumlah_perhari,
+            'jumlah_belum_bayar_perhari' => $total_belum_terbayar_perhari,
+            'jumlah_selesai_perhari' => $total_selesai_perhari,
+
             'jumlah_penderekan' => $totalPenderekan,
             'jumlah_penderekan_terbayar' => $jumlah,
             'jumlah_penderekan_belum_terbayar' => $total_belum_terbayar,
             'jumlah_penderekan_selesai' => $total_selesai,
             'detail_terbayar' => $totalPenderekanTerbayarDetail,
 
-            // harian
-            'total_penderekan_perhari' => $totalPenderekanPerhari,
-            'jumlah_terbayar_perhari' => $jumlah_perhari,
-            'jumlah_belum_bayar_perhari' => $total_belum_terbayar_perhari,
-            'jumlah_selesai_perhari' => $total_selesai_perhari,
+
 
             // angkut motor
             // 'jumlah_angkut_motor' => $total_angkut_motor,

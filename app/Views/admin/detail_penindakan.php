@@ -41,28 +41,31 @@
 
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                        <h6>Tanda Tangan Pelanggar</h6>
-                        <img src="/<?= $detail_data->tanda_tangan_pelanggar ?>" alt="tanda tangan" class="img-fluid">
-                        <h2><?= $detail_data->nama_pengemudi ?></h2>
+                <?php if ($detail_data->tanda_tangan_pelanggar != null) : ?>
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                            <h6>Tanda Tangan Pelanggar</h6>
+                            <img src="/<?= $detail_data->tanda_tangan_pelanggar ?>" alt="tanda tangan" class="img-fluid">
+                            <h2><?= $detail_data->nama_pengemudi ?></h2>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
 
                 <div class="card">
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                        <?php if ($detail_data->nama_pengemudi != null) : ?>
+                        <?php if ($detail_data->status_bap_id == 3 || $detail_data->status_bap_id == 4 || $detail_data->status_bap_id == 5) : ?>
+                            <h6>Berita Acara Penderekan</h6>
                             <a href="/pdf/bap_digital/<?= $detail_data->nomor_bap ?>" target="_blank" class="btn btn-sm btn-primary" type="button">
                                 <i class="bi bi-download"> </i> Download BAP
                             </a>
-                        <?php else : ?>
+                        <?php elseif ($detail_data->status_bap_id == 2) :  ?>
                             <a href="/admin/data_penindakan/edit_data/<?= $detail_data->nomor_bap ?>" class="btn btn-sm btn-warning" type="button">
                                 <i class="bi bi-exclamation-square"> </i> Data Belum Lengkap
                             </a>
                         <?php endif; ?>
                     </div>
                 </div>
-                <?php if ($detail_data->jenis_spk != null) : ?>
+                <?php if ($detail_data->status_bap_id == 4 || $detail_data->status_bap_id == 5) : ?>
                     <div class="card">
                         <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                             <h6><?= $detail_data->jenis_spk ?></h6>

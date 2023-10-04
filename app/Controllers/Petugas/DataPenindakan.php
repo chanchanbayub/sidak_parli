@@ -90,6 +90,8 @@ class DataPenindakan extends BaseController
 
     public function tambah_penindakan()
     {
+        $ppns = $this->petugasModel->getPPNS(session()->get('ukpd_id'));
+        // dd($ppns);
         $data = [
             'title' => 'TAMBAH DATA PENINDAKAN',
             'ukpd' => $this->ukpdModel->getUkpd(),

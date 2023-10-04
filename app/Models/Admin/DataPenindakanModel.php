@@ -477,9 +477,10 @@ class DataPenindakanModel extends Model
                 ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
                 ->join('type_kendaraan_table', 'data_kendaraan_table.type_kendaraan_id = type_kendaraan_table.id', 'left')
                 ->where(["bap_table.jenis_penindakan_id" => 1])
+                ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
                 ->where(["bap_table.status_bap_id" => 3])
                 ->orWhere(["bap_table.status_bap_id" => 2])
-                ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
+
                 ->get()->getResultObject();
         } else {
             return $this->table($this->table)
@@ -493,9 +494,9 @@ class DataPenindakanModel extends Model
                 ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
                 ->join('type_kendaraan_table', 'data_kendaraan_table.type_kendaraan_id = type_kendaraan_table.id', 'left')
                 ->where(["bap_table.jenis_penindakan_id" => 1])
+                ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
                 ->where(["bap_table.status_bap_id" => 3])
                 ->orWhere(["bap_table.status_bap_id" => 2])
-                ->where(["data_penindakan_table.tanggal_pelanggaran" => $tanggal_pelanggaran])
                 ->where(["ukpd_table.id" => $ukpd_id])
                 ->get()->getResultObject();
         }

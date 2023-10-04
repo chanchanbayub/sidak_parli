@@ -162,10 +162,11 @@ $routes->group('/admin', function ($routes) {
     $routes->get('data_penindakan/getKota', 'Admin\DataPenindakan::getKota');
     $routes->get('data_penindakan/getKecamatan', 'Admin\DataPenindakan::getKecamatan');
     $routes->post('data_penindakan/insert', 'Admin\DataPenindakan::insert');
-    $routes->get('data_penindakan/detail/(:any)', 'Admin\DataPenindakan::detail/$1');
+    $routes->get('data_penindakan/detail/(:num)', 'Admin\DataPenindakan::detail/$1');
     $routes->get('data_penindakan/edit', 'Admin\DataPenindakan::edit');
     $routes->get('data_penindakan/edit_status', 'Admin\DataPenindakan::edit_status');
-    $routes->get('data_penindakan/edit_data/(:any)', 'Admin\DataPenindakan::edit_data/$1');
+
+    $routes->get('data_penindakan/edit_data/(:num)', 'Admin\DataPenindakan::editData/$1');
 
     $routes->get('data_penindakan/detail_terbayar/', 'Admin\DataPenindakan::detail_terbayar');
     $routes->get('data_penindakan/detail_belum_terbayar/', 'Admin\DataPenindakan::detail_belum_terbayar');
@@ -174,7 +175,7 @@ $routes->group('/admin', function ($routes) {
     $routes->get('data_penindakan/detail_terbayar_perhari', 'Admin\DataPenindakan::detail_terbayar_perhari');
     $routes->get('data_penindakan/detail_terbayar_perhari_with_ukpd/(:any)', 'Admin\DataPenindakan::detail_terbayar_perhari_with_ukpd/$1');
 
-    $routes->get('data_penindakan/detail_belum_terbayar_perhari/', 'Admin\DataPenindakan::detail_belum_terbayar_perhari');
+    $routes->get('data_penindakan/detail_belum_terbayar_perhari', 'Admin\DataPenindakan::detail_belum_terbayar_perhari');
     $routes->get('data_penindakan/detail_belum_terbayar_perhari_with_ukpd/(:any)', 'Admin\DataPenindakan::detail_belum_terbayar_perhari_with_ukpd/$1');
 
 

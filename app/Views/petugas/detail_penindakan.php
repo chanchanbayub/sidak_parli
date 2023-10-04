@@ -41,13 +41,15 @@
 
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                        <h6>Tanda Tangan Pelanggar</h6>
-                        <img src="/<?= $detail_data->tanda_tangan_pelanggar ?>" alt="tanda tangan" class="img-fluid">
-                        <h2><?= $detail_data->nama_pengemudi ?></h2>
+                <?php if ($detail_data->tanda_tangan_pelanggar != null) : ?>
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                            <h6>Tanda Tangan Pelanggar</h6>
+                            <img src="/<?= $detail_data->tanda_tangan_pelanggar ?>" alt="tanda tangan" class="img-fluid">
+                            <h2><?= $detail_data->nama_pengemudi ?></h2>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
 
                 <div class="card">
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
