@@ -67,8 +67,8 @@ class Filters extends BaseConfig
     public array $filters = [
         'isLogedIn' => [
             'before' => [
-                'petugas/*',
-                'admin/*'
+                // 'petugas/*',
+                // 'admin/'
             ],
         ]
     ];
