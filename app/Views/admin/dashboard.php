@@ -22,7 +22,7 @@
                             <select name="ukpd_id" id="ukpd_id" class="form-control" required>
                                 <option value="">Silahkan Pilih</option>
                                 <?php foreach ($ukpd as $data) : ?>
-                                    <option value="<?= $data->id ?>"> <?= $data->ukpd ?></option>
+                                    <option value="<?= $data->id ?>"> <?= $data->nama_dinas ?></option>
                                 <?php endforeach; ?>
                             </select>
                             <button type="submit" class="btn btn-outline-primary send">Filter</button>
@@ -360,7 +360,7 @@
                 $('.send').prop('disabled', false);
 
                 // Harian
-                $(".title_data").html(`laporan harian penderekan ${response.ukpd.ukpd}`);
+                $(".title_data").html(`laporan harian penderekan ${response.ukpd.nama_dinas}`);
 
                 $("#perhari").html(`<h6 id="perhari"> ${response.total_penderekan_perhari}<span class="text-muted small pt-2 ps-1">Kendaraan </span></h6>`)
                 $("#terbayar_perhari").html(`<h6 id="terbayar_perhari">${response.jumlah_terbayar_perhari}<span class="text-muted small pt-2 ps-1">Kendaraan </span></h6>`)

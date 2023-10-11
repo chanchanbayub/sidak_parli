@@ -20,7 +20,7 @@ class UkpdModel extends Model
     public function getUkpd()
     {
         return $this->table($this->table)
-            ->orderBy('id desc')
+            ->orderBy('id asc')
             ->get()->getResultObject();
     }
 }
