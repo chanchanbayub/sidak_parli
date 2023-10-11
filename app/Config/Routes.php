@@ -234,6 +234,7 @@ $routes->group('/admin', function ($routes) {
 
 $routes->get('/pdf/bap_digital/(:any)', 'Pdf\Pdf::index/$1');
 $routes->get('/exportExcel', 'Excel\ExportExcel::index');
+$routes->get('/exportExcelOcp', 'Excel\ExportExcel::exportOcp');
 
 $routes->group('/auth', function ($routes) {
     $routes->get('login', 'Auth\Login::index');

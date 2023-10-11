@@ -20,10 +20,17 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><?= $title ?></h5>
-                        <p>
-                            <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#smallModal">Tambah OCP</button>
-                        </p>
-
+                        <div class="btn-group-sm" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Action
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <?php if (session()->get('role_id') == 1 || session()->get('role_id') == 2) : ?>
+                                    <a class="dropdown-item btn-sm" data-bs-toggle="modal" data-bs-target="#smallModal"> <i class="bi bi-plus"></i>Tambah OCP</a>
+                                    <a href="/exportExcelOcp" class="dropdown-item btn-sm"><i class="bi bi-file-earmark-excel"></i> Export Excel</a>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
                         <!-- Table with stripped rows -->
                         <div class="table-responsive">
                             <table class="table datatable">
