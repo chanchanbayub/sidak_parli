@@ -11,17 +11,12 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#penindakan-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-database-lock"></i><span>Master Data Penderekan </span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-database-lock"></i><span>Penindakan Roda 4 </span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="penindakan-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="/petugas/data_penindakan">
                         <i class="bi bi-circle"></i><span>Data Penderekan</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/petugas/ocp">
-                        <i class="bi bi-circle"></i><span>OPS Cabut Pentil</span>
                     </a>
                 </li>
             </ul>
@@ -34,6 +29,11 @@
                 <li>
                     <a href="/petugas/angkut_motor">
                         <i class="bi bi-circle"></i><span>Angkut Motor</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/petugas/ocp">
+                        <i class="bi bi-circle"></i><span>OPS Cabut Pentil</span>
                     </a>
                 </li>
 

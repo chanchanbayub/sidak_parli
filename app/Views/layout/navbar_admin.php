@@ -121,7 +121,7 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#penindakan-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-car-front"></i><span>Master Data Penderekan </span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-car-front"></i><span>Penindakan Roda 4 </span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="penindakan-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
