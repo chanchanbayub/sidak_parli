@@ -29,7 +29,7 @@
                                 <select class="form-select" name="ukpd_id" id="ukpd_id">
                                     <option value="">--Silahkan Pilih--</option>
                                     <?php foreach ($ukpd as $ukpd) : ?>
-                                        <option value="<?= $ukpd->id ?>" selected><?= $ukpd->ukpd ?></option>
+                                        <option value="<?= $ukpd->id ?>"><?= $ukpd->ukpd ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <div class="invalid-feedback error-ukpd">
