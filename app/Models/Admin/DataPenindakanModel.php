@@ -108,6 +108,37 @@ class DataPenindakanModel extends Model
         }
     }
 
+    public function getDataPenindakanWithNoKendaraan($nomor_kendaraan)
+    {
+        return $this->table($this->table)
+            ->select($this->fieldTable)
+            ->join('ukpd_table', 'ukpd_table.id = data_penindakan_table.ukpd_id', 'left')
+            ->join('bap_table', 'bap_table.id = data_penindakan_table.bap_id')
+            ->join('jenis_penindakan_table', 'jenis_penindakan_table.id = bap_table.jenis_penindakan_id', 'left')
+            ->join('status_penderekan_table', 'status_penderekan_table.id = bap_table.status_bap_id', 'left')
+            ->join('data_kendaraan_table', 'bap_table.id = data_kendaraan_table.bap_id', 'left')
+            ->join('jenis_kendaraan_table', 'data_kendaraan_table.jenis_kendaraan_id = jenis_kendaraan_table.id', 'left')
+            ->join('type_kendaraan_table', 'data_kendaraan_table.type_kendaraan_id = type_kendaraan_table.id', 'left')
+            ->join('nomor_spt_table', 'nomor_spt_table.id = data_penindakan_table.spt_id', 'left')
+            ->join('tempat_penyimpanan_table', 'tempat_penyimpanan_table.id = data_penindakan_table.tempat_penyimpanan_id', 'left')
+            ->join('jenis_pelanggaran_table', 'jenis_pelanggaran_table.id = data_penindakan_table.jenis_pelanggaran_id', 'left')
+            ->join('unit_regu_table', 'unit_regu_table.id = bap_table.unit_id', 'left')
+            ->join('data_pelanggar_table', 'data_pelanggar_table.bap_id = data_penindakan_table.bap_id', 'left')
+            ->join('kartu_identitas_table', 'kartu_identitas_table.id = data_pelanggar_table.kartu_identitas_id', 'left')
+            ->join('petugas_table', 'petugas_table.unit_id = unit_regu_table.id', 'left')
+            ->join('tanda_tangan_petugas_table', 'tanda_tangan_petugas_table.petugas_id = petugas_table.id', 'left')
+            ->join('lokasi_penindakan_table', 'lokasi_penindakan_table.bap_id = data_penindakan_table.bap_id', 'left')
+            ->join('provinsi', 'provinsi.id = lokasi_penindakan_table.provinsi_id', 'left')
+            ->join('kota', 'kota.id = lokasi_penindakan_table.kota_id', 'left')
+            ->join('kecamatan', 'kecamatan.id = lokasi_penindakan_table.kecamatan_id', 'left')
+            ->join('foto_penindakan_table', 'bap_table.id = foto_penindakan_table.bap_id', 'left')
+            ->join('surat_pengeluaran_table', 'bap_table.id = surat_pengeluaran_table.bap_id', 'left')
+            ->join('jenis_spk_table', 'jenis_spk_table.id = surat_pengeluaran_table.jenis_spk_id', 'left')
+            ->where(["data_kendaraan_table.nomor_kendaraan" => $nomor_kendaraan])
+            ->orderBy('data_penindakan_table.id desc')
+            ->get()->getRowObject();
+    }
+
     public function getDataPenindakanPenderekan($ukpd_id)
     {
         if ($ukpd_id == null) {

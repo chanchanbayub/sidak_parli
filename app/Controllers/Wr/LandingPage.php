@@ -3,7 +3,7 @@
 namespace App\Controllers\Wr;
 
 use App\Controllers\BaseController;
-use App\Models\Petugas\DataPenindakanModel;
+use App\Models\Admin\DataPenindakanModel;
 
 class LandingPage extends BaseController
 {
@@ -20,7 +20,7 @@ class LandingPage extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'SIDAK PARLI ',
+            'title' => 'SIDAK PARLI',
         ];
 
         return view('public_user/landing_page', $data);
@@ -46,7 +46,6 @@ class LandingPage extends BaseController
                 $nomor_kendaraan = $this->request->getVar('nomor_kendaraan');
 
                 $data_penindakan = $this->dataPenindakan->getDataPenindakanWithNoKendaraan($nomor_kendaraan);
-
 
                 if ($data_penindakan == null) {
 
