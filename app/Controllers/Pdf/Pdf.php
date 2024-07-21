@@ -41,4 +41,27 @@ class Pdf extends BaseController
         $this->response->setHeader('Content-Type', 'application/pdf');;
         $this->mpdf->output('BAP_' . $data_penindakan->nomor_kendaraan . '.pdf', 'I');
     }
+
+    public function cetak_spk($nomor_bap)
+    {
+        $this->mpdf->showImageErrors = true;
+        $data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
+
+        // dd($data_penindakan);
+
+        $ppns = $this->petugasModel->getDataPPNSBAP($data_penindakan->ppns_id);
+
+        helper(['format']);
+
+        $data = [
+            'data' =>  $data_penindakan,
+            'ppns' => $ppns
+        ];
+
+        $html = view('pdf/spk', $data);
+        $this->mpdf->WriteHTML($html);
+
+        $this->response->setHeader('Content-Type', 'application/pdf');;
+        $this->mpdf->output('SPK_' . $data_penindakan->nomor_kendaraan . '.pdf', 'I');
+    }
 }

@@ -233,6 +233,7 @@ $routes->group('/admin', function ($routes) {
 });
 
 $routes->get('/pdf/bap_digital/(:any)', 'Pdf\Pdf::index/$1');
+$routes->get('/pdf/spk/(:any)', 'Pdf\Pdf::cetak_spk/$1');
 $routes->get('/exportExcel', 'Excel\ExportExcel::index');
 $routes->get('/exportExcelOcp', 'Excel\ExportExcel::exportOcp');
 

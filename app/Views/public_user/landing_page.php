@@ -127,7 +127,7 @@ use CodeIgniter\Filters\CSRF;
                 </div>
                 <div class="modal-footer text-center">
                     <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fa fa-times"></i> Close</button>
-                    <a class="btn btn-success" href="" target="_blank" id="whatsapp"> <i class="fab fa-whatsapp"></i> Ajukan Pengeluaran</a>
+                    <!-- <a class="btn btn-success" href="" target="_blank" id="whatsapp"> <i class="fab fa-whatsapp"></i> Ajukan Pengeluaran</a> -->
                     <a href="" class="btn btn-primary" target="_blank" id="download"> <i class="fa fa-download"></i> Download BAP</a>
                 </div>
             </div>
@@ -193,7 +193,7 @@ use CodeIgniter\Filters\CSRF;
                         } else if (response.data_penindakan.status_bap_id == 4 || response.data_penindakan.status_bap_id == 5) {
                             $(".status").addClass("badge badge-success status")
                             $("#download").css('display', 'block');
-                            $("#download").attr('href', `/spk/${response.data_penindakan.nomor_spk_pdf}`);
+                            $("#download").attr('href', `/pdf/spk/${response.data_penindakan.nomor_bap}`);
                             $("#whatsapp").css('display', 'none');
                             $("#download").html('<i class="fa fa-download"></i> Download SPK');
                         }

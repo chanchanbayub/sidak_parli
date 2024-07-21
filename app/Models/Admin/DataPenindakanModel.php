@@ -19,7 +19,7 @@ class DataPenindakanModel extends Model
 
     protected $fieldTable =
     'data_penindakan_table.id, data_penindakan_table.ukpd_id, data_penindakan_table.ppns_id, data_penindakan_table.spt_id,data_penindakan_table.bap_id, data_penindakan_table.jenis_pelanggaran_id,data_penindakan_table.tanggal_pelanggaran, data_penindakan_table.jam_pelanggaran, data_penindakan_table.tempat_penyimpanan_id,
-    ukpd_table.ukpd,
+    ukpd_table.ukpd, ukpd_table.nama_dinas,
     status_penderekan_table.status_penderekan,
     bap_table.nomor_bap, bap_table.status_bap_id, bap_table.unit_id,bap_table.jenis_penindakan_id,
     data_kendaraan_table.nomor_kendaraan,data_kendaraan_table.merk_kendaraan, data_kendaraan_table.warna_kendaraan, data_kendaraan_table.jenis_kendaraan_id,data_kendaraan_table.type_kendaraan_id,

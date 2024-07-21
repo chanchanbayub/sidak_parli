@@ -70,7 +70,7 @@
                         <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                             <h6>Surat Pernyataan</h6>
                             <!-- <h6><= $detail_data->jenis_spk ?></h6> -->
-                            <a href="#" target="_blank" class="btn btn-sm btn-primary" type="button">
+                            <a href="/pdf/spk/<?= $detail_data->nomor_bap ?>" target="_blank" class="btn btn-sm btn-primary" type="button">
                                 <i class="bi bi-download"> </i> Surat Pengeluaran Kendaraan
                             </a>
                             <!-- 
