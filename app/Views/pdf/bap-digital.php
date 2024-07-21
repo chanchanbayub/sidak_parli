@@ -152,7 +152,7 @@
                     <p id="p1"> pemerintah daerah khusus ibu kota jakarta</p>
                     <p id="p2"> dinas perhubungan</p>
                     <p id="p3">Jalan Taman Jatibaru Nomor 1 Telepon 3501349 Faksimile 3455264</p>
-                    <p id="p4">Website : www.dishub.jakarta.go.id E-mail : admsuratdishubdki@gmail.com </p>
+                    <p id="p4">Website : www.dishub.jakarta.go.id E-mail : dishub@jakarta.go.id </p>
                     <p id="p4">J A K A R T A</p>
                 </td>
                 <td>
@@ -193,7 +193,19 @@
                     <h2 style="text-align:center;">PENDEREKAN PEMINDAHAN KENDARAAN</h2>
                 </td>
                 <td>
-                    <p> No. <b style="color:red ;"> <?= $data->nomor_bap ?> </b></p>
+                    <?php if ($data->ukpd_id == 1) : ?>
+                        <p> No. <b style="color:red ;">BD <?= $data->nomor_bap ?> </b></p>
+                    <?php elseif ($data->ukpd_id == 2) : ?>
+                        <p> No. <b style="color:red ;">SJP <?= $data->nomor_bap ?> </b></p>
+                    <?php elseif ($data->ukpd_id == 3) : ?>
+                        <p> No. <b style="color:red ;">SJU <?= $data->nomor_bap ?> </b></p>
+                    <?php elseif ($data->ukpd_id == 4) : ?>
+                        <p> No. <b style="color:red ;">SJS <?= $data->nomor_bap ?> </b></p>
+                    <?php elseif ($data->ukpd_id == 5) : ?>
+                        <p> No. <b style="color:red ;">SJB <?= $data->nomor_bap ?> </b></p>
+                    <?php elseif ($data->ukpd_id == 6) : ?>
+                        <p> No. <b style="color:red ;">SJT <?= $data->nomor_bap ?> </b></p>
+                    <?php endif; ?>
                 </td>
                 <td>
                     <h3> <b style="color:red ;"></b></h3>
@@ -259,7 +271,7 @@
         <table class="content-table">
             <tr>
                 <td>
-                    <p>----------Untuk pengeluaran kendaraan saudara diwajibkan membayar Retribusi sesuai Perda 1 Tahun 2015 tentang Perubahan Atas Perda 3 Tahun 2012 tentang Retribusi Daerah dan menyelesaikan administrasi Pengeluaran Kendaraan, selanjutnya pengambilan kendaraan dilakukan di Tempat Penyimpanan Kendaraan atas.
+                    <p>----------Untuk pengeluaran kendaraan saudara diwajibkan untuk menyelesaikan administrasi Pengeluaran Kendaraan, selanjutnya pengambilan kendaraan dilakukan di Tempat Penyimpanan Kendaraan di atas.
                         <br> ----------Demikian Berita Acara Penderekan Pemindahan Kendaraan ini dibuat dengan sebenar benarnya atas kekuatan sumpah jabatan, kemudian ditutup dan ditandatangani di <b class="output">Jakarta</b> pada tanggal <b class="output"> <?= date_indo(date('Y-m-d', strtotime($data->tanggal_pelanggaran))) ?></b><b>.</b>
                     </p>
                 </td>

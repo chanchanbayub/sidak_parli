@@ -24,6 +24,8 @@ class Pdf extends BaseController
         $this->mpdf->showImageErrors = true;
         $data_penindakan = $this->dataPenindakanModel->getDataPenindakanWithNomorBAP($nomor_bap);
 
+        // dd($data_penindakan);
+
         $ppns = $this->petugasModel->getDataPPNSBAP($data_penindakan->ppns_id);
 
         helper(['format']);
