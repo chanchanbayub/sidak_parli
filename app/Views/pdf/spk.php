@@ -78,6 +78,7 @@
 
         .ttd {
             text-align: center;
+            box-sizing: border-box;
         }
 
         #noSuratKend {
@@ -133,7 +134,7 @@
         }
 
         .ttd_digital {
-            width: 155px;
+            width: 100px;
         }
 
         .ttd_cap {
@@ -277,7 +278,7 @@
             <tr>
                 <td>Hari / Tanggal</td>
                 <td>:</td>
-                <td> <b class="output"> <?= tanggal_indonesia(date('Y-m-d', strtotime($data->tanggal_pelanggaran))) ?>. <?= date_indo(date('Y-m-d', strtotime($data->tanggal_pelanggaran))) ?></b></td>
+                <td> <b class="output"> <?= tanggal_indonesia(date('Y-m-d', strtotime($data->tanggal_pelanggaran))) ?>, <?= date_indo(date('Y-m-d', strtotime($data->tanggal_pelanggaran))) ?></b></td>
             </tr>
         </table>
 
@@ -303,71 +304,11 @@
                 <td></td>
                 <td align="center" style="width:75%">Lalu Lintas Dan Angkutan Jalan</td>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
 
-            </tr>
             <tr>
                 <td></td>
                 <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td align="center"><img src="ttd_pim/ttd_12.png" width="150px" alt="logo" /></td>
             </tr>
             <tr>
                 <td></td>
