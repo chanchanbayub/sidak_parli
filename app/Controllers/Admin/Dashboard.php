@@ -36,7 +36,6 @@ class Dashboard extends BaseController
     public function index()
     {
         $date = date('Y-m-d');
-        // dd($date);
 
         $totalPenderekanTerbayarDetailPerhari = $this->dataPenindakanModel->totalPenderekanTerbayarDetailPerhari($date, "");
 
