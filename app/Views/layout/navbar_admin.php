@@ -150,7 +150,7 @@
             </ul>
         </li><!-- End Components Nav -->
 
-        <!-- <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#pengeluaran-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-database-lock"></i><span>Surat Pengeluaran </span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -161,7 +161,7 @@
                     </a>
                 </li>
             </ul>
-        </li> -->
+        </li>
         <!-- End Components Nav -->
 
     </ul>
