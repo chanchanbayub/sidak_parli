@@ -488,7 +488,7 @@ class DataPenindakan extends BaseController
                     $this->bapModel->update($noBap->id, [
                         'id' => $noBap->id,
                         'bap_id' => $bap_id,
-                        'status_bap_id' => 5
+                        'status_bap_id' => 3
                     ]);
                 } else {
                     $this->bapModel->update($noBap->id, [
@@ -949,14 +949,14 @@ class DataPenindakan extends BaseController
                             $this->bapModel->update($noBap->id, [
                                 'id' => $noBap->id,
                                 'bap_id' => $bap_id,
-                                'status_bap_id' => 5
+                                'status_bap_id' => 4
                             ]);
                         }
                     } else {
                         $this->bapModel->update($noBap->id, [
                             'id' => $noBap->id,
                             'bap_id' => $bap_id,
-                            'status_bap_id' => 5
+                            'status_bap_id' => 3
                         ]);
                     }
                 } else {
