@@ -127,10 +127,10 @@ use CodeIgniter\Filters\CSRF;
                 </div>
                 <div class="modal-footer text-center">
                     <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fa fa-times"></i> Close</button>
-                    <!-- <a class="btn btn-success" href="" target="_blank" id="whatsapp"> <i class="fab fa-whatsapp"></i> Ajukan Pengeluaran</a> -->
+                    <a class="btn btn-success" href="" target="_blank" id="whatsapp"> <i class="fab fa-whatsapp"></i> Ajukan Pengeluaran</a>
                     <a href="" class="btn btn-primary" target="_blank" id="download"> <i class="fa fa-download"></i> Download BAP</a>
 
-                    <a href="" class="btn btn-success" target="_blank" id="download_spk"> <i class="fa fa-download"></i> Download SPK</a>
+                    <!-- <a href="" class="btn btn-success" target="_blank" id="download_spk"> <i class="fa fa-download"></i> Download SPK</a> -->
                 </div>
             </div>
         </div>
@@ -186,20 +186,21 @@ use CodeIgniter\Filters\CSRF;
                             $(".status").addClass("badge badge-warning status")
                             $("#download").css('display', 'none')
                         } else if (response.data_penindakan.status_bap_id == 3) {
+                            $(".status").addClass("badge badge-danger status")
                             $("#download").css('display', 'block')
                             $("#download").html('<i class="fa fa-download"></i> Download BAP');
                             $("#download").attr('href', `/pdf/bap_digital/${response.data_penindakan.nomor_bap}`);
                             $("#whatsapp").css('display', 'block');
                             $("#whatsapp").attr('href', `https://api.whatsapp.com/send?phone=6285799200900&text=PARKIR%20${response.data_penindakan.nomor_kendaraan}%20${response.data_penindakan.nama_jalan}`);
-                            $(".status").addClass("badge badge-danger status")
+
                         } else if (response.data_penindakan.status_bap_id == 4 || response.data_penindakan.status_bap_id == 5) {
                             $(".status").addClass("badge badge-success status")
-                            $("#download").css('display', 'block');
+                            // $("#download").css('display', 'block');
                             $("#download_spk").attr('href', `/pdf/spk/${response.data_penindakan.nomor_bap}`);
-                            $("#download").attr('href', `/pdf/bap_digital/${response.data_penindakan.nomor_bap}`);
+                            // $("#download").attr('href', `/pdf/bap_digital/${response.data_penindakan.nomor_bap}`);
                             $("#whatsapp").css('display', 'none');
-                            $("#download").html('<i class="fa fa-download"></i> Download BAP');
-                            $("#download_spk").html('<i class="fa fa-download"></i> Download SPK');
+                            // $("#download").html('<i class="fa fa-download"></i> Download BAP');
+                            // $("#download_spk").html('<i class="fa fa-download"></i> Download SPK');
                         }
 
                         if (response.data_penindakan.ukpd_id == 1 || response.data_penindakan.ukpd_id == 2) {
