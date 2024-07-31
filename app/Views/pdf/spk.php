@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BERITA ACARA PEMINDAHAN DAN PENDEREKAN KENDARAAN</title>
+    <title>SURAT PENGELUARAN KENDARAAN PENDEREKAN</title>
     <link rel="shortcut icon" href="assets/img/logo2.png" type="image/png">
     <style>
         body {
