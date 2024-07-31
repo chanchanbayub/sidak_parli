@@ -293,34 +293,181 @@
             </tr>
         </table>
         <br>
-        <table id="ttd">
-            <tr>
-                <td style="width: 50%;"></td>
-                <td></td>
-                <td align="center" style="width:75%">Kepala Bidang Pengendalian Operasional</td>
-            </tr>
-            <tr>
-                <td style="width: 50%;"></td>
-                <td></td>
-                <td align="center" style="width:75%">Lalu Lintas Dan Angkutan Jalan</td>
-            </tr>
+        <?php if ($data->ukpd_id == 1) : ?>
+            <table id="ttd">
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kepala Bidang Pengendalian Operasional</td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Lalu Lintas Dan Angkutan Jalan</td>
+                </tr>
 
-            <tr>
-                <td></td>
-                <td></td>
-                <td align="center"><img src="ttd_pim/ttd_12.png" width="150px" alt="logo" /></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td align="center">Harlem Simanjuntak</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td align="center">NIP. 197208151992031004</td>
-            </tr>
-        </table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center"><img src="ttd_pim/ttd_12.png" width="150px" alt="logo" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">Harlem Simanjuntak</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">NIP. 197208151992031004</td>
+                </tr>
+            </table>
+        <?php elseif ($data->ukpd_id == 2) : ?>
+            <table id="ttd">
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kepala Suku Dinas Perhubungan</td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kota Administrasi Jakarta Pusat</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center"><img src="ttd_pim/ttd_12.png" width="150px" alt="logo" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">Muhamad Wildan Anwar</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">NIP. 197509201998031004</td>
+                </tr>
+            </table>
+        <?php elseif ($data->ukpd_id == 3) : ?>
+            <table id="ttd">
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kepala Suku Dinas Perhubungan</td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kota Administrasi Jakarta Utara</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center"><img src="ttd_pim/ttd_12.png" width="150px" alt="logo" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">Hendrico Tampubolon</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">NIP. 1969090919980310006</td>
+                </tr>
+            </table>
+        <?php elseif ($data->ukpd_id == 4) : ?>
+            <table id="ttd">
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kepala Suku Dinas Perhubungan</td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kota Administrasi Jakarta Selatan</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center"><img src="ttd_pim/ttd_12.png" width="150px" alt="logo" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">Bernad Octavianus</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">NIP. 1972101519920301006</td>
+                </tr>
+            </table>
+        <?php elseif ($data->ukpd_id == 5) : ?>
+            <table id="ttd">
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kepala Bidang Pengendalian Operasional</td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Lalu Lintas Dan Angkutan Jalan</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center"><img src="ttd_pim/ttd_12.png" width="150px" alt="logo" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">Harlem Simanjuntak</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">NIP. 197208151992031004</td>
+                </tr>
+            </table>
+        <?php elseif ($data->ukpd_id == 6) : ?>
+            <table id="ttd">
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kepala Suku Dinas Perhubungan</td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;"></td>
+                    <td></td>
+                    <td align="center" style="width:75%">Kota Administrasi Jakarta Timur</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center"><img src="ttd_pim/ttd_12.png" width="150px" alt="logo" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">Renny Dwi Astuti</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="center">NIP. 196908071999032001</td>
+                </tr>
+            </table>
+        <?php endif; ?>
         <table id="footer">
             <tr>
                 <td>Tembusan :</td>
