@@ -185,6 +185,8 @@ use CodeIgniter\Filters\CSRF;
                         if (response.data_penindakan.status_bap_id == 2) {
                             $(".status").addClass("badge badge-warning status")
                             $("#download").css('display', 'none')
+                            $("#whatsapp").css('display', 'block');
+                            $("#whatsapp").html('<i class="fa fa-download"></i> Temui Petugas Untuk Melengkapi Data');
                         } else if (response.data_penindakan.status_bap_id == 3) {
                             $(".status").addClass("badge badge-danger status")
                             $("#download").css('display', 'block')

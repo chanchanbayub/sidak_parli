@@ -177,7 +177,7 @@
                 <td style="width:13%"> Nomor</td>
                 <td style="width: 2%;">:</td>
                 <td>
-                    <p> &nbsp; &nbsp; &nbsp; &nbsp; / PH.06.00 </p>
+                    <p> <?= $data->ukpd ?> / 073.554 </p>
                 </td>
                 <td colspan="11" align="right">
                     <p id="date"> &nbsp; <?= date_indo(date('Y-m-d', strtotime($data->tanggal_pelanggaran))) ?> </p>
