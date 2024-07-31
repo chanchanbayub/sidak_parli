@@ -196,11 +196,11 @@ use CodeIgniter\Filters\CSRF;
                         } else if (response.data_penindakan.status_bap_id == 4 || response.data_penindakan.status_bap_id == 5) {
                             $(".status").addClass("badge badge-success status")
                             // $("#download").css('display', 'block');
-                            $("#download_spk").attr('href', `/pdf/spk/${response.data_penindakan.nomor_bap}`);
+                            $("#download").attr('href', `/pdf/spk/${response.data_penindakan.nomor_bap}`);
                             // $("#download").attr('href', `/pdf/bap_digital/${response.data_penindakan.nomor_bap}`);
                             $("#whatsapp").css('display', 'none');
                             // $("#download").html('<i class="fa fa-download"></i> Download BAP');
-                            // $("#download_spk").html('<i class="fa fa-download"></i> Download SPK');
+                            $("#download").html('<i class="fa fa-download"></i> Download SPK');
                         }
 
                         if (response.data_penindakan.ukpd_id == 1 || response.data_penindakan.ukpd_id == 2) {

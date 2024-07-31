@@ -68,8 +68,9 @@
                 <?php if ($detail_data->status_bap_id == 4 || $detail_data->status_bap_id == 5) : ?>
                     <div class="card">
                         <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                            <h6>Surat Pernyataan</h6>
-                            <!-- <h6><= $detail_data->jenis_spk ?></h6> -->
+                            <!-- <h6>Surat Pernyataan</h6> -->
+                            <h6> Surat Pengeluaran Kendaraan</h6>
+                            <h6> ( <?= $detail_data->jenis_spk ?> )</h6>
                             <a href="/pdf/spk/<?= $detail_data->nomor_bap ?>" target="_blank" class="btn btn-sm btn-primary" type="button">
                                 <i class="bi bi-download"> </i> Surat Pengeluaran Kendaraan
                             </a>
